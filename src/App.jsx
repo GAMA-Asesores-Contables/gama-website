@@ -1,0 +1,318 @@
+import React, { useState } from 'react';
+import { ChevronDown, Menu, X, Send, ArrowRight, CheckCircle2, Globe } from 'lucide-react';
+
+export default function GAMAWebsite() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [language, setLanguage] = useState('es');
+  const [formData, setFormData] = useState({ name: '', email: '', company: '', message: '' });
+  const [activeService, setActiveService] = useState(null);
+
+  const t = {
+    es: {
+      nav: { inicio: 'Inicio', servicios: 'Servicios', nosotros: 'Nosotros', blog: 'Blog', contacto: 'Contacto' },
+      hero: {
+        title: 'Asesoría Contable, Tributaria y Financiera',
+        subtitle: 'Soluciones integrales para empresas que buscan crecer con seguridad',
+        cta: 'Solicitar Presupuesto'
+      },
+      services: {
+        title: 'Servicios Especializados',
+        subtitle: 'Desde cumplimiento tributario hasta transformación financiera',
+        items: [
+          { name: 'NIIF para PYMES', desc: 'Implementación y revisión de estándares internacionales' },
+          { name: 'Declaraciones Fiscales', desc: 'Gestión tributaria mensual y anual ante TRIBU-CR' },
+          { name: 'Auditoría y Aseguramiento', desc: 'Informes técnicos y certificaciones CPA' },
+          { name: 'Outsourcing Contable', desc: 'Gestión integral de procesos contables y administrativos' },
+          { name: 'Proyecciones Financieras', desc: 'Análisis y flujos de caja para decisiones estratégicas' },
+          { name: 'Constitución Societaria', desc: 'Asesoría legal y administrativa en conformación de empresas' }
+        ]
+      },
+      why: {
+        title: '¿Por qué elegirnos?',
+        items: [
+          { title: 'Experiencia Técnica', desc: 'Dominio profundo de NIIF, tributación costarricense y regulaciones locales' },
+          { title: 'Atención Personalizada', desc: 'Cada cliente merece soluciones adaptadas a su realidad empresarial' },
+          { title: 'Bilingües', desc: 'Atención en español e inglés para clientes nacionales e internacionales' },
+          { title: 'Disponibilidad 360°', desc: 'Presencial en San José y virtual para todo Costa Rica' }
+        ]
+      },
+      contact: {
+        title: 'Solicitá tu Presupuesto',
+        subtitle: 'Cuéntanos sobre tu empresa y te contactaremos en 24 horas',
+        name: 'Nombre', email: 'Correo', company: 'Empresa', message: 'Mensaje', send: 'Enviar'
+      },
+      footer: 'GAMA Asesores Contables © 2026. Contabilidad y Finanzas.'
+    },
+    en: {
+      nav: { inicio: 'Home', servicios: 'Services', nosotros: 'About', blog: 'Blog', contacto: 'Contact' },
+      hero: {
+        title: 'Accounting, Tax & Financial Advisory',
+        subtitle: 'Complete solutions for companies seeking growth with confidence',
+        cta: 'Request a Quote'
+      },
+      services: {
+        title: 'Specialized Services',
+        subtitle: 'From tax compliance to financial transformation',
+        items: [
+          { name: 'IFRS for SMEs', desc: 'Implementation and review of international standards' },
+          { name: 'Tax Declarations', desc: 'Monthly and annual tax management with TRIBU-CR' },
+          { name: 'Audit & Assurance', desc: 'Technical reports and CPA certifications' },
+          { name: 'Accounting Outsourcing', desc: 'Comprehensive accounting and administrative processes' },
+          { name: 'Financial Projections', desc: 'Analysis and cash flow forecasting for strategy' },
+          { name: 'Corporate Setup', desc: 'Legal and administrative guidance in company formation' }
+        ]
+      },
+      why: {
+        title: 'Why Choose Us',
+        items: [
+          { title: 'Technical Expertise', desc: 'Deep knowledge of IFRS, Costa Rican taxation and local regulations' },
+          { title: 'Personalized Service', desc: 'Each client deserves solutions tailored to their business reality' },
+          { title: 'Bilingual', desc: 'Spanish and English support for local and international clients' },
+          { title: '360° Availability', desc: 'In-person in San José and virtual throughout Costa Rica' }
+        ]
+      },
+      contact: {
+        title: 'Request Your Quote',
+        subtitle: 'Tell us about your business and we\'ll contact you within 24 hours',
+        name: 'Name', email: 'Email', company: 'Company', message: 'Message', send: 'Send'
+      },
+      footer: 'GAMA Asesores Contables © 2026. Accounting and Finance.'
+    }
+  };
+
+  const content = t[language];
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form submitted:', formData);
+    setFormData({ name: '', email: '', company: '', message: '' });
+    alert(language === 'es' ? 'Presupuesto enviado. Te contactaremos pronto.' : 'Quote sent. We\'ll contact you soon.');
+  };
+
+  return (
+    <div className="min-h-screen bg-white text-gray-900 overflow-hidden">
+      {/* Navbar */}
+      <nav className="fixed top-0 w-full bg-white shadow-lg z-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+          <div className="flex items-center gap-2">
+            <div className="text-2xl font-bold" style={{ color: '#051e57' }}>
+              GAMA
+            </div>
+            <span className="text-sm" style={{ color: '#b38d47' }}>Asesores</span>
+          </div>
+
+          {/* Desktop Menu */}
+          <div className="hidden md:flex gap-8 items-center">
+            {Object.entries(content.nav).map(([key, val]) => (
+              <a key={key} href={`#${key}`} className="text-sm font-medium hover:text-blue-700 transition">
+                {val}
+              </a>
+            ))}
+            <button
+              onClick={() => setLanguage(language === 'es' ? 'en' : 'es')}
+              className="flex items-center gap-1 px-3 py-1 rounded border"
+              style={{ borderColor: '#051e57', color: '#051e57' }}
+            >
+              <Globe size={16} />
+              {language === 'es' ? 'EN' : 'ES'}
+            </button>
+          </div>
+
+          {/* Mobile Menu Toggle */}
+          <div className="md:hidden flex items-center gap-4">
+            <button
+              onClick={() => setLanguage(language === 'es' ? 'en' : 'es')}
+              className="text-sm font-medium"
+              style={{ color: '#051e57' }}
+            >
+              {language === 'es' ? 'EN' : 'ES'}
+            </button>
+            <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="md:hidden bg-gray-50 border-t p-4 space-y-3">
+            {Object.entries(content.nav).map(([key, val]) => (
+              
+                key={key}
+                href={`#${key}`}
+                className="block text-sm font-medium py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {val}
+              </a>
+            ))}
+          </div>
+        )}
+      </nav>
+
+      {/* Hero Section */}
+      <section id="inicio" className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div
+          className="absolute inset-0 opacity-5"
+          style={{
+            backgroundImage: 'url("data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M0 0h40v40H0z" fill="%23051e57"/%3E%3C/svg%3E")',
+          }}
+        />
+        <div className="max-w-5xl mx-auto text-center relative z-10">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6" style={{ color: '#051e57' }}>
+            {content.hero.title}
+          </h1>
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            {content.hero.subtitle}
+          </p>
+          <button
+            onClick={() => document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' })}
+            className="px-8 py-4 text-white font-semibold rounded-lg transition hover:shadow-xl"
+            style={{ backgroundColor: '#b38d47' }}
+          >
+            {content.hero.cta}
+            <ArrowRight className="inline ml-2" size={20} />
+          </button>
+        </div>
+
+        {/* Decorative Element */}
+        <div className="mt-16 max-w-6xl mx-auto">
+          <div
+            className="h-64 rounded-lg opacity-10"
+            style={{
+              background: 'linear-gradient(135deg, #051e57, #b38d47)',
+            }}
+          />
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section id="servicios" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-4" style={{ color: '#051e57' }}>
+            {content.services.title}
+          </h2>
+          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+            {content.services.subtitle}
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {content.services.items.map((service, idx) => (
+              <div
+                key={idx}
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition cursor-pointer"
+                onClick={() => setActiveService(activeService === idx ? null : idx)}
+              >
+                <div className="flex items-start gap-4">
+                  <CheckCircle2 size={24} style={{ color: '#b38d47' }} className="flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="font-bold text-lg mb-2" style={{ color: '#051e57' }}>
+                      {service.name}
+                    </h3>
+                    <p className="text-sm text-gray-600">{service.desc}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section id="nosotros" className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-12" style={{ color: '#051e57' }}>
+            {content.why.title}
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {content.why.items.map((item, idx) => (
+              <div key={idx} className="border-l-4 pl-6" style={{ borderColor: '#b38d47' }}>
+                <h3 className="text-xl font-bold mb-2" style={{ color: '#051e57' }}>
+                  {item.title}
+                </h3>
+                <p className="text-gray-600">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contacto" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-4" style={{ color: '#051e57' }}>
+            {content.contact.title}
+          </h2>
+          <p className="text-center text-gray-600 mb-12">{content.contact.subtitle}</p>
+
+          <form onSubmit={handleSubmit} className="space-y-4 bg-white p-8 rounded-lg shadow-md">
+            <div>
+              <label className="block text-sm font-medium mb-2" style={{ color: '#051e57' }}>
+                {content.contact.name}
+              </label>
+              <input
+                type="text"
+                required
+                value={formData.name}
+                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2"
+                style={{ focusRing: '#b38d47' }}
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium mb-2" style={{ color: '#051e57' }}>
+                {content.contact.email}
+              </label>
+              <input
+                type="email"
+                required
+                value={formData.email}
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium mb-2" style={{ color: '#051e57' }}>
+                {content.contact.company}
+              </label>
+              <input
+                type="text"
+                value={formData.company}
+                onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium mb-2" style={{ color: '#051e57' }}>
+                {content.contact.message}
+              </label>
+              <textarea
+                value={formData.message}
+                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 h-32"
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="w-full py-3 text-white font-semibold rounded-lg transition hover:shadow-xl flex items-center justify-center gap-2"
+              style={{ backgroundColor: '#b38d47' }}
+            >
+              <Send size={20} />
+              {content.contact.send}
+            </button>
+          </form>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-8 px-4 text-center text-sm" style={{ backgroundColor: '#051e57', color: 'white' }}>
+        <p>{content.footer}</p>
+      </footer>
+    </div>
+  );
+}
