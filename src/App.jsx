@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { ChevronDown, Menu, X, Send, ArrowRight, CheckCircle2, Globe } from 'lucide-react';
 
@@ -132,14 +133,14 @@ export default function GAMAWebsite() {
             </button>
           </div>
         </div>
-
+ 
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden bg-gray-50 border-t p-4 space-y-3">
             {Object.entries(content.nav).map(([key, val]) => (
               
                 key={key}
-                href={`#${llave}`}
+                   href={`#${key}`}
                 className="block text-sm font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
