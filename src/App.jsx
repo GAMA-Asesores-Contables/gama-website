@@ -138,15 +138,15 @@ export default function GAMAWebsite() {
         {isMenuOpen && (
           <div className="md:hidden bg-gray-50 border-t p-4 space-y-3">
             {Object.entries(content.nav).map(([key, val]) => (
-              
-                key={key}
-                   href={`#${key}`}
-                className="block text-sm font-medium py-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {val}
-              </a>
-            ))}
+  
+    key={key}
+    href={`#${key}`}
+    className="block text-sm font-medium py-2"
+    onClick={() => setIsMenuOpen(false)}
+  >
+    {val}
+  </a>
+))}
           </div>
         )}
       </nav>
