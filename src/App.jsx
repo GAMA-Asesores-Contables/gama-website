@@ -139,7 +139,7 @@ export default function GAMAWebsite() {
             {Object.entries(content.nav).map(([key, val]) => (
               
                 key={key}
-                href={`#${key}`}
+                href={`#${llave}`}
                 className="block text-sm font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
