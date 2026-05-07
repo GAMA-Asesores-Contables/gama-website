@@ -138,6 +138,7 @@ export default function GAMAWebsite() {
         {isMenuOpen && (
           <div className="md:hidden bg-gray-50 border-t p-4 space-y-3">
             {Object.entries(content.nav).map(([key, val]) => (
+  <a
   
     key={key}
     href={`#${key}`}
