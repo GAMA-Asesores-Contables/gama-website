@@ -83,12 +83,34 @@ export default function GAMAWebsite() {
 
   const content = t[language];
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    setFormData({ name: '', email: '', company: '', message: '' });
-    alert(language === 'es' ? 'Presupuesto enviado. Te contactaremos pronto.' : 'Quote sent. We\'ll contact you soon.');
-  };
+     const handleSubmit = async (e) => {
+     e.preventDefault();
+     
+     try {
+       const response = await fetch('https://formspree.io/f/xeenzndr', {
+         method: 'POST',
+         headers: {
+           'Content-Type': 'application/json',
+         },
+         body: JSON.stringify({
+           name: formData.name,
+           email: formData.email,
+           company: formData.company,
+           message: formData.message,
+         }),
+       });
+
+       if (response.ok) {
+         setFormData({ name: '', email: '', company: '', message: '' });
+         alert(language === 'es' ? '✅ Presupuesto enviado. Te contactaremos en 24 horas.' : '✅ Quote sent. We\'ll contact you within 24 hours.');
+       } else {
+         alert(language === 'es' ? '❌ Error al enviar. Intenta de nuevo.' : '❌ Error sending. Please try again.');
+       }
+     } catch (error) {
+       console.error('Error:', error);
+       alert(language === 'es' ? '❌ Error de conexión.' : '❌ Connection error.');
+     }
+   };
 
   return (
     <div className="min-h-screen bg-white text-gray-900 overflow-hidden">
