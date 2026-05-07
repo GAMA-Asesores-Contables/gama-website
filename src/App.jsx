@@ -338,7 +338,7 @@ export default function GAMAWebsite() {
      href="https://wa.me/50688969883?text=Hola%20GAMA%20Asesores,%20me%20interesa%20solicitar%20un%20presupuesto"
      target="_blank"
      rel="noopener noreferrer"
-     className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg z-40 transition"
+     className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg z-40 transition w-14 h-14 flex items-center justify-center"
      title="Contactar por WhatsApp"
    >
      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
