@@ -8,7 +8,7 @@ export default function GAMAWebsite() {
   const [currentPage, setCurrentPage] = useState('home');
   const [selectedArticle, setSelectedArticle] = useState(null);
 
-  const articles = [
+  const articlesES = [
     {
       id: 1,
       title: 'TRIBU-CR: Guía completa para la tributación electrónica 2026',
@@ -48,6 +48,49 @@ export default function GAMAWebsite() {
       date: '28 de abril de 2026',
       excerpt: 'Análisis de los cambios tributarios de 2026: cómo afectan empresas grandes, medianas y pequeñas, y qué acciones debes tomar ahora.',
       content: 'Cada año trae nuevos cambios en la normativa tributaria costarricense. En este artículo analizamos los cambios más relevantes de 2026, cómo afectan empresas grandes, medianas y pequeñas, y qué acciones debes tomar ahora para adaptarte. Mantente informado y evita sorpresas fiscales.\n\nTemas cubiertos:\n- Cambios en tasas y porcentajes tributarios\n- Nuevas obligaciones de declaración\n- Reformas al sistema de retenciones\n- Incentivos fiscales disponibles\n- Impacto en pequeñas y medianas empresas\n- Calendario de implementación\n- Recomendaciones para adaptarte'
+    }
+  ];
+
+  const articlesEN = [
+    {
+      id: 1,
+      title: 'TRIBU-CR: Complete guide to electronic taxation 2026',
+      category: 'TRIBU-CR',
+      date: 'May 10, 2026',
+      excerpt: 'TRIBU-CR is the mandatory electronic declaration system with Costa Rican tax authorities. Learn what it is, how it works, deadlines and how to avoid penalties.',
+      content: 'TRIBU-CR is the mandatory electronic declaration system with Costa Rican tax authorities. In this guide we explain what it is, how it works, filing deadlines, technical requirements and how to avoid penalties. Ideal for companies just starting out in the system or needing to update their tax compliance processes.\n\nTopics covered:\n- What is TRIBU-CR and mandatory requirements\n- Filing deadlines by company type\n- Technical requirements and digital certificates\n- Step-by-step for your first filing\n- Common mistakes and how to avoid them\n- Penalties and consequences of non-compliance'
+    },
+    {
+      id: 2,
+      title: 'VAT in Costa Rica: Declaration, calculation and updated obligations',
+      category: 'VAT',
+      date: 'May 8, 2026',
+      excerpt: 'Value Added Tax (VAT) is one of the most important tax obligations. Know the rates, exemptions and how to file correctly.',
+      content: 'Value Added Tax (VAT) is one of the most important tax obligations. Know the current rates, exemptions, how to correctly calculate your monthly declaration, and avoid common mistakes that can result in fines. This article covers both new and established companies.\n\nTopics covered:\n- Current VAT rates in Costa Rica\n- Exempt and non-taxable operations\n- VAT calculation: tax debit vs credit\n- Monthly filing: step by step\n- Mistakes that generate fines\n- Small businesses and special regimes\n- VAT audit by tax authorities'
+    },
+    {
+      id: 3,
+      title: 'Capital Income vs. Business Income: Differences and tax strategies',
+      category: 'Income',
+      date: 'May 5, 2026',
+      excerpt: 'Do you know the difference between capital and business income? This distinction directly impacts your tax burden. Discover how to legally optimize your filing.',
+      content: 'Do you know the difference between capital and business income? This distinction directly impacts your tax burden. We explain what income is categorized in each type, applicable tax rates, and how to legally optimize your annual income tax filing to maximize returns.\n\nTopics covered:\n- Definition of capital income vs business income\n- Tax treatment of each income type\n- Current tax rates\n- Capital gains: stocks, real estate, investments\n- Business earnings and distributions\n- Losses: how to offset them\n- Legal tax optimization strategies'
+    },
+    {
+      id: 4,
+      title: 'IFRS for SMEs: Step-by-step implementation in your company',
+      category: 'IFRS',
+      date: 'May 2, 2026',
+      excerpt: 'IFRS for SMEs is mandatory for many Costa Rican companies. Discover implementation, accounting changes and when you need professional advice.',
+      content: 'International Financial Reporting Standards for Small and Medium Entities (IFRS for SMEs) are mandatory for many Costa Rican companies. Discover what implementation requires, how it affects your financial statements, what the main accounting changes are, and when you need professional guidance for this transition.\n\nTopics covered:\n- Who must apply IFRS for SMEs?\n- Main changes from previous standards\n- Implementation: initial assessment\n- Revenue recognition under IFRS\n- Inventory valuation\n- Fixed asset depreciation\n- Financial statements under IFRS\n- Transition and first comparative figures'
+    },
+    {
+      id: 5,
+      title: 'Tax reform 2026: Changes that impact your business',
+      category: 'Regulations',
+      date: 'April 28, 2026',
+      excerpt: 'Analysis of 2026 tax changes: how they affect large, medium and small companies, and what actions you should take now.',
+      content: 'Every year brings new changes to Costa Rican tax regulations. In this article we analyze the most relevant 2026 changes, how they affect large, medium and small companies, and what actions you should take now to adapt. Stay informed and avoid tax surprises.\n\nTopics covered:\n- Changes in tax rates and percentages\n- New filing obligations\n- Reforms to the withholding system\n- Available tax incentives\n- Impact on small and medium companies\n- Implementation timeline\n- Recommendations to adapt'
     }
   ];
 
@@ -125,7 +168,7 @@ export default function GAMAWebsite() {
       },
       contact: {
         title: 'Request Your Quote',
-        subtitle: 'Tell us about your business and we\'ll contact you within 24 hours',
+        subtitle: 'Tell us about your business and we will contact you within 24 hours',
         name: 'Name', email: 'Email', company: 'Company', message: 'Message', send: 'Send'
       },
       blog: {
@@ -141,6 +184,7 @@ export default function GAMAWebsite() {
   };
 
   const content = t[language];
+  const articles = language === 'es' ? articlesES : articlesEN;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -195,6 +239,12 @@ export default function GAMAWebsite() {
           </div>
         </div>
 
+        <a href="https://wa.me/50688969883?text=Hola%20GAMA%20Asesores,%20me%20interesa%20solicitar%20un%20presupuesto" target="_blank" rel="noopener noreferrer" className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg z-40 flex items-center justify-center" style={{ width: '50px', height: '50px' }}>
+          <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.255.949c-1.238.503-2.335 1.236-3.356 2.26-1.022 1.024-1.756 2.12-2.26 3.359a9.9 9.9 0 00-1.271 3.999c-.108.816-.073 1.63.1 2.431.174.801.48 1.555.923 2.236.443.681 1.006 1.289 1.687 1.815.68.526 1.479.938 2.289 1.243.809.305 1.66.456 2.522.456 2.04 0 3.97-.775 5.414-2.173 1.444-1.397 2.25-3.32 2.25-5.354 0-.954-.178-1.897-.529-2.8-.35-.904-.868-1.738-1.537-2.458-.669-.72-1.464-1.286-2.34-1.685-.876-.4-1.82-.603-2.788-.603z" />
+          </svg>
+        </a>
+
         <footer className="py-8 px-4 text-center text-sm" style={{ backgroundColor: '#051e57', color: 'white' }}><p>{content.footer}</p></footer>
       </div>
     );
@@ -239,6 +289,12 @@ export default function GAMAWebsite() {
             </div>
           </div>
         </section>
+
+        <a href="https://wa.me/50688969883?text=Hola%20GAMA%20Asesores,%20me%20interesa%20solicitar%20un%20presupuesto" target="_blank" rel="noopener noreferrer" className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg z-40 flex items-center justify-center" style={{ width: '50px', height: '50px' }}>
+          <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.255.949c-1.238.503-2.335 1.236-3.356 2.26-1.022 1.024-1.756 2.12-2.26 3.359a9.9 9.9 0 00-1.271 3.999c-.108.816-.073 1.63.1 2.431.174.801.48 1.555.923 2.236.443.681 1.006 1.289 1.687 1.815.68.526 1.479.938 2.289 1.243.809.305 1.66.456 2.522.456 2.04 0 3.97-.775 5.414-2.173 1.444-1.397 2.25-3.32 2.25-5.354 0-.954-.178-1.897-.529-2.8-.35-.904-.868-1.738-1.537-2.458-.669-.72-1.464-1.286-2.34-1.685-.876-.4-1.82-.603-2.788-.603z" />
+          </svg>
+        </a>
 
         <footer className="py-8 px-4 text-center text-sm" style={{ backgroundColor: '#051e57', color: 'white' }}><p>{content.footer}</p></footer>
       </div>
