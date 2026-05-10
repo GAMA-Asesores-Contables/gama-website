@@ -754,34 +754,36 @@ function ServicesSection({ lang }) {
   const [open, setOpen] = useState(null);
 
   return (
-    <section id="services-section" style={{ padding:"100px 5%", background:C.gray50 }}>
+    <section id="services-section" style={{ padding:"100px 5%", background:`linear-gradient(180deg, ${C.navyDk} 0%, ${C.navy} 100%)` }}>
       <div style={{ maxWidth:1200, margin:"0 auto" }}>
         <div style={{ marginBottom:64, textAlign:"center" }}>
           <p style={{ color:C.gold, fontFamily:"'Montserrat',sans-serif", fontSize:"0.75rem", letterSpacing:"0.2em", textTransform:"uppercase", fontWeight:700, marginBottom:12 }}>{t.label}</p>
-          <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(1.9rem,3.5vw,2.8rem)", color:C.navy, fontWeight:700 }}>{t.title}</h2>
+          <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(1.9rem,3.5vw,2.8rem)", color:C.white, fontWeight:700 }}>{t.title}</h2>
         </div>
 
         <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(320px,1fr))", gap:28 }}>
           {t.items.map((item, i) => (
             <div key={i}
               style={{
-                background:C.white, borderRadius:2,
+                background: open===i ? "rgba(179,141,71,0.10)" : "rgba(255,255,255,0.05)",
+                borderRadius:2,
                 borderLeft:`3px solid ${C.gold}`,
-                boxShadow: open===i ? `0 12px 40px rgba(5,30,87,0.14)` : `0 2px 12px rgba(5,30,87,0.06)`,
-                padding:"32px 28px", cursor:"pointer", transition:"box-shadow .25s, transform .25s",
+                border: open===i ? `1px solid rgba(179,141,71,0.35)` : `1px solid rgba(255,255,255,0.08)`,
+                borderLeftWidth:3, borderLeftColor:C.gold,
+                padding:"32px 28px", cursor:"pointer", transition:"background .25s, transform .25s",
                 transform: open===i ? "translateY(-4px)" : "none",
               }}
               onClick={() => setOpen(open===i ? null : i)}
             >
               <div style={{ marginBottom:20 }}>{item.icon}</div>
-              <h3 style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.18rem", fontWeight:700, color:C.navy, marginBottom:10 }}>{item.title}</h3>
-              <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.87rem", color:C.gray700, lineHeight:1.7, marginBottom:16 }}>{item.short}</p>
+              <h3 style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.18rem", fontWeight:700, color:C.white, marginBottom:10 }}>{item.title}</h3>
+              <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.87rem", color:"rgba(255,255,255,0.65)", lineHeight:1.7, marginBottom:16 }}>{item.short}</p>
 
               {/* Expanded detail */}
               {open===i && (
-                <div style={{ borderTop:`1px solid ${C.gray100}`, paddingTop:16, marginTop:4 }}>
+                <div style={{ borderTop:`1px solid rgba(179,141,71,0.25)`, paddingTop:16, marginTop:4 }}>
                   {item.detail.split("\n\n").map((para, j) => (
-                    <p key={j} style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.84rem", color:C.gray700, lineHeight:1.75, marginBottom:10 }}>{para}</p>
+                    <p key={j} style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.84rem", color:"rgba(255,255,255,0.65)", lineHeight:1.75, marginBottom:10 }}>{para}</p>
                   ))}
                 </div>
               )}
@@ -829,23 +831,23 @@ function WhySection({ lang }) {
 function AboutSection({ lang }) {
   const t = DATA[lang].about;
   return (
-    <section id="about-section" style={{ padding:"100px 5%", background:C.white }}>
+    <section id="about-section" style={{ padding:"100px 5%", background:`linear-gradient(180deg, ${C.navy} 0%, ${C.navyDk} 100%)` }}>
       <div style={{ maxWidth:1200, margin:"0 auto" }}>
         <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:72, alignItems:"start" }} className="about-grid">
           {/* Left */}
           <div>
             <p style={{ color:C.gold, fontFamily:"'Montserrat',sans-serif", fontSize:"0.75rem", letterSpacing:"0.2em", textTransform:"uppercase", fontWeight:700, marginBottom:12 }}>{t.label}</p>
-            <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(1.9rem,3vw,2.6rem)", color:C.navy, fontWeight:700, marginBottom:28 }}>{t.title}</h2>
+            <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(1.9rem,3vw,2.6rem)", color:C.white, fontWeight:700, marginBottom:28 }}>{t.title}</h2>
             {t.body.split("\n\n").map((p,i) => (
-              <p key={i} style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.92rem", color:C.gray700, lineHeight:1.85, marginBottom:16 }}>{p}</p>
+              <p key={i} style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.92rem", color:"rgba(255,255,255,0.68)", lineHeight:1.85, marginBottom:16 }}>{p}</p>
             ))}
 
             {/* Values */}
             <div style={{ marginTop:40, display:"grid", gridTemplateColumns:"1fr 1fr", gap:20 }}>
               {t.values.map((v,i) => (
-                <div key={i} style={{ padding:"20px 18px", background:C.gray50, borderLeft:`3px solid ${C.gold}` }}>
-                  <div style={{ fontFamily:"'Playfair Display',serif", fontWeight:700, color:C.navy, marginBottom:8, fontSize:"0.96rem" }}>{v.title}</div>
-                  <div style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.82rem", color:C.gray700, lineHeight:1.65 }}>{v.text}</div>
+                <div key={i} style={{ padding:"20px 18px", background:"rgba(255,255,255,0.05)", borderLeft:`3px solid ${C.gold}` }}>
+                  <div style={{ fontFamily:"'Playfair Display',serif", fontWeight:700, color:C.white, marginBottom:8, fontSize:"0.96rem" }}>{v.title}</div>
+                  <div style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.82rem", color:"rgba(255,255,255,0.60)", lineHeight:1.65 }}>{v.text}</div>
                 </div>
               ))}
             </div>
@@ -886,19 +888,19 @@ function BlogList({ lang, onRead }) {
   const arts = t.articles;
 
   return (
-    <section id="blog-section" style={{ padding:"100px 5%", background:C.gray50 }}>
+    <section id="blog-section" style={{ padding:"100px 5%", background:`linear-gradient(180deg, ${C.navyDk} 0%, ${C.navy} 100%)` }}>
       <div style={{ maxWidth:1200, margin:"0 auto" }}>
         <div style={{ marginBottom:64, textAlign:"center" }}>
           <p style={{ color:C.gold, fontFamily:"'Montserrat',sans-serif", fontSize:"0.75rem", letterSpacing:"0.2em", textTransform:"uppercase", fontWeight:700, marginBottom:12 }}>{t.label}</p>
-          <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(1.9rem,3.5vw,2.8rem)", color:C.navy, fontWeight:700, marginBottom:12 }}>{t.title}</h2>
-          <p style={{ fontFamily:"'Montserrat',sans-serif", color:C.gray400, maxWidth:560, margin:"0 auto", lineHeight:1.7, fontSize:"0.92rem" }}>{t.subtitle}</p>
+          <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(1.9rem,3.5vw,2.8rem)", color:C.white, fontWeight:700, marginBottom:12 }}>{t.title}</h2>
+          <p style={{ fontFamily:"'Montserrat',sans-serif", color:"rgba(255,255,255,0.55)", maxWidth:560, margin:"0 auto", lineHeight:1.7, fontSize:"0.92rem" }}>{t.subtitle}</p>
         </div>
 
         <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(340px,1fr))", gap:28 }}>
           {arts.map((a,i) => (
-            <article key={a.id} style={{ background:C.white, borderRadius:2, overflow:"hidden", boxShadow:"0 2px 14px rgba(5,30,87,0.06)", transition:"box-shadow .25s, transform .25s", cursor:"pointer" }}
-              onMouseEnter={e => { e.currentTarget.style.boxShadow="0 8px 32px rgba(5,30,87,0.12)"; e.currentTarget.style.transform="translateY(-3px)"; }}
-              onMouseLeave={e => { e.currentTarget.style.boxShadow="0 2px 14px rgba(5,30,87,0.06)"; e.currentTarget.style.transform="none"; }}
+            <article key={a.id} style={{ background:"rgba(255,255,255,0.05)", borderRadius:2, overflow:"hidden", border:"1px solid rgba(255,255,255,0.08)", transition:"background .25s, transform .25s", cursor:"pointer" }}
+              onMouseEnter={e => { e.currentTarget.style.background="rgba(179,141,71,0.10)"; e.currentTarget.style.transform="translateY(-3px)"; }}
+              onMouseLeave={e => { e.currentTarget.style.background="rgba(255,255,255,0.05)"; e.currentTarget.style.transform="none"; }}
               onClick={() => onRead(a)}
             >
               {/* Color band */}
@@ -906,12 +908,12 @@ function BlogList({ lang, onRead }) {
 
               <div style={{ padding:"28px 28px 24px" }}>
                 <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:16 }}>
-                  <span style={{ background:C.navy, color:C.yellow, fontFamily:"'Montserrat',sans-serif", fontSize:"0.68rem", fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase", padding:"3px 10px", borderRadius:2 }}>{a.category}</span>
-                  <span style={{ color:C.gray400, fontFamily:"'Montserrat',sans-serif", fontSize:"0.76rem" }}>{a.date}</span>
+                  <span style={{ background:"rgba(179,141,71,0.2)", color:C.yellow, fontFamily:"'Montserrat',sans-serif", fontSize:"0.68rem", fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase", padding:"3px 10px", borderRadius:2, border:`1px solid rgba(179,141,71,0.3)` }}>{a.category}</span>
+                  <span style={{ color:"rgba(255,255,255,0.4)", fontFamily:"'Montserrat',sans-serif", fontSize:"0.76rem" }}>{a.date}</span>
                 </div>
 
-                <h3 style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.12rem", fontWeight:700, color:C.navy, lineHeight:1.4, marginBottom:14 }}>{a.title}</h3>
-                <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.85rem", color:C.gray700, lineHeight:1.75 }}>{a.summary}</p>
+                <h3 style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.12rem", fontWeight:700, color:C.white, lineHeight:1.4, marginBottom:14 }}>{a.title}</h3>
+                <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.85rem", color:"rgba(255,255,255,0.60)", lineHeight:1.75 }}>{a.summary}</p>
 
                 <div style={{ marginTop:20, color:C.gold, fontFamily:"'Montserrat',sans-serif", fontSize:"0.8rem", fontWeight:700, letterSpacing:"0.06em" }}>{t.readMore}</div>
               </div>
@@ -931,33 +933,33 @@ function ArticleView({ article, lang, onBack }) {
   const t = DATA[lang].blog;
 
   const renderContent = (text) => {
-    if (!text) return <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.95rem", color:C.gray700, lineHeight:1.85 }}>Contenido en actualización.</p>;
+    if (!text) return <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.95rem", color:"rgba(255,255,255,0.68)", lineHeight:1.85 }}>Contenido en actualización.</p>;
     return text.split("\n").map((line, i) => {
-      if (line.startsWith("## ")) return <h2 key={i} style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.35rem", color:C.navy, fontWeight:700, marginTop:36, marginBottom:14 }}>{line.slice(3)}</h2>;
-      if (line.startsWith("# ")) return <h1 key={i} style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.6rem", color:C.navy, fontWeight:700, marginBottom:16 }}>{line.slice(2)}</h1>;
+      if (line.startsWith("## ")) return <h2 key={i} style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.35rem", color:C.white, fontWeight:700, marginTop:36, marginBottom:14 }}>{line.slice(3)}</h2>;
+      if (line.startsWith("# ")) return <h1 key={i} style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.6rem", color:C.white, fontWeight:700, marginBottom:16 }}>{line.slice(2)}</h1>;
       if (line.trim() === "") return <br key={i}/>;
-      return <p key={i} style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.93rem", color:C.gray700, lineHeight:1.85, marginBottom:14 }}>{line}</p>;
+      return <p key={i} style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.93rem", color:"rgba(255,255,255,0.68)", lineHeight:1.85, marginBottom:14 }}>{line}</p>;
     });
   };
 
   return (
-    <section style={{ padding:"100px 5% 80px", background:C.white }}>
+    <section style={{ padding:"100px 5% 80px", background:`linear-gradient(180deg, ${C.navyDk} 0%, ${C.navy} 100%)` }}>
       <div style={{ maxWidth:780, margin:"0 auto" }}>
         <button onClick={onBack}
-          style={{ ...btn.outline, marginBottom:40, fontSize:"0.78rem", padding:"10px 24px", color:C.navy, borderColor:C.navy }}
-          onMouseEnter={e => { e.target.style.background=C.navy; e.target.style.color=C.white; }}
-          onMouseLeave={e => { e.target.style.background="transparent"; e.target.style.color=C.navy; }}
+          style={{ ...btn.outline, marginBottom:40, fontSize:"0.78rem", padding:"10px 24px" }}
+          onMouseEnter={e => { e.target.style.background=C.gold; e.target.style.color=C.navy; }}
+          onMouseLeave={e => { e.target.style.background="transparent"; e.target.style.color=C.gold; }}
         >{t.back}</button>
 
         <div style={{ display:"flex", gap:10, marginBottom:20 }}>
-          <span style={{ background:C.navy, color:C.yellow, fontFamily:"'Montserrat',sans-serif", fontSize:"0.72rem", fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase", padding:"4px 12px" }}>{article.category}</span>
-          <span style={{ color:C.gray400, fontFamily:"'Montserrat',sans-serif", fontSize:"0.82rem", alignSelf:"center" }}>{article.date}</span>
+          <span style={{ background:"rgba(179,141,71,0.2)", color:C.yellow, fontFamily:"'Montserrat',sans-serif", fontSize:"0.72rem", fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase", padding:"4px 12px", border:`1px solid rgba(179,141,71,0.35)` }}>{article.category}</span>
+          <span style={{ color:"rgba(255,255,255,0.4)", fontFamily:"'Montserrat',sans-serif", fontSize:"0.82rem", alignSelf:"center" }}>{article.date}</span>
         </div>
 
-        <h1 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(1.8rem,3vw,2.4rem)", fontWeight:700, color:C.navy, lineHeight:1.28, marginBottom:32 }}>{article.title}</h1>
+        <h1 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(1.8rem,3vw,2.4rem)", fontWeight:700, color:C.white, lineHeight:1.28, marginBottom:32 }}>{article.title}</h1>
 
-        <div style={{ background:C.gray50, padding:"20px 24px", borderLeft:`3px solid ${C.gold}`, marginBottom:40 }}>
-          <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.93rem", color:C.gray700, lineHeight:1.75, margin:0, fontStyle:"italic" }}>{article.summary}</p>
+        <div style={{ background:"rgba(179,141,71,0.08)", padding:"20px 24px", borderLeft:`3px solid ${C.gold}`, marginBottom:40 }}>
+          <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.93rem", color:"rgba(255,255,255,0.72)", lineHeight:1.75, margin:0, fontStyle:"italic" }}>{article.summary}</p>
         </div>
 
         <div>{renderContent(article.content)}</div>
@@ -1000,50 +1002,50 @@ function ContactSection({ lang }) {
     } catch { setStatus("error"); }
   };
 
-  const inputStyle = { width:"100%", padding:"12px 16px", border:`1px solid rgba(5,30,87,0.15)`, borderRadius:2, fontFamily:"'Montserrat',sans-serif", fontSize:"0.88rem", color:C.navy, background:"rgba(248,247,244,0.5)", boxSizing:"border-box", outline:"none", transition:"border-color .2s" };
+  const inputStyle = { width:"100%", padding:"12px 16px", border:`1px solid rgba(255,255,255,0.15)`, borderRadius:2, fontFamily:"'Montserrat',sans-serif", fontSize:"0.88rem", color:C.white, background:"rgba(255,255,255,0.07)", boxSizing:"border-box", outline:"none", transition:"border-color .2s" };
 
   return (
-    <section id="contact-section" style={{ padding:"100px 5%", background:C.gray50 }}>
+    <section id="contact-section" style={{ padding:"100px 5%", background:`linear-gradient(180deg, ${C.navy} 0%, ${C.navyDk} 100%)` }}>
       <div style={{ maxWidth:1200, margin:"0 auto" }}>
         <div style={{ marginBottom:64, textAlign:"center" }}>
           <p style={{ color:C.gold, fontFamily:"'Montserrat',sans-serif", fontSize:"0.75rem", letterSpacing:"0.2em", textTransform:"uppercase", fontWeight:700, marginBottom:12 }}>{t.label}</p>
-          <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(1.9rem,3.5vw,2.8rem)", color:C.navy, fontWeight:700, marginBottom:12 }}>{t.title}</h2>
-          <p style={{ fontFamily:"'Montserrat',sans-serif", color:C.gray400, fontSize:"0.92rem" }}>{t.subtitle}</p>
+          <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(1.9rem,3.5vw,2.8rem)", color:C.white, fontWeight:700, marginBottom:12 }}>{t.title}</h2>
+          <p style={{ fontFamily:"'Montserrat',sans-serif", color:"rgba(255,255,255,0.55)", fontSize:"0.92rem" }}>{t.subtitle}</p>
         </div>
 
         <div style={{ display:"grid", gridTemplateColumns:"1.2fr 1fr", gap:60, alignItems:"start" }} className="contact-grid">
           {/* Form */}
-          <div style={{ background:C.white, padding:"44px 40px", boxShadow:"0 4px 24px rgba(5,30,87,0.08)" }}>
+          <div style={{ background:"rgba(255,255,255,0.06)", padding:"44px 40px", border:"1px solid rgba(255,255,255,0.10)" }}>
             <form onSubmit={submit}>
               <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:16, marginBottom:16 }}>
                 <div>
-                  <label style={{ display:"block", fontFamily:"'Montserrat',sans-serif", fontSize:"0.75rem", color:C.navy, fontWeight:600, letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:6 }}>{f.name}</label>
-                  <input style={inputStyle} value={form.name} onChange={e=>set("name",e.target.value)} required onFocus={e=>e.target.style.borderColor=C.gold} onBlur={e=>e.target.style.borderColor="rgba(5,30,87,0.15)"}/>
+                  <label style={{ display:"block", fontFamily:"'Montserrat',sans-serif", fontSize:"0.75rem", color:"rgba(255,255,255,0.7)", fontWeight:600, letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:6 }}>{f.name}</label>
+                  <input style={{...inputStyle}} value={form.name} onChange={e=>set("name",e.target.value)} required onFocus={e=>e.target.style.borderColor=C.gold} onBlur={e=>e.target.style.borderColor="rgba(255,255,255,0.15)"}/>
                 </div>
                 <div>
-                  <label style={{ display:"block", fontFamily:"'Montserrat',sans-serif", fontSize:"0.75rem", color:C.navy, fontWeight:600, letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:6 }}>{f.email}</label>
-                  <input type="email" style={inputStyle} value={form.email} onChange={e=>set("email",e.target.value)} required onFocus={e=>e.target.style.borderColor=C.gold} onBlur={e=>e.target.style.borderColor="rgba(5,30,87,0.15)"}/>
+                  <label style={{ display:"block", fontFamily:"'Montserrat',sans-serif", fontSize:"0.75rem", color:"rgba(255,255,255,0.7)", fontWeight:600, letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:6 }}>{f.email}</label>
+                  <input type="email" style={{...inputStyle}} value={form.email} onChange={e=>set("email",e.target.value)} required onFocus={e=>e.target.style.borderColor=C.gold} onBlur={e=>e.target.style.borderColor="rgba(255,255,255,0.15)"}/>
                 </div>
               </div>
               <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:16, marginBottom:16 }}>
                 <div>
-                  <label style={{ display:"block", fontFamily:"'Montserrat',sans-serif", fontSize:"0.75rem", color:C.navy, fontWeight:600, letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:6 }}>{f.phone}</label>
-                  <input style={inputStyle} value={form.phone} onChange={e=>set("phone",e.target.value)} onFocus={e=>e.target.style.borderColor=C.gold} onBlur={e=>e.target.style.borderColor="rgba(5,30,87,0.15)"}/>
+                  <label style={{ display:"block", fontFamily:"'Montserrat',sans-serif", fontSize:"0.75rem", color:"rgba(255,255,255,0.7)", fontWeight:600, letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:6 }}>{f.phone}</label>
+                  <input style={{...inputStyle}} value={form.phone} onChange={e=>set("phone",e.target.value)} onFocus={e=>e.target.style.borderColor=C.gold} onBlur={e=>e.target.style.borderColor="rgba(255,255,255,0.15)"}/>
                 </div>
                 <div>
-                  <label style={{ display:"block", fontFamily:"'Montserrat',sans-serif", fontSize:"0.75rem", color:C.navy, fontWeight:600, letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:6 }}>{f.company}</label>
-                  <input style={inputStyle} value={form.company} onChange={e=>set("company",e.target.value)} onFocus={e=>e.target.style.borderColor=C.gold} onBlur={e=>e.target.style.borderColor="rgba(5,30,87,0.15)"}/>
+                  <label style={{ display:"block", fontFamily:"'Montserrat',sans-serif", fontSize:"0.75rem", color:"rgba(255,255,255,0.7)", fontWeight:600, letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:6 }}>{f.company}</label>
+                  <input style={{...inputStyle}} value={form.company} onChange={e=>set("company",e.target.value)} onFocus={e=>e.target.style.borderColor=C.gold} onBlur={e=>e.target.style.borderColor="rgba(255,255,255,0.15)"}/>
                 </div>
               </div>
               <div style={{ marginBottom:16 }}>
-                <label style={{ display:"block", fontFamily:"'Montserrat',sans-serif", fontSize:"0.75rem", color:C.navy, fontWeight:600, letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:6 }}>{f.service}</label>
-                <select style={{...inputStyle}} value={form.service} onChange={e=>set("service",e.target.value)} onFocus={e=>e.target.style.borderColor=C.gold} onBlur={e=>e.target.style.borderColor="rgba(5,30,87,0.15)"}>
+                <label style={{ display:"block", fontFamily:"'Montserrat',sans-serif", fontSize:"0.75rem", color:"rgba(255,255,255,0.7)", fontWeight:600, letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:6 }}>{f.service}</label>
+                <select style={{...inputStyle}} value={form.service} onChange={e=>set("service",e.target.value)} onFocus={e=>e.target.style.borderColor=C.gold} onBlur={e=>e.target.style.borderColor="rgba(255,255,255,0.15)"}>
                   {f.serviceOptions.map((o,i) => <option key={i} value={i===0?"":o}>{o}</option>)}
                 </select>
               </div>
               <div style={{ marginBottom:24 }}>
-                <label style={{ display:"block", fontFamily:"'Montserrat',sans-serif", fontSize:"0.75rem", color:C.navy, fontWeight:600, letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:6 }}>{f.message}</label>
-                <textarea rows={5} style={{...inputStyle, resize:"vertical"}} value={form.message} onChange={e=>set("message",e.target.value)} required onFocus={e=>e.target.style.borderColor=C.gold} onBlur={e=>e.target.style.borderColor="rgba(5,30,87,0.15)"} />
+                <label style={{ display:"block", fontFamily:"'Montserrat',sans-serif", fontSize:"0.75rem", color:"rgba(255,255,255,0.7)", fontWeight:600, letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:6 }}>{f.message}</label>
+                <textarea rows={5} style={{...inputStyle, resize:"vertical"}} value={form.message} onChange={e=>set("message",e.target.value)} required onFocus={e=>e.target.style.borderColor=C.gold} onBlur={e=>e.target.style.borderColor="rgba(255,255,255,0.15)"} />
               </div>
 
               {status==="ok" && <div style={{ background:"#e8f5e9", border:"1px solid #a5d6a7", padding:"12px 16px", borderRadius:2, fontFamily:"'Montserrat',sans-serif", fontSize:"0.86rem", color:"#2e7d32", marginBottom:16 }}>{f.success}</div>}
@@ -1058,14 +1060,14 @@ function ContactSection({ lang }) {
           {/* Office info */}
           <div>
             {t.offices.map((o,i) => (
-              <div key={i} style={{ marginBottom:36, paddingBottom:36, borderBottom: i<t.offices.length-1 ? `1px solid ${C.gray100}` : "none" }}>
-                <div style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.05rem", fontWeight:700, color:C.navy, marginBottom:4 }}>{o.name}</div>
+              <div key={i} style={{ marginBottom:36, paddingBottom:36, borderBottom: i<t.offices.length-1 ? `1px solid rgba(255,255,255,0.08)` : "none" }}>
+                <div style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.05rem", fontWeight:700, color:C.white, marginBottom:4 }}>{o.name}</div>
                 <div style={{ height:2, width:36, background:C.gold, marginBottom:16 }} />
-                <div style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.88rem", color:C.gray700, lineHeight:1.8 }}>
+                <div style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.88rem", color:"rgba(255,255,255,0.60)", lineHeight:1.8 }}>
                   <div>{o.addr}</div>
                   <div style={{ marginBottom:12 }}>{o.city}</div>
-                  <div><strong>{lang==="es"?"Tel:":"Ph:"}</strong> <a href={`tel:${o.tel.replace(/\s/g,"")}`} style={{ color:C.gold, textDecoration:"none" }}>{o.tel}</a></div>
-                  <div><strong>Email:</strong> <a href={`mailto:${o.email}`} style={{ color:C.gold, textDecoration:"none" }}>{o.email}</a></div>
+                  <div><strong style={{color:"rgba(255,255,255,0.75)"}}>{lang==="es"?"Tel:":"Ph:"}</strong> <a href={`tel:${o.tel.replace(/\s/g,"")}`} style={{ color:C.gold, textDecoration:"none" }}>{o.tel}</a></div>
+                  <div><strong style={{color:"rgba(255,255,255,0.75)"}}>Email:</strong> <a href={`mailto:${o.email}`} style={{ color:C.gold, textDecoration:"none" }}>{o.email}</a></div>
                 </div>
               </div>
             ))}
