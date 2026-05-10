@@ -1,10 +1,55 @@
 import React, { useState } from 'react';
-import { Menu, X, Send, ArrowRight, CheckCircle2, Globe } from 'lucide-react';
+import { Menu, X, Send, ArrowRight, CheckCircle2, Globe, ArrowLeft } from 'lucide-react';
 
 export default function GAMAWebsite() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [language, setLanguage] = useState('es');
   const [formData, setFormData] = useState({ name: '', email: '', company: '', message: '' });
+  const [currentPage, setCurrentPage] = useState('home');
+  const [selectedArticle, setSelectedArticle] = useState(null);
+
+  const articles = [
+    {
+      id: 1,
+      title: 'TRIBU-CR: Guía completa para la tributación electrónica 2026',
+      category: 'TRIBU-CR',
+      date: '10 de mayo de 2026',
+      excerpt: 'TRIBU-CR es el sistema obligatorio de declaración electrónica ante la DIAN costarricense. Aprende qué es, cómo funciona, plazos y cómo evitar sanciones.',
+      content: 'TRIBU-CR es el sistema obligatorio de declaración electrónica ante la DIAN costarricense. En esta guía te explicamos qué es, cómo funciona, plazos de presentación, requisitos técnicos y cómo evitar sanciones. Ideal para empresas que recién inician en el sistema o necesitan actualizar sus procesos de cumplimiento tributario.\n\nTemas cubiertos:\n- Qué es TRIBU-CR y obligatoriedad\n- Plazos de presentación según tu tipo de empresa\n- Requisitos técnicos y certificados digitales\n- Paso a paso para tu primera declaración\n- Errores comunes y cómo evitarlos\n- Sanciones y consecuencias del incumplimiento'
+    },
+    {
+      id: 2,
+      title: 'IVA en Costa Rica: Declaración, cálculo y obligaciones actualizadas',
+      category: 'IVA',
+      date: '8 de mayo de 2026',
+      excerpt: 'El Impuesto al Valor Agregado (IVA) es una de las obligaciones fiscales más importantes. Conoce porcentajes, exenciones y cómo declarar correctamente.',
+      content: 'El Impuesto al Valor Agregado (IVA) es una de las obligaciones fiscales más importantes. Conoce los porcentajes vigentes, exenciones, cómo calcular correctamente tu declaración mensual, y evita errores comunes que pueden generar multas. Este artículo cubre tanto empresas nuevas como consolidadas.\n\nTemas cubiertos:\n- Porcentajes de IVA vigentes en Costa Rica\n- Operaciones exentas y no sujetas\n- Cálculo del IVA: débito vs crédito fiscal\n- Declaración mensual: paso a paso\n- Errores que generan multas\n- Empresas pequeñas y regímenes especiales\n- Auditoria del IVA por parte de Hacienda'
+    },
+    {
+      id: 3,
+      title: 'Renta Capital vs. Renta Utilidades: Diferencias y estrategias fiscales',
+      category: 'Renta',
+      date: '5 de mayo de 2026',
+      excerpt: '¿Sabes la diferencia entre renta capital y renta utilidades? Esta distinción impacta tu carga tributaria. Descubre cómo optimizar legalmente tu declaración.',
+      content: '¿Sabes la diferencia entre renta capital y renta utilidades? Esta distinción impacta directamente tu carga tributaria. Te explicamos qué ganancias se categorizan en cada una, tasas de impuesto aplicables, y cómo optimizar legalmente tu declaración de renta anual para maximizar rendimiento.\n\nTemas cubiertos:\n- Definición de renta capital vs renta utilidades\n- Tratamiento fiscal de cada tipo de renta\n- Tasas de impuesto vigentes\n- Ganancias de capital: acciones, inmuebles, inversiones\n- Utilidades empresariales y distribuciones\n- Pérdidas: cómo compensarlas\n- Estrategias legales de optimización fiscal'
+    },
+    {
+      id: 4,
+      title: 'NIIF para PYMES: Implementación paso a paso en tu empresa',
+      category: 'NIIF',
+      date: '2 de mayo de 2026',
+      excerpt: 'Las NIIF para PYMES son obligatorias para muchas empresas costarricenses. Descubre la implementación, cambios contables y cuándo necesitas asesoría profesional.',
+      content: 'Las Normas Internacionales de Información Financiera (NIIF para PYMES) son obligatorias para muchas empresas costarricenses. Descubre qué requiere la implementación, cómo afecta tus estados financieros, cuáles son los principales cambios contables, y cuándo necesitas asesoría profesional para esta transición.\n\nTemas cubiertos:\n- ¿Quién debe aplicar NIIF para PYMES?\n- Principales cambios respecto a PCGA\n- Implementación: diagnóstico inicial\n- Reconocimiento de ingresos bajo NIIF\n- Valuación de inventarios\n- Depreciación de activos fijos\n- Estados financieros bajo NIIF\n- Transición y primeras cifras comparativas'
+    },
+    {
+      id: 5,
+      title: 'Reforma tributaria 2026: Cambios que impactan tu negocio',
+      category: 'Normativa',
+      date: '28 de abril de 2026',
+      excerpt: 'Análisis de los cambios tributarios de 2026: cómo afectan empresas grandes, medianas y pequeñas, y qué acciones debes tomar ahora.',
+      content: 'Cada año trae nuevos cambios en la normativa tributaria costarricense. En este artículo analizamos los cambios más relevantes de 2026, cómo afectan empresas grandes, medianas y pequeñas, y qué acciones debes tomar ahora para adaptarte. Mantente informado y evita sorpresas fiscales.\n\nTemas cubiertos:\n- Cambios en tasas y porcentajes tributarios\n- Nuevas obligaciones de declaración\n- Reformas al sistema de retenciones\n- Incentivos fiscales disponibles\n- Impacto en pequeñas y medianas empresas\n- Calendario de implementación\n- Recomendaciones para adaptarte'
+    }
+  ];
 
   const t = {
     es: {
@@ -39,6 +84,14 @@ export default function GAMAWebsite() {
         title: 'Solicitá tu Presupuesto',
         subtitle: 'Cuéntanos sobre tu empresa y te contactaremos en 24 horas',
         name: 'Nombre', email: 'Correo', company: 'Empresa', message: 'Mensaje', send: 'Enviar'
+      },
+      blog: {
+        title: 'Blog Tributario',
+        subtitle: 'Actualizaciones, guías y análisis sobre tributación, NIIF y finanzas',
+        readMore: 'Leer más',
+        back: 'Volver al blog',
+        date: 'Fecha',
+        category: 'Categoría'
       },
       footer: 'GAMA Asesores Contables © 2026. Contabilidad y Finanzas.'
     },
@@ -75,6 +128,14 @@ export default function GAMAWebsite() {
         subtitle: 'Tell us about your business and we\'ll contact you within 24 hours',
         name: 'Name', email: 'Email', company: 'Company', message: 'Message', send: 'Send'
       },
+      blog: {
+        title: 'Tax & Finance Blog',
+        subtitle: 'Updates, guides and analysis on taxation, IFRS and finance',
+        readMore: 'Read more',
+        back: 'Back to blog',
+        date: 'Date',
+        category: 'Category'
+      },
       footer: 'GAMA Asesores Contables © 2026. Accounting and Finance.'
     }
   };
@@ -98,6 +159,93 @@ export default function GAMAWebsite() {
     }
   };
 
+  // Renderizar artículo individual
+  if (currentPage === 'blog' && selectedArticle) {
+    const article = articles.find(a => a.id === selectedArticle);
+    return (
+      <div className="min-h-screen bg-white text-gray-900">
+        <nav className="fixed top-0 w-full bg-white shadow-lg z-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div className="flex items-center gap-2">
+              <div className="text-2xl font-bold" style={{ color: '#051e57' }}>GAMA</div>
+              <span className="text-sm" style={{ color: '#b38d47' }}>Asesores</span>
+            </div>
+            <div className="hidden md:flex gap-8 items-center">
+              {Object.entries(content.nav).map(([key, val]) => (
+                <button key={key} onClick={() => { setCurrentPage(key); setSelectedArticle(null); }} className="text-sm font-medium hover:text-blue-700">{val}</button>
+              ))}
+              <button onClick={() => setLanguage(language === 'es' ? 'en' : 'es')} className="flex items-center gap-1 px-3 py-1 rounded border" style={{ borderColor: '#051e57', color: '#051e57' }}>{language === 'es' ? 'EN' : 'ES'}</button>
+            </div>
+          </div>
+        </nav>
+
+        <div className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <button onClick={() => { setCurrentPage('blog'); setSelectedArticle(null); }} className="flex items-center gap-2 mb-6" style={{ color: '#051e57' }}>
+              <ArrowLeft size={20} /> {content.blog.back}
+            </button>
+            <h1 className="text-4xl font-bold mb-4" style={{ color: '#051e57' }}>{article.title}</h1>
+            <div className="flex gap-4 text-sm text-gray-600 mb-8">
+              <span>{content.blog.date}: {article.date}</span>
+              <span>{content.blog.category}: <span style={{ color: '#b38d47', fontWeight: 'bold' }}>{article.category}</span></span>
+            </div>
+            <div className="prose max-w-none text-gray-700 leading-relaxed whitespace-pre-wrap">
+              {article.content}
+            </div>
+          </div>
+        </div>
+
+        <footer className="py-8 px-4 text-center text-sm" style={{ backgroundColor: '#051e57', color: 'white' }}><p>{content.footer}</p></footer>
+      </div>
+    );
+  }
+
+  // Renderizar lista de blog
+  if (currentPage === 'blog') {
+    return (
+      <div className="min-h-screen bg-white text-gray-900">
+        <nav className="fixed top-0 w-full bg-white shadow-lg z-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div className="flex items-center gap-2">
+              <div className="text-2xl font-bold" style={{ color: '#051e57' }}>GAMA</div>
+              <span className="text-sm" style={{ color: '#b38d47' }}>Asesores</span>
+            </div>
+            <div className="hidden md:flex gap-8 items-center">
+              {Object.entries(content.nav).map(([key, val]) => (
+                <button key={key} onClick={() => setCurrentPage(key)} className="text-sm font-medium hover:text-blue-700">{val}</button>
+              ))}
+              <button onClick={() => setLanguage(language === 'es' ? 'en' : 'es')} className="flex items-center gap-1 px-3 py-1 rounded border" style={{ borderColor: '#051e57', color: '#051e57' }}>{language === 'es' ? 'EN' : 'ES'}</button>
+            </div>
+          </div>
+        </nav>
+
+        <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <h1 className="text-4xl font-bold text-center mb-4" style={{ color: '#051e57' }}>{content.blog.title}</h1>
+            <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">{content.blog.subtitle}</p>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              {articles.map((article) => (
+                <div key={article.id} className="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition cursor-pointer" onClick={() => setSelectedArticle(article.id)}>
+                  <div className="flex justify-between items-start mb-3">
+                    <span className="text-xs font-semibold px-3 py-1 rounded" style={{ backgroundColor: '#f2e485', color: '#051e57' }}>{article.category}</span>
+                    <span className="text-xs text-gray-500">{article.date}</span>
+                  </div>
+                  <h3 className="font-bold text-lg mb-2" style={{ color: '#051e57' }}>{article.title}</h3>
+                  <p className="text-sm text-gray-600 mb-4">{article.excerpt}</p>
+                  <button className="text-sm font-semibold" style={{ color: '#b38d47' }}>{content.blog.readMore} →</button>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <footer className="py-8 px-4 text-center text-sm" style={{ backgroundColor: '#051e57', color: 'white' }}><p>{content.footer}</p></footer>
+      </div>
+    );
+  }
+
+  // Página principal
   return (
     <div className="min-h-screen bg-white text-gray-900">
       <nav className="fixed top-0 w-full bg-white shadow-lg z-50">
@@ -108,7 +256,7 @@ export default function GAMAWebsite() {
           </div>
           <div className="hidden md:flex gap-8 items-center">
             {Object.entries(content.nav).map(([key, val]) => (
-              <a key={key} href={`#${key}`} className="text-sm font-medium hover:text-blue-700">{val}</a>
+              <button key={key} onClick={() => { setCurrentPage(key); setIsMenuOpen(false); }} className="text-sm font-medium hover:text-blue-700">{val}</button>
             ))}
             <button onClick={() => setLanguage(language === 'es' ? 'en' : 'es')} className="flex items-center gap-1 px-3 py-1 rounded border" style={{ borderColor: '#051e57', color: '#051e57' }}>
               <Globe size={16} />{language === 'es' ? 'EN' : 'ES'}
@@ -121,7 +269,7 @@ export default function GAMAWebsite() {
         </div>
         {isMenuOpen && (
           <div className="md:hidden bg-gray-50 border-t p-4 space-y-3">
-            {Object.entries(content.nav).map(([key, val]) => (<a key={key} href={`#${key}`} className="block text-sm font-medium py-2" onClick={() => setIsMenuOpen(false)}>{val}</a>))}
+            {Object.entries(content.nav).map(([key, val]) => (<button key={key} onClick={() => { setCurrentPage(key); setIsMenuOpen(false); }} className="block w-full text-left text-sm font-medium py-2">{val}</button>))}
           </div>
         )}
       </nav>
