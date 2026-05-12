@@ -419,10 +419,16 @@ Nuevos beneficios para empresas con certificación ambiental (ISO 14001 o equiva
         success: "¡Mensaje enviado! Le contactaremos pronto.",
         error: "Hubo un error. Por favor intente nuevamente.",
       },
-      offices: [
-        { name: "Oficina Principal", addr: "Residencial Bulevar del Sol, Etapa IV, Casa E-14", city: "Barranca, Puntarenas, Costa Rica", tel: "+506 8896-9883", email: "gmongea@gamacpa-asesores.com" },
-        { name: "Oficina Secundaria", addr: "Frente a la Plaza de Fútbol de Santa Teresa, 2° piso del Súper El Mango", city: "Santa Teresa, Cóbano, Puntarenas, Costa Rica", tel: "+506 6055-8006", email: "gamasacsa@gmail.com" },
-      ],
+      contactInfo: {
+        title: "Información de Contacto",
+        phones: ["+506 8896-9883", "+506 6055-8006"],
+        emails: ["gmongea@gamacpa-asesores.com", "gamasacsa@gmail.com"],
+        officesTitle: "Nuestras Oficinas",
+        offices: [
+          { name: "Oficina Puntarenas", addr: "Residencial Bulevar del Sol, Etapa IV, Casa E-14, Barranca, Puntarenas" },
+          { name: "Oficina Peninsular", addr: "Frente a la Plaza de Fútbol de Santa Teresa, 2° piso del Súper El Mango, Santa Teresa, Cóbano, Puntarenas" },
+        ],
+      },
     },
     footer: {
       tagline: "Contabilidad · Finanzas · Consultoría Empresarial",
@@ -719,10 +725,16 @@ New benefits for companies with environmental certification (ISO 14001 or equiva
         success: "Message sent! We will contact you shortly.",
         error: "An error occurred. Please try again.",
       },
-      offices: [
-        { name: "Main Office", addr: "Residencial Bulevar del Sol, Etapa IV, Casa E-14", city: "Barranca, Puntarenas, Costa Rica", tel: "+506 8896-9883", email: "gmongea@gamacpa-asesores.com" },
-        { name: "Secondary Office", addr: "Across from the Soccer Field in Santa Teresa, 2nd floor of Súper El Mango", city: "Santa Teresa, Cóbano, Puntarenas, Costa Rica", tel: "+506 6055-8006", email: "gamasacsa@gmail.com" },
-      ],
+      contactInfo: {
+        title: "Contact Information",
+        phones: ["+506 8896-9883", "+506 6055-8006"],
+        emails: ["gmongea@gamacpa-asesores.com", "gamasacsa@gmail.com"],
+        officesTitle: "Our Offices",
+        offices: [
+          { name: "Puntarenas Office", addr: "Residencial Bulevar del Sol, Etapa IV, Casa E-14, Barranca, Puntarenas" },
+          { name: "Peninsula Office", addr: "Across from the Soccer Field in Santa Teresa, 2nd floor of Súper El Mango, Santa Teresa, Cóbano, Puntarenas" },
+        ],
+      },
     },
     footer: {
       tagline: "Accounting · Finance · Business Consulting",
@@ -884,12 +896,12 @@ function HeroSection({ lang, setSection }) {
 
         {/* CTAs */}
         <div style={{ display:"flex", gap:16, flexWrap:"wrap" }}>
-          <button onClick={() => { document.getElementById("contact-section")?.scrollIntoView({behavior:"smooth"}); }}
+          <button onClick={() => setSection("contact")}
             style={btn.primary}
             onMouseEnter={e => e.target.style.opacity=0.88}
             onMouseLeave={e => e.target.style.opacity=1}
           >{t.cta}</button>
-          <button onClick={() => { document.getElementById("services-section")?.scrollIntoView({behavior:"smooth"}); }}
+          <button onClick={() => setSection("services")}
             style={btn.outline}
             onMouseEnter={e => { e.target.style.background=C.gold; e.target.style.color=C.navy; }}
             onMouseLeave={e => { e.target.style.background="transparent"; e.target.style.color=C.gold; }}
@@ -990,55 +1002,104 @@ function WhySection({ lang }) {
 /* ── ABOUT ── */
 function AboutSection({ lang }) {
   const t = DATA[lang].about;
+
+  // Equipo — 6 colaboradores placeholder (Gustavo los completará con fotos y datos reales)
+  const team = [
+    { initial:"A", name: lang==="es" ? "Nombre del Colaborador" : "Team Member Name", role: lang==="es" ? "Asistente Contable" : "Accounting Assistant", bio: lang==="es" ? "Información del colaborador próximamente." : "Team member information coming soon." },
+    { initial:"B", name: lang==="es" ? "Nombre del Colaborador" : "Team Member Name", role: lang==="es" ? "Asistente Contable" : "Accounting Assistant", bio: lang==="es" ? "Información del colaborador próximamente." : "Team member information coming soon." },
+    { initial:"C", name: lang==="es" ? "Nombre del Colaborador" : "Team Member Name", role: lang==="es" ? "Asistente Contable" : "Accounting Assistant", bio: lang==="es" ? "Información del colaborador próximamente." : "Team member information coming soon." },
+    { initial:"D", name: lang==="es" ? "Nombre del Colaborador" : "Team Member Name", role: lang==="es" ? "Asistente Contable" : "Accounting Assistant", bio: lang==="es" ? "Información del colaborador próximamente." : "Team member information coming soon." },
+    { initial:"E", name: lang==="es" ? "Nombre del Colaborador" : "Team Member Name", role: lang==="es" ? "Asistente Contable" : "Accounting Assistant", bio: lang==="es" ? "Información del colaborador próximamente." : "Team member information coming soon." },
+    { initial:"F", name: lang==="es" ? "Nombre del Colaborador" : "Team Member Name", role: lang==="es" ? "Asistente Contable" : "Accounting Assistant", bio: lang==="es" ? "Información del colaborador próximamente." : "Team member information coming soon." },
+  ];
+
   return (
-    <section id="about-section" style={{ padding:"100px 5%", background:C.white }}>
-      <div style={{ maxWidth:1200, margin:"0 auto" }}>
-        <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:72, alignItems:"start" }} className="about-grid">
-          {/* Left */}
-          <div>
-            <p style={{ color:C.gold, fontFamily:"'Montserrat',sans-serif", fontSize:"0.75rem", letterSpacing:"0.2em", textTransform:"uppercase", fontWeight:700, marginBottom:12 }}>{t.label}</p>
-            <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(1.9rem,3vw,2.6rem)", color:C.navy, fontWeight:700, marginBottom:28 }}>{t.title}</h2>
-            {t.body.split("\n\n").map((p,i) => (
-              <p key={i} style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.92rem", color:"#3d3830", lineHeight:1.85, marginBottom:16 }}>{p}</p>
-            ))}
-
-            {/* Values */}
-            <div style={{ marginTop:40, display:"grid", gridTemplateColumns:"1fr 1fr", gap:20 }}>
-              {t.values.map((v,i) => (
-                <div key={i} style={{ padding:"20px 18px", background:"#f4f1eb", borderLeft:`3px solid ${C.gold}` }}>
-                  <div style={{ fontFamily:"'Playfair Display',serif", fontWeight:700, color:C.navy, marginBottom:8, fontSize:"0.96rem" }}>{v.title}</div>
-                  <div style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.82rem", color:"#4a4540", lineHeight:1.65 }}>{v.text}</div>
-                </div>
+    <>
+      {/* ── SOBRE NOSOTROS ── */}
+      <section id="about-section" style={{ padding:"100px 5%", background:C.white }}>
+        <div style={{ maxWidth:1200, margin:"0 auto" }}>
+          <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:72, alignItems:"start" }} className="about-grid">
+            {/* Left */}
+            <div>
+              <p style={{ color:C.gold, fontFamily:"'Montserrat',sans-serif", fontSize:"0.75rem", letterSpacing:"0.2em", textTransform:"uppercase", fontWeight:700, marginBottom:12 }}>{t.label}</p>
+              <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(1.9rem,3vw,2.6rem)", color:C.navy, fontWeight:700, marginBottom:28 }}>{t.title}</h2>
+              {t.body.split("\n\n").map((p,i) => (
+                <p key={i} style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.92rem", color:"#3d3830", lineHeight:1.85, marginBottom:16 }}>{p}</p>
               ))}
-            </div>
-          </div>
 
-          {/* Right — CPA card */}
-          <div>
-            <div style={{ background:C.navy, padding:"40px 36px", borderRadius:2, position:"relative", overflow:"hidden" }}>
-              <div style={{ position:"absolute", top:-20, right:-20, width:120, height:120, borderRadius:"50%", background:"rgba(179,141,71,0.08)" }} />
-              <div style={{ position:"absolute", bottom:0, left:0, height:3, width:"100%", background:`linear-gradient(90deg, ${C.gold}, transparent)` }} />
-
-              {/* Avatar placeholder */}
-              <div style={{ width:80, height:80, borderRadius:"50%", background:`linear-gradient(135deg, ${C.gold}, ${C.navyLt})`, display:"flex", alignItems:"center", justifyContent:"center", marginBottom:24, border:`3px solid rgba(179,141,71,0.4)` }}>
-                <span style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.8rem", fontWeight:700, color:C.white }}>G</span>
+              {/* Values */}
+              <div style={{ marginTop:40, display:"grid", gridTemplateColumns:"1fr 1fr", gap:20 }}>
+                {t.values.map((v,i) => (
+                  <div key={i} style={{ padding:"20px 18px", background:"#f4f1eb", borderLeft:`3px solid ${C.gold}` }}>
+                    <div style={{ fontFamily:"'Playfair Display',serif", fontWeight:700, color:C.navy, marginBottom:8, fontSize:"0.96rem" }}>{v.title}</div>
+                    <div style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.82rem", color:"#4a4540", lineHeight:1.65 }}>{v.text}</div>
+                  </div>
+                ))}
               </div>
+            </div>
 
-              <div style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.3rem", fontWeight:700, color:C.white, marginBottom:4 }}>{t.cpa.name}</div>
-              <div style={{ color:C.gold, fontFamily:"'Montserrat',sans-serif", fontSize:"0.76rem", letterSpacing:"0.1em", textTransform:"uppercase", marginBottom:24, fontWeight:600 }}>{t.cpa.role}</div>
-
-              {t.cpa.bio.split("\n\n").map((p,i) => (
-                <p key={i} style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.85rem", color:"rgba(255,255,255,0.7)", lineHeight:1.8, marginBottom:12 }}>{p}</p>
-              ))}
-
-              <div style={{ marginTop:28, paddingTop:24, borderTop:`1px solid rgba(255,255,255,0.1)`, display:"flex", gap:12, flexWrap:"wrap" }}>
-                <a href="mailto:gmongea@gamacpa-asesores.com" style={{ color:C.gold, fontFamily:"'Montserrat',sans-serif", fontSize:"0.78rem", textDecoration:"none", letterSpacing:"0.04em" }}>gmongea@gamacpa-asesores.com</a>
+            {/* Right — CPA card */}
+            <div>
+              <div style={{ background:C.navy, padding:"40px 36px", borderRadius:2, position:"relative", overflow:"hidden" }}>
+                <div style={{ position:"absolute", top:-20, right:-20, width:120, height:120, borderRadius:"50%", background:"rgba(179,141,71,0.08)" }} />
+                <div style={{ position:"absolute", bottom:0, left:0, height:3, width:"100%", background:`linear-gradient(90deg, ${C.gold}, transparent)` }} />
+                <div style={{ width:80, height:80, borderRadius:"50%", background:`linear-gradient(135deg, ${C.gold}, ${C.navyLt})`, display:"flex", alignItems:"center", justifyContent:"center", marginBottom:24, border:`3px solid rgba(179,141,71,0.4)` }}>
+                  <span style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.8rem", fontWeight:700, color:C.white }}>G</span>
+                </div>
+                <div style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.3rem", fontWeight:700, color:C.white, marginBottom:4 }}>{t.cpa.name}</div>
+                <div style={{ color:C.gold, fontFamily:"'Montserrat',sans-serif", fontSize:"0.76rem", letterSpacing:"0.1em", textTransform:"uppercase", marginBottom:24, fontWeight:600 }}>{t.cpa.role}</div>
+                {t.cpa.bio.split("\n\n").map((p,i) => (
+                  <p key={i} style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.85rem", color:"rgba(255,255,255,0.7)", lineHeight:1.8, marginBottom:12 }}>{p}</p>
+                ))}
+                <div style={{ marginTop:28, paddingTop:24, borderTop:`1px solid rgba(255,255,255,0.1)` }}>
+                  <a href="mailto:gmongea@gamacpa-asesores.com" style={{ color:C.gold, fontFamily:"'Montserrat',sans-serif", fontSize:"0.78rem", textDecoration:"none", letterSpacing:"0.04em" }}>gmongea@gamacpa-asesores.com</a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* ── EQUIPO ── */}
+      <section style={{ padding:"80px 5% 100px", background:"#f4f1eb" }}>
+        <div style={{ maxWidth:1200, margin:"0 auto" }}>
+          <div style={{ textAlign:"center", marginBottom:56 }}>
+            <p style={{ color:C.gold, fontFamily:"'Montserrat',sans-serif", fontSize:"0.75rem", letterSpacing:"0.2em", textTransform:"uppercase", fontWeight:700, marginBottom:12 }}>
+              {lang==="es" ? "Nuestro Equipo" : "Our Team"}
+            </p>
+            <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(1.7rem,3vw,2.4rem)", color:C.navy, fontWeight:700 }}>
+              {lang==="es" ? "Los Profesionales Detrás de GAMA" : "The Professionals Behind GAMA"}
+            </h2>
+          </div>
+
+          <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(280px,1fr))", gap:24 }}>
+            {team.map((m, i) => (
+              <div key={i} style={{ background:C.white, borderRadius:2, overflow:"hidden", boxShadow:"0 2px 12px rgba(5,30,87,0.07)", borderTop:`3px solid ${C.gold}` }}>
+                {/* Foto placeholder — reemplazar src con ruta de foto real */}
+                <div style={{ height:200, background:`linear-gradient(135deg, ${C.navyDk}, ${C.navy})`, display:"flex", alignItems:"center", justifyContent:"center", position:"relative" }}>
+                  <div style={{ width:90, height:90, borderRadius:"50%", background:`linear-gradient(135deg, ${C.gold}, ${C.goldLt})`, display:"flex", alignItems:"center", justifyContent:"center", border:`3px solid rgba(255,255,255,0.2)` }}>
+                    <span style={{ fontFamily:"'Playfair Display',serif", fontSize:"2rem", fontWeight:700, color:C.white }}>{m.initial}</span>
+                  </div>
+                  <div style={{ position:"absolute", bottom:0, left:0, right:0, height:2, background:`linear-gradient(90deg, transparent, ${C.gold}, transparent)` }} />
+                </div>
+                {/* Info */}
+                <div style={{ padding:"24px 22px" }}>
+                  <div style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.05rem", fontWeight:700, color:C.navy, marginBottom:4 }}>{m.name}</div>
+                  <div style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.72rem", color:C.gold, fontWeight:700, letterSpacing:"0.1em", textTransform:"uppercase", marginBottom:12 }}>{m.role}</div>
+                  <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.83rem", color:"#4a4540", lineHeight:1.7, fontStyle:"italic" }}>{m.bio}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <p style={{ textAlign:"center", marginTop:40, fontFamily:"'Montserrat',sans-serif", fontSize:"0.82rem", color:"#9a9280", fontStyle:"italic" }}>
+            {lang==="es"
+              ? "* Información del equipo en actualización. Próximamente los perfiles completos de nuestros colaboradores."
+              : "* Team information being updated. Full profiles of our collaborators coming soon."}
+          </p>
+        </div>
+      </section>
+    </>
   );
 }
 
@@ -1048,41 +1109,34 @@ function BlogList({ lang, onRead }) {
   const arts = t.articles;
 
   return (
-    <section id="blog-section" style={{ padding:"100px 5%", background:`linear-gradient(180deg, ${C.navyDk} 0%, ${C.navy} 100%)` }}>
+    <section id="blog-section" style={{ padding:"100px 5%", background:"#f4f1eb" }}>
       <div style={{ maxWidth:1200, margin:"0 auto" }}>
         <div style={{ marginBottom:64, textAlign:"center" }}>
           <p style={{ color:C.gold, fontFamily:"'Montserrat',sans-serif", fontSize:"0.75rem", letterSpacing:"0.2em", textTransform:"uppercase", fontWeight:700, marginBottom:12 }}>{t.label}</p>
-          <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(1.9rem,3.5vw,2.8rem)", color:C.white, fontWeight:700, marginBottom:12 }}>{t.title}</h2>
-          <p style={{ fontFamily:"'Montserrat',sans-serif", color:"rgba(255,255,255,0.55)", maxWidth:560, margin:"0 auto", lineHeight:1.7, fontSize:"0.92rem" }}>{t.subtitle}</p>
+          <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(1.9rem,3.5vw,2.8rem)", color:C.navy, fontWeight:700, marginBottom:12 }}>{t.title}</h2>
+          <p style={{ fontFamily:"'Montserrat',sans-serif", color:"#6b6560", maxWidth:560, margin:"0 auto", lineHeight:1.7, fontSize:"0.92rem" }}>{t.subtitle}</p>
         </div>
 
         <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(340px,1fr))", gap:28 }}>
           {arts.map((a,i) => (
-            <article key={a.id} style={{ background:"rgba(255,255,255,0.05)", borderRadius:2, overflow:"hidden", border:"1px solid rgba(255,255,255,0.08)", transition:"background .25s, transform .25s", cursor:"pointer" }}
-              onMouseEnter={e => { e.currentTarget.style.background="rgba(179,141,71,0.10)"; e.currentTarget.style.transform="translateY(-3px)"; }}
-              onMouseLeave={e => { e.currentTarget.style.background="rgba(255,255,255,0.05)"; e.currentTarget.style.transform="none"; }}
+            <article key={a.id} style={{ background:C.white, borderRadius:2, overflow:"hidden", boxShadow:"0 2px 16px rgba(5,30,87,0.08)", transition:"box-shadow .25s, transform .25s", cursor:"pointer", borderTop:`3px solid ${C.gold}` }}
+              onMouseEnter={e => { e.currentTarget.style.boxShadow="0 8px 32px rgba(5,30,87,0.14)"; e.currentTarget.style.transform="translateY(-4px)"; }}
+              onMouseLeave={e => { e.currentTarget.style.boxShadow="0 2px 16px rgba(5,30,87,0.08)"; e.currentTarget.style.transform="none"; }}
               onClick={() => onRead(a)}
             >
-              {/* Color band */}
-              <div style={{ height:4, background:`linear-gradient(90deg, ${C.gold}, ${C.yellow})` }} />
-
               <div style={{ padding:"28px 28px 24px" }}>
                 <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:16 }}>
-                  <span style={{ background:"rgba(179,141,71,0.2)", color:C.yellow, fontFamily:"'Montserrat',sans-serif", fontSize:"0.68rem", fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase", padding:"3px 10px", borderRadius:2, border:`1px solid rgba(179,141,71,0.3)` }}>{a.category}</span>
-                  <span style={{ color:"rgba(255,255,255,0.4)", fontFamily:"'Montserrat',sans-serif", fontSize:"0.76rem" }}>{a.date}</span>
+                  <span style={{ background:C.navy, color:C.yellow, fontFamily:"'Montserrat',sans-serif", fontSize:"0.68rem", fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase", padding:"3px 10px", borderRadius:2 }}>{a.category}</span>
+                  <span style={{ color:"#9a9280", fontFamily:"'Montserrat',sans-serif", fontSize:"0.76rem" }}>{a.date}</span>
                 </div>
-
-                <h3 style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.12rem", fontWeight:700, color:C.white, lineHeight:1.4, marginBottom:14 }}>{a.title}</h3>
-                <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.85rem", color:"rgba(255,255,255,0.60)", lineHeight:1.75 }}>{a.summary}</p>
-
+                <h3 style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.12rem", fontWeight:700, color:C.navy, lineHeight:1.4, marginBottom:14 }}>{a.title}</h3>
+                <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.85rem", color:"#4a4540", lineHeight:1.75 }}>{a.summary}</p>
                 <div style={{ marginTop:20, color:C.gold, fontFamily:"'Montserrat',sans-serif", fontSize:"0.8rem", fontWeight:700, letterSpacing:"0.06em" }}>{t.readMore}</div>
               </div>
             </article>
           ))}
         </div>
       </div>
-
-      {/* WhatsApp */}
       <WhatsAppBtn />
     </section>
   );
@@ -1217,20 +1271,52 @@ function ContactSection({ lang }) {
             </form>
           </div>
 
-          {/* Office info */}
+          {/* Contacto info — nuevo formato */}
           <div>
-            {t.offices.map((o,i) => (
-              <div key={i} style={{ marginBottom:36, paddingBottom:36, borderBottom: i<t.offices.length-1 ? `1px solid rgba(5,30,87,0.12)` : "none" }}>
-                <div style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.05rem", fontWeight:700, color:C.navy, marginBottom:4 }}>{o.name}</div>
-                <div style={{ height:2, width:36, background:C.gold, marginBottom:16 }} />
-                <div style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.88rem", color:"#3d3830", lineHeight:1.8 }}>
-                  <div>{o.addr}</div>
-                  <div style={{ marginBottom:12 }}>{o.city}</div>
-                  <div><strong style={{color:C.navy}}>{lang==="es"?"Tel:":"Ph:"}</strong> <a href={`tel:${o.tel.replace(/\s/g,"")}`} style={{ color:C.gold, textDecoration:"none" }}>{o.tel}</a></div>
-                  <div><strong style={{color:C.navy}}>Email:</strong> <a href={`mailto:${o.email}`} style={{ color:C.gold, textDecoration:"none" }}>{o.email}</a></div>
+            {/* Datos de contacto */}
+            <div style={{ marginBottom:36 }}>
+              <div style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.1rem", fontWeight:700, color:C.navy, marginBottom:4 }}>{t.contactInfo.title}</div>
+              <div style={{ height:2, width:36, background:C.gold, marginBottom:20 }} />
+
+              {/* Teléfonos */}
+              <div style={{ marginBottom:16 }}>
+                <div style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.72rem", fontWeight:700, color:C.navy, letterSpacing:"0.1em", textTransform:"uppercase", marginBottom:8 }}>
+                  {lang==="es" ? "Teléfonos" : "Phone Numbers"}
                 </div>
+                {t.contactInfo.phones.map((p,i) => (
+                  <div key={i} style={{ marginBottom:4 }}>
+                    <a href={`tel:${p.replace(/\s/g,"")}`} style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.95rem", color:C.gold, textDecoration:"none", fontWeight:600 }}>{p}</a>
+                  </div>
+                ))}
               </div>
-            ))}
+
+              {/* Correos */}
+              <div style={{ marginBottom:8 }}>
+                <div style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.72rem", fontWeight:700, color:C.navy, letterSpacing:"0.1em", textTransform:"uppercase", marginBottom:8 }}>
+                  {lang==="es" ? "Correos Electrónicos" : "Email Addresses"}
+                </div>
+                {t.contactInfo.emails.map((e,i) => (
+                  <div key={i} style={{ marginBottom:4 }}>
+                    <a href={`mailto:${e}`} style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.88rem", color:C.gold, textDecoration:"none" }}>{e}</a>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Divisor dorado */}
+            <div style={{ height:1, background:`linear-gradient(90deg, ${C.gold}, transparent)`, marginBottom:32, opacity:0.5 }} />
+
+            {/* Direcciones */}
+            <div>
+              <div style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.1rem", fontWeight:700, color:C.navy, marginBottom:4 }}>{t.contactInfo.officesTitle}</div>
+              <div style={{ height:2, width:36, background:C.gold, marginBottom:20 }} />
+              {t.contactInfo.offices.map((o,i) => (
+                <div key={i} style={{ marginBottom:20, paddingBottom:20, borderBottom: i<t.contactInfo.offices.length-1 ? `1px solid rgba(5,30,87,0.08)` : "none" }}>
+                  <div style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.78rem", fontWeight:700, color:C.navy, letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:6 }}>{o.name}</div>
+                  <div style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.86rem", color:"#4a4540", lineHeight:1.7 }}>{o.addr}</div>
+                </div>
+              ))}
+            </div>
 
             {/* WhatsApp CTA */}
             <a href="https://wa.me/50688969883?text=Hola%20GAMA%20Asesores,%20me%20interesa%20solicitar%20un%20presupuesto"
@@ -1326,7 +1412,7 @@ export default function App() {
   const renderSection = () => {
     if (section === "blog" && article) return <ArticleView article={article} lang={lang} onBack={() => setArticle(null)} />;
     switch(section) {
-      case "home":     return <><HeroSection lang={lang} setSection={setSection}/><ServicesSection lang={lang}/><WhySection lang={lang}/></>;
+      case "home":     return <><HeroSection lang={lang} setSection={setSection}/><WhySection lang={lang}/></>;
       case "services": return <ServicesSection lang={lang}/>;
       case "about":    return <AboutSection lang={lang}/>;
       case "blog":     return <BlogList lang={lang} onRead={(a)=>{ setArticle(a); window.scrollTo({top:0,behavior:"smooth"}); }}/>;
