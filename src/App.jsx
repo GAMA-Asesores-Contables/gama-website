@@ -588,16 +588,6 @@ En GAMA Asesores atendemos a decenas de profesionales independientes, ayudándol
         },
       ],
     },
-    testimonials: {
-      label: lang==="es" ? "Testimonios" : "Testimonials",
-      title: lang==="es" ? "Lo que Dicen Nuestros Clientes" : "What Our Clients Say",
-      items: [
-        { name:"Ricardo Jiménez", company:"Shaka Surf Camp S.A.", text: lang==="es" ? "GAMA Asesores transformó completamente nuestra gestión financiera. Pasamos de tener registros desordenados a estados financieros bajo NIIF que nuestro banco acepta sin problema para trámites de crédito." : "GAMA Advisors completely transformed our financial management. We went from disorganized records to IFRS financial statements that our bank accepts without issues for credit applications.", stars:5 },
-        { name:"María Fernanda Solís", company:"Soltara Healing Center S.R.L.", text: lang==="es" ? "Como empresa internacional, necesitábamos un contador que entendiera tanto la normativa costarricense como los requerimientos de nuestros socios extranjeros. Gustavo y su equipo cumplen ambas condiciones con excelencia." : "As an international company, we needed an accountant who understood both Costa Rican regulations and our foreign partners' requirements. Gustavo and his team excel at both.", stars:5 },
-        { name:"Carlos Faingold", company:"FAINGOLDS S.R.L.", text: lang==="es" ? "La atención personalizada y la disponibilidad de Gustavo son excepcionales. Siempre responde rápido y con respuestas claras. Haber encontrado un CPA de esta calidad ha sido un alivio enorme para nuestra empresa." : "Gustavo's personalized service and availability are exceptional. He always responds quickly and clearly. Finding a CPA of this quality has been a huge relief for our company.", stars:5 },
-        { name:"Alejandra Mora", company:"Profesional independiente", text: lang==="es" ? "Llevaba años declarando de forma incorrecta sin saberlo. Gracias a GAMA Asesores regularicé mi situación tributaria y ahora tengo la tranquilidad de cumplir correctamente. El costo de la asesoría se recuperó en el primer año." : "For years I had been filing incorrectly without knowing it. Thanks to GAMA Advisors I regularized my tax situation and now have peace of mind. The advisory cost was recovered in the first year.", stars:5 },
-      ],
-    },
     contact: {
       label: "Contacto",
       title: "¿Listo para Impulsar su Empresa?",
@@ -619,7 +609,7 @@ En GAMA Asesores atendemos a decenas de profesionales independientes, ayudándol
         title: "Información de Contacto",
         phones: [
           { number:"+506 8896-9883", label:"Directo con Gustavo Monge A., CPA" },
-          { number:"+506 6055-8006", label:"Directo con Colaboradores" },
+          { number:"+506 6055-8006", label:"Directo con Asistentes / Colaboradores" },
         ],
         emails: ["gmongea@gamacpa-asesores.com", "gamasacsa@gmail.com"],
         officesTitle: "Nuestras Oficinas",
