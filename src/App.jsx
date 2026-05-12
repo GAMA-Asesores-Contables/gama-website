@@ -421,7 +421,10 @@ Nuevos beneficios para empresas con certificación ambiental (ISO 14001 o equiva
       },
       contactInfo: {
         title: "Información de Contacto",
-        phones: ["+506 8896-9883", "+506 6055-8006"],
+        phones: [
+          { number:"+506 8896-9883", label:"Directo con Gustavo Monge A., CPA" },
+          { number:"+506 6055-8006", label:"Directo con Colaboradores" },
+        ],
         emails: ["gmongea@gamacpa-asesores.com", "gamasacsa@gmail.com"],
         officesTitle: "Nuestras Oficinas",
         offices: [
@@ -727,7 +730,10 @@ New benefits for companies with environmental certification (ISO 14001 or equiva
       },
       contactInfo: {
         title: "Contact Information",
-        phones: ["+506 8896-9883", "+506 6055-8006"],
+        phones: [
+          { number:"+506 8896-9883", label:"Direct line to Gustavo Monge A., CPA" },
+          { number:"+506 6055-8006", label:"Direct line to Assistants / Collaborators" },
+        ],
         emails: ["gmongea@gamacpa-asesores.com", "gamasacsa@gmail.com"],
         officesTitle: "Our Offices",
         offices: [
@@ -862,60 +868,72 @@ function Navbar({ lang, setLang, section, setSection }) {
 function HeroSection({ lang, setSection }) {
   const t = DATA[lang].hero;
   return (
-    <section style={{ minHeight:"100vh", background:`linear-gradient(135deg, ${C.navyDk} 0%, ${C.navy} 55%, ${C.navyLt} 100%)`, display:"flex", alignItems:"center", position:"relative", overflow:"hidden" }}>
-      {/* Decorative bar motif */}
-      <div style={{ position:"absolute", right:"-5%", top:"10%", opacity:0.06, transform:"rotate(-8deg)" }}>
-        <svg viewBox="0 0 300 400" style={{ width:400, height:500 }}>
-          <rect x="0" y="200" width="60" height="200" fill={C.gold}/>
-          <rect x="80" y="130" width="60" height="270" fill={C.gold}/>
-          <rect x="160" y="60" width="60" height="340" fill={C.gold}/>
-          <polygon points="220,60 280,0 280,60" fill={C.gold}/>
+    <section style={{ minHeight:"100vh", background:C.white, display:"flex", alignItems:"center", position:"relative", overflow:"hidden", borderBottom:`3px solid rgba(179,141,71,0.15)` }}>
+
+      {/* Motivo decorativo dorado — fondo claro */}
+      <div style={{ position:"absolute", right:0, top:0, bottom:0, width:"42%", background:"#f4f1eb", clipPath:"polygon(12% 0, 100% 0, 100% 100%, 0% 100%)" }} />
+      <div style={{ position:"absolute", right:"5%", top:"50%", transform:"translateY(-50%)", opacity:0.12 }}>
+        <svg viewBox="0 0 300 400" style={{ width:320, height:420 }}>
+          <rect x="0" y="200" width="55" height="200" fill={C.gold}/>
+          <rect x="75" y="120" width="55" height="280" fill={C.gold}/>
+          <rect x="150" y="50" width="55" height="350" fill={C.gold}/>
+          <polygon points="205,50 265,0 265,50" fill={C.gold}/>
         </svg>
       </div>
-      <div style={{ position:"absolute", left:"0", bottom:"0", width:"100%", height:3, background:`linear-gradient(90deg, transparent, ${C.gold}, transparent)`, opacity:0.4 }} />
+      {/* Línea dorada inferior */}
+      <div style={{ position:"absolute", left:0, bottom:0, width:"100%", height:3, background:`linear-gradient(90deg, ${C.gold}, ${C.yellow}, transparent)`, opacity:0.5 }} />
 
-      <div style={{ maxWidth:1200, margin:"0 auto", padding:"120px 5% 80px", width:"100%" }}>
-        {/* Badge */}
-        <div style={{ display:"inline-flex", alignItems:"center", gap:8, border:`1px solid rgba(179,141,71,0.4)`, padding:"6px 16px", borderRadius:2, marginBottom:32 }}>
-          <div style={{ width:6, height:6, borderRadius:"50%", background:C.gold }} />
-          <span style={{ color:C.gold, fontFamily:"'Montserrat',sans-serif", fontSize:"0.72rem", letterSpacing:"0.18em", textTransform:"uppercase", fontWeight:600 }}>{t.badge}</span>
-        </div>
+      <div style={{ maxWidth:1200, margin:"0 auto", padding:"120px 5% 80px", width:"100%", position:"relative" }}>
+        <div style={{ maxWidth:620 }}>
 
-        {/* Title */}
-        <h1 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(2.6rem,5.5vw,4.2rem)", fontWeight:700, color:C.white, lineHeight:1.12, marginBottom:28, maxWidth:700, whiteSpace:"pre-line" }}>
-          {t.title.split("\n")[0]}<br/>
-          <span style={{ background:`linear-gradient(135deg, ${C.gold}, ${C.yellow})`, WebkitBackgroundClip:"text", WebkitTextFillColor:"transparent" }}>
-            {t.title.split("\n").slice(1).join("\n")}
-          </span>
-        </h1>
+          {/* Badge */}
+          <div style={{ display:"inline-flex", alignItems:"center", gap:8, border:`1px solid rgba(179,141,71,0.45)`, background:"rgba(179,141,71,0.06)", padding:"6px 16px", borderRadius:2, marginBottom:32 }}>
+            <div style={{ width:6, height:6, borderRadius:"50%", background:C.gold }} />
+            <span style={{ color:C.gold, fontFamily:"'Montserrat',sans-serif", fontSize:"0.72rem", letterSpacing:"0.18em", textTransform:"uppercase", fontWeight:700 }}>{t.badge}</span>
+          </div>
 
-        {/* Subtitle */}
-        <p style={{ color:"rgba(255,255,255,0.72)", fontFamily:"'Montserrat',sans-serif", fontSize:"1.05rem", lineHeight:1.75, maxWidth:580, marginBottom:48, fontWeight:300 }}>
-          {t.subtitle}
-        </p>
+          {/* Título */}
+          <h1 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(2.4rem,5vw,4rem)", fontWeight:700, color:C.navy, lineHeight:1.1, marginBottom:28, maxWidth:640 }}>
+            {t.title.split("\n")[0]}<br/>
+            <span style={{ color:C.gold }}>
+              {t.title.split("\n").slice(1).join("\n")}
+            </span>
+          </h1>
 
-        {/* CTAs */}
-        <div style={{ display:"flex", gap:16, flexWrap:"wrap" }}>
-          <button onClick={() => setSection("contact")}
-            style={btn.primary}
-            onMouseEnter={e => e.target.style.opacity=0.88}
-            onMouseLeave={e => e.target.style.opacity=1}
-          >{t.cta}</button>
-          <button onClick={() => setSection("services")}
-            style={btn.outline}
-            onMouseEnter={e => { e.target.style.background=C.gold; e.target.style.color=C.navy; }}
-            onMouseLeave={e => { e.target.style.background="transparent"; e.target.style.color=C.gold; }}
-          >{t.ctaSecondary}</button>
-        </div>
+          {/* Subtítulo */}
+          <p style={{ color:"#4a4540", fontFamily:"'Montserrat',sans-serif", fontSize:"1.05rem", lineHeight:1.8, maxWidth:520, marginBottom:48, fontWeight:300 }}>
+            {t.subtitle}
+          </p>
 
-        {/* Stats bar */}
-        <div style={{ marginTop:72, paddingTop:40, borderTop:`1px solid rgba(255,255,255,0.1)`, display:"flex", gap:48, flexWrap:"wrap" }}>
-          {[["10+", lang==="es"?"Años de experiencia":"Years of experience"], ["100+", lang==="es"?"Clientes satisfechos":"Satisfied clients"], ["6", lang==="es"?"Servicios especializados":"Specialized services"], ["2", lang==="es"?"Oficinas en CR":"Offices in CR"]].map(([n,l]) => (
-            <div key={n}>
-              <div style={{ fontFamily:"'Playfair Display',serif", fontSize:"2.2rem", fontWeight:700, color:C.gold }}>{n}</div>
-              <div style={{ color:"rgba(255,255,255,0.55)", fontFamily:"'Montserrat',sans-serif", fontSize:"0.75rem", letterSpacing:"0.06em", marginTop:4 }}>{l}</div>
-            </div>
-          ))}
+          {/* CTAs */}
+          <div style={{ display:"flex", gap:16, flexWrap:"wrap" }}>
+            <button onClick={() => setSection("contact")}
+              style={btn.primary}
+              onMouseEnter={e => e.target.style.opacity=0.88}
+              onMouseLeave={e => e.target.style.opacity=1}
+            >{t.cta}</button>
+            <button onClick={() => setSection("services")}
+              style={{ ...btn.outline, color:C.navy, borderColor:C.navy }}
+              onMouseEnter={e => { e.target.style.background=C.navy; e.target.style.color=C.white; }}
+              onMouseLeave={e => { e.target.style.background="transparent"; e.target.style.color=C.navy; e.target.style.borderColor=C.navy; }}
+            >{t.ctaSecondary}</button>
+          </div>
+
+          {/* Stats bar */}
+          <div style={{ marginTop:72, paddingTop:40, borderTop:`1px solid rgba(5,30,87,0.1)`, display:"flex", gap:48, flexWrap:"wrap" }}>
+            {[["10+", lang==="es"?"Años de experiencia":"Years of experience"],
+              ["100+", lang==="es"?"Clientes satisfechos":"Satisfied clients"],
+              ["6", lang==="es"?"Servicios especializados":"Specialized services"],
+              ["2", lang==="es"?"Oficinas en Costa Rica":"Offices in Costa Rica"]
+            ].map(([n,l]) => (
+              <div key={n}>
+                <div style={{ fontFamily:"'Playfair Display',serif", fontSize:"2.2rem", fontWeight:700, color:C.navy }}>{n}</div>
+                <div style={{ width:24, height:2, background:C.gold, margin:"6px 0 8px" }} />
+                <div style={{ color:"#6b6560", fontFamily:"'Montserrat',sans-serif", fontSize:"0.75rem", letterSpacing:"0.06em" }}>{l}</div>
+              </div>
+            ))}
+          </div>
+
         </div>
       </div>
     </section>
@@ -1003,7 +1021,7 @@ function WhySection({ lang }) {
 function AboutSection({ lang }) {
   const t = DATA[lang].about;
 
-  // Equipo — 6 colaboradores placeholder (Gustavo los completará con fotos y datos reales)
+  // Equipo — 6 colaboradores placeholder
   const team = [
     { initial:"A", name: lang==="es" ? "Nombre del Colaborador" : "Team Member Name", role: lang==="es" ? "Asistente Contable" : "Accounting Assistant", bio: lang==="es" ? "Información del colaborador próximamente." : "Team member information coming soon." },
     { initial:"B", name: lang==="es" ? "Nombre del Colaborador" : "Team Member Name", role: lang==="es" ? "Asistente Contable" : "Accounting Assistant", bio: lang==="es" ? "Información del colaborador próximamente." : "Team member information coming soon." },
@@ -1072,21 +1090,44 @@ function AboutSection({ lang }) {
             </h2>
           </div>
 
-          <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(280px,1fr))", gap:24 }}>
+          {/* Fila 1 — Gustavo destacado centrado */}
+          <div style={{ display:"flex", justifyContent:"center", marginBottom:28 }}>
+            <div style={{ background:C.navy, borderRadius:2, overflow:"hidden", boxShadow:"0 6px 28px rgba(5,30,87,0.18)", width:"100%", maxWidth:380, borderTop:`3px solid ${C.gold}` }}>
+              <div style={{ height:220, background:`linear-gradient(135deg, ${C.navyDk}, ${C.navyLt})`, display:"flex", alignItems:"center", justifyContent:"center", position:"relative" }}>
+                <div style={{ width:100, height:100, borderRadius:"50%", background:`linear-gradient(135deg, ${C.gold}, ${C.goldLt})`, display:"flex", alignItems:"center", justifyContent:"center", border:`3px solid rgba(255,255,255,0.25)` }}>
+                  <span style={{ fontFamily:"'Playfair Display',serif", fontSize:"2.4rem", fontWeight:700, color:C.white }}>G</span>
+                </div>
+                <div style={{ position:"absolute", bottom:0, left:0, right:0, height:2, background:`linear-gradient(90deg, transparent, ${C.gold}, transparent)` }} />
+              </div>
+              <div style={{ padding:"28px 28px 24px" }}>
+                <div style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.2rem", fontWeight:700, color:C.white, marginBottom:4 }}>{t.cpa.name}</div>
+                <div style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.72rem", color:C.gold, fontWeight:700, letterSpacing:"0.1em", textTransform:"uppercase", marginBottom:14 }}>{t.cpa.role}</div>
+                <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.84rem", color:"rgba(255,255,255,0.68)", lineHeight:1.75 }}>
+                  {lang==="es"
+                    ? "Contador Público Autorizado y profesor universitario con especialización en NIIF para PYMES, auditoría y asesoría tributaria para el mercado costarricense."
+                    : "Certified Public Accountant and university professor specializing in IFRS for SMEs, audit and tax advisory for the Costa Rican market."}
+                </p>
+                <div style={{ marginTop:16, paddingTop:16, borderTop:`1px solid rgba(179,141,71,0.2)` }}>
+                  <a href="mailto:gmongea@gamacpa-asesores.com" style={{ color:C.gold, fontFamily:"'Montserrat',sans-serif", fontSize:"0.76rem", textDecoration:"none" }}>gmongea@gamacpa-asesores.com</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Fila 2 y 3 — 6 colaboradores en 3 columnas */}
+          <div style={{ display:"grid", gridTemplateColumns:"repeat(3, 1fr)", gap:24 }} className="team-grid">
             {team.map((m, i) => (
               <div key={i} style={{ background:C.white, borderRadius:2, overflow:"hidden", boxShadow:"0 2px 12px rgba(5,30,87,0.07)", borderTop:`3px solid ${C.gold}` }}>
-                {/* Foto placeholder — reemplazar src con ruta de foto real */}
-                <div style={{ height:200, background:`linear-gradient(135deg, ${C.navyDk}, ${C.navy})`, display:"flex", alignItems:"center", justifyContent:"center", position:"relative" }}>
-                  <div style={{ width:90, height:90, borderRadius:"50%", background:`linear-gradient(135deg, ${C.gold}, ${C.goldLt})`, display:"flex", alignItems:"center", justifyContent:"center", border:`3px solid rgba(255,255,255,0.2)` }}>
-                    <span style={{ fontFamily:"'Playfair Display',serif", fontSize:"2rem", fontWeight:700, color:C.white }}>{m.initial}</span>
+                <div style={{ height:190, background:`linear-gradient(135deg, ${C.navyDk}, ${C.navy})`, display:"flex", alignItems:"center", justifyContent:"center", position:"relative" }}>
+                  <div style={{ width:84, height:84, borderRadius:"50%", background:`linear-gradient(135deg, ${C.gold}, ${C.goldLt})`, display:"flex", alignItems:"center", justifyContent:"center", border:`3px solid rgba(255,255,255,0.2)` }}>
+                    <span style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.9rem", fontWeight:700, color:C.white }}>{m.initial}</span>
                   </div>
                   <div style={{ position:"absolute", bottom:0, left:0, right:0, height:2, background:`linear-gradient(90deg, transparent, ${C.gold}, transparent)` }} />
                 </div>
-                {/* Info */}
-                <div style={{ padding:"24px 22px" }}>
-                  <div style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.05rem", fontWeight:700, color:C.navy, marginBottom:4 }}>{m.name}</div>
-                  <div style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.72rem", color:C.gold, fontWeight:700, letterSpacing:"0.1em", textTransform:"uppercase", marginBottom:12 }}>{m.role}</div>
-                  <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.83rem", color:"#4a4540", lineHeight:1.7, fontStyle:"italic" }}>{m.bio}</p>
+                <div style={{ padding:"22px 20px" }}>
+                  <div style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.02rem", fontWeight:700, color:C.navy, marginBottom:4 }}>{m.name}</div>
+                  <div style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.7rem", color:C.gold, fontWeight:700, letterSpacing:"0.1em", textTransform:"uppercase", marginBottom:10 }}>{m.role}</div>
+                  <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.82rem", color:"#4a4540", lineHeight:1.7, fontStyle:"italic" }}>{m.bio}</p>
                 </div>
               </div>
             ))}
@@ -1284,8 +1325,9 @@ function ContactSection({ lang }) {
                   {lang==="es" ? "Teléfonos" : "Phone Numbers"}
                 </div>
                 {t.contactInfo.phones.map((p,i) => (
-                  <div key={i} style={{ marginBottom:4 }}>
-                    <a href={`tel:${p.replace(/\s/g,"")}`} style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.95rem", color:C.gold, textDecoration:"none", fontWeight:600 }}>{p}</a>
+                  <div key={i} style={{ marginBottom:10 }}>
+                    <a href={`tel:${p.number.replace(/\s/g,"")}`} style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"1rem", color:C.gold, textDecoration:"none", fontWeight:700, display:"block" }}>{p.number}</a>
+                    <span style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.76rem", color:"#6b6560", letterSpacing:"0.04em" }}>{p.label}</span>
                   </div>
                 ))}
               </div>
@@ -1432,11 +1474,15 @@ export default function App() {
         * { margin:0; padding:0; box-sizing:border-box; }
         html { scroll-behavior:smooth; }
         body { background:#f8f7f4; }
-        @media(max-width:768px){
+        @media(max-width:900px){
           .nav-desktop{display:none!important;}
           .nav-mobile-btn{display:flex!important;}
           .about-grid{grid-template-columns:1fr!important;}
           .contact-grid{grid-template-columns:1fr!important;}
+          .team-grid{grid-template-columns:1fr 1fr!important;}
+        }
+        @media(max-width:560px){
+          .team-grid{grid-template-columns:1fr!important;}
         }
         button:focus{outline:none;}
         a:focus{outline:none;}
