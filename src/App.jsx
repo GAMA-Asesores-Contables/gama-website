@@ -1349,25 +1349,24 @@ function ServicesSection({ lang }) {
 function WhySection({ lang }) {
   const t = DATA[lang].why;
   return (
-    <section style={{ padding:"100px 5%", background:C.navy }}>
+    <section style={{ padding:"100px 5%", background:C.white }}>
       <div style={{ maxWidth:1200, margin:"0 auto" }}>
         <div style={{ marginBottom:72, textAlign:"center" }}>
           <p style={{ color:C.gold, fontFamily:"'Montserrat',sans-serif", fontSize:"0.75rem", letterSpacing:"0.2em", textTransform:"uppercase", fontWeight:700, marginBottom:12 }}>{t.label}</p>
-          <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(1.9rem,3.5vw,2.8rem)", color:C.white, fontWeight:700 }}>{t.title}</h2>
+          <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(1.9rem,3.5vw,2.8rem)", color:C.navy, fontWeight:700 }}>{t.title}</h2>
         </div>
 
         <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(240px,1fr))", gap:40 }}>
           {t.items.map((item,i) => (
-            <div key={i} style={{ borderTop:`2px solid rgba(179,141,71,0.3)`, paddingTop:28 }}>
-              <div style={{ fontFamily:"'Playfair Display',serif", fontSize:"2.8rem", fontWeight:700, color:"rgba(179,141,71,0.25)", marginBottom:16, lineHeight:1 }}>{item.num}</div>
-              <h3 style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.2rem", color:C.white, fontWeight:700, marginBottom:14 }}>{item.title}</h3>
-              <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.86rem", color:"rgba(255,255,255,0.62)", lineHeight:1.8 }}>{item.text}</p>
+            <div key={i} style={{ borderTop:`2px solid ${C.gold}`, paddingTop:28 }}>
+              <div style={{ fontFamily:"'Playfair Display',serif", fontSize:"2.8rem", fontWeight:700, color:"rgba(179,141,71,0.18)", marginBottom:16, lineHeight:1 }}>{item.num}</div>
+              <h3 style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.2rem", color:C.navy, fontWeight:700, marginBottom:14 }}>{item.title}</h3>
+              <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.86rem", color:"#4a4540", lineHeight:1.8 }}>{item.text}</p>
             </div>
           ))}
         </div>
 
-        {/* Gold divider */}
-        <div style={{ marginTop:72, height:1, background:`linear-gradient(90deg, transparent, ${C.gold}, transparent)`, opacity:0.4 }} />
+        <div style={{ marginTop:72, height:1, background:`linear-gradient(90deg, transparent, ${C.gold}, transparent)`, opacity:0.35 }} />
       </div>
     </section>
   );
@@ -1737,19 +1736,19 @@ function ContactSection({ lang }) {
 /* ── TESTIMONIALS ── */
 function TestimonialsSection({ lang }) {
   const items = [
-    { name:"Ricardo Jiménez", company:"Shaka Surf Camp S.A.", stars:5,
+    { name:"Michael Bienz", company:"Shaka Surf Camp S.A.", stars:5,
       text: lang==="es"
         ? "GAMA Asesores transformó completamente nuestra gestión financiera. Pasamos de tener registros desordenados a estados financieros bajo NIIF que nuestro banco acepta sin problema para trámites de crédito."
         : "GAMA Advisors completely transformed our financial management. We went from disorganized records to IFRS financial statements that our bank accepts without issues for credit applications." },
-    { name:"María Fernanda Solís", company:"Soltara Healing Center S.R.L.", stars:5,
+    { name:"Ezio Cabalceta Chaves", company:"Soltara Healing Center S.R.L.", stars:5,
       text: lang==="es"
         ? "Como empresa internacional necesitábamos un contador que entendiera tanto la normativa costarricense como los requerimientos de nuestros socios extranjeros. Gustavo y su equipo cumplen ambas condiciones con excelencia."
         : "As an international company we needed an accountant who understood both Costa Rican regulations and our foreign partners' requirements. Gustavo and his team excel at both." },
-    { name:"Carlos Faingold", company:"FAINGOLDS S.R.L.", stars:5,
+    { name:"Naftali Dani Assado", company:"Grupo Empresarial Assado y Bernstein", stars:5,
       text: lang==="es"
         ? "La atención personalizada y la disponibilidad de Gustavo son excepcionales. Siempre responde rápido y con respuestas claras. Haber encontrado un CPA de esta calidad ha sido un alivio enorme para nuestra empresa."
         : "Gustavo's personalized service and availability are exceptional. He always responds quickly and clearly. Finding a CPA of this quality has been a huge relief for our company." },
-    { name:"Alejandra Mora", company: lang==="es" ? "Profesional independiente" : "Independent professional", stars:5,
+    { name:"Lilliana García Barrantes", company: "Abogada LG Privacy Legal", stars:5,
       text: lang==="es"
         ? "Llevaba años declarando de forma incorrecta sin saberlo. Gracias a GAMA Asesores regularicé mi situación tributaria y ahora tengo la tranquilidad de cumplir correctamente. El costo de la asesoría se recuperó en el primer año."
         : "For years I had been filing incorrectly without knowing it. Thanks to GAMA Advisors I regularized my tax situation. The advisory cost was recovered in the first year." },
@@ -1799,12 +1798,12 @@ function MapSection({ lang }) {
     {
       name: lang==="es" ? "Oficina Puntarenas" : "Puntarenas Office",
       addr: lang==="es" ? "Residencial Bulevar del Sol, Etapa IV, Barranca, Puntarenas" : "Residencial Bulevar del Sol, Stage IV, Barranca, Puntarenas",
-      mapSrc: "https://maps.google.com/maps?q=Barranca,Puntarenas,Costa+Rica&z=14&output=embed",
+      mapSrc: "https://maps.google.com/maps?q=9.97055,-84.72782&z=17&output=embed",
     },
     {
       name: lang==="es" ? "Oficina Peninsular" : "Peninsula Office",
       addr: lang==="es" ? "Frente a la Plaza de Fútbol, 2° piso Súper El Mango, Santa Teresa, Cóbano" : "Across from the Soccer Field, 2nd floor Súper El Mango, Santa Teresa, Cóbano",
-      mapSrc: "https://maps.google.com/maps?q=Santa+Teresa,Cobano,Puntarenas,Costa+Rica&z=14&output=embed",
+      mapSrc: "https://maps.google.com/maps?q=9.63883,-85.16311&z=17&output=embed",
     },
   ];
 
