@@ -1734,60 +1734,249 @@ function ContactSection({ lang }) {
 
 /* ── FOOTER ── */
 /* ── TESTIMONIALS ── */
+/* ─── SUPABASE CONFIG ───────────────────────────────────────────────────────
+   Reemplazar con tus valores reales después de crear el proyecto en Supabase.
+   Ver instrucciones de configuración al final del archivo.
+   ─────────────────────────────────────────────────────────────────────────── */
+const SB_URL = "https://nsoheqglajgrprqwddaq.supabase.co";
+const SB_KEY = "sb_publishable_VL-5kiCXe-grainH5QbvVw_uGeS82th";
+const SB_CONFIGURED = SB_URL !== "YOUR_SUPABASE_URL";
+
+/* Testimonios fijos (siempre visibles mientras Supabase no esté configurado
+   o como respaldo si la carga falla) */
+const STATIC_TESTIMONIALS = [
+  { id:"s1", name:"Michael Bienz", company:"Shaka Surf Camp S.A.", stars:5, lang:"es",
+    text:"GAMA Asesores transformó completamente nuestra gestión financiera. Pasamos de tener registros desordenados a estados financieros bajo NIIF que nuestro banco acepta sin problema para trámites de crédito." },
+  { id:"s1en", name:"Michael Bienz", company:"Shaka Surf Camp S.A.", stars:5, lang:"en",
+    text:"GAMA Advisors completely transformed our financial management. We went from disorganized records to IFRS financial statements that our bank accepts without issues for credit applications." },
+  { id:"s2", name:"Ezio Cabalceta Chaves", company:"Soltara Healing Center S.R.L.", stars:5, lang:"es",
+    text:"Como empresa internacional necesitábamos un contador que entendiera tanto la normativa costarricense como los requerimientos de nuestros socios extranjeros. Gustavo y su equipo cumplen ambas condiciones con excelencia." },
+  { id:"s2en", name:"Ezio Cabalceta Chaves", company:"Soltara Healing Center S.R.L.", stars:5, lang:"en",
+    text:"As an international company we needed an accountant who understood both Costa Rican regulations and our foreign partners' requirements. Gustavo and his team excel at both." },
+  { id:"s3", name:"Naftali Dani Assado", company:"Grupo Empresarial Assado y Bernstein", stars:5, lang:"es",
+    text:"La atención personalizada y la disponibilidad de Gustavo son excepcionales. Siempre responde rápido y con respuestas claras. Haber encontrado un CPA de esta calidad ha sido un alivio enorme para nuestra empresa." },
+  { id:"s3en", name:"Naftali Dani Assado", company:"Grupo Empresarial Assado y Bernstein", stars:5, lang:"en",
+    text:"Gustavo's personalized service and availability are exceptional. He always responds quickly and clearly. Finding a CPA of this quality has been a huge relief for our company." },
+  { id:"s4", name:"Lilliana García Barrantes", company:"Abogada LG Privacy Legal", stars:5, lang:"es",
+    text:"Llevaba años declarando de forma incorrecta sin saberlo. Gracias a GAMA Asesores regularicé mi situación tributaria y ahora tengo la tranquilidad de cumplir correctamente. El costo de la asesoría se recuperó en el primer año." },
+  { id:"s4en", name:"Lilliana García Barrantes", company:"Abogada LG Privacy Legal", stars:5, lang:"en",
+    text:"For years I had been filing incorrectly without knowing it. Thanks to GAMA Advisors I regularized my tax situation. The advisory cost was recovered in the first year." },
+];
+
 function TestimonialsSection({ lang }) {
-  const items = [
-    { name:"Michael Bienz", company:"Shaka Surf Camp S.A.", stars:5,
-      text: lang==="es"
-        ? "GAMA Asesores transformó completamente nuestra gestión financiera. Pasamos de tener registros desordenados a estados financieros bajo NIIF que nuestro banco acepta sin problema para trámites de crédito."
-        : "GAMA Advisors completely transformed our financial management. We went from disorganized records to IFRS financial statements that our bank accepts without issues for credit applications." },
-    { name:"Ezio Cabalceta Chaves", company:"Soltara Healing Center S.R.L.", stars:5,
-      text: lang==="es"
-        ? "Como empresa internacional necesitábamos un contador que entendiera tanto la normativa costarricense como los requerimientos de nuestros socios extranjeros. Gustavo y su equipo cumplen ambas condiciones con excelencia."
-        : "As an international company we needed an accountant who understood both Costa Rican regulations and our foreign partners' requirements. Gustavo and his team excel at both." },
-    { name:"Naftali Dani Assado", company:"Grupo Empresarial Assado y Bernstein", stars:5,
-      text: lang==="es"
-        ? "La atención personalizada y la disponibilidad de Gustavo son excepcionales. Siempre responde rápido y con respuestas claras. Haber encontrado un CPA de esta calidad ha sido un alivio enorme para nuestra empresa."
-        : "Gustavo's personalized service and availability are exceptional. He always responds quickly and clearly. Finding a CPA of this quality has been a huge relief for our company." },
-    { name:"Lilliana García Barrantes", company: "Abogada LG Privacy Legal", stars:5,
-      text: lang==="es"
-        ? "Llevaba años declarando de forma incorrecta sin saberlo. Gracias a GAMA Asesores regularicé mi situación tributaria y ahora tengo la tranquilidad de cumplir correctamente. El costo de la asesoría se recuperó en el primer año."
-        : "For years I had been filing incorrectly without knowing it. Thanks to GAMA Advisors I regularized my tax situation. The advisory cost was recovered in the first year." },
-  ];
-  const stars = (n) => "★".repeat(n);
+  const [dynItems, setDynItems] = useState([]);
+  const [loadDone, setLoadDone] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [form, setForm] = useState({ name:"", company:"", stars:5, text:"" });
+  const [submitStatus, setSubmitStatus] = useState("idle"); // idle | sending | ok | error
+
+  /* Cargar testimonios aprobados desde Supabase */
+  useEffect(() => {
+    if (!SB_CONFIGURED) { setLoadDone(true); return; }
+    fetch(`${SB_URL}/rest/v1/testimonials?approved=eq.true&order=created_at.desc`, {
+      headers: { apikey: SB_KEY, Authorization: `Bearer ${SB_KEY}` },
+    })
+      .then(r => r.json())
+      .then(data => { if (Array.isArray(data)) setDynItems(data); })
+      .catch(() => {})
+      .finally(() => setLoadDone(true));
+  }, []);
+
+  /* Mezclar: primero los dinámicos del idioma activo, luego los estáticos del idioma activo */
+  const dynFiltered = dynItems.filter(t => (t.lang ?? "es") === lang);
+  const staticFiltered = STATIC_TESTIMONIALS.filter(t => t.lang === lang);
+  const allItems = [...dynFiltered, ...staticFiltered];
+
+  const stars = (n) => "★".repeat(n) + "☆".repeat(5 - n);
+
+  /* Enviar nuevo testimonio */
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!SB_CONFIGURED) { setSubmitStatus("ok"); return; }
+    setSubmitStatus("sending");
+    try {
+      const res = await fetch(`${SB_URL}/rest/v1/testimonials`, {
+        method: "POST",
+        headers: {
+          apikey: SB_KEY,
+          Authorization: `Bearer ${SB_KEY}`,
+          "Content-Type": "application/json",
+          Prefer: "return=minimal",
+        },
+        body: JSON.stringify({ ...form, lang, approved: false }),
+      });
+      setSubmitStatus(res.ok ? "ok" : "error");
+      if (res.ok) setForm({ name:"", company:"", stars:5, text:"" });
+    } catch { setSubmitStatus("error"); }
+  };
+
+  const inputSt = {
+    width:"100%", padding:"11px 14px", border:"1px solid rgba(255,255,255,0.15)",
+    borderRadius:2, fontFamily:"'Montserrat',sans-serif", fontSize:"0.88rem",
+    color:C.white, background:"rgba(255,255,255,0.07)", boxSizing:"border-box",
+    outline:"none",
+  };
 
   return (
-    <section style={{ padding:"100px 5%", background:C.navy }}>
-      <div style={{ maxWidth:1200, margin:"0 auto" }}>
-        <div style={{ textAlign:"center", marginBottom:64 }}>
-          <p style={{ color:C.gold, fontFamily:"'Montserrat',sans-serif", fontSize:"0.75rem", letterSpacing:"0.2em", textTransform:"uppercase", fontWeight:700, marginBottom:12 }}>
-            {lang==="es" ? "Testimonios" : "Testimonials"}
-          </p>
-          <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(1.9rem,3.5vw,2.6rem)", color:C.white, fontWeight:700 }}>
-            {lang==="es" ? "Lo que Dicen Nuestros Clientes" : "What Our Clients Say"}
-          </h2>
-        </div>
+    <>
+      <section style={{ padding:"100px 5%", background:C.navy }}>
+        <div style={{ maxWidth:1200, margin:"0 auto" }}>
 
-        <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(280px,1fr))", gap:24 }}>
-          {items.map((item, i) => (
-            <div key={i} style={{ background:"rgba(255,255,255,0.05)", border:"1px solid rgba(179,141,71,0.2)", padding:"32px 28px", position:"relative" }}>
-              {/* Comilla decorativa */}
-              <div style={{ position:"absolute", top:20, right:24, fontFamily:"Georgia,serif", fontSize:"5rem", color:"rgba(179,141,71,0.12)", lineHeight:1 }}>"</div>
-              {/* Estrellas */}
-              <div style={{ color:C.gold, fontSize:"1.1rem", marginBottom:16, letterSpacing:2 }}>{stars(item.stars)}</div>
-              {/* Texto */}
-              <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.88rem", color:"rgba(255,255,255,0.75)", lineHeight:1.85, marginBottom:24, fontStyle:"italic" }}>
-                "{item.text}"
-              </p>
-              {/* Autor */}
-              <div style={{ borderTop:`1px solid rgba(179,141,71,0.2)`, paddingTop:18 }}>
-                <div style={{ fontFamily:"'Playfair Display',serif", fontSize:"0.98rem", fontWeight:700, color:C.white }}>{item.name}</div>
-                <div style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.74rem", color:C.gold, letterSpacing:"0.06em", marginTop:3 }}>{item.company}</div>
+          {/* Header */}
+          <div style={{ textAlign:"center", marginBottom:64 }}>
+            <p style={{ color:C.gold, fontFamily:"'Montserrat',sans-serif", fontSize:"0.75rem", letterSpacing:"0.2em", textTransform:"uppercase", fontWeight:700, marginBottom:12 }}>
+              {lang==="es" ? "Testimonios" : "Testimonials"}
+            </p>
+            <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(1.9rem,3.5vw,2.6rem)", color:C.white, fontWeight:700, marginBottom:8 }}>
+              {lang==="es" ? "Lo que Dicen Nuestros Clientes" : "What Our Clients Say"}
+            </h2>
+            <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.86rem", color:"rgba(255,255,255,0.45)", marginTop:8 }}>
+              {lang==="es" ? "Experiencias reales de empresas y profesionales que confían en GAMA Asesores." : "Real experiences from companies and professionals who trust GAMA Advisors."}
+            </p>
+          </div>
+
+          {/* Grid de testimonios */}
+          <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(280px,1fr))", gap:24, marginBottom:52 }}>
+            {allItems.map((item, i) => (
+              <div key={item.id ?? i} style={{ background:"rgba(255,255,255,0.05)", border:"1px solid rgba(179,141,71,0.2)", padding:"32px 28px", position:"relative" }}>
+                <div style={{ position:"absolute", top:20, right:24, fontFamily:"Georgia,serif", fontSize:"5rem", color:"rgba(179,141,71,0.10)", lineHeight:1 }}>"</div>
+                <div style={{ color:C.gold, fontSize:"1rem", marginBottom:14, letterSpacing:2 }}>{stars(item.stars ?? 5)}</div>
+                <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.88rem", color:"rgba(255,255,255,0.75)", lineHeight:1.85, marginBottom:24, fontStyle:"italic" }}>
+                  "{item.text}"
+                </p>
+                <div style={{ borderTop:`1px solid rgba(179,141,71,0.2)`, paddingTop:18 }}>
+                  <div style={{ fontFamily:"'Playfair Display',serif", fontSize:"0.98rem", fontWeight:700, color:C.white }}>{item.name}</div>
+                  <div style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.74rem", color:C.gold, letterSpacing:"0.06em", marginTop:3 }}>{item.company}</div>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+
+          {/* Botón para dejar testimonio */}
+          <div style={{ textAlign:"center" }}>
+            <button onClick={() => { setShowModal(true); setSubmitStatus("idle"); }}
+              style={{ ...btn.outline, padding:"14px 40px" }}
+              onMouseEnter={e => { e.target.style.background=C.gold; e.target.style.color=C.navy; e.target.style.borderColor=C.gold; }}
+              onMouseLeave={e => { e.target.style.background="transparent"; e.target.style.color=C.gold; e.target.style.borderColor=C.gold; }}
+            >
+              {lang==="es" ? "✍ Compartir mi Experiencia" : "✍ Share My Experience"}
+            </button>
+            <p style={{ marginTop:14, fontFamily:"'Montserrat',sans-serif", fontSize:"0.76rem", color:"rgba(255,255,255,0.3)", fontStyle:"italic" }}>
+              {lang==="es"
+                ? "Los comentarios son revisados antes de publicarse."
+                : "Comments are reviewed before being published."}
+            </p>
+          </div>
+
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* ── MODAL ── */}
+      {showModal && (
+        <div style={{ position:"fixed", inset:0, zIndex:500, display:"flex", alignItems:"center", justifyContent:"center", padding:"20px" }}
+          onClick={e => { if (e.target === e.currentTarget) setShowModal(false); }}
+        >
+          {/* Overlay */}
+          <div style={{ position:"absolute", inset:0, background:"rgba(3,18,46,0.88)", backdropFilter:"blur(6px)" }} onClick={() => setShowModal(false)} />
+
+          {/* Card */}
+          <div style={{ position:"relative", background:C.navyDk, border:`1px solid rgba(179,141,71,0.3)`, borderTop:`3px solid ${C.gold}`, padding:"44px 40px", maxWidth:520, width:"100%", borderRadius:2, zIndex:1 }}>
+
+            {/* Cerrar */}
+            <button onClick={() => setShowModal(false)}
+              style={{ position:"absolute", top:16, right:20, background:"none", border:"none", color:"rgba(255,255,255,0.45)", fontSize:"1.4rem", cursor:"pointer", lineHeight:1 }}>✕</button>
+
+            {submitStatus === "ok" ? (
+              <div style={{ textAlign:"center", padding:"24px 0" }}>
+                <div style={{ fontSize:"3rem", marginBottom:16 }}>✅</div>
+                <h3 style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.4rem", color:C.white, marginBottom:12 }}>
+                  {lang==="es" ? "¡Gracias por su aporte!" : "Thank you for your feedback!"}
+                </h3>
+                <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.88rem", color:"rgba(255,255,255,0.6)", lineHeight:1.75 }}>
+                  {lang==="es"
+                    ? "Su comentario fue recibido y será revisado por nuestro equipo. Si es aprobado, aparecerá en esta sección próximamente."
+                    : "Your comment has been received and will be reviewed by our team. If approved, it will appear in this section soon."}
+                </p>
+                <button onClick={() => setShowModal(false)} style={{ ...btn.primary, marginTop:24 }}>
+                  {lang==="es" ? "Cerrar" : "Close"}
+                </button>
+              </div>
+            ) : (
+              <>
+                <p style={{ color:C.gold, fontFamily:"'Montserrat',sans-serif", fontSize:"0.72rem", letterSpacing:"0.18em", textTransform:"uppercase", fontWeight:700, marginBottom:8 }}>
+                  {lang==="es" ? "Dejar mi Testimonio" : "Leave My Testimonial"}
+                </p>
+                <h3 style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.35rem", color:C.white, fontWeight:700, marginBottom:6 }}>
+                  {lang==="es" ? "¿Cómo fue su experiencia?" : "How was your experience?"}
+                </h3>
+                <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.8rem", color:"rgba(255,255,255,0.45)", marginBottom:28 }}>
+                  {lang==="es" ? "Su comentario será revisado antes de publicarse." : "Your comment will be reviewed before publishing."}
+                </p>
+
+                <form onSubmit={handleSubmit}>
+                  <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:14, marginBottom:14 }}>
+                    <div>
+                      <label style={{ display:"block", fontFamily:"'Montserrat',sans-serif", fontSize:"0.72rem", color:"rgba(255,255,255,0.6)", fontWeight:600, letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:5 }}>
+                        {lang==="es" ? "Nombre *" : "Name *"}
+                      </label>
+                      <input style={inputSt} required value={form.name}
+                        onChange={e => setForm(p=>({...p,name:e.target.value}))}
+                        onFocus={e=>e.target.style.borderColor=C.gold}
+                        onBlur={e=>e.target.style.borderColor="rgba(255,255,255,0.15)"} />
+                    </div>
+                    <div>
+                      <label style={{ display:"block", fontFamily:"'Montserrat',sans-serif", fontSize:"0.72rem", color:"rgba(255,255,255,0.6)", fontWeight:600, letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:5 }}>
+                        {lang==="es" ? "Empresa / Cargo" : "Company / Role"}
+                      </label>
+                      <input style={inputSt} value={form.company}
+                        onChange={e => setForm(p=>({...p,company:e.target.value}))}
+                        onFocus={e=>e.target.style.borderColor=C.gold}
+                        onBlur={e=>e.target.style.borderColor="rgba(255,255,255,0.15)"} />
+                    </div>
+                  </div>
+
+                  {/* Estrellas interactivas */}
+                  <div style={{ marginBottom:14 }}>
+                    <label style={{ display:"block", fontFamily:"'Montserrat',sans-serif", fontSize:"0.72rem", color:"rgba(255,255,255,0.6)", fontWeight:600, letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:8 }}>
+                      {lang==="es" ? "Calificación" : "Rating"}
+                    </label>
+                    <div style={{ display:"flex", gap:6 }}>
+                      {[1,2,3,4,5].map(n => (
+                        <span key={n} onClick={() => setForm(p=>({...p,stars:n}))}
+                          style={{ fontSize:"1.6rem", cursor:"pointer", color: n <= form.stars ? C.gold : "rgba(255,255,255,0.2)", transition:"color .15s" }}>★</span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div style={{ marginBottom:22 }}>
+                    <label style={{ display:"block", fontFamily:"'Montserrat',sans-serif", fontSize:"0.72rem", color:"rgba(255,255,255,0.6)", fontWeight:600, letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:5 }}>
+                      {lang==="es" ? "Su Comentario *" : "Your Comment *"}
+                    </label>
+                    <textarea rows={4} required style={{...inputSt, resize:"vertical"}} value={form.text}
+                      onChange={e => setForm(p=>({...p,text:e.target.value}))}
+                      onFocus={e=>e.target.style.borderColor=C.gold}
+                      onBlur={e=>e.target.style.borderColor="rgba(255,255,255,0.15)"} />
+                  </div>
+
+                  {submitStatus==="error" && (
+                    <div style={{ background:"rgba(220,53,69,0.15)", border:"1px solid rgba(220,53,69,0.4)", padding:"10px 14px", borderRadius:2, fontFamily:"'Montserrat',sans-serif", fontSize:"0.83rem", color:"#ff8a94", marginBottom:16 }}>
+                      {lang==="es" ? "Error al enviar. Por favor intente de nuevo." : "Error sending. Please try again."}
+                    </div>
+                  )}
+
+                  <button type="submit" disabled={submitStatus==="sending"}
+                    style={{ ...btn.primary, width:"100%", opacity: submitStatus==="sending" ? 0.7 : 1 }}>
+                    {submitStatus==="sending"
+                      ? (lang==="es" ? "Enviando..." : "Sending...")
+                      : (lang==="es" ? "Enviar Testimonio" : "Submit Testimonial")}
+                  </button>
+                </form>
+              </>
+            )}
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 
