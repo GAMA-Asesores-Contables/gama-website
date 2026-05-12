@@ -534,11 +534,172 @@ I also serve as a university professor in accounting, costs and accounting infor
       readMore: "Read article →",
       back: "← Back to Blog",
       articles: [
-        { id:1, category:"TRIBU-CR", date:"May 10, 2026", title:"TRIBU-CR: Complete guide to electronic taxation 2026", summary:"Everything you need to know about the mandatory electronic declaration system: deadlines, technical requirements, common mistakes and how to avoid penalties.", content:"[Same structure as Spanish - full English version]" },
-        { id:2, category:"VAT", date:"May 8, 2026", title:"VAT in Costa Rica: Declaration, calculation and updated obligations", summary:"Current rates, exemptions, calculation of tax debit and credit, and how to correctly submit your monthly declaration to the Tax Administration.", content:"" },
-        { id:3, category:"Income", date:"May 5, 2026", title:"Capital Income vs. Business Income: Differences and tax strategies", summary:"Correct classification of your income can make a significant difference in your tax burden. Understand the distinction, applicable rates and legal planning strategies.", content:"" },
-        { id:4, category:"IFRS", date:"May 2, 2026", title:"IFRS for SMEs: Step-by-step implementation in your company", summary:"Practical guide to the complete implementation process, main changes versus traditional accounting, realistic timeline and impact on your financial statements.", content:"" },
-        { id:5, category:"Regulations", date:"April 28, 2026", title:"Tax reform 2026: Changes that impact your business", summary:"The 2026 regulatory changes in Costa Rica introduce new invoicing obligations, rate modifications, and the new beneficial owners report (CIF-BB). Know what you must do.", content:"" },
+        {
+          id:1, category:"TRIBU-CR", date:"May 10, 2026",
+          title:"TRIBU-CR: Complete guide to electronic taxation 2026",
+          summary:"Everything you need to know about the mandatory electronic declaration system: deadlines, technical requirements, common mistakes and how to avoid penalties.",
+          content:`TRIBU-CR (Costa Rica's Electronic Taxation System) is the mandatory platform through which all companies must submit their tax returns to the General Tax Directorate (DGT) of Costa Rica.
+
+## What is TRIBU-CR?
+
+Since 2018, TRIBU-CR replaced paper formats and modernized tax compliance. It is mandatory for all legal entities, natural persons with commercial activities, and organizations that generate income. Exceptions are limited and require special processing with the DGT.
+
+## Filing deadlines by type of contributor
+
+Normal contributors must file within 15 days after the end of the tax month. Large contributors follow a specific schedule published by the DGT. Simplified regime contributors have quarterly deadlines.
+
+Non-compliance generates interest (1% per month) and fines on the owed tax.
+
+## Technical requirements
+
+To operate in TRIBU-CR you need a digital certificate from the ACCV (Costa Rica Certification Authority), reliable internet access, accounting software compatible with the platform, and registered user credentials.
+
+## Step by step for your declaration
+
+1. Verify that your digital certificate is valid
+2. Prepare tax information for the period (income, expenses, withholdings)
+3. Generate the file in your accounting system
+4. Digitally sign with your certificate
+5. Transmit to TRIBU-CR and save the receipt
+
+## Common mistakes to avoid
+
+The most frequent error is filing with an expired certificate, which causes automatic rejection. Inconsistencies between declared data and bank records are also common, as is failing to keep transmission receipts.
+
+## Penalties for non-compliance
+
+Late filing generates a monthly penalty of 1% on the tax owed. Omission of declaration can generate fines of up to 50% of the owed tax, plus interest. In serious and repeated cases, the DGT can order business closure.
+
+At GAMA Advisors we comprehensively manage your TRIBU-CR compliance so you can focus on your business.`,
+        },
+        {
+          id:2, category:"VAT", date:"May 8, 2026",
+          title:"VAT in Costa Rica: Declaration, calculation and updated obligations",
+          summary:"Current rates, exemptions, calculation of tax debit and credit, and how to correctly submit your monthly declaration to the Tax Administration.",
+          content:`Value Added Tax (VAT) is the highest-revenue tax obligation in Costa Rica. Although it is a tax paid by the final consumer, companies are responsible for collecting and correctly declaring it.
+
+## Current VAT rates
+
+The general rate is 13%, applicable to most goods and services. A reduced rate of 4% applies to medicines, some basic foods and agricultural products. Certain special operations have a rate of 1%.
+
+## Exempt operations
+
+Not all operations are subject to VAT. Exempt operations include: education services from authorized institutions, medical and dental services, financial services (bank fees, insurance), residential rental, and exports of goods and services.
+
+## How the debit and credit mechanism works
+
+VAT Debit is the tax you collect from your customers (13% on taxable sales). VAT Credit is the tax you paid when purchasing materials or services for your business, supported by valid invoice. The difference is the VAT to be paid to the State.
+
+If your credit exceeds your debit, you have a balance in your favor that you can carry forward or request as a refund.
+
+## Monthly declaration: process
+
+You must file your declaration before the 15th of the month following the declared period. This requires compiling sales (taxable, exempt, and non-subject), purchases with valid invoice, and calculating the difference. Filing is done in TRIBU-CR.
+
+## Errors that generate fines
+
+Not documenting purchases with an authorized invoice prevents deducting the tax credit. Filing after the deadline generates a monthly fine of 1%. Including personal expenses as business deductions is grounds for tax adjustment and penalty.
+
+## Mandatory documentation
+
+Every purchase generating a tax credit must be supported by an electronic invoice correctly issued by the supplier, including your company's data. Keep digital backups for at least 5 years.`,
+        },
+        {
+          id:3, category:"Income", date:"May 5, 2026",
+          title:"Capital Income vs. Business Income: Differences and tax strategies",
+          summary:"Correct classification of your income can make a significant difference in your tax burden. Understand the distinction, applicable rates and legal planning strategies.",
+          content:`In Costa Rica, two categories of income coexist with different tax treatments: capital income (15-18%) and business income (up to 25%). Incorrectly classifying your income can be costly, or deprive you of a legitimate tax advantage.
+
+## What is capital income?
+
+It is the gain obtained from the sale or disposal of assets (properties, stocks, bonds, vehicles) held without original commercial intent to sell. It also includes interest and dividends from financial investments.
+
+Classic examples: selling land purchased as a long-term investment, collecting interest on certificates of deposit, or selling shares in a company you invested in.
+
+## What is business income?
+
+It is the gain derived from regular commercial operations: the result of your business after deducting costs and operating expenses. It is the income from your company or profession.
+
+Examples: profits from your commercial company, income as an independent professional, gains from a service business.
+
+## Tax rates: the key difference
+
+Capital income is taxed at 15% (and 18% from 2026 for some assets). Business income is taxed up to 25% for companies, plus VAT and withholding obligations.
+
+If you obtain ₡10M in gain, the difference between classifying it as capital (₡1.5M-1.8M) or business (₡2.5M) can be substantial.
+
+## How is your income classified?
+
+Classification depends on the habitual and professional character of the activity. If you sell a property in isolation and it is not part of your regular business, it is capital income. If you buy and sell properties regularly as your main activity, the DGT may classify it as business income.
+
+## Legal tax planning strategies
+
+Always document your intention when acquiring an asset. If it is a long-term investment, keep a record. Plan the timing of sales with tax criteria. Consult before selling significant assets. Optimization must be done before the transaction, not after.`,
+        },
+        {
+          id:4, category:"IFRS", date:"May 2, 2026",
+          title:"IFRS for SMEs: Step-by-step implementation in your company",
+          summary:"Practical guide to the complete implementation process, main changes versus traditional accounting, realistic timeline and impact on your financial statements.",
+          content:`International Financial Reporting Standards for Small and Medium Entities (IFRS for SMEs) are not optional in Costa Rica. They have been mandatory since 2011. If you still operate under traditional accounting, this guide shows you how to make the transition correctly.
+
+## Why are they mandatory?
+
+The Costa Rican Public Accountants Association officially established in 2010 that all companies must prepare their financial statements under IFRS for SMEs. Banks, SUGEF and other regulatory entities require IFRS-compliant statements to evaluate credit applications and operations.
+
+## Main changes versus traditional accounting
+
+In revenue recognition, under IFRS income is recorded when the customer obtains control of the good or service (not necessarily when the invoice is issued). This especially affects long-term projects and contracts.
+
+Depreciation of fixed assets must be based on the actual useful life of each asset in your specific business, not generic rates. A computer may have a 3-year useful life in a technology-intensive company, or 5 years in another.
+
+Financial statements under IFRS must include: Statement of Financial Position, Income Statement, Statement of Changes in Equity, Cash Flow Statement, and detailed Notes. The level of disclosure required in the notes is significantly greater.
+
+## Implementation process in 7 steps
+
+The recommended process includes: gap analysis (identifying differences between your current situation and IFRS requirements), team training, design of new documented accounting policies, conversion of opening balances as of January 1, accounting system configuration, reprocessing of period operations, and preparation of notes to financial statements.
+
+## Realistic timeline
+
+With dedicated professional advice, implementation takes between 4 and 6 weeks for a medium-sized company with organized records. Companies with disorganized records or fixed assets without an updated list may require 10-12 weeks.
+
+## Impact on your financial statements
+
+It is normal for equity to change when implementing IFRS. Adjustments in depreciation, recognition of provisions, and inventory changes generate differences. Inform your banks and shareholders in advance to avoid misinterpretations of the changes.`,
+        },
+        {
+          id:5, category:"Regulations", date:"April 28, 2026",
+          title:"Tax reform 2026: Changes that impact your business",
+          summary:"The 2026 regulatory changes in Costa Rica introduce new invoicing obligations, rate modifications, and the new beneficial owners report (CIF-BB). Know what you must do.",
+          content:`The 2026 tax reform modernizes Costa Rican tax administration and introduces new obligations for companies of all sizes. Ignoring them has a direct cost in penalties.
+
+## Electronic invoicing 100% mandatory
+
+Starting June 30, 2026, every invoice must be electronic and transmitted to TRIBU-CR within 48 hours. SMEs still using paper invoices have until that date to update.
+
+If you do not have software with integrated electronic invoicing, install it before May. Implementation requires configuration time, training and testing.
+
+## Expansion of the single tax regime
+
+The income ceiling to access the single tax regime increases from ₡30M to ₡50M annually. This means more small businesses can adopt this simplified regime, with a single monthly payment combining VAT and income tax, and lower administrative burden.
+
+Evaluate whether, with your current income, the simplified regime is more efficient than the regular regime.
+
+## Changes in capital income rates
+
+The capital income rate increases from 15% to 18% for asset sales. The 15% rate is maintained for assets held more than 10 years (long-term investment benefit). If you have planned asset sales, analyze the timing with your advisor.
+
+## New beneficial owners declaration (CIF-BB)
+
+All business corporations must annually file the Declaration of Information on Final Beneficiaries, identifying who are the real owners of the company. The first deadline was March 31, 2026. The penalty for non-compliance ranges from ₡500,000 to ₡2,000,000.
+
+## Increase in service withholding
+
+The withholding rate on payments for professional services (consulting, design, technical services) increases from 10% to 12%. If you pay for these services, you must withhold and declare the new percentage.
+
+## Tax incentives for green companies
+
+New benefits for companies with environmental certification (ISO 14001 or equivalent): an additional deduction of 15% on environmental investments and a 2-point reduction in the income tax rate. If your industry qualifies, evaluate the return on obtaining certification.`,
+        },
       ],
     },
     contact: {
@@ -603,11 +764,12 @@ function Navbar({ lang, setLang, section, setSection }) {
 
   return (
     <nav style={navStyle}>
-      <div style={{ maxWidth:1200, margin:"0 auto", display:"flex", alignItems:"center", justifyContent:"space-between", height:72 }}>
-        {/* Logo */}
-        <div onClick={() => go("home")} style={{ cursor:"pointer", display:"flex", alignItems:"center", gap:12 }}>
-          <img src="/logo_gama_asesores_web.jpg" alt="GAMA Asesores" style={{ height:44, objectFit:"contain" }}
-            onError={(e) => { e.target.style.display="none"; }} />
+      <div style={{ maxWidth:1200, margin:"0 auto", display:"flex", alignItems:"center", justifyContent:"space-between", height:84 }}>
+        {/* Logo modificado (fondo navy, letras blancas+doradas) — ideal para navbar oscura */}
+        <div onClick={() => go("home")} style={{ cursor:"pointer" }}>
+          <img src="/logo_gama_asesores_modificado_web.jpg" alt="GAMA Asesores"
+            style={{ height:70, objectFit:"contain", borderRadius:3, display:"block" }}
+            onError={(e) => { e.target.src="/logo_gama_asesores_web.jpg"; }} />
         </div>
 
         {/* Desktop links */}
@@ -1096,8 +1258,9 @@ function Footer({ lang, setSection }) {
       <div style={{ maxWidth:1200, margin:"0 auto" }}>
         <div style={{ display:"flex", justifyContent:"space-between", alignItems:"start", flexWrap:"wrap", gap:40, marginBottom:48 }}>
           <div style={{ maxWidth:280 }}>
-            <img src="/logo_gama_asesores_web.jpg" alt="GAMA Asesores" style={{ height:50, objectFit:"contain", marginBottom:16 }}
-              onError={(e)=>{ e.target.style.display="none"; }} />
+            <img src="/logo_gama_asesores_modificado_web.jpg" alt="GAMA Asesores"
+              style={{ height:70, objectFit:"contain", marginBottom:16, borderRadius:3 }}
+              onError={(e) => { e.target.src="/logo_gama_asesores_web.jpg"; }} />
             <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.8rem", color:"rgba(255,255,255,0.45)", lineHeight:1.7 }}>{t.tagline}</p>
           </div>
           <div style={{ display:"flex", gap:48, flexWrap:"wrap" }}>
