@@ -400,6 +400,202 @@ La retención sobre pagos a servicios profesionales (consultoría, diseño, serv
 
 Nuevos beneficios para empresas con certificación ambiental (ISO 14001 o equivalente): deducción adicional del 15% en inversiones ambientales y reducción de 2 puntos en la tasa de renta. Si su industria aplica, evalúe el retorno de obtener certificación.`,
         },
+        {
+          id:6, category:"Ganancias de Capital", date:"25 de abril, 2026",
+          title:"Ganancias de Capital en Costa Rica: Aplicación, pago y beneficios fiscales",
+          summary:"Todo sobre el impuesto de ganancias de capital: qué activos lo generan, cómo se calcula, cuándo y cómo se paga, y los beneficios fiscales disponibles para inversionistas a largo plazo.",
+          content:`El impuesto sobre ganancias de capital en Costa Rica, regulado por la Ley del Impuesto sobre la Renta N.º 7092 y sus reformas, aplica cuando usted vende o transfiere activos que han aumentado de valor. Comprenderlo correctamente puede significar una diferencia importante en su carga tributaria.
+
+## ¿Qué activos generan ganancias de capital?
+
+Las ganancias de capital provienen principalmente de: venta de bienes inmuebles (terrenos, casas, apartamentos, locales comerciales), venta de acciones o participaciones en sociedades mercantiles, traspasos de vehículos con ganancia sobre el precio de compra, rendimientos de instrumentos financieros (bonos, fondos de inversión, certificados a plazo), y dividendos de empresas no sujetas a retención en la fuente.
+
+## Tasa aplicable y base imponible
+
+Desde la reforma de 2026, la tasa general es el 18% sobre la ganancia neta (diferencia entre precio de venta y costo de adquisición debidamente documentado). Se aplica una tasa preferencial del 15% para activos poseídos por más de 10 años, reconociendo la inversión a largo plazo.
+
+La base imponible es la ganancia neta: precio de venta menos costo de adquisición, más gastos asociados a la venta que sean deducibles (honorarios notariales, comisiones de venta debidamente facturadas, mejoras capitalizadas documentadas).
+
+## Cuándo y cómo se paga
+
+El impuesto se declara y paga mediante el formulario específico de ganancias de capital, dentro del mes siguiente a la fecha de la transacción. No es un impuesto anual acumulado: cada transacción genera una obligación independiente.
+
+Las notarías y registradores tienen obligación de informar a la DGT sobre traspasos de bienes inmuebles, por lo que las ventas son cruzadas automáticamente. No declarar una venta es de alto riesgo de detección.
+
+## Beneficios fiscales disponibles
+
+Costa Rica ofrece varios beneficios para inversionistas: la tasa preferencial del 15% para activos de largo plazo, la posibilidad de compensar pérdidas de capital con ganancias del mismo período, exención en la venta de casa de habitación principal bajo ciertas condiciones (consulte con su asesor los requisitos vigentes), y la posibilidad de diferir el impuesto en restructuraciones empresariales bajo fusiones o escisiones autorizadas.
+
+## Errores más costosos
+
+El principal error es no documentar el costo de adquisición original. Sin comprobante del precio de compra, la DGT puede considerar el costo como cero, aplicando el 18% sobre el precio de venta completo. Guarde escrituras, facturas y cualquier documento del costo original por tiempo indefinido.
+
+Otro error frecuente es asumir que una venta hecha "en efectivo" o sin notario no genera obligación. Todos los traspasos registrales son reportados a la DGT independientemente del medio de pago.
+
+En GAMA Asesores le ayudamos a planificar sus transacciones antes de que ocurran, no después.`,
+        },
+        {
+          id:7, category:"Plataformas Digitales", date:"22 de abril, 2026",
+          title:"Airbnb, Booking y HomeAway en Costa Rica: Impuestos y obligaciones del anfitrión",
+          summary:"Si alquila propiedades a través de plataformas de hospedaje, tiene obligaciones tributarias específicas en Costa Rica. Conozca el IVA, el impuesto sobre la renta y los requisitos de facturación aplicables.",
+          content:`El alquiler de inmuebles a través de plataformas digitales como Airbnb, Booking.com, HomeAway (ahora Vrbo) y similares genera obligaciones tributarias en Costa Rica que muchos anfitriones desconocen, con riesgo directo de sanciones y ajustes.
+
+## Marco legal aplicable
+
+La Ley del Impuesto sobre el Valor Agregado (N.º 9635) y la Ley del Impuesto sobre la Renta (N.º 7092) regulan estas actividades. Adicionalmente, la DGT emitió directrices específicas para plataformas digitales que establecen responsabilidades tanto para las plataformas como para los anfitriones.
+
+## IVA: Impuesto al Valor Agregado
+
+Los servicios de hospedaje, independientemente de si se ofrecen a través de plataformas digitales o directamente, están gravados con IVA en Costa Rica a la tasa del 13%. Esto significa que usted, como anfitrión, debe estar inscrito ante la DGT como contribuyente del IVA si sus ingresos por hospedaje superan los límites del régimen simplificado.
+
+Importante: Airbnb y otras plataformas pueden retener y remitir el IVA directamente a la DGT en algunos casos, pero esto no exime al anfitrión de su obligación de inscripción y declaración. Verifique si la plataforma que utiliza tiene acuerdo con la DGT costarricense para retención en la fuente.
+
+## Impuesto sobre la Renta
+
+Los ingresos por alquiler de corto plazo (hospedaje) se clasifican como renta de actividad empresarial si se prestan de forma habitual y organizada, o como renta capital inmobiliario en casos de alquileres esporádicos.
+
+Para la mayoría de anfitriones activos en plataformas, la DGT tiende a clasificarlos como actividad empresarial, lo que implica declaración mensual de IVA y declaración anual de renta con deducción de gastos operacionales (mantenimiento, comisiones de la plataforma, servicios, depreciación del inmueble).
+
+## Facturación electrónica
+
+Desde la entrada en vigencia de la obligatoriedad de facturación electrónica, los anfitriones deben emitir factura electrónica por cada hospedaje. Algunas plataformas ofrecen integración con el sistema de facturación costarricense, pero muchas no. En esos casos, el anfitrión debe emitir factura independientemente del comprobante de la plataforma.
+
+## Gastos deducibles del hospedaje
+
+Los anfitriones pueden deducir: comisión cobrada por la plataforma (Airbnb cobra entre 3% y 5% al anfitrión, que es gasto deducible), costos de limpieza y mantenimiento, servicios públicos (agua, luz, internet) proporcionales al uso turístico, depreciación del inmueble y mobiliario, seguros, y gastos de administración.
+
+## Régimen simplificado: ¿aplica para usted?
+
+Si sus ingresos anuales por hospedaje no superan el límite establecido para el régimen simplificado (actualizado anualmente), puede acogerse a este régimen y pagar una cuota mensual fija sin necesidad de declarar IVA por separado. Consulte los montos vigentes con su asesor tributario.
+
+## Recomendaciones de GAMA Asesores
+
+Inscríbase ante la DGT si aún no lo ha hecho. Emita factura electrónica por cada servicio de hospedaje. Registre todos los ingresos de la plataforma y conserve los estados de cuenta mensuales. Separe los gastos del inmueble de uso turístico versus uso personal. No espere a ser requerido por Hacienda; el cumplimiento proactivo siempre cuesta menos.`,
+        },
+        {
+          id:8, category:"Empresas Nuevas", date:"18 de abril, 2026",
+          title:"Obligaciones tributarias para empresas nuevas en Costa Rica: Guía del primer año",
+          summary:"Si acaba de constituir su empresa, este artículo le explica todas las obligaciones tributarias que debe cumplir desde el primer mes: inscripciones, declaraciones, planilla y más.",
+          content:`El primer año de una empresa en Costa Rica está lleno de obligaciones tributarias con plazos críticos. No cumplirlas desde el inicio genera multas y antecedentes que complican el crecimiento futuro.
+
+## Primeros 30 días: inscripciones obligatorias
+
+Dentro del primer mes de inicio de operaciones debe completar: inscripción ante la Dirección General de Tributación (DGT) como contribuyente del IVA y del Impuesto sobre la Renta, inscripción ante la Caja Costarricense de Seguro Social (CCSS) como patrono (si tiene empleados), registro de la razón social ante la Municipalidad del cantón donde opera (patente municipal), y apertura de cuenta bancaria empresarial.
+
+La inscripción en la DGT se realiza en el portal ATV (Administración Tributaria Virtual) con la cédula jurídica de la sociedad.
+
+## Obligaciones mensuales desde el primer mes
+
+Desde el primer mes de operaciones debe declarar y pagar el IVA mensualmente (antes del día 15 del mes siguiente). Si tiene empleados, debe calcular y pagar la planilla de CCSS mensualmente (cuotas obrero-patronales). Debe emitir factura electrónica por cada venta o servicio desde el primer día de operaciones.
+
+## Facturación electrónica: obligatoria desde el inicio
+
+No existe período de gracia para la facturación electrónica. Desde el primer día de operaciones debe emitir facturas electrónicas autorizadas por la DGT. Para ello necesita registrarse como emisor en el ATV, adquirir un certificado digital de la ACCV, y contar con software de facturación compatible o usar el sistema Comprobantes Electrónicos gratuito de la DGT.
+
+## Impuesto sobre la Renta: declaración anual
+
+La declaración anual de renta (Formulario D-101) se presenta dentro de los dos meses y quince días después del cierre del período fiscal (para períodos que cierran el 31 de diciembre, el plazo es hasta el 15 de marzo del año siguiente).
+
+En el primer año, aunque tenga pérdidas (lo cual es común), debe presentar la declaración. Las pérdidas del primer año pueden trasladarse a períodos siguientes para compensar utilidades futuras.
+
+## Impuesto sobre sociedades
+
+Todas las sociedades mercantiles inscritas en Costa Rica, independientemente de si operan o no, deben pagar el impuesto a las personas jurídicas anualmente. Para el período 2026, el monto varía según la actividad y el tamaño de la empresa. Su no pago puede generar limitaciones en trámites registrales.
+
+## Declaración de beneficiarios finales (CIF-BB)
+
+Las nuevas sociedades deben presentar la declaración de información sobre beneficiarios finales dentro de los primeros 20 días hábiles después de su inscripción en el Registro Nacional. Esta declaración identifica a los propietarios reales de la empresa y debe actualizarse anualmente.
+
+## Errores del primer año más comunes
+
+No inscribirse oportunamente en la DGT, no emitir factura electrónica desde el inicio, mezclar finanzas personales con las empresariales, no llevar contabilidad desde el primer mes, y no registrar adecuadamente los gastos (sin factura, no hay deducción) son los errores que más caro cuestan en el primer año.
+
+En GAMA Asesores acompañamos empresas desde su constitución, asegurándonos de que arranquen correctamente desde el primer día.`,
+        },
+        {
+          id:9, category:"Planilla y CCSS", date:"15 de abril, 2026",
+          title:"Planilla y CCSS en Costa Rica: Obligaciones del empleador y cálculo correcto",
+          summary:"Como empleador en Costa Rica, debe calcular y pagar correctamente las cargas sociales ante la CCSS. Comprenda los porcentajes, plazos, el cálculo de aguinaldo y las consecuencias del incumplimiento.",
+          content:`Las obligaciones laborales y de seguridad social son de las más sensibles para cualquier empresa. El incumplimiento en el pago de la CCSS genera deudas que crecen con intereses y multas, y puede afectar gravemente la operación y reputación de su empresa.
+
+## Estructura de la planilla: quién paga qué
+
+En Costa Rica, las cargas sociales se dividen entre el empleador y el trabajador. El empleador paga sobre el salario bruto del trabajador los siguientes porcentajes aproximados: CCSS (enfermedad y maternidad): 9.25%, IVM (invalidez, vejez y muerte): 5.08%, Banco Popular: 0.50%, IMAS: 0.50%, INA: 1.50%, FODESAF: 0.50%, Fondo de Capitalización Laboral: 3.00%. Total patrono: aproximadamente 26.33%.
+
+El trabajador también aporta de su salario: CCSS: 5.50%, IVM: 3.84%, Banco Popular: 1.00%. Total trabajador: aproximadamente 10.34%.
+
+## Cómo calcular la planilla paso a paso
+
+Primero determine el salario bruto de cada empleado (incluyendo horas extra, incentivos y cualquier remuneración regular). Calcule las deducciones del trabajador (10.34% sobre el salario bruto). Calcule la contribución patronal (26.33% sobre el salario bruto). El salario neto que recibe el empleado es el salario bruto menos las deducciones del trabajador. El costo total para el empleador es el salario bruto más la contribución patronal.
+
+## Aguinaldo: obligatorio y con fecha fija
+
+El aguinaldo es un derecho de todo trabajador en Costa Rica equivalente a un mes de salario (un doceavo del salario anual). Se calcula sobre todos los salarios ordinarios y extraordinarios recibidos entre el 1 de diciembre del año anterior y el 30 de noviembre del año en curso. El pago es obligatorio antes del 20 de diciembre. No tiene cargas sociales de CCSS, pero sí se incluye en el salario anual para el cálculo del impuesto sobre la renta del trabajador si supera los montos exentos.
+
+## Plazos de pago a la CCSS
+
+La planilla debe cancelarse mensualmente, dentro de los primeros 15 días calendario del mes siguiente al período trabajado. Pagos tardíos generan intereses del 1% mensual más multas. La CCSS tiene acceso a información bancaria y tributaria para detectar omisiones, por lo que reportar menos salarios de los reales es una práctica de alto riesgo legal.
+
+## Consecuencias del incumplimiento
+
+El no pago de cargas sociales puede resultar en: proceso judicial con embargo de cuentas bancarias y activos, imposibilidad de obtener certificados de estar al día (requeridos para contratos con el Estado y muchos bancos), responsabilidad personal de los representantes legales en casos graves, y cierre temporal de operaciones.
+
+## Otros beneficios laborales obligatorios
+
+Además de la planilla mensual, el empleador debe garantizar: vacaciones anuales (2 semanas mínimo por año trabajado), preaviso al desvincularse o desvincular al empleado, cesantía proporcional según tiempo laborado, y días feriados con salario.
+
+La gestión correcta de la planilla no es solo cumplimiento legal: es la base de una relación laboral sana y sostenible.`,
+        },
+        {
+          id:10, category:"Profesionales Independientes", date:"10 de abril, 2026",
+          title:"Tributación para profesionales independientes en Costa Rica: Lo que debe saber",
+          summary:"Médicos, abogados, ingenieros, contadores y otros profesionales que facturan independientemente tienen obligaciones específicas. Conozca sus obligaciones de IVA, renta, y cómo optimizar legalmente sus deducciones.",
+          content:`Miles de profesionales en Costa Rica prestan servicios de forma independiente sin entender completamente sus obligaciones tributarias. Este desconocimiento genera tanto incumplimientos como deducciones no aprovechadas.
+
+## ¿Quién es profesional independiente ante la DGT?
+
+Es toda persona física que presta servicios basados en conocimiento especializado (salud, derecho, ingeniería, arquitectura, contaduría, consultoría, educación, tecnología, etc.) sin una relación de dependencia laboral con quien le paga. Si emite facturas por sus servicios y no tiene un patrono que le deduzca CCSS del salario, es un profesional independiente con obligaciones tributarias propias.
+
+## Inscripción obligatoria ante la DGT
+
+Todo profesional independiente con ingresos regulares debe inscribirse ante la Dirección General de Tributación. La inscripción determina sus obligaciones específicas: si debe declarar IVA mensualmente o puede acogerse al régimen simplificado, y cómo declarará su impuesto sobre la renta anualmente.
+
+## IVA para profesionales: 13% sobre sus servicios
+
+Los servicios profesionales en general están gravados con IVA al 13%. Esto significa que cuando factura sus honorarios, debe incluir el 13% de IVA que luego declara y paga a Hacienda. Al mismo tiempo, el IVA que usted paga en sus compras y gastos relacionados con su actividad (equipo de oficina, software, papelería, servicios profesionales subcontratados) genera crédito fiscal que reduce su IVA a pagar.
+
+Existen excepciones: algunos servicios de salud están exentos. Consulte si su especialidad específica aplica a alguna exención.
+
+## Retención en la fuente: ¿qué pasa cuando le pagan?
+
+Cuando una empresa le paga por sus servicios, está obligada a retenerle el 12% del monto bruto como retención del impuesto sobre la renta (aumentado en la reforma 2026). Esta retención no es el impuesto final; es un anticipo que se acredita en su declaración anual. Si al final del año pagó más retenciones de las que le corresponden en impuesto, tiene derecho a devolución.
+
+## Impuesto sobre la Renta: cómo funciona para independientes
+
+Los profesionales independientes declaran su renta anualmente sumando todos sus ingresos y deduciendo todos sus gastos relacionados con la actividad. La diferencia es la base imponible sobre la que aplican las tasas progresivas: desde un 0% para los primeros tramos hasta el 25% para ingresos altos (los tramos se actualizan anualmente por la DGT).
+
+## Gastos deducibles que muchos profesionales no aprovechan
+
+Pueden deducirse: arrendamiento de oficina o consultorio (proporcional al uso profesional), equipo de cómputo y tecnología, software y suscripciones profesionales, libros, cursos y capacitaciones relacionadas con su área, conexión a internet y teléfono (proporción de uso profesional), vehículo (proporción de uso profesional), seguro médico o de responsabilidad civil profesional, y honorarios de su propio contador.
+
+Todos los gastos deben respaldarse con factura electrónica a nombre del profesional o su sociedad.
+
+## Régimen simplificado: ¿conviene?
+
+Si sus ingresos anuales están dentro del límite establecido, el régimen simplificado le permite pagar una cuota mensual fija sin declarar IVA separado. Sin embargo, en el régimen simplificado no puede deducir gastos reales, por lo que puede no ser conveniente si tiene gastos significativos. Compare ambos regímenes con su asesor antes de escoger.
+
+En GAMA Asesores atendemos a decenas de profesionales independientes, ayudándoles a cumplir correctamente y optimizar su carga tributaria de forma legal.`,
+        },
+      ],
+    },
+    testimonials: {
+      label: lang==="es" ? "Testimonios" : "Testimonials",
+      title: lang==="es" ? "Lo que Dicen Nuestros Clientes" : "What Our Clients Say",
+      items: [
+        { name:"Ricardo Jiménez", company:"Shaka Surf Camp S.A.", text: lang==="es" ? "GAMA Asesores transformó completamente nuestra gestión financiera. Pasamos de tener registros desordenados a estados financieros bajo NIIF que nuestro banco acepta sin problema para trámites de crédito." : "GAMA Advisors completely transformed our financial management. We went from disorganized records to IFRS financial statements that our bank accepts without issues for credit applications.", stars:5 },
+        { name:"María Fernanda Solís", company:"Soltara Healing Center S.R.L.", text: lang==="es" ? "Como empresa internacional, necesitábamos un contador que entendiera tanto la normativa costarricense como los requerimientos de nuestros socios extranjeros. Gustavo y su equipo cumplen ambas condiciones con excelencia." : "As an international company, we needed an accountant who understood both Costa Rican regulations and our foreign partners' requirements. Gustavo and his team excel at both.", stars:5 },
+        { name:"Carlos Faingold", company:"FAINGOLDS S.R.L.", text: lang==="es" ? "La atención personalizada y la disponibilidad de Gustavo son excepcionales. Siempre responde rápido y con respuestas claras. Haber encontrado un CPA de esta calidad ha sido un alivio enorme para nuestra empresa." : "Gustavo's personalized service and availability are exceptional. He always responds quickly and clearly. Finding a CPA of this quality has been a huge relief for our company.", stars:5 },
+        { name:"Alejandra Mora", company:"Profesional independiente", text: lang==="es" ? "Llevaba años declarando de forma incorrecta sin saberlo. Gracias a GAMA Asesores regularicé mi situación tributaria y ahora tengo la tranquilidad de cumplir correctamente. El costo de la asesoría se recuperó en el primer año." : "For years I had been filing incorrectly without knowing it. Thanks to GAMA Advisors I regularized my tax situation and now have peace of mind. The advisory cost was recovered in the first year.", stars:5 },
       ],
     },
     contact: {
@@ -708,6 +904,176 @@ The withholding rate on payments for professional services (consulting, design, 
 ## Tax incentives for green companies
 
 New benefits for companies with environmental certification (ISO 14001 or equivalent): an additional deduction of 15% on environmental investments and a 2-point reduction in the income tax rate. If your industry qualifies, evaluate the return on obtaining certification.`,
+        },
+        {
+          id:6, category:"Capital Gains", date:"April 25, 2026",
+          title:"Capital Gains in Costa Rica: Application, payment and tax benefits",
+          summary:"Everything about capital gains tax: which assets generate it, how it is calculated, when and how it is paid, and the tax benefits available for long-term investors.",
+          content:`Capital gains tax in Costa Rica, regulated by the Income Tax Law No. 7092 and its reforms, applies when you sell or transfer assets that have increased in value. Understanding it correctly can mean a significant difference in your tax burden.
+
+## What assets generate capital gains?
+
+Capital gains come primarily from: sale of real estate (land, houses, apartments, commercial premises), sale of shares or participations in business corporations, vehicle transfers with gain over the purchase price, returns from financial instruments (bonds, investment funds, time deposits), and dividends from companies not subject to source withholding.
+
+## Applicable rate and tax base
+
+Since the 2026 reform, the general rate is 18% on the net gain (difference between sale price and duly documented acquisition cost). A preferential rate of 15% applies to assets held for more than 10 years, recognizing long-term investment.
+
+The tax base is the net gain: sale price minus acquisition cost, plus deductible sale expenses (notary fees, duly invoiced sales commissions, documented capitalized improvements).
+
+## When and how it is paid
+
+The tax is declared and paid using the specific capital gains form, within the month following the transaction date. It is not an annual cumulative tax: each transaction generates an independent obligation.
+
+Notaries and registrars are required to report real estate transfers to the DGT, so sales are automatically cross-referenced. Not declaring a sale carries a high risk of detection.
+
+## Available tax benefits
+
+Costa Rica offers several benefits for investors: the preferential 15% rate for long-term assets, the ability to offset capital losses against gains from the same period, exemption on the sale of primary residence under certain conditions (consult your advisor for current requirements), and the possibility of deferring tax in corporate restructurings under authorized mergers or spin-offs.
+
+## Most costly mistakes
+
+The main mistake is not documenting the original acquisition cost. Without proof of the purchase price, the DGT may consider the cost as zero, applying 18% on the full sale price. Keep deeds, invoices and any original cost documents indefinitely.
+
+Another frequent mistake is assuming that a sale made "in cash" or without a notary generates no obligation. All registry transfers are reported to the DGT regardless of the payment method.
+
+At GAMA Advisors we help you plan your transactions before they happen, not after.`,
+        },
+        {
+          id:7, category:"Digital Platforms", date:"April 22, 2026",
+          title:"Airbnb, Booking and HomeAway in Costa Rica: Taxes and host obligations",
+          summary:"If you rent properties through hosting platforms, you have specific tax obligations in Costa Rica. Learn about VAT, income tax and applicable invoicing requirements.",
+          content:`Renting properties through digital platforms like Airbnb, Booking.com, HomeAway (now Vrbo) and similar generates tax obligations in Costa Rica that many hosts are unaware of, with direct risk of penalties and adjustments.
+
+## Applicable legal framework
+
+The Value Added Tax Law (No. 9635) and the Income Tax Law (No. 7092) regulate these activities. Additionally, the DGT issued specific guidelines for digital platforms establishing responsibilities for both platforms and hosts.
+
+## VAT: Value Added Tax
+
+Lodging services, regardless of whether offered through digital platforms or directly, are subject to VAT in Costa Rica at the rate of 13%. This means that you, as a host, must be registered with the DGT as a VAT taxpayer if your lodging income exceeds the simplified regime limits.
+
+Important: Airbnb and other platforms may withhold and remit VAT directly to the DGT in some cases, but this does not exempt the host from registration and filing obligations. Verify whether the platform you use has an agreement with the Costa Rican DGT for source withholding.
+
+## Income Tax
+
+Short-term rental income (lodging) is classified as business activity income if provided habitually and in an organized manner, or as real estate capital income for sporadic rentals.
+
+For most active hosts on platforms, the DGT tends to classify them as business activity, which implies monthly VAT declaration and annual income declaration with deduction of operating expenses (maintenance, platform commissions, services, property depreciation).
+
+## Electronic invoicing
+
+Hosts must issue electronic invoices for each lodging. Some platforms offer integration with the Costa Rican invoicing system, but many do not. In those cases, the host must issue invoices independently from the platform receipt.
+
+## Deductible lodging expenses
+
+Hosts can deduct: platform commission (Airbnb charges between 3% and 5% to the host, which is a deductible expense), cleaning and maintenance costs, utilities (water, electricity, internet) proportional to tourist use, depreciation of the property and furniture, insurance, and management expenses.
+
+## Simplified regime: does it apply to you?
+
+If your annual lodging income does not exceed the established limit for the simplified regime, you can adopt this regime and pay a fixed monthly fee without needing to declare VAT separately. Consult current amounts with your tax advisor.
+
+At GAMA Advisors we help platform hosts regularize and optimize their tax situation.`,
+        },
+        {
+          id:8, category:"New Companies", date:"April 18, 2026",
+          title:"Tax obligations for new companies in Costa Rica: First year guide",
+          summary:"If you just incorporated your company, this article explains all the tax obligations you must meet from the first month: registrations, declarations, payroll and more.",
+          content:`The first year of a company in Costa Rica is full of tax obligations with critical deadlines. Not meeting them from the start generates fines and records that complicate future growth.
+
+## First 30 days: mandatory registrations
+
+Within the first month of starting operations you must complete: registration with the General Tax Directorate (DGT) as a VAT and Income Tax contributor, registration with the Costa Rican Social Security Fund (CCSS) as an employer (if you have employees), registration of the business name with the Municipality of the canton where you operate, and opening a business bank account.
+
+DGT registration is done on the ATV (Virtual Tax Administration) portal with the company's legal ID.
+
+## Monthly obligations from the first month
+
+From the first month of operations you must declare and pay VAT monthly (before the 15th of the following month). If you have employees, you must calculate and pay CCSS payroll monthly. You must issue electronic invoices for each sale or service from the first day of operations.
+
+## Electronic invoicing: mandatory from day one
+
+There is no grace period for electronic invoicing. From the first day of operations you must issue DGT-authorized electronic invoices. For this you need to register as an issuer on the ATV, obtain a digital certificate from the ACCV, and have compatible invoicing software or use the DGT's free Electronic Receipts system.
+
+## Income Tax: annual declaration
+
+The annual income tax declaration (Form D-101) is filed within two months and fifteen days after the end of the fiscal period. Even if you have losses in the first year (which is common), you must file the declaration. First-year losses can be carried forward to future periods to offset future profits.
+
+## Corporate tax
+
+All business corporations registered in Costa Rica, regardless of whether they operate or not, must pay the annual legal entities tax. Non-payment can generate limitations in registry procedures.
+
+## Beneficial owners declaration (CIF-BB)
+
+New corporations must file the beneficial owners information declaration within the first 20 business days after registration at the National Registry. This declaration identifies the real owners of the company and must be updated annually.
+
+At GAMA Advisors we accompany companies from their incorporation, ensuring they start correctly from day one.`,
+        },
+        {
+          id:9, category:"Payroll & CCSS", date:"April 15, 2026",
+          title:"Payroll and CCSS in Costa Rica: Employer obligations and correct calculation",
+          summary:"As an employer in Costa Rica, you must correctly calculate and pay social security contributions to the CCSS. Understand the percentages, deadlines, Christmas bonus calculation and the consequences of non-compliance.",
+          content:`Labor and social security obligations are among the most sensitive for any company. Non-payment of CCSS generates debts that grow with interest and fines, and can seriously affect your company's operation and reputation.
+
+## Payroll structure: who pays what
+
+In Costa Rica, social charges are divided between employer and employee. The employer pays on the worker's gross salary approximately: CCSS (illness and maternity): 9.25%, IVM (disability, old age and death): 5.08%, Banco Popular: 0.50%, IMAS: 0.50%, INA: 1.50%, FODESAF: 0.50%, Labor Capitalization Fund: 3.00%. Total employer contribution: approximately 26.33%.
+
+The employee also contributes from their salary: CCSS: 5.50%, IVM: 3.84%, Banco Popular: 1.00%. Total employee: approximately 10.34%.
+
+## How to calculate payroll step by step
+
+First determine each employee's gross salary (including overtime, incentives and any regular compensation). Calculate employee deductions (10.34% on gross salary). Calculate employer contribution (26.33% on gross salary). The net salary the employee receives is gross salary minus employee deductions. Total cost to the employer is gross salary plus employer contribution.
+
+## Christmas bonus: mandatory with fixed date
+
+The Christmas bonus (aguinaldo) is a right of every worker in Costa Rica equivalent to one month's salary. It is calculated on all ordinary and extraordinary salaries received between December 1 of the previous year and November 30 of the current year. Payment is mandatory before December 20. It has no CCSS social charges, but is included in the annual salary for income tax calculation if it exceeds exempt amounts.
+
+## CCSS payment deadlines
+
+Payroll must be paid monthly, within the first 15 calendar days of the month following the worked period. Late payments generate 1% monthly interest plus fines. CCSS has access to banking and tax information to detect omissions.
+
+## Consequences of non-compliance
+
+Non-payment of social charges can result in: legal proceedings with bank account and asset attachment, inability to obtain certificates of compliance (required for government contracts and many banks), personal liability of legal representatives in serious cases, and temporary business closure.
+
+At GAMA Advisors we manage payroll for companies of all sizes, ensuring timely and correct compliance.`,
+        },
+        {
+          id:10, category:"Independent Professionals", date:"April 10, 2026",
+          title:"Taxation for independent professionals in Costa Rica: What you need to know",
+          summary:"Doctors, lawyers, engineers, accountants and other professionals who invoice independently have specific obligations. Learn about VAT, income tax and how to legally optimize your deductions.",
+          content:`Thousands of professionals in Costa Rica provide services independently without fully understanding their tax obligations. This lack of knowledge generates both non-compliance and unused deductions.
+
+## Who is an independent professional according to the DGT?
+
+It is any natural person who provides services based on specialized knowledge (healthcare, law, engineering, architecture, accounting, consulting, education, technology, etc.) without an employment dependency relationship with their payer. If you issue invoices for your services and do not have an employer deducting CCSS from a salary, you are an independent professional with your own tax obligations.
+
+## Mandatory registration with the DGT
+
+Every independent professional with regular income must register with the General Tax Directorate. Registration determines your specific obligations: whether you must declare VAT monthly or can adopt the simplified regime, and how you will declare your income tax annually.
+
+## VAT for professionals: 13% on your services
+
+Professional services in general are subject to 13% VAT. When you invoice your fees, you must include 13% VAT which you then declare and pay to Revenue. At the same time, the VAT you pay on your purchases and expenses related to your activity (office equipment, software, stationery, subcontracted professional services) generates tax credit that reduces your VAT payable.
+
+There are exceptions: some healthcare services are exempt. Check if your specific specialty qualifies for any exemption.
+
+## Source withholding: what happens when you are paid
+
+When a company pays you for your services, it is required to withhold 12% of the gross amount as income tax withholding (increased in the 2026 reform). This withholding is not the final tax; it is an advance that is credited in your annual declaration. If you paid more withholdings than your tax obligation, you are entitled to a refund.
+
+## Income Tax: how it works for independents
+
+Independent professionals declare their income annually, adding all income and deducting all expenses related to the activity. The difference is the taxable base on which progressive rates apply: from 0% for the lower brackets up to 25% for high incomes.
+
+## Deductible expenses many professionals don't take advantage of
+
+Deductible expenses include: office or clinic rental (proportional to professional use), computer equipment and technology, professional software and subscriptions, books, courses and training related to your field, internet and phone (professional use proportion), vehicle (professional use proportion), professional liability insurance, and your own accountant's fees.
+
+All expenses must be supported by an electronic invoice in the professional's or their company's name.
+
+At GAMA Advisors we serve dozens of independent professionals, helping them comply correctly and optimize their tax burden legally.`,
         },
       ],
     },
@@ -1378,6 +1744,117 @@ function ContactSection({ lang }) {
 }
 
 /* ── FOOTER ── */
+/* ── TESTIMONIALS ── */
+function TestimonialsSection({ lang }) {
+  const items = [
+    { name:"Ricardo Jiménez", company:"Shaka Surf Camp S.A.", stars:5,
+      text: lang==="es"
+        ? "GAMA Asesores transformó completamente nuestra gestión financiera. Pasamos de tener registros desordenados a estados financieros bajo NIIF que nuestro banco acepta sin problema para trámites de crédito."
+        : "GAMA Advisors completely transformed our financial management. We went from disorganized records to IFRS financial statements that our bank accepts without issues for credit applications." },
+    { name:"María Fernanda Solís", company:"Soltara Healing Center S.R.L.", stars:5,
+      text: lang==="es"
+        ? "Como empresa internacional necesitábamos un contador que entendiera tanto la normativa costarricense como los requerimientos de nuestros socios extranjeros. Gustavo y su equipo cumplen ambas condiciones con excelencia."
+        : "As an international company we needed an accountant who understood both Costa Rican regulations and our foreign partners' requirements. Gustavo and his team excel at both." },
+    { name:"Carlos Faingold", company:"FAINGOLDS S.R.L.", stars:5,
+      text: lang==="es"
+        ? "La atención personalizada y la disponibilidad de Gustavo son excepcionales. Siempre responde rápido y con respuestas claras. Haber encontrado un CPA de esta calidad ha sido un alivio enorme para nuestra empresa."
+        : "Gustavo's personalized service and availability are exceptional. He always responds quickly and clearly. Finding a CPA of this quality has been a huge relief for our company." },
+    { name:"Alejandra Mora", company: lang==="es" ? "Profesional independiente" : "Independent professional", stars:5,
+      text: lang==="es"
+        ? "Llevaba años declarando de forma incorrecta sin saberlo. Gracias a GAMA Asesores regularicé mi situación tributaria y ahora tengo la tranquilidad de cumplir correctamente. El costo de la asesoría se recuperó en el primer año."
+        : "For years I had been filing incorrectly without knowing it. Thanks to GAMA Advisors I regularized my tax situation. The advisory cost was recovered in the first year." },
+  ];
+  const stars = (n) => "★".repeat(n);
+
+  return (
+    <section style={{ padding:"100px 5%", background:C.navy }}>
+      <div style={{ maxWidth:1200, margin:"0 auto" }}>
+        <div style={{ textAlign:"center", marginBottom:64 }}>
+          <p style={{ color:C.gold, fontFamily:"'Montserrat',sans-serif", fontSize:"0.75rem", letterSpacing:"0.2em", textTransform:"uppercase", fontWeight:700, marginBottom:12 }}>
+            {lang==="es" ? "Testimonios" : "Testimonials"}
+          </p>
+          <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(1.9rem,3.5vw,2.6rem)", color:C.white, fontWeight:700 }}>
+            {lang==="es" ? "Lo que Dicen Nuestros Clientes" : "What Our Clients Say"}
+          </h2>
+        </div>
+
+        <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(280px,1fr))", gap:24 }}>
+          {items.map((item, i) => (
+            <div key={i} style={{ background:"rgba(255,255,255,0.05)", border:"1px solid rgba(179,141,71,0.2)", padding:"32px 28px", position:"relative" }}>
+              {/* Comilla decorativa */}
+              <div style={{ position:"absolute", top:20, right:24, fontFamily:"Georgia,serif", fontSize:"5rem", color:"rgba(179,141,71,0.12)", lineHeight:1 }}>"</div>
+              {/* Estrellas */}
+              <div style={{ color:C.gold, fontSize:"1.1rem", marginBottom:16, letterSpacing:2 }}>{stars(item.stars)}</div>
+              {/* Texto */}
+              <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.88rem", color:"rgba(255,255,255,0.75)", lineHeight:1.85, marginBottom:24, fontStyle:"italic" }}>
+                "{item.text}"
+              </p>
+              {/* Autor */}
+              <div style={{ borderTop:`1px solid rgba(179,141,71,0.2)`, paddingTop:18 }}>
+                <div style={{ fontFamily:"'Playfair Display',serif", fontSize:"0.98rem", fontWeight:700, color:C.white }}>{item.name}</div>
+                <div style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.74rem", color:C.gold, letterSpacing:"0.06em", marginTop:3 }}>{item.company}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ── MAP ── */
+function MapSection({ lang }) {
+  // Coordenadas: Barranca 10.0107,-84.7054 | Santa Teresa 9.6415,-85.1653
+  const offices = [
+    {
+      name: lang==="es" ? "Oficina Puntarenas" : "Puntarenas Office",
+      addr: lang==="es" ? "Residencial Bulevar del Sol, Etapa IV, Barranca, Puntarenas" : "Residencial Bulevar del Sol, Stage IV, Barranca, Puntarenas",
+      mapSrc: "https://maps.google.com/maps?q=Barranca,Puntarenas,Costa+Rica&z=14&output=embed",
+    },
+    {
+      name: lang==="es" ? "Oficina Peninsular" : "Peninsula Office",
+      addr: lang==="es" ? "Frente a la Plaza de Fútbol, 2° piso Súper El Mango, Santa Teresa, Cóbano" : "Across from the Soccer Field, 2nd floor Súper El Mango, Santa Teresa, Cóbano",
+      mapSrc: "https://maps.google.com/maps?q=Santa+Teresa,Cobano,Puntarenas,Costa+Rica&z=14&output=embed",
+    },
+  ];
+
+  return (
+    <section style={{ padding:"80px 5%", background:"#f4f1eb" }}>
+      <div style={{ maxWidth:1200, margin:"0 auto" }}>
+        <div style={{ textAlign:"center", marginBottom:56 }}>
+          <p style={{ color:C.gold, fontFamily:"'Montserrat',sans-serif", fontSize:"0.75rem", letterSpacing:"0.2em", textTransform:"uppercase", fontWeight:700, marginBottom:12 }}>
+            {lang==="es" ? "Encuéntrenos" : "Find Us"}
+          </p>
+          <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(1.7rem,3vw,2.4rem)", color:C.navy, fontWeight:700 }}>
+            {lang==="es" ? "Nuestras Ubicaciones" : "Our Locations"}
+          </h2>
+        </div>
+
+        <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:32 }} className="map-grid">
+          {offices.map((o, i) => (
+            <div key={i} style={{ background:C.white, borderRadius:2, overflow:"hidden", boxShadow:"0 2px 16px rgba(5,30,87,0.08)", borderTop:`3px solid ${C.gold}` }}>
+              <iframe
+                title={o.name}
+                src={o.mapSrc}
+                width="100%"
+                height="280"
+                style={{ border:0, display:"block" }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+              <div style={{ padding:"20px 24px" }}>
+                <div style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.72rem", fontWeight:700, color:C.navy, letterSpacing:"0.1em", textTransform:"uppercase", marginBottom:6 }}>{o.name}</div>
+                <div style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.86rem", color:"#4a4540", lineHeight:1.6 }}>{o.addr}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Footer({ lang, setSection }) {
   const t = DATA[lang].footer;
   const navSections = ["home","services","about","blog","contact"];
@@ -1454,11 +1931,11 @@ export default function App() {
   const renderSection = () => {
     if (section === "blog" && article) return <ArticleView article={article} lang={lang} onBack={() => setArticle(null)} />;
     switch(section) {
-      case "home":     return <><HeroSection lang={lang} setSection={setSection}/><WhySection lang={lang}/></>;
+      case "home":     return <><HeroSection lang={lang} setSection={setSection}/><WhySection lang={lang}/><TestimonialsSection lang={lang}/></>;
       case "services": return <ServicesSection lang={lang}/>;
       case "about":    return <AboutSection lang={lang}/>;
       case "blog":     return <BlogList lang={lang} onRead={(a)=>{ setArticle(a); window.scrollTo({top:0,behavior:"smooth"}); }}/>;
-      case "contact":  return <ContactSection lang={lang}/>;
+      case "contact":  return <><ContactSection lang={lang}/><MapSection lang={lang}/></>;
       default:         return <HeroSection lang={lang} setSection={setSection}/>;
     }
   };
@@ -1480,6 +1957,7 @@ export default function App() {
           .about-grid{grid-template-columns:1fr!important;}
           .contact-grid{grid-template-columns:1fr!important;}
           .team-grid{grid-template-columns:1fr 1fr!important;}
+          .map-grid{grid-template-columns:1fr!important;}
         }
         @media(max-width:560px){
           .team-grid{grid-template-columns:1fr!important;}
