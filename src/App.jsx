@@ -1140,6 +1140,184 @@ At GAMA Advisors we serve dozens of independent professionals, helping them comp
   },
 };
 
+/* ─────────────────────────────────────────────────────────────
+   PrivacyPolicy.jsx — GAMA Asesores Contables
+   Política de Privacidad bilingüe (ES/EN)
+   Cumple: Ley 8968 CR · GDPR básico · Formspree · Google Analytics
+   ───────────────────────────────────────────────────────────── */
+
+const PRIVACY_CONTENT = {
+  es: {
+    title: "Política de Privacidad",
+    updated: "Última actualización: Mayo 2026",
+    intro: "GAMA CPA y Asesoría Contable S.R.L. (en adelante \"GAMA Asesores\"), con domicilio en Barranca, Puntarenas, Costa Rica, es responsable del tratamiento de sus datos personales conforme a la Ley N.° 8968 (Ley de Protección de la Persona frente al Tratamiento de sus Datos Personales) y sus reglamentos.",
+    sections: [
+      {
+        title: "1. Datos que recopilamos",
+        body: "Recopilamos únicamente los datos que usted nos proporciona voluntariamente a través del formulario de contacto de este sitio: nombre completo, correo electrónico, número de teléfono (opcional), nombre de empresa y mensaje. Adicionalmente, Google Analytics recopila datos de navegación anónimos (páginas visitadas, tiempo de sesión, país de origen) para análisis estadístico."
+      },
+      {
+        title: "2. Finalidad del tratamiento",
+        body: "Sus datos personales son utilizados exclusivamente para: (a) responder a su consulta o solicitud de presupuesto, (b) contactarle en relación con los servicios de asesoría contable y financiera de GAMA Asesores, y (c) mejorar la experiencia del sitio web mediante análisis estadístico anónimo. No utilizamos sus datos para marketing masivo ni los compartimos con terceros con fines comerciales."
+      },
+      {
+        title: "3. Base legal del tratamiento",
+        body: "El tratamiento de sus datos se fundamenta en el consentimiento que usted otorga libremente al completar y enviar el formulario de contacto, conforme al artículo 5 de la Ley N.° 8968."
+      },
+      {
+        title: "4. Terceros que reciben sus datos",
+        body: "Sus datos de contacto son procesados por Formspree Inc. (Estados Unidos), servicio de gestión de formularios web, bajo sus propias políticas de privacidad y medidas de seguridad. Google LLC procesa datos de navegación anónimos mediante Google Analytics. Ninguno de estos proveedores tiene autorización para usar sus datos con fines propios."
+      },
+      {
+        title: "5. Conservación de datos",
+        body: "Sus datos se conservan durante el tiempo necesario para atender su consulta y, en caso de convertirse en cliente, durante la vigencia de la relación contractual más el plazo legal de prescripción aplicable (5 años según la legislación costarricense). Los datos de navegación de Google Analytics se conservan por 26 meses."
+      },
+      {
+        title: "6. Sus derechos",
+        body: "Conforme a la Ley N.° 8968, usted tiene derecho a: acceder a sus datos personales, rectificarlos si son inexactos, suprimirlos cuando ya no sean necesarios, oponerse a su tratamiento y solicitar su portabilidad. Para ejercer cualquiera de estos derechos, escríbanos a gmongea@gamacpa-asesores.com indicando su nombre completo y el derecho que desea ejercer. Atenderemos su solicitud en un plazo máximo de 5 días hábiles."
+      },
+      {
+        title: "7. Seguridad",
+        body: "GAMA Asesores implementa medidas técnicas y organizativas razonables para proteger sus datos personales contra acceso no autorizado, pérdida o destrucción. La transmisión de datos a través del formulario de contacto se realiza mediante protocolo HTTPS cifrado."
+      },
+      {
+        title: "8. Cookies y tecnologías de seguimiento",
+        body: "Este sitio utiliza Google Analytics, que emplea cookies para recopilar información de navegación de forma anónima. Puede desactivar estas cookies mediante la configuración de su navegador o instalando el complemento de inhabilitación de Google Analytics. No utilizamos cookies de publicidad ni de redes sociales."
+      },
+      {
+        title: "9. Cambios a esta política",
+        body: "Nos reservamos el derecho de actualizar esta Política de Privacidad cuando sea necesario. La fecha de última actualización siempre estará indicada al inicio del documento. Le recomendamos revisarla periódicamente."
+      },
+      {
+        title: "10. Contacto",
+        body: "Para consultas sobre esta política o el tratamiento de sus datos personales, contáctenos: CPA Gustavo Monge A. · gmongea@gamacpa-asesores.com · +506 8896-9883 · Barranca, Puntarenas, Costa Rica."
+      },
+    ]
+  },
+  en: {
+    title: "Privacy Policy",
+    updated: "Last updated: May 2026",
+    intro: "GAMA CPA y Asesoría Contable S.R.L. (hereinafter \"GAMA Advisors\"), with registered address in Barranca, Puntarenas, Costa Rica, is responsible for the processing of your personal data in accordance with Law No. 8968 (Law on Protection of Individuals Regarding the Processing of Personal Data) and its regulations.",
+    sections: [
+      {
+        title: "1. Data we collect",
+        body: "We collect only the data you voluntarily provide through this website's contact form: full name, email address, phone number (optional), company name, and message. Additionally, Google Analytics collects anonymous browsing data (pages visited, session time, country of origin) for statistical analysis."
+      },
+      {
+        title: "2. Purpose of processing",
+        body: "Your personal data is used exclusively to: (a) respond to your inquiry or quote request, (b) contact you regarding GAMA Advisors' accounting and financial advisory services, and (c) improve the website experience through anonymous statistical analysis. We do not use your data for mass marketing nor share it with third parties for commercial purposes."
+      },
+      {
+        title: "3. Legal basis for processing",
+        body: "The processing of your data is based on the consent you freely give by completing and submitting the contact form, in accordance with Article 5 of Law No. 8968."
+      },
+      {
+        title: "4. Third parties receiving your data",
+        body: "Your contact data is processed by Formspree Inc. (United States), a web form management service, under their own privacy policies and security measures. Google LLC processes anonymous browsing data through Google Analytics. Neither provider is authorized to use your data for their own purposes."
+      },
+      {
+        title: "5. Data retention",
+        body: "Your data is retained for as long as necessary to address your inquiry and, if you become a client, for the duration of the contractual relationship plus the applicable legal statute of limitations (5 years under Costa Rican law). Google Analytics browsing data is retained for 26 months."
+      },
+      {
+        title: "6. Your rights",
+        body: "Under Law No. 8968, you have the right to: access your personal data, rectify it if inaccurate, delete it when no longer necessary, object to its processing, and request its portability. To exercise any of these rights, write to us at gmongea@gamacpa-asesores.com indicating your full name and the right you wish to exercise. We will respond within 5 business days."
+      },
+      {
+        title: "7. Security",
+        body: "GAMA Advisors implements reasonable technical and organizational measures to protect your personal data against unauthorized access, loss, or destruction. Data transmission through the contact form is carried out via encrypted HTTPS protocol."
+      },
+      {
+        title: "8. Cookies and tracking technologies",
+        body: "This site uses Google Analytics, which employs cookies to collect browsing information anonymously. You can disable these cookies through your browser settings or by installing the Google Analytics opt-out add-on. We do not use advertising or social media cookies."
+      },
+      {
+        title: "9. Changes to this policy",
+        body: "We reserve the right to update this Privacy Policy when necessary. The last update date will always be indicated at the beginning of the document. We recommend reviewing it periodically."
+      },
+      {
+        title: "10. Contact",
+        body: "For questions about this policy or the processing of your personal data, contact us: CPA Gustavo Monge A. · gmongea@gamacpa-asesores.com · +506 8896-9883 · Barranca, Puntarenas, Costa Rica."
+      },
+    ]
+  }
+};
+
+export default function PrivacyPolicy({ lang = "es", onBack }) {
+  const t = PRIVACY_CONTENT[lang] || PRIVACY_CONTENT.es;
+
+  return (
+    <section style={{ padding:"100px 5% 80px", background:"#f8f7f4", minHeight:"100vh" }}>
+      <div style={{ maxWidth:820, margin:"0 auto" }}>
+
+        {/* Botón volver */}
+        {onBack && (
+          <button onClick={onBack}
+            style={{ background:"transparent", border:"1.5px solid #051e57", color:"#051e57",
+              fontFamily:"'Montserrat',sans-serif", fontSize:"0.78rem", fontWeight:700,
+              letterSpacing:"0.08em", textTransform:"uppercase", padding:"10px 24px",
+              cursor:"pointer", marginBottom:48, borderRadius:2 }}
+            onMouseEnter={e=>{ e.target.style.background="#051e57"; e.target.style.color="#fff"; }}
+            onMouseLeave={e=>{ e.target.style.background="transparent"; e.target.style.color="#051e57"; }}
+          >
+            {lang === "es" ? "← Volver" : "← Back"}
+          </button>
+        )}
+
+        {/* Header */}
+        <div style={{ borderLeft:"3px solid #b38d47", paddingLeft:"1.5rem", marginBottom:48 }}>
+          <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.72rem", fontWeight:700,
+            letterSpacing:"0.2em", textTransform:"uppercase", color:"#b38d47", marginBottom:10 }}>
+            GAMA Asesores Contables
+          </p>
+          <h1 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(1.8rem,3vw,2.6rem)",
+            fontWeight:700, color:"#051e57", marginBottom:12 }}>
+            {t.title}
+          </h1>
+          <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.82rem", color:"#9a9280" }}>
+            {t.updated}
+          </p>
+        </div>
+
+        {/* Intro */}
+        <div style={{ background:"#fff", borderLeft:"3px solid #b38d47", padding:"20px 24px",
+          marginBottom:40, boxShadow:"0 2px 12px rgba(5,30,87,0.06)" }}>
+          <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.92rem", color:"#3d3830",
+            lineHeight:1.85, margin:0 }}>
+            {t.intro}
+          </p>
+        </div>
+
+        {/* Secciones */}
+        {t.sections.map((s, i) => (
+          <div key={i} style={{ marginBottom:36, background:"#fff", padding:"28px 32px",
+            boxShadow:"0 2px 12px rgba(5,30,87,0.05)", borderRadius:2 }}>
+            <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.1rem", fontWeight:700,
+              color:"#051e57", marginBottom:12 }}>
+              {s.title}
+            </h2>
+            <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.88rem", color:"#4a4540",
+              lineHeight:1.85, margin:0 }}>
+              {s.body}
+            </p>
+          </div>
+        ))}
+
+        {/* Footer legal */}
+        <div style={{ marginTop:48, paddingTop:32, borderTop:"1px solid rgba(5,30,87,0.1)",
+          textAlign:"center" }}>
+          <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.76rem", color:"#9a9280", lineHeight:1.7 }}>
+            {lang === "es"
+              ? "GAMA CPA y Asesoría Contable S.R.L. · Cédula Jurídica 3-102-913105 · Barranca, Puntarenas, Costa Rica"
+              : "GAMA CPA y Asesoría Contable S.R.L. · Legal ID 3-102-913105 · Barranca, Puntarenas, Costa Rica"}
+          </p>
+        </div>
+
+      </div>
+    </section>
+  );
+}
+
 /* ─────────────── COMPONENTS ─────────────── */
 
 function Navbar({ lang, setLang, section, setSection }) {
@@ -2231,7 +2409,7 @@ function MapSection({ lang }) {
   );
 }
 
-function Footer({ lang, setSection }) {
+function Footer({ lang, setSection, setShowPrivacy }) {
   const t = DATA[lang].footer;
   const navSections = ["home","services","about","blog","contact"];
   return (
@@ -2271,7 +2449,18 @@ function Footer({ lang, setSection }) {
         </div>
 
         <div style={{ borderTop:`1px solid rgba(255,255,255,0.08)`, paddingTop:24, display:"flex", justifyContent:"space-between", alignItems:"center", flexWrap:"wrap", gap:12 }}>
+        <div style={{ display:"flex", flexDirection:"column", gap:6 }}>
           <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.76rem", color:"rgba(255,255,255,0.3)" }}>{t.rights}</p>
+          <button onClick={() => { setShowPrivacy(true); window.scrollTo({top:0}); }}
+           style={{ background:"none", border:"none", cursor:"pointer", textAlign:"left", padding:0,
+             fontFamily:"'Montserrat',sans-serif", fontSize:"0.72rem",
+             color:"rgba(179,141,71,0.55)", letterSpacing:"0.04em" }}
+           onMouseEnter={e=>e.target.style.color="rgba(179,141,71,0.9)"}
+           onMouseLeave={e=>e.target.style.color="rgba(179,141,71,0.55)"}
+          >
+            {lang==="es" ? "Política de Privacidad" : "Privacy Policy"}
+          </button>
+        </div>
           <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.72rem", color:"rgba(255,255,255,0.22)" }}>
             <a href="https://gamacpa-asesores.com" style={{ color:"rgba(179,141,71,0.4)", textDecoration:"none" }}>gamacpa-asesores.com</a>
           </p>
@@ -2307,6 +2496,7 @@ export default function App() {
 const [lang, setLang] = useState(getBrowserLang);
   const [section, setSection] = useState("home");
   const [article, setArticle] = useState(null);
+  const [showPrivacy, setShowPrivacy] = useState(false);
 
   useEffect(() => {
   const titles = {
@@ -2331,16 +2521,21 @@ const [lang, setLang] = useState(getBrowserLang);
 }, [section, lang]);
   
   const renderSection = () => {
-    if (section === "blog" && article) return <ArticleView article={article} lang={lang} onBack={() => setArticle(null)} />;
-    switch(section) {
-      case "home":     return <><HeroSection lang={lang} setLang={setLang} setSection={setSection}/><WhySection lang={lang}/><TestimonialsSection lang={lang}/></>;
-      case "services": return <ServicesSection lang={lang}/>;
-      case "about":    return <AboutSection lang={lang}/>;
-      case "blog":     return <BlogList lang={lang} onRead={(a)=>{ setArticle(a); window.scrollTo({top:0,behavior:"smooth"}); }}/>;
-      case "contact":  return <><ContactSection lang={lang}/><MapSection lang={lang}/></>;
-      default:         return <HeroSection lang={lang} setLang={setLang} setSection={setSection}/>;
-    }
-  };
+  if (showPrivacy) return (
+    <PrivacyPolicy lang={lang} onBack={() => setShowPrivacy(false)} />
+  );
+  if (section === "blog" && article) return (
+    <ArticleView article={article} lang={lang} onBack={() => setArticle(null)} />
+  );
+  switch(section) {
+    case "home":     return <><HeroSection lang={lang} setLang={setLang} setSection={setSection}/><WhySection lang={lang}/><TestimonialsSection lang={lang}/></>;
+    case "services": return <ServicesSection lang={lang}/>;
+    case "about":    return <AboutSection lang={lang}/>;
+    case "blog":     return <BlogList lang={lang} onRead={(a)=>{ setArticle(a); window.scrollTo({top:0,behavior:"smooth"}); }}/>;
+    case "contact":  return <><ContactSection lang={lang}/><MapSection lang={lang}/></>;
+    default:         return <HeroSection lang={lang} setLang={setLang} setSection={setSection}/>;
+  }
+};
 
   return (
     <>
@@ -2374,7 +2569,10 @@ const [lang, setLang] = useState(getBrowserLang);
         {renderSection()}
       </main>
 
-      <Footer lang={lang} setSection={(s)=>{ setSection(s); setArticle(null); window.scrollTo({top:0}); }}/>
+      <Footer lang={lang}
+        setSection={(s)=>{ setSection(s); setArticle(null); setShowPrivacy(false); window.scrollTo({top:0}); }}
+        setShowPrivacy={setShowPrivacy}
+      />
       <WhatsAppBtn/>
     </>
   );
