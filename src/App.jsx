@@ -109,11 +109,28 @@ const DATA = {
       cta: "Presupuesto",
     },
     hero: {
-      badge: "Firma especializada · Costa Rica",
-      title: "Asesoría Contable,\nTributaria y Financiera",
-      subtitle: "Soluciones integrales para empresas que buscan crecer con seguridad financiera y cumplimiento normativo.",
-      cta: "Solicitar Presupuesto",
-      ctaSecondary: "Ver Servicios",
+badge1: "CPAs Autorizados · Colegio de Contadores Públicos de Costa Rica",
+badge2: "Firma de CPIs Incorporados · Colegio de Contadores Privados de Costa Rica",
+headline1: "Su empresa merece",
+headline2: "asesoría contable",
+headline3: "que transforma números en decisiones.",
+subheadline: "Contabilidad, cumplimiento tributario y consultoría financiera para empresas en Costa Rica. Aplicamos NIIF Completas, NIIF para PYMES y NICSP con precisión, ética y acompañamiento estratégico.",
+cta: "Consultar por WhatsApp",
+ctaSub: "Respuesta en menos de 24 horas",
+stats: [
+  { value: "25+",  label: "Años de experiencia" },
+  { value: "NIIF", label: "Completas · PYMES · NICSP" },
+  { value: "2",    label: "Oficinas en Puntarenas" },
+],
+services: [
+  "Declaraciones tributarias",
+  "Estados financieros NIIF",
+  "Auditoría y aseguramiento",
+  "Planillas CCSS e INS",
+  "Certificaciones CPA",
+  "Consultoría financiera",
+],
+langToggle: "English",
     },
     services: {
       label: "Servicios Profesionales",
@@ -630,11 +647,28 @@ En GAMA Asesores atendemos a decenas de profesionales independientes, ayudándol
   en: {
     nav: { links: ["Home","Services","About","Blog","Contact"], cta: "Get Quote" },
     hero: {
-      badge: "Specialized firm · Costa Rica",
-      title: "Accounting, Tax\n& Financial Advisory",
-      subtitle: "Complete solutions for companies seeking growth with financial confidence and regulatory compliance.",
-      cta: "Request a Quote",
-      ctaSecondary: "View Services",
+badge1: "Authorized CPAs · Costa Rica Public Accountants Association",
+badge2: "CPI Firm · Costa Rica Private Accountants Association",
+headline1: "Your business deserves",
+headline2: "accounting advisory",
+headline3: "that turns numbers into decisions.",
+subheadline: "Accounting, tax compliance and financial consulting for companies in Costa Rica. We apply Full IFRS, IFRS for SMEs and IPSAS with precision, ethics and strategic partnership.",
+cta: "Contact via WhatsApp",
+ctaSub: "Response within 24 hours",
+stats: [
+  { value: "25+",  label: "Years of experience" },
+  { value: "IFRS", label: "Full · SMEs · IPSAS" },
+  { value: "2",    label: "Offices in Puntarenas" },
+],
+services: [
+  "Tax declarations",
+  "IFRS financial statements",
+  "Audit & assurance",
+  "CCSS & INS payroll",
+  "CPA certifications",
+  "Financial consulting",
+],
+langToggle: "Español",
     },
     services: {
       label: "Professional Services",
@@ -2101,20 +2135,24 @@ function WhatsAppBtn() {
 }
 
 /* ─────────────── APP ─────────────── */
+const getBrowserLang = () => {
+  const lang = navigator.language || navigator.userLanguage || "es";
+  return lang.toLowerCase().startsWith("en") ? "en" : "es";
+};
 export default function App() {
-  const [lang, setLang] = useState("es");
+const [lang, setLang] = useState(getBrowserLang);
   const [section, setSection] = useState("home");
   const [article, setArticle] = useState(null);
 
   const renderSection = () => {
     if (section === "blog" && article) return <ArticleView article={article} lang={lang} onBack={() => setArticle(null)} />;
     switch(section) {
-      case "home":     return <><HeroSection lang={lang} setSection={setSection}/><WhySection lang={lang}/><TestimonialsSection lang={lang}/></>;
+      case "home":     return <><HeroSection lang={lang} setLang={setLang} setSection={setSection}/><WhySection lang={lang}/><TestimonialsSection lang={lang}/></>;
       case "services": return <ServicesSection lang={lang}/>;
       case "about":    return <AboutSection lang={lang}/>;
       case "blog":     return <BlogList lang={lang} onRead={(a)=>{ setArticle(a); window.scrollTo({top:0,behavior:"smooth"}); }}/>;
       case "contact":  return <><ContactSection lang={lang}/><MapSection lang={lang}/></>;
-      default:         return <HeroSection lang={lang} setSection={setSection}/>;
+      default:         return <HeroSection lang={lang} setLang={setLang} setSection={setSection}/>;
     }
   };
 
