@@ -2308,6 +2308,28 @@ const [lang, setLang] = useState(getBrowserLang);
   const [section, setSection] = useState("home");
   const [article, setArticle] = useState(null);
 
+  useEffect(() => {
+  const titles = {
+    es: {
+      home:     "GAMA Asesores Contables · Contabilidad y Finanzas | Costa Rica",
+      services: "Servicios Contables y Financieros · GAMA Asesores | Costa Rica",
+      about:    "Nosotros · CPA Gustavo Monge A. · GAMA Asesores Contables",
+      blog:     "Blog Tributario · Normativa Fiscal Costa Rica · GAMA Asesores",
+      contact:  "Contacto · Solicitar Presupuesto · GAMA Asesores Contables",
+      privacy:  "Política de Privacidad · GAMA Asesores Contables",
+    },
+    en: {
+      home:     "GAMA Advisors · Accounting & Financial Services | Costa Rica",
+      services: "Accounting & Financial Services · GAMA Advisors | Costa Rica",
+      about:    "About Us · CPA Gustavo Monge A. · GAMA Advisors",
+      blog:     "Tax Blog · Costa Rica Tax Regulations · GAMA Advisors",
+      contact:  "Contact · Request a Quote · GAMA Advisors",
+      privacy:  "Privacy Policy · GAMA Advisors",
+    }
+  };
+  document.title = titles[lang]?.[section] || titles[lang].home;
+}, [section, lang]);
+  
   const renderSection = () => {
     if (section === "blog" && article) return <ArticleView article={article} lang={lang} onBack={() => setArticle(null)} />;
     switch(section) {
