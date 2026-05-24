@@ -1616,9 +1616,8 @@ function AboutSection({ lang }) {
               <div style={{ background:C.navy, padding:"40px 36px", borderRadius:2, position:"relative", overflow:"hidden" }}>
                 <div style={{ position:"absolute", top:-20, right:-20, width:120, height:120, borderRadius:"50%", background:"rgba(179,141,71,0.08)" }} />
                 <div style={{ position:"absolute", bottom:0, left:0, height:3, width:"100%", background:`linear-gradient(90deg, ${C.gold}, transparent)` }} />
-                <div style={{ width:80, height:80, borderRadius:"50%", background:`linear-gradient(135deg, ${C.gold}, ${C.navyLt})`, display:"flex", alignItems:"center", justifyContent:"center", marginBottom:24, border:`3px solid rgba(179,141,71,0.4)` }}>
-                  <span style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.8rem", fontWeight:700, color:C.white }}>G</span>
-                </div>
+                <img src="/gustavo_monge_cpa.jpg" alt="CPA Gustavo Monge A."
+                  style={{ width:80, height:80, borderRadius:"50%", objectFit:"cover", objectPosition:"center top", marginBottom:24, border:`3px solid rgba(179,141,71,0.4)`, display:"block" }} />
                 <div style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.3rem", fontWeight:700, color:C.white, marginBottom:4 }}>{t.cpa.name}</div>
                 <div style={{ color:C.gold, fontFamily:"'Montserrat',sans-serif", fontSize:"0.76rem", letterSpacing:"0.1em", textTransform:"uppercase", marginBottom:24, fontWeight:600 }}>{t.cpa.role}</div>
                 {t.cpa.bio.split("\n\n").map((p,i) => (
@@ -1649,9 +1648,8 @@ function AboutSection({ lang }) {
           <div style={{ display:"flex", justifyContent:"center", marginBottom:28 }}>
             <div style={{ background:C.navy, borderRadius:2, overflow:"hidden", boxShadow:"0 6px 28px rgba(5,30,87,0.18)", width:"100%", maxWidth:380, borderTop:`3px solid ${C.gold}` }}>
               <div style={{ height:220, background:`linear-gradient(135deg, ${C.navyDk}, ${C.navyLt})`, display:"flex", alignItems:"center", justifyContent:"center", position:"relative" }}>
-                <div style={{ width:100, height:100, borderRadius:"50%", background:`linear-gradient(135deg, ${C.gold}, ${C.goldLt})`, display:"flex", alignItems:"center", justifyContent:"center", border:`3px solid rgba(255,255,255,0.25)` }}>
-                  <span style={{ fontFamily:"'Playfair Display',serif", fontSize:"2.4rem", fontWeight:700, color:C.white }}>G</span>
-                </div>
+                <img src="/gustavo_monge_cpa.jpg" alt="CPA Gustavo Monge A."
+                 style={{ width:100, height:100, borderRadius:"50%", objectFit:"cover", objectPosition:"center top", border:`3px solid rgba(255,255,255,0.25)`, display:"block" }} />
                 <div style={{ position:"absolute", bottom:0, left:0, right:0, height:2, background:`linear-gradient(90deg, transparent, ${C.gold}, transparent)` }} />
               </div>
               <div style={{ padding:"28px 28px 24px" }}>
