@@ -1255,78 +1255,244 @@ function Navbar({ lang, setLang, section, setSection }) {
 }
 
 /* ── HERO ── */
-function HeroSection({ lang, setSection }) {
+function HeroSection({ lang, setLang, setSection }) {
+  const [visible, setVisible] = useState(false);
   const t = DATA[lang].hero;
+
+  useEffect(() => {
+    const timer = setTimeout(() => setVisible(true), 100);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleWhatsApp = () => {
+    const msg = lang === "es"
+      ? "Hola, me gustaría consultar sobre los servicios de GAMA Asesores Contables."
+      : "Hello, I would like to inquire about GAMA Asesores Contables services.";
+    window.open(`https://wa.me/50688969883?text=${encodeURIComponent(msg)}`, "_blank");
+  };
+
   return (
-    <section style={{ minHeight:"100vh", background:C.white, display:"flex", alignItems:"center", position:"relative", overflow:"hidden", borderBottom:`3px solid rgba(179,141,71,0.15)` }}>
+    <>
+      <style>{`
+        .hero-root {
+          font-family: 'Montserrat', sans-serif;
+          min-height: 100vh;
+          background: #030f2e;
+          position: relative;
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+        }
+        .hero-root::before {
+          content: '';
+          position: absolute; inset: 0;
+          background:
+            linear-gradient(135deg, rgba(179,141,71,0.06) 25%, transparent 25%) -20px 0,
+            linear-gradient(225deg, rgba(179,141,71,0.06) 25%, transparent 25%) -20px 0,
+            linear-gradient(315deg, rgba(179,141,71,0.06) 25%, transparent 25%),
+            linear-gradient(45deg,  rgba(179,141,71,0.06) 25%, transparent 25%);
+          background-size: 40px 40px;
+          background-color: #030f2e;
+          pointer-events: none;
+        }
+        .hero-root::after {
+          content: '';
+          position: absolute; top: -120px; right: -120px;
+          width: 500px; height: 500px;
+          background: radial-gradient(circle, rgba(179,141,71,0.18) 0%, transparent 70%);
+          pointer-events: none;
+        }
+        .hero-main {
+          position: relative; z-index: 5; flex: 1;
+          display: flex; align-items: center;
+          padding: 2.5rem 2.5rem 2rem;
+          max-width: 1200px; margin: 0 auto; width: 100%; gap: 4rem;
+        }
+        .hero-copy {
+          flex: 1.2;
+          opacity: 0; transform: translateY(24px);
+          transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .hero-copy.visible { opacity: 1; transform: translateY(0); }
+        .hero-badges { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1.75rem; }
+        .hero-badge {
+          display: inline-flex; align-items: center; gap: 0.5rem;
+          background: rgba(179,141,71,0.12);
+          border: 1px solid rgba(179,141,71,0.35);
+          color: #b38d47;
+          font-size: 0.68rem; font-weight: 700;
+          letter-spacing: 0.1em; text-transform: uppercase;
+          padding: 0.3rem 0.9rem; width: fit-content;
+        }
+        .badge-dot {
+          width: 6px; height: 6px; flex-shrink: 0;
+          background: #b38d47; border-radius: 50%;
+          animation: heroPulse 2s ease-in-out infinite;
+        }
+        .hero-badge:nth-child(2) .badge-dot { animation-delay: 1s; }
+        @keyframes heroPulse {
+          0%, 100% { opacity: 1; transform: scale(1); }
+          50%       { opacity: 0.45; transform: scale(0.75); }
+        }
+        .hero-headline {
+          font-family: 'Playfair Display', serif;
+          font-size: clamp(2.2rem, 4vw, 3.6rem);
+          font-weight: 700; line-height: 1.12;
+          color: #ffffff; margin-bottom: 1.4rem;
+        }
+        .hero-headline .gold-line { color: #b38d47; display: block; }
+        .hero-headline .accent-line {
+          color: #f2e485; display: block; font-style: italic;
+          font-size: clamp(1.5rem, 2.8vw, 2.4rem);
+        }
+        .hero-sub {
+          font-size: 0.97rem; font-weight: 300;
+          color: rgba(255,255,255,0.72); line-height: 1.78;
+          max-width: 520px; margin-bottom: 2rem;
+          border-left: 2px solid #b38d47; padding-left: 1rem;
+        }
+        .hero-service-tags {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 0.45rem;
+          margin-bottom: 2.25rem;
+          max-width: 520px;
+        }
+        .hero-service-tag {
+          font-size: 0.67rem; font-weight: 700;
+          letter-spacing: 0.07em; text-transform: uppercase;
+          color: rgba(255,255,255,0.58);
+          background: rgba(255,255,255,0.05);
+          border: 1px solid rgba(255,255,255,0.12);
+          padding: 0.3rem 0.5rem; text-align: center;
+        }
+        .hero-cta-btn {
+          display: inline-flex; align-items: center; gap: 0.75rem;
+          background: linear-gradient(135deg, #b38d47 0%, #d4aa5a 50%, #b38d47 100%);
+          background-size: 200% 200%;
+          color: #030f2e;
+          font-family: 'Montserrat', sans-serif;
+          font-size: 0.9rem; font-weight: 700;
+          letter-spacing: 0.08em; text-transform: uppercase;
+          padding: 1rem 2rem; border: none; cursor: pointer;
+          transition: background-position 0.4s ease, transform 0.2s ease, box-shadow 0.2s ease;
+          box-shadow: 0 4px 24px rgba(179,141,71,0.35);
+          border-radius: 2px;
+        }
+        .hero-cta-btn:hover {
+          background-position: right center;
+          transform: translateY(-2px);
+          box-shadow: 0 8px 32px rgba(179,141,71,0.5);
+        }
+        .hero-cta-sub { font-size: 0.7rem; color: rgba(255,255,255,0.38); letter-spacing: 0.06em; padding-left: 0.25rem; }
+        .hero-stats-col {
+          flex: 0.78;
+          display: flex; flex-direction: column; gap: 1.4rem;
+          opacity: 0; transform: translateX(24px);
+          transition: opacity 0.7s ease 0.25s, transform 0.7s ease 0.25s;
+        }
+        .hero-stats-col.visible { opacity: 1; transform: translateX(0); }
+        .hero-stat-card {
+          background: rgba(5,30,87,0.6);
+          border: 1px solid rgba(179,141,71,0.25);
+          border-left: 3px solid #b38d47;
+          padding: 1.2rem 1.4rem;
+          backdrop-filter: blur(8px);
+        }
+        .hero-stat-value {
+          font-family: 'Playfair Display', serif;
+          font-size: 2.3rem; font-weight: 700;
+          color: #f2e485; line-height: 1; margin-bottom: 0.3rem;
+        }
+        .hero-stat-label {
+          font-size: 0.7rem; font-weight: 700;
+          letter-spacing: 0.1em; text-transform: uppercase;
+          color: rgba(255,255,255,0.48);
+        }
+        .hero-stat-div { height: 1px; background: linear-gradient(to right, rgba(179,141,71,0.35), transparent); }
+        .hero-footer-strip {
+          position: relative; z-index: 5;
+          display: flex; align-items: center; justify-content: center;
+          gap: 2.5rem; padding: 0.9rem 2.5rem;
+          border-top: 1px solid rgba(179,141,71,0.15);
+          background: rgba(3,15,46,0.5); flex-wrap: wrap;
+        }
+        .hero-footer-item {
+          display: flex; align-items: center; gap: 0.45rem;
+          font-size: 0.7rem; color: rgba(255,255,255,0.38); letter-spacing: 0.05em;
+        }
+        .hero-footer-dot { width: 4px; height: 4px; background: #b38d47; border-radius: 50%; opacity: 0.55; }
+        @media (max-width: 900px) {
+          .hero-main { flex-direction: column; gap: 2rem; padding: 2rem 1.5rem 1.5rem; }
+          .hero-stats-col { flex-direction: row; flex-wrap: wrap; }
+          .hero-stat-card { flex: 1; min-width: 140px; }
+          .hero-service-tags { max-width: 100%; }
+          .hero-footer-strip { gap: 1rem; padding: 0.75rem 1.5rem; }
+        }
+        @media (max-width: 480px) {
+          .hero-headline { font-size: 1.9rem; }
+          .hero-stats-col { flex-direction: column; }
+          .hero-badge { font-size: 0.6rem; }
+          .hero-service-tags { grid-template-columns: repeat(2, 1fr); }
+        }
+      `}</style>
 
-      {/* Motivo decorativo dorado — fondo claro */}
-      <div style={{ position:"absolute", right:0, top:0, bottom:0, width:"42%", background:"#f4f1eb", clipPath:"polygon(12% 0, 100% 0, 100% 100%, 0% 100%)" }} />
-      <div style={{ position:"absolute", right:"5%", top:"50%", transform:"translateY(-50%)", opacity:0.12 }}>
-        <svg viewBox="0 0 300 400" style={{ width:320, height:420 }}>
-          <rect x="0" y="200" width="55" height="200" fill={C.gold}/>
-          <rect x="75" y="120" width="55" height="280" fill={C.gold}/>
-          <rect x="150" y="50" width="55" height="350" fill={C.gold}/>
-          <polygon points="205,50 265,0 265,50" fill={C.gold}/>
-        </svg>
-      </div>
-      {/* Línea dorada inferior */}
-      <div style={{ position:"absolute", left:0, bottom:0, width:"100%", height:3, background:`linear-gradient(90deg, ${C.gold}, ${C.yellow}, transparent)`, opacity:0.5 }} />
+      <section className="hero-root">
+        <div className="hero-main">
 
-      <div style={{ maxWidth:1200, margin:"0 auto", padding:"120px 5% 80px", width:"100%", position:"relative" }}>
-        <div style={{ maxWidth:620 }}>
+          <div className={`hero-copy ${visible ? "visible" : ""}`}>
+            <div className="hero-badges">
+              <div className="hero-badge"><span className="badge-dot" />{t.badge1}</div>
+              <div className="hero-badge"><span className="badge-dot" />{t.badge2}</div>
+            </div>
 
-          {/* Badge */}
-          <div style={{ display:"inline-flex", alignItems:"center", gap:8, border:`1px solid rgba(179,141,71,0.45)`, background:"rgba(179,141,71,0.06)", padding:"6px 16px", borderRadius:2, marginBottom:32 }}>
-            <div style={{ width:6, height:6, borderRadius:"50%", background:C.gold }} />
-            <span style={{ color:C.gold, fontFamily:"'Montserrat',sans-serif", fontSize:"0.72rem", letterSpacing:"0.18em", textTransform:"uppercase", fontWeight:700 }}>{t.badge}</span>
+            <h1 className="hero-headline">
+              {t.headline1}
+              <span className="gold-line">{t.headline2}</span>
+              <span className="accent-line">{t.headline3}</span>
+            </h1>
+
+            <p className="hero-sub">{t.subheadline}</p>
+
+            <div className="hero-service-tags">
+              {t.services.map((s) => (
+                <span key={s} className="hero-service-tag">{s}</span>
+              ))}
+            </div>
+
+            <div style={{ display:"flex", flexDirection:"column", alignItems:"flex-start", gap:"0.55rem" }}>
+              <button className="hero-cta-btn" onClick={handleWhatsApp}>
+                <svg style={{width:"20px",height:"20px",fill:"#030f2e"}} viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                {t.cta}
+              </button>
+              <span className="hero-cta-sub">· {t.ctaSub} ·</span>
+            </div>
           </div>
 
-          {/* Título */}
-          <h1 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(2.4rem,5vw,4rem)", fontWeight:700, color:C.navy, lineHeight:1.1, marginBottom:28, maxWidth:640 }}>
-            {t.title.split("\n")[0]}<br/>
-            <span style={{ color:C.gold }}>
-              {t.title.split("\n").slice(1).join("\n")}
-            </span>
-          </h1>
-
-          {/* Subtítulo */}
-          <p style={{ color:"#4a4540", fontFamily:"'Montserrat',sans-serif", fontSize:"1.05rem", lineHeight:1.8, maxWidth:520, marginBottom:48, fontWeight:300 }}>
-            {t.subtitle}
-          </p>
-
-          {/* CTAs */}
-          <div style={{ display:"flex", gap:16, flexWrap:"wrap" }}>
-            <button onClick={() => setSection("contact")}
-              style={btn.primary}
-              onMouseEnter={e => e.target.style.opacity=0.88}
-              onMouseLeave={e => e.target.style.opacity=1}
-            >{t.cta}</button>
-            <button onClick={() => setSection("services")}
-              style={{ ...btn.outline, color:C.navy, borderColor:C.navy }}
-              onMouseEnter={e => { e.target.style.background=C.navy; e.target.style.color=C.white; }}
-              onMouseLeave={e => { e.target.style.background="transparent"; e.target.style.color=C.navy; e.target.style.borderColor=C.navy; }}
-            >{t.ctaSecondary}</button>
-          </div>
-
-          {/* Stats bar */}
-          <div style={{ marginTop:72, paddingTop:40, borderTop:`1px solid rgba(5,30,87,0.1)`, display:"flex", gap:48, flexWrap:"wrap" }}>
-            {[["10+", lang==="es"?"Años de experiencia":"Years of experience"],
-              ["100+", lang==="es"?"Clientes satisfechos":"Satisfied clients"],
-              ["6", lang==="es"?"Servicios especializados":"Specialized services"],
-              ["2", lang==="es"?"Oficinas en Costa Rica":"Offices in Costa Rica"]
-            ].map(([n,l]) => (
-              <div key={n}>
-                <div style={{ fontFamily:"'Playfair Display',serif", fontSize:"2.2rem", fontWeight:700, color:C.navy }}>{n}</div>
-                <div style={{ width:24, height:2, background:C.gold, margin:"6px 0 8px" }} />
-                <div style={{ color:"#6b6560", fontFamily:"'Montserrat',sans-serif", fontSize:"0.75rem", letterSpacing:"0.06em" }}>{l}</div>
+          <div className={`hero-stats-col ${visible ? "visible" : ""}`}>
+            {t.stats.map((s, i) => (
+              <div key={i}>
+                <div className="hero-stat-card">
+                  <div className="hero-stat-value">{s.value}</div>
+                  <div className="hero-stat-label">{s.label}</div>
+                </div>
+                {i < t.stats.length - 1 && <div className="hero-stat-div" />}
               </div>
             ))}
           </div>
 
         </div>
-      </div>
-    </section>
+
+        <div className="hero-footer-strip">
+          <span className="hero-footer-item"><span className="hero-footer-dot" />Barranca, Puntarenas</span>
+          <span className="hero-footer-item"><span className="hero-footer-dot" />Santa Teresa, Cóbano</span>
+          <span className="hero-footer-item"><span className="hero-footer-dot" />gamacpa-asesores.com</span>
+          <span className="hero-footer-item"><span className="hero-footer-dot" />+506 8896-9883</span>
+        </div>
+      </section>
+    </>
   );
 }
 
