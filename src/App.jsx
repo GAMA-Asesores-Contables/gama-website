@@ -1243,7 +1243,7 @@ const PRIVACY_CONTENT = {
   }
 };
 
-export default function PrivacyPolicy({ lang = "es", onBack }) {
+function PrivacyPolicy({ lang = "es", onBack }) {
   const t = PRIVACY_CONTENT[lang] || PRIVACY_CONTENT.es;
 
   return (
@@ -2488,10 +2488,6 @@ function WhatsAppBtn() {
 }
 
 /* ─────────────── APP ─────────────── */
-const getBrowserLang = () => {
-  const lang = navigator.language || navigator.userLanguage || "es";
-  return lang.toLowerCase().startsWith("en") ? "en" : "es";
-};
 export default function App() {
 const [lang, setLang] = useState(getBrowserLang);
   const [section, setSection] = useState("home");
