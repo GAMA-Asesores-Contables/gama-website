@@ -2403,7 +2403,7 @@ function TestimonialsSection({ lang }) {
   const [loadDone, setLoadDone] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [form, setForm] = useState({ name:"", company:"", stars:5, text:"" });
-  const [submitStatus, setSubmitStatus] = useState("idle"); // idle | sending | ok | error
+  const [submitStatus, setSubmitStatus] = useState("idle"); // idle | translating | sending | ok | error
 
   /* Cargar testimonios aprobados desde Supabase */
   useEffect(() => {
@@ -2428,9 +2428,9 @@ function TestimonialsSection({ lang }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!SB_CONFIGURED) { setSubmitStatus("ok"); return; }
-    setSubmitStatus("sending");
-    try {
-      const res = await fetch(`${SB_URL}/rest/v1/testimonials`, {
+
+    const saveToSupabase = (item) =>
+      fetch(`${SB_URL}/rest/v1/testimonials`, {
         method: "POST",
         headers: {
           apikey: SB_KEY,
@@ -2438,10 +2438,46 @@ function TestimonialsSection({ lang }) {
           "Content-Type": "application/json",
           Prefer: "return=minimal",
         },
-        body: JSON.stringify({ ...form, lang, approved: false }),
+        body: JSON.stringify(item),
       });
-      setSubmitStatus(res.ok ? "ok" : "error");
-      if (res.ok) setForm({ name:"", company:"", stars:5, text:"" });
+
+    const translateText = async (text, fromLang, toLang) => {
+      const names = { es: "Spanish", en: "English", he: "Hebrew" };
+      const res = await fetch("https://api.anthropic.com/v1/messages", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          model: "claude-sonnet-4-6",
+          max_tokens: 500,
+          messages: [{
+            role: "user",
+            content: `Translate the following client testimonial from ${names[fromLang]} to ${names[toLang]}. Preserve the original tone, warmth and authenticity. Return ONLY the translated text with no explanations:\n\n${text}`,
+          }],
+        }),
+      });
+      const data = await res.json();
+      return data?.content?.[0]?.text ?? text;
+    };
+
+    try {
+      setSubmitStatus("translating");
+      const otherLangs = ["es","en","he"].filter(l => l !== lang);
+      const translations = await Promise.all(
+        otherLangs.map(async (toLang) => ({
+          lang: toLang,
+          text: await translateText(form.text, lang, toLang),
+        }))
+      );
+
+      setSubmitStatus("sending");
+      const items = [
+        { ...form, lang, approved: false },
+        ...translations.map(t => ({ ...form, text: t.text, lang: t.lang, approved: false })),
+      ];
+      const results = await Promise.all(items.map(saveToSupabase));
+      const allOk = results.every(r => r.ok);
+      setSubmitStatus(allOk ? "ok" : "error");
+      if (allOk) setForm({ name:"", company:"", stars:5, text:"" });
     } catch { setSubmitStatus("error"); }
   };
 
@@ -2599,9 +2635,11 @@ function TestimonialsSection({ lang }) {
                     </div>
                   )}
 
-                  <button type="submit" disabled={submitStatus==="sending"}
-                    style={{ ...btn.primary, width:"100%", opacity: submitStatus==="sending" ? 0.7 : 1 }}>
-                    {submitStatus==="sending"
+                  <button type="submit" disabled={submitStatus==="sending" || submitStatus==="translating"}
+                    style={{ ...btn.primary, width:"100%", opacity: (submitStatus==="sending" || submitStatus==="translating") ? 0.7 : 1 }}>
+                    {submitStatus==="translating"
+                      ? (lang==="he" ? "מתרגם לשלושה שפות..." : lang==="es" ? "Traduciendo a 3 idiomas..." : "Translating to 3 languages...")
+                      : submitStatus==="sending"
                       ? (lang==="he" ? "שולח..." : lang==="es" ? "Enviando..." : "Sending...")
                       : (lang==="he" ? "שלח המלצה" : lang==="es" ? "Enviar Testimonio" : "Submit Testimonial")}
                   </button>
