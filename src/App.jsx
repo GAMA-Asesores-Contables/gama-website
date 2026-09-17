@@ -2329,15 +2329,18 @@ function WhatsAppBtn() {
 export default function App() {
   const [lang, setLang] = useState("es");
   const [section, setSection] = useState("home");
-  const [article, setArticle] = useState(null);
+  const [articleId, setArticleId] = useState(null);
 
   const renderSection = () => {
-    if (section === "blog" && article) return <ArticleView article={article} lang={lang} onBack={() => setArticle(null)} />;
+    if (section === "blog" && articleId) {
+      const article = DATA[lang].blog.articles.find(a => a.id === articleId);
+      return <ArticleView article={article} lang={lang} onBack={() => setArticleId(null)} />;
+    }
     switch(section) {
       case "home":     return <><HeroSection lang={lang} setSection={setSection}/><WhySection lang={lang}/><TestimonialsSection lang={lang}/></>;
       case "services": return <ServicesSection lang={lang}/>;
       case "about":    return <AboutSection lang={lang}/>;
-      case "blog":     return <BlogList lang={lang} onRead={(a)=>{ setArticle(a); window.scrollTo({top:0,behavior:"smooth"}); }}/>;
+      case "blog":     return <BlogList lang={lang} onRead={(a)=>{ setArticleId(a.id); window.scrollTo({top:0,behavior:"smooth"}); }}/>;
       case "contact":  return <><ContactSection lang={lang}/><MapSection lang={lang}/></>;
       default:         return <HeroSection lang={lang} setSection={setSection}/>;
     }
@@ -2375,7 +2378,7 @@ export default function App() {
         {renderSection()}
       </main>
 
-      <Footer lang={lang} setSection={(s)=>{ setSection(s); setArticle(null); window.scrollTo({top:0}); }}/>
+      <Footer lang={lang} setSection={(s)=>{ setSection(s); setArticleId(null); window.scrollTo({top:0}); }}/>
       <WhatsAppBtn/>
     </>
   );
