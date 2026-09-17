@@ -1727,7 +1727,7 @@ function AboutSection({ lang }) {
 /* ── BLOG LIST ── */
 function BlogList({ lang, onRead }) {
   const t = DATA[lang].blog;
-  const arts = t.articles;
+  const arts = [...t.articles].sort((a, b) => b.id - a.id);
 
   return (
     <section id="blog-section" style={{ padding:"100px 5%", background:"#f4f1eb" }}>
