@@ -1329,6 +1329,408 @@ Source: Delfino.cr, September 15, 2026. Based on National Registry Circular DGL-
       links: ["Home","Services","About","Blog","Contact"],
     },
   },
+
+  /* ── HEBREW ── */
+  he: {
+    nav: { links: ["ראשי","שירותים","אודות","בלוג","צור קשר"], cta: "בקש הצעת מחיר" },
+    hero: {
+      badge: "משרד מקצועי · קוסטה ריקה",
+      title: "ייעוץ חשבונאי,\nמיסויי ופיננסי",
+      subtitle: "פתרונות מקיפים לעסקים ומשקיעים הפועלים בקוסטה ריקה — בספרדית, אנגלית ועברית.",
+      cta: "בקש הצעת מחיר",
+      ctaSecondary: "לשירותים שלנו",
+    },
+    services: {
+      label: "שירותים מקצועיים",
+      title: "פתרונות מותאמים לעסק שלכם",
+      items: [
+        {
+          icon: icons.niif,
+          title: "IFRS לעסקים קטנים ובינוניים",
+          short: "יישום והטמעה של תקני IFRS for SMEs לחברות הפועלות בקוסטה ריקה.",
+          detail: `תקני IFRS לעסקים קטנים ובינוניים הם תקן החשבונאות הבינלאומי המיושם בקוסטה ריקה. אנו מלווים את התהליך המלא מהאבחון הראשוני ועד ליישום מלא.
+
+כולל: ניתוח פערים, עיצוב מדיניות חשבונאית חדשה, הכנת דוחות כספיים השוואתיים, הכשרת הצוות ועמידה בדרישות הבנקים וגופים פיננסיים.`,
+        },
+        {
+          icon: icons.fiscal,
+          title: "הגשת דוחות מס",
+          short: "ניהול חודשי ושנתי של חובות המס שלכם בקוסטה ריקה.",
+          detail: `ניהול מלא של כל דוחות המס: מע"מ חודשי (D-104), מס הכנסה שנתי (D-101), ניכויים, דוחות מיוחדים ואופטימיזציה מיסויית חוקית.
+
+אנו מנהלים את כל ההגשות דרך מערכת TRIBU-CR ומייצגים את לקוחותינו מול רשות המסים.`,
+        },
+        {
+          icon: icons.audit,
+          title: "ביקורת ומתן ביטחון",
+          short: "דוחות טכניים עצמאיים ואישורי רו\"ח לגופי שלישיים.",
+          detail: `ביקורות ואישורים הם כלים חיוניים לאימות מידע פיננסי בפני בנקים, משקיעים ורשויות. אנו מציעים שירותי ביקורת מקיפים בהתאם לחקיקה הקוסטה-ריקאית.
+
+כולל: ביקורות פיננסיות עצמאיות, אישורי הכנסה, דוחות ביטחון לגורמים בנקאיים וחוות דעת מקצועיות.`,
+        },
+        {
+          icon: icons.outsourcing,
+          title: "מיקור חוץ חשבונאי",
+          short: "ניהול מלא של התהליכים החשבונאיים שלכם ללא הגדלת כוח אדם.",
+          detail: `מיקור חוץ חשבונאי הוא הפתרון לייעול תהליכים ללא הגדלת עלויות קבועות. GAMA Asesores לוקחת אחריות מלאה על החשבונאות שלכם.
+
+כולל: רישום חשבונאי יומי, פיוסי בנק, חשבונות לקבל ולשלם, ניהול שכר ו-CCSS, ודוחות חודשיים עם ניתוח שונויות.`,
+        },
+        {
+          icon: icons.projection,
+          title: "תחזיות פיננסיות",
+          short: "ניתוח, תזרים מזומנים ותרחישים להחלטות אסטרטגיות מבוססות.",
+          detail: `תכנון פיננסי הוא מצפן הצמיחה העסקית. אנו מכינים תחזיות מציאותיות המבוססות על נתונים היסטוריים ומניחים טכניים מנומקים.
+
+כולל: ניתוח ביצועים היסטוריים, תחזיות הכנסות והוצאות, תזרים מזומנים חזוי, ניתוח תרחישים (פסימי, בסיסי, אופטימי) ונקודות שיווי משקל.`,
+        },
+        {
+          icon: icons.society,
+          title: "הקמת חברות",
+          short: "ייעוץ משפטי ומנהלתי בהקמה ורישום של חברות בקוסטה ריקה.",
+          detail: `הקמת חברה בקוסטה ריקה דורשת עמידה במספר רב של דרישות חוקיות ומנהליות. אנו מלווים את התהליך המלא מהתכנון ועד לפעולה.
+
+כולל: ייעוץ לגבי המבנה המשפטי המתאים, רישום ב-Registro Nacional, מספר עוסק, רישום מיסויי ב-TRIBU-CR ועמידה בדרישות CCSS ועיריות.`,
+        },
+      ],
+    },
+    why: {
+      label: "למה לבחור אותנו?",
+      title: "מחויבות למצוינות",
+      items: [
+        { num: "01", title: "מומחיות טכנית", text: "מעל 10 שנות ניסיון בשוק קוסטה ריקה עם ידע מעמיק ב-IFRS לעסקים קטנים, מיסוי עדכני ותקנות מקומיות. עדכון מתמיד בשינויי חקיקה." },
+        { num: "02", title: "שירות אישי", text: "אנו מאמינים בשירות מותאם אישית. לוקחים את הזמן להבין את העסק, הענף והמטרות הפיננסיות שלכם ומעצבים פתרונות המותאמים למציאות העסקית שלכם." },
+        { num: "03", title: "שלישי לשוני ES / EN / עב", text: "שירות מקצועי מלא בספרדית, אנגלית ועברית. אנו מאפשרים תקשורת ישירה עם לקוחות מקומיים ומשקיעים זרים ומכינים תיעוד לכל הקהלים." },
+        { num: "04", title: "זמינות מלאה", text: "משרדים בברנקה ובסנטה טרזה, עם צוות וירטואלי לכל קוסטה ריקה. גמישות לעבודה פנים אל פנים או מרחוק, תמיד באותה איכות שירות." },
+      ],
+    },
+    about: {
+      label: "אודות",
+      title: "GAMA Asesores Contables",
+      body: `GAMA Asesores היא משרד המתמחה בשירותי חשבונאות, פיננסים, מיסוי וייעוץ עסקי. אנו משלבים ניסיון מקצועי, ניתוח פיננסי קפדני וידע מעמיק בתקנות קוסטה ריקה לתמיכה בקבלת החלטות עסקיות.
+
+שמנו, GAMA, מייצג את הספקטרום המלא של הפתרונות שאנו מציעים: מניהול מנהלתי ועד מודלים פיננסיים מתקדמים. איננו רק רואי חשבון — אנחנו שותפים אסטרטגיים בצמיחת העסק שלכם.`,
+      cpa: {
+        name: "CPA Gustavo Monge A.",
+        role: "רואה חשבון מוסמך · מרצה אוניברסיטאי",
+        bio: `רואה חשבון מוסמך בקוסטה ריקה עם ניסיון נרחב בייעוץ חשבונאי, פיננסי ומיסויי לחברות במגזרי השירותים, התיירות והנדל"ן.
+
+התמחיתי ביישום נכון של IFRS לעסקים קטנים ובינוניים ובעמידה בחובות המס בפני רשות המסים, ומספק ליווי מקיף בהכנת דוחות כספיים, אישורי CPA ודוחות ביטחון.
+
+כמו כן, אני משמש כמרצה באוניברסיטה בתחומי החשבונאות, עלויות ומערכות מידע חשבונאיות.`,
+      },
+      values: [
+        { title: "יושרה", text: "כנות מוחלטת תוך כיבוד תקנים, חוקים ועקרונות אתיים בכל פעולה." },
+        { title: "שקיפות", text: "תקשורת ברורה, ישירה וללא ז'רגון מיותר עם כל לקוח." },
+        { title: "מצוינות", text: "עדכון מתמיד בתקנים בינלאומיים ובנוהלי חשבונאות מיטביים." },
+        { title: "תוצאות", text: "פתרונות שיוצרים ערך אמיתי ומדיד לחברת הלקוח." },
+      ],
+    },
+    blog: {
+      label: "בלוג מקצועי",
+      title: "מידע מיסויי עדכני",
+      subtitle: "ניתוח מקצועי על תקנות קוסטה ריקה לקבלת החלטות טובות יותר.",
+      readMore: "קרא עוד →",
+      back: "← חזרה לבלוג",
+      articles: [
+        {
+          id:1, category:"מיסוי דיגיטלי", date:"10 במאי, 2026",
+          title:"TRIBU-CR: מדריך מקיף למערכת המיסוי הדיגיטלי של קוסטה ריקה 2026",
+          summary:"TRIBU-CR היא פלטפורמת המיסוי הדיגיטלי החדשה של רשות המסים בקוסטה ריקה, שהחליפה את מערכת ATV הישנה. מדריך זה יסביר כיצד לנהל את חובות המס שלכם דרכה.",
+          content:`TRIBU-CR היא פלטפורמת המיסוי הדיגיטלי החדשה של ממשלת קוסטה ריקה. כל חברה ועצמאי חייב להגיש את דוחות המס שלהם דרך פלטפורמה זו.
+
+## מה ניתן לעשות ב-TRIBU-CR?
+
+הגשת דוחות מע"מ חודשיים (D-104), הגשת דוחות מס הכנסה שנתיים (D-101), ניהול חשבוניות אלקטרוניות, תשלום מסים ישירות לרשות וצפייה בהיסטוריית הדוחות.
+
+## רישום ועדכון פרטים
+
+כל ישות חייבת להיות רשומה ב-TRIBU-CR עם פרטים עדכניים: כתובת, טלפון, ייצוג חוקי ופעילות כלכלית. עדכון הפרטים הוא חובה ואי-עמידה עלולה לגרום לקנסות.
+
+## הגשת דוחות מע"מ
+
+דוחות מע"מ (IVA) מוגשים עד ה-15 לכל חודש עבור החודש הקודם. שיעור המע"מ הסטנדרטי הוא 13% על מרבית הסחורות והשירותים.
+
+ב-GAMA Asesores אנו מנהלים את כל ההגשות ב-TRIBU-CR עבור לקוחותינו, מבטיחים עמידה בלוחות הזמנים ומונעים קנסות.`,
+        },
+        {
+          id:2, category:"מע\"מ", date:"8 במאי, 2026",
+          title:"מע\"מ בקוסטה ריקה: הצהרה, חישוב וחובות עדכניות",
+          summary:"מע\"מ (IVA) בשיעור 13% חל על מרבית הסחורות והשירותים בקוסטה ריקה. למדו כיצד לחשב, לדווח ולנצל את אשראי המס הזמין.",
+          content:`מע"מ (IVA) בקוסטה ריקה נכנס לתוקף בשנת 2019 עם חוק החיזוק הפיסקאלי (Ley 9635). שיעור המע"מ הסטנדרטי הוא 13%.
+
+## מה חייב במע"מ?
+
+מרבית הסחורות והשירותים חייבים ב-13%. שיעורים מופחתים: 4% על שירותי בריאות פרטיים, 2% על ביטוחים, 1% על מוצרי מזון בסיסיים.
+
+## אשראי מס
+
+עסקים יכולים לנכות את מע"מ הרכישות מ-IVA המכירות שלהם. זה מאפשר לשלם רק על "הערך המוסף" שנוצר בפעילות.
+
+## מועדי הגשה
+
+הדוח החודשי מוגש עד ה-15 לחודש שאחרי. הגשה מאוחרת גוררת קנס של 2% לחודש ועד ל-20%.
+
+ב-GAMA Asesores אנו מנהלים את כל חישובי ה-IVA ודואגים לעמידה בלוחות הזמנים.`,
+        },
+        {
+          id:3, category:"מס הכנסה", date:"5 במאי, 2026",
+          title:"הכנסות מהון מול רווחי פעילות עסקית: ההבדלים בקוסטה ריקה",
+          summary:"בקוסטה ריקה ישנה הבחנה ברורה בין הכנסות מהון לבין הכנסות מפעילות עסקית. ההבחנה קובעת את שיעור המס החל.",
+          content:`חוק מס הכנסה בקוסטה ריקה (Ley 7092) מבחין בין סוגי הכנסה שונים הממוסים בשיעורים שונים.
+
+## הכנסות מהון
+
+הכנסות מהון כוללות ריבית, דיבידנדים ודמי שכירות מנכסי מקרקעין. אלה ממוסות בשיעור 15%.
+
+דמי שכירות מנכסים: 15% על ברוטו, או 15% על הנטו לאחר ניכוי 15% הוצאות אוטומטיות.
+
+## הכנסות עסקיות
+
+הכנסות מפעילות עסקית רגילה ממוסות בשיעורים פרוגרסיביים על רווח נקי: 5% לטווח הנמוך עד 25% לטווח הגבוה.
+
+## חשיבות ההבחנה
+
+הבחנה שגויה בין סוגי הכנסה עלולה לגרום לתשלום יתר או לחסר. ב-GAMA Asesores אנו מוודאים שכל הכנסה ממוסה בשיעור הנכון.`,
+        },
+        {
+          id:4, category:"IFRS", date:"2 במאי, 2026",
+          title:"IFRS לעסקים קטנים ובינוניים: יישום צעד אחר צעד",
+          summary:"IFRS for SMEs הוא תקן החשבונאות הבינלאומי המיושם בחברות בקוסטה ריקה. מדריך מעשי ליישום מוצלח.",
+          content:`IFRS for SMEs (NIIF para PYMES) הוא תקן חשבונאי בינלאומי שפורסם על ידי IASB ואומץ בקוסטה ריקה כתקן החובה לחברות שאינן ציבוריות.
+
+## מדוע IFRS for SMEs?
+
+הבנקים, הרשויות והמשקיעים בקוסטה ריקה דורשים דוחות כספיים לפי IFRS for SMEs. ללא יישום נכון, חברות עלולות להתקשות בקבלת מימון בנקאי.
+
+## שלבי היישום
+
+שלב 1 - אבחון: בדיקת המצב הקיים אל מול דרישות IFRS.
+שלב 2 - מדיניות חשבונאית: קביעת מדיניות חשבונאית חדשה.
+שלב 3 - יישום: המרת יתרות הפתיחה, הכנת דוחות השוואתיים.
+שלב 4 - דוחות שנתיים: הכנת הדוחות הכספיים השנתיים הראשונים.
+
+ב-GAMA Asesores, תהליך היישום לחברה בינונית עם רישומים מסודרים אורך 4-6 שבועות.`,
+        },
+        {
+          id:5, category:"חקיקה", date:"28 באפריל, 2026",
+          title:"רפורמת המס 2026 בקוסטה ריקה: מה שחברות חייבות לדעת",
+          summary:"שנת 2026 מביאה עדכונים חשובים בתחום המיסוי בקוסטה ריקה. מחשבוניות אלקטרוניות ועד שינויים בשיעורי המס.",
+          content:`שנת 2026 מציינת שינויים משמעותיים במערכת המיסוי של קוסטה ריקה. חשוב שחברות יהיו מעודכנות כדי למנוע קנסות ולנצל הזדמנויות.
+
+## חשבוניות אלקטרוניות 4.4
+
+מאז 30 ביוני 2026, כל חשבונית חייבת להיות אלקטרונית ולהיות מועברת ל-TRIBU-CR תוך 48 שעות. חברות שעדיין משתמשות בחשבוניות נייר חייבות לעדכן מיד.
+
+## עדכוני TRIBU-CR
+
+מערכת TRIBU-CR שדרגה את ממשק הגשת הדוחות. ישנם שינויים בפורמטים של מספר טפסים.
+
+## שיעורי ניכוי מס במקור
+
+שיעורי ניכוי המס במקור עודכנו לשנת 2026. שירותים מקצועיים: 12% ניכוי במקור.
+
+ב-GAMA Asesores אנו מלווים את לקוחותינו בכל עדכוני הרגולציה ומוודאים ציות מלא.`,
+        },
+        {
+          id:6, category:"רווחי הון", date:"25 באפריל, 2026",
+          title:"רווחי הון בקוסטה ריקה: יישום, תשלום ויתרונות",
+          summary:"מס על רווחי הון בשיעור 15% חל על מכירת נכסים בקוסטה ריקה. מדריך מלא על מתי חל המס, כיצד מחשבים ומתי ישנן פטורים.",
+          content:`מס על רווחי הון בקוסטה ריקה חל על רווחים ממכירת נכסים כגון קרקעות, בתים, מניות וציוד עסקי. שיעור המס הוא 15% על הרווח הנקי.
+
+## מה הם רווחי הון?
+
+רווח הון הוא ההפרש בין מחיר המכירה לבין עלות הרכישה. מכירת נכס מקרקעין ברווח של $100,000 תגרור מס של $15,000.
+
+## הגשה ותשלום
+
+המס מוגש ומשולם תוך חודש ממועד העסקה. אין מס שנתי מצטבר — כל עסקה מייצרת חובה עצמאית.
+
+## תכנון לפני מכירה
+
+שמירת מסמכים על מחיר הרכישה המקורי, שיפוצים ועלויות אחרות היא חיונית להפחתת בסיס המס. ב-GAMA Asesores אנו מסייעים בתכנון לפני מכירה.`,
+        },
+        {
+          id:7, category:"פלטפורמות דיגיטליות", date:"22 באפריל, 2026",
+          title:"Airbnb ופלטפורמות דיגיטליות: חובות מס המארחים בקוסטה ריקה",
+          summary:"מארחים ב-Airbnb, Booking ו-VRBO בקוסטה ריקה חייבים במע\"מ ובמס הכנסה. מדריך לחישוב וניהול מלא של חובות אלה.",
+          content:`קוסטה ריקה חוקקה תקנות ברורות לגבי מיסוי פעילות מארחים בפלטפורמות דיגיטליות כ-Airbnb, Booking.com ו-VRBO.
+
+## חובות מע"מ
+
+הכנסות משכירות לטווח קצר (פחות מ-30 יום) חייבות ב-13% מע"מ. הפלטפורמות עשויות לגבות מע"מ ישירות מהלקוח, אך המארח אחראי לוודא שהמס הוגש כראוי.
+
+## מס הכנסה
+
+הכנסות נטו משכירות ממוסות ב-15% כהכנסות מהון. ניתן לנכות הוצאות ריאליות: תחזוקה, חשמל, ניהול נכס, פחת.
+
+## רישום נדרש
+
+מארחים חייבים להיות רשומים ב-TRIBU-CR ולהגיש דוחות חודשיים (מע"מ) ושנתי (הכנסה). אי-רישום עלול לגרור קנסות משמעותיים.
+
+ב-GAMA Asesores אנו מתמחים בטיפול בלקוחות עם פעילות Airbnb ונכסים להשכרה, כולל משקיעים זרים.`,
+        },
+        {
+          id:8, category:"חברות חדשות", date:"18 באפריל, 2026",
+          title:"חובות מס לחברות חדשות בקוסטה ריקה: כל מה שצריך לדעת",
+          summary:"אם הקמתם לאחרונה חברה בקוסטה ריקה, מאמר זה מסביר את כל חובות המס מהחודש הראשון: רישומים, דוחות, שכר ועוד.",
+          content:`הקמת חברה בקוסטה ריקה מחייבת עמידה בחובות מיסוי ורגולציה מהחודש הראשון לפעילות.
+
+## רישומים חובה
+
+TRIBU-CR: רישום תוך 30 יום מהפעלת החברה עם קוד פעילות כלכלי נכון.
+CCSS: רישום כמעסיק גם אם אתם העובד היחיד, לפני קבלת עובד ראשון.
+Registro de Beneficiarios Finales: רישום הבעלים האמיתיים תוך 20 ימי עסקים מהרישום.
+
+## חובות חודשיות מחודש 1
+
+הגשת דוח מע"מ (אם פעילות כפופה ל-IVA), הגשת דוח שכר ל-CCSS, והפקת חשבוניות אלקטרוניות לכל עסקה.
+
+## חובות שנתיות
+
+דוח מס הכנסה שנתי (D-101), עדכון Registro de Transparencia, ותשלום מס חברות שנתי.
+
+ב-GAMA Asesores אנו מלווים חברות חדשות בכל תהליך הרישום וההגדרה הנכונה.`,
+        },
+        {
+          id:9, category:"שכר ו-CCSS", date:"15 באפריל, 2026",
+          title:"שכר ו-CCSS בקוסטה ריקה: חובות המעסיק",
+          summary:"ניהול שכר ב-CCSS בקוסטה ריקה כולל ניכויים קבועים, אגרות ודוחות חודשיים. מדריך מלא למעסיקים.",
+          content:`כל מעסיק בקוסטה ריקה חייב לנהל שכר ב-CCSS (Caja Costarricense de Seguro Social) ולדווח על כל עובד מדי חודש.
+
+## שיעורי ניכוי
+
+מנת המעסיק: 26.33% מהשכר הגולמי (בריאות, פנסיה, ביטוח תאונות ועוד).
+מנת העובד: 10.67% מהשכר הגולמי (בריאות ופנסיה).
+
+## שכר מינימום 2026
+
+שכר המינימום מתעדכן מדי שנה. יש לוודא שהשכר המשולם עומד בדרישות החוק הנוכחיות.
+
+## אגרת חופשה שנתית (Aguinaldo)
+
+בכל חודש דצמבר, כל מעסיק חייב לשלם אגרת חופשה שנתית השווה לחודש שכר. אין אפשרות חוקית לוותר על תשלום זה.
+
+ב-GAMA Asesores אנו מנהלים שכר של עשרות חברות, כולל ניהול CCSS ואגרות שנתיות.`,
+        },
+        {
+          id:10, category:"עצמאים", date:"10 באפריל, 2026",
+          title:"מיסוי עצמאים בקוסטה ריקה: מה שחייבים לדעת",
+          summary:"רופאים, עורכי דין, מהנדסים, יועצים ועצמאים אחרים בקוסטה ריקה חייבים בחובות מס ספציפיות. מדריך מקיף.",
+          content:`אלפי אנשי מקצוע בקוסטה ריקה פועלים כעצמאים מבלי להבין לגמרי את חובות המס שלהם. בורות זו גורמת הן לאי-עמידה והן לניכויים לא מנוצלים.
+
+## מי נחשב עצמאי?
+
+כל אדם המספק שירותים מבוססי ידע (בריאות, משפט, הנדסה, חשבונאות, ייעוץ וכו') ללא קשר עבודה תלוי. אם אתם מנפיקים חשבוניות — חייבים ברישום ב-TRIBU-CR.
+
+## מע"מ לעצמאים: 13%
+
+שירותים מקצועיים חייבים ב-13% מע"מ. בעת הוצאת חשבונית, יש לכלול 13% IVA.
+
+## ניכוי במקור: 12%
+
+כאשר חברה משלמת לכם על שירות, היא חייבת לנכות 12% כניכוי במקור. זוהי מקדמה על חשבון מס ההכנסה השנתי.
+
+## הוצאות ניתנות לניכוי
+
+שכירות משרד, ציוד מחשוב, תוכנות, קורסים, אינטרנט וטלפון (פרופורציה מקצועית), רכב, ביטוח מקצועי ושכר רואה החשבון שלכם.
+
+ב-GAMA Asesores אנו מסייעים לעשרות עצמאים לעמוד בחובותיהם ולמקסם את הניכויים המותרים.`,
+        },
+        {
+          id:11, category:"מנהל המסים", date:"17 בספטמבר, 2026",
+          title:"משרד האוצר מארגן מחדש 18 אגפים משפטיים: מה זה אומר לנישומים?",
+          summary:"משרד האוצר של קוסטה ריקה מכין את איחוד יותר מ-200 עורכי דינו המפוזרים ב-18 יחידות, במטרה לאחד קריטריונים ולחזק גביית מסים.",
+          content:`ב-17 בספטמבר 2026 הודיע משרד האוצר של קוסטה ריקה שיעמיד להתייעצות פנימית הצעה לארגון מחדש של 18 האגפים המשפטיים שלו. נשמע כמו ענין פנימי, אך יש לכך השלכות ישירות על כל עסק.
+
+## הבעיה הנוכחית: פיזור משפטי
+
+כיום יש למשרד האוצר יותר מ-200 עורכי דין המפוזרים ב-18 יחידות שונות. מצב זה יוצר קריטריונים משפטיים סותרים, כפילות תהליכים ופיצול בגביית מסים.
+
+## מה מבקשת הארגון מחדש?
+
+ההצעה, המתואמת עם המלצות MIDEPLAN ו-OECD, שואפת לרכז את הפונקציות המשפטיות במנהל משפטי מחוזק עם קריטריונים אחידים.
+
+## מה זה אומר לנישומים?
+
+גבייה יעילה יותר: חברות עם חובות מס יתמודדו עם ניהול גבייה מהיר ושיטתי יותר.
+קוהרנטיות גדולה יותר: קריטריונים אחידים יאפשרו תחזיות טובות יותר לגבי מדיניות מסים.
+
+## מה כדאי שהחברה שלכם תעשה עכשיו?
+
+לשמור על כל ההגשות עדכניות, לשמור תיעוד מלא, לטפל מיידית בכל הודעה מה-DGT ולסדר מצבים תלויים לפני שיעברו לשלב הגבייה השיפוטי.
+
+מקור: Delfino.cr, 17 בספטמבר 2026.`,
+        },
+        {
+          id:12, category:"מרשם החברות", date:"15 בספטמבר, 2026",
+          title:"כתובת דוא\"ל חובה לחברות: מרשם החברות פותח מערכת חינמית ב-20 בספטמבר 2026",
+          summary:"החל מ-20 בספטמבר 2026, מרשם החברות של קוסטה ריקה פותח את מערכת ACE לרישום חינמי של כתובת דוא\"ל לחברות. המועד האחרון: 3 בדצמבר 2027.",
+          content:`מרשם החברות הודיע שהחל מ-20 בספטמבר 2026 יפעיל את מערכת ניהול-עצמי של דוא"ל (ACE), שתאפשר לנציגים משפטיים לרשום ישירות ובחינם את כתובת הדוא"ל של חברותיהם.
+
+## מדוע כתובת דוא"ל היא חובה?
+
+חוק 10.597 קבע דוא"ל כאמצעי ההודעה הרשמי לכל חברות המסחר. חוק 10.962 יצר מנגנון חינמי לרישום. ללא דוא"ל רשום, הודעות ייחשבו כמומצאות כדין גם אם לא קיבלתם אותן.
+
+## לאיזה חברות זה חל?
+
+החובה חלה על: חברה בעמ (S.A.), חברת אחריות מוגבלת (S.R.L.), שותפות כללית, שותפות מוגבלת, וחברות זרות ללא מושב בקוסטה ריקה.
+
+## כיצד פועלת מערכת ACE?
+
+כניסה עם חתימה דיגיטלית, בחירת החברה, הזנת הדוא"ל, חתימה על הצהרה בשבועה אלקטרונית והורדת קבלה. אין צורך בביקור פיזי במרשם ואין צורך בפרסום ב-La Gaceta.
+
+## המועד האחרון והתוצאות של אי-ציות
+
+המועד לרישום הדוא"ל הוא 3 בדצמבר 2027. לאחר מכן המרשם לא יעבד שום מסמך לחברות ללא דוא"ל רשום, והעמלה תהיה ₡7,295.
+
+## ההמלצה שלנו
+
+אל תחכו עד דצמבר 2027. המערכת פתוחה מ-20 בספטמבר 2026, חינמית, מהירה ולא מצריכה ביקור במרשם.
+
+ב-GAMA Asesores אנו מסייעים לבדוק את מצב החברות שלכם ולתאם את רישום הדוא"ל.
+
+מקור: Delfino.cr, 15 בספטמבר 2026. חוזר DGL-003-2026 והנחיית DPJ-002-2026.`,
+        },
+      ],
+    },
+    contact: {
+      label: "צור קשר",
+      title: "מוכנים לשדרג את הניהול הפיננסי שלכם?",
+      subtitle: "צרו איתנו קשר לייעוץ ראשוני ללא עלות.",
+      form: {
+        name: "שם מלא",
+        email: "כתובת דוא\"ל",
+        phone: "טלפון (אופציונלי)",
+        company: "שם החברה",
+        service: "שירות מבוקש",
+        serviceOptions: ["בחרו שירות","IFRS לעסקים קטנים","הגשת דוחות מס","ביקורת ומתן ביטחון","מיקור חוץ חשבונאי","תחזיות פיננסיות","הקמת חברות","אחר / שאלה כללית"],
+        message: "כיצד נוכל לסייע לכם?",
+        send: "שלח פנייה",
+        sending: "שולח...",
+        success: "ההודעה נשלחה! ניצור אתכם קשר בקרוב.",
+        error: "אירעה שגיאה. אנא נסו שנית.",
+      },
+      contactInfo: {
+        title: "פרטי יצירת קשר",
+        phones: [
+          { number:"+506 8896-9883", label:"ישיר עם גוסטבו מונחה, CPA" },
+          { number:"+506 6055-8006", label:"ישיר עם הסגל / עוזרים" },
+        ],
+        emails: ["gmongea@gamacpa-asesores.com","gamasacsa@gmail.com"],
+        officesTitle: "המשרדים שלנו",
+        offices: [
+          { name:"משרד פונטרנס", addr:"Residencial Bulevar del Sol, Etapa IV, Casa E-14, Barranca, Puntarenas" },
+          { name:"משרד חצי האי", addr:"מול מגרש הכדורגל, קומה 2, Súper El Mango, Santa Teresa, Cóbano, Puntarenas" },
+        ],
+      },
+    },
+    footer: {
+      tagline: "חשבונאות · פיננסים · ייעוץ עסקי",
+      rights: "© 2026 GAMA Asesores Contables. כל הזכויות שמורות.",
+      links: ["ראשי","שירותים","אודות","בלוג","צור קשר"],
+    },
+  },
 };
 
 /* ─────────────── COMPONENTS ─────────────── */
@@ -1390,7 +1792,7 @@ function Navbar({ lang, setLang, section, setSection }) {
 
           {/* Language switcher */}
           <div style={{ display:"flex", border:`1px solid rgba(179,141,71,0.4)`, borderRadius:2, overflow:"hidden" }}>
-            {["es","en"].map(l => (
+            {["es","en","he"].map(l => (
               <button key={l} onClick={() => setLang(l)}
                 style={{
                   padding:"5px 12px", border:"none", cursor:"pointer",
@@ -1400,7 +1802,7 @@ function Navbar({ lang, setLang, section, setSection }) {
                   fontWeight:700, letterSpacing:"0.06em",
                   textTransform:"uppercase", transition:"all .2s",
                 }}
-              >{l.toUpperCase()}</button>
+              >{l === "he" ? "עב" : l.toUpperCase()}</button>
             ))}
           </div>
 
@@ -1423,20 +1825,20 @@ function Navbar({ lang, setLang, section, setSection }) {
             <button key={i} onClick={() => go(navSections[i])}
               style={{ display:"block", width:"100%", background:"none", border:"none", cursor:"pointer",
                 color: C.white, fontFamily:"'Montserrat',sans-serif", fontSize:"0.9rem",
-                textAlign:"left", padding:"12px 0", letterSpacing:"0.08em",
+                textAlign:"start", padding:"12px 0", letterSpacing:"0.08em",
                 borderBottom:`1px solid rgba(255,255,255,0.08)`,
               }}
             >{link}</button>
           ))}
           <div style={{ display:"flex", gap:8, marginTop:16 }}>
-            {["es","en"].map(l => (
+            {["es","en","he"].map(l => (
               <button key={l} onClick={() => setLang(l)}
                 style={{ padding:"8px 20px", border:`1px solid ${C.gold}`, cursor:"pointer",
                   background: lang===l ? C.gold : "transparent",
                   color: lang===l ? C.navy : C.gold,
                   fontFamily:"'Montserrat',sans-serif", fontWeight:700, fontSize:"0.8rem",
                 }}
-              >{l.toUpperCase()}</button>
+              >{l === "he" ? "עב" : l.toUpperCase()}</button>
             ))}
           </div>
         </div>
@@ -1801,12 +2203,12 @@ function ArticleView({ article, lang, onBack }) {
 
         <div style={{ marginTop:60, padding:"32px 28px", background:C.navy, textAlign:"center" }}>
           <p style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.1rem", color:C.white, marginBottom:20 }}>
-            {lang==="es" ? "¿Necesita asesoría sobre este tema?" : "Need advice on this topic?"}
+            {lang==="he" ? "צריכים ייעוץ בנושא זה?" : lang==="es" ? "¿Necesita asesoría sobre este tema?" : "Need advice on this topic?"}
           </p>
-          <a href={`https://wa.me/50688969883?text=${encodeURIComponent(lang==="es"?"Hola GAMA Asesores, leí el artículo del blog y me gustaría consultar.":"Hello GAMA Advisors, I read the blog article and would like to inquire.")}`}
+          <a href={`https://wa.me/50688969883?text=${encodeURIComponent(lang==="he"?"שלום GAMA Asesores, קראתי את המאמר ורציתי להתייעץ.":lang==="es"?"Hola GAMA Asesores, leí el artículo del blog y me gustaría consultar.":"Hello GAMA Advisors, I read the blog article and would like to inquire.")}`}
             target="_blank" rel="noopener noreferrer"
             style={{ ...btn.primary, display:"inline-block", textDecoration:"none" }}
-          >{lang==="es" ? "Consultar por WhatsApp" : "Ask via WhatsApp"}</a>
+          >{lang==="he" ? "שלחו הודעה ב-WhatsApp" : lang==="es" ? "Consultar por WhatsApp" : "Ask via WhatsApp"}</a>
         </div>
       </div>
       <WhatsAppBtn />
@@ -2009,7 +2411,7 @@ function TestimonialsSection({ lang }) {
 
   /* Mezclar: primero los dinámicos del idioma activo, luego los estáticos del idioma activo */
   const dynFiltered = dynItems.filter(t => (t.lang ?? "es") === lang);
-  const staticFiltered = STATIC_TESTIMONIALS.filter(t => t.lang === lang);
+  const staticFiltered = STATIC_TESTIMONIALS.filter(t => t.lang === (lang === "he" ? "es" : lang));
   const allItems = [...dynFiltered, ...staticFiltered];
 
   const stars = (n) => "★".repeat(n) + "☆".repeat(5 - n);
@@ -2050,13 +2452,13 @@ function TestimonialsSection({ lang }) {
           {/* Header */}
           <div style={{ textAlign:"center", marginBottom:64 }}>
             <p style={{ color:C.gold, fontFamily:"'Montserrat',sans-serif", fontSize:"0.75rem", letterSpacing:"0.2em", textTransform:"uppercase", fontWeight:700, marginBottom:12 }}>
-              {lang==="es" ? "Testimonios" : "Testimonials"}
+              {lang==="he" ? "המלצות" : lang==="es" ? "Testimonios" : "Testimonials"}
             </p>
             <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(1.9rem,3.5vw,2.6rem)", color:C.white, fontWeight:700, marginBottom:8 }}>
-              {lang==="es" ? "Lo que Dicen Nuestros Clientes" : "What Our Clients Say"}
+              {lang==="he" ? "מה הלקוחות שלנו אומרים" : lang==="es" ? "Lo que Dicen Nuestros Clientes" : "What Our Clients Say"}
             </h2>
             <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.86rem", color:"rgba(255,255,255,0.45)", marginTop:8 }}>
-              {lang==="es" ? "Experiencias reales de empresas y profesionales que confían en GAMA Asesores." : "Real experiences from companies and professionals who trust GAMA Advisors."}
+              {lang==="he" ? "חוויות אמיתיות של עסקים ואנשי מקצוע שסומכים על GAMA Asesores." : lang==="es" ? "Experiencias reales de empresas y profesionales que confían en GAMA Asesores." : "Real experiences from companies and professionals who trust GAMA Advisors."}
             </p>
           </div>
 
@@ -2084,10 +2486,10 @@ function TestimonialsSection({ lang }) {
               onMouseEnter={e => { e.target.style.background=C.gold; e.target.style.color=C.navy; e.target.style.borderColor=C.gold; }}
               onMouseLeave={e => { e.target.style.background="transparent"; e.target.style.color=C.gold; e.target.style.borderColor=C.gold; }}
             >
-              {lang==="es" ? "✍ Compartir mi Experiencia" : "✍ Share My Experience"}
+              {lang==="he" ? "✍ שתפו את חוות הדעת שלכם" : lang==="es" ? "✍ Compartir mi Experiencia" : "✍ Share My Experience"}
             </button>
             <p style={{ marginTop:14, fontFamily:"'Montserrat',sans-serif", fontSize:"0.76rem", color:"rgba(255,255,255,0.3)", fontStyle:"italic" }}>
-              {lang==="es"
+              {lang==="he" ? "ההמלצות נסקרות לפני פרסומן." : lang==="es"
                 ? "Los comentarios son revisados antes de publicarse."
                 : "Comments are reviewed before being published."}
             </p>
@@ -2115,34 +2517,34 @@ function TestimonialsSection({ lang }) {
               <div style={{ textAlign:"center", padding:"24px 0" }}>
                 <div style={{ fontSize:"3rem", marginBottom:16 }}>✅</div>
                 <h3 style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.4rem", color:C.white, marginBottom:12 }}>
-                  {lang==="es" ? "¡Gracias por su aporte!" : "Thank you for your feedback!"}
+                  {lang==="he" ? "תודה על חוות הדעת שלכם!" : lang==="es" ? "¡Gracias por su aporte!" : "Thank you for your feedback!"}
                 </h3>
                 <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.88rem", color:"rgba(255,255,255,0.6)", lineHeight:1.75 }}>
-                  {lang==="es"
+                  {lang==="he" ? "חוות הדעת שלכם התקבלה ותיסקר על ידי הצוות שלנו. אם תאושר, תופיע בקרוב בסעיף זה." : lang==="es"
                     ? "Su comentario fue recibido y será revisado por nuestro equipo. Si es aprobado, aparecerá en esta sección próximamente."
                     : "Your comment has been received and will be reviewed by our team. If approved, it will appear in this section soon."}
                 </p>
                 <button onClick={() => setShowModal(false)} style={{ ...btn.primary, marginTop:24 }}>
-                  {lang==="es" ? "Cerrar" : "Close"}
+                  {lang==="he" ? "סגור" : lang==="es" ? "Cerrar" : "Close"}
                 </button>
               </div>
             ) : (
               <>
                 <p style={{ color:C.gold, fontFamily:"'Montserrat',sans-serif", fontSize:"0.72rem", letterSpacing:"0.18em", textTransform:"uppercase", fontWeight:700, marginBottom:8 }}>
-                  {lang==="es" ? "Dejar mi Testimonio" : "Leave My Testimonial"}
+                  {lang==="he" ? "כתבו המלצה" : lang==="es" ? "Dejar mi Testimonio" : "Leave My Testimonial"}
                 </p>
                 <h3 style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.35rem", color:C.white, fontWeight:700, marginBottom:6 }}>
-                  {lang==="es" ? "¿Cómo fue su experiencia?" : "How was your experience?"}
+                  {lang==="he" ? "כיצד הייתה חוויתכם?" : lang==="es" ? "¿Cómo fue su experiencia?" : "How was your experience?"}
                 </h3>
                 <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.8rem", color:"rgba(255,255,255,0.45)", marginBottom:28 }}>
-                  {lang==="es" ? "Su comentario será revisado antes de publicarse." : "Your comment will be reviewed before publishing."}
+                  {lang==="he" ? "חוות הדעת שלכם תיסקר לפני פרסומה." : lang==="es" ? "Su comentario será revisado antes de publicarse." : "Your comment will be reviewed before publishing."}
                 </p>
 
                 <form onSubmit={handleSubmit}>
                   <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:14, marginBottom:14 }}>
                     <div>
                       <label style={{ display:"block", fontFamily:"'Montserrat',sans-serif", fontSize:"0.72rem", color:"rgba(255,255,255,0.6)", fontWeight:600, letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:5 }}>
-                        {lang==="es" ? "Nombre *" : "Name *"}
+                        {lang==="he" ? "שם *" : lang==="es" ? "Nombre *" : "Name *"}
                       </label>
                       <input style={inputSt} required value={form.name}
                         onChange={e => setForm(p=>({...p,name:e.target.value}))}
@@ -2151,7 +2553,7 @@ function TestimonialsSection({ lang }) {
                     </div>
                     <div>
                       <label style={{ display:"block", fontFamily:"'Montserrat',sans-serif", fontSize:"0.72rem", color:"rgba(255,255,255,0.6)", fontWeight:600, letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:5 }}>
-                        {lang==="es" ? "Empresa / Cargo" : "Company / Role"}
+                        {lang==="he" ? "חברה / תפקיד" : lang==="es" ? "Empresa / Cargo" : "Company / Role"}
                       </label>
                       <input style={inputSt} value={form.company}
                         onChange={e => setForm(p=>({...p,company:e.target.value}))}
@@ -2163,7 +2565,7 @@ function TestimonialsSection({ lang }) {
                   {/* Estrellas interactivas */}
                   <div style={{ marginBottom:14 }}>
                     <label style={{ display:"block", fontFamily:"'Montserrat',sans-serif", fontSize:"0.72rem", color:"rgba(255,255,255,0.6)", fontWeight:600, letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:8 }}>
-                      {lang==="es" ? "Calificación" : "Rating"}
+                      {lang==="he" ? "דירוג" : lang==="es" ? "Calificación" : "Rating"}
                     </label>
                     <div style={{ display:"flex", gap:6 }}>
                       {[1,2,3,4,5].map(n => (
@@ -2175,7 +2577,7 @@ function TestimonialsSection({ lang }) {
 
                   <div style={{ marginBottom:22 }}>
                     <label style={{ display:"block", fontFamily:"'Montserrat',sans-serif", fontSize:"0.72rem", color:"rgba(255,255,255,0.6)", fontWeight:600, letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:5 }}>
-                      {lang==="es" ? "Su Comentario *" : "Your Comment *"}
+                      {lang==="he" ? "חוות הדעת שלכם *" : lang==="es" ? "Su Comentario *" : "Your Comment *"}
                     </label>
                     <textarea rows={4} required style={{...inputSt, resize:"vertical"}} value={form.text}
                       onChange={e => setForm(p=>({...p,text:e.target.value}))}
@@ -2185,15 +2587,15 @@ function TestimonialsSection({ lang }) {
 
                   {submitStatus==="error" && (
                     <div style={{ background:"rgba(220,53,69,0.15)", border:"1px solid rgba(220,53,69,0.4)", padding:"10px 14px", borderRadius:2, fontFamily:"'Montserrat',sans-serif", fontSize:"0.83rem", color:"#ff8a94", marginBottom:16 }}>
-                      {lang==="es" ? "Error al enviar. Por favor intente de nuevo." : "Error sending. Please try again."}
+                      {lang==="he" ? "שגיאה בשליחה. אנא נסו שנית." : lang==="es" ? "Error al enviar. Por favor intente de nuevo." : "Error sending. Please try again."}
                     </div>
                   )}
 
                   <button type="submit" disabled={submitStatus==="sending"}
                     style={{ ...btn.primary, width:"100%", opacity: submitStatus==="sending" ? 0.7 : 1 }}>
                     {submitStatus==="sending"
-                      ? (lang==="es" ? "Enviando..." : "Sending...")
-                      : (lang==="es" ? "Enviar Testimonio" : "Submit Testimonial")}
+                      ? (lang==="he" ? "שולח..." : lang==="es" ? "Enviando..." : "Sending...")
+                      : (lang==="he" ? "שלח המלצה" : lang==="es" ? "Enviar Testimonio" : "Submit Testimonial")}
                   </button>
                 </form>
               </>
@@ -2210,13 +2612,13 @@ function MapSection({ lang }) {
   // Coordenadas: Barranca 10.0107,-84.7054 | Santa Teresa 9.6415,-85.1653
   const offices = [
     {
-      name: lang==="es" ? "Oficina Puntarenas" : "Puntarenas Office",
-      addr: lang==="es" ? "Residencial Bulevar del Sol, Etapa IV, Barranca, Puntarenas" : "Residencial Bulevar del Sol, Stage IV, Barranca, Puntarenas",
+      name: lang==="he" ? "משרד פונטרנס" : lang==="es" ? "Oficina Puntarenas" : "Puntarenas Office",
+      addr: lang==="he" ? "Residencial Bulevar del Sol, Etapa IV, Barranca, Puntarenas" : lang==="es" ? "Residencial Bulevar del Sol, Etapa IV, Barranca, Puntarenas" : "Residencial Bulevar del Sol, Stage IV, Barranca, Puntarenas",
       mapSrc: "https://maps.google.com/maps?q=9.97055,-84.72782&z=17&output=embed",
     },
     {
-      name: lang==="es" ? "Oficina Peninsular" : "Peninsula Office",
-      addr: lang==="es" ? "Frente a la Plaza de Fútbol, 2° piso Súper El Mango, Santa Teresa, Cóbano" : "Across from the Soccer Field, 2nd floor Súper El Mango, Santa Teresa, Cóbano",
+      name: lang==="he" ? "משרד חצי האי" : lang==="es" ? "Oficina Peninsular" : "Peninsula Office",
+      addr: lang==="he" ? "מול מגרש הכדורגל, קומה 2, Súper El Mango, Santa Teresa, Cóbano" : lang==="es" ? "Frente a la Plaza de Fútbol, 2° piso Súper El Mango, Santa Teresa, Cóbano" : "Across from the Soccer Field, 2nd floor Súper El Mango, Santa Teresa, Cóbano",
       mapSrc: "https://maps.google.com/maps?q=9.63883,-85.16311&z=17&output=embed",
     },
   ];
@@ -2226,10 +2628,10 @@ function MapSection({ lang }) {
       <div style={{ maxWidth:1200, margin:"0 auto" }}>
         <div style={{ textAlign:"center", marginBottom:56 }}>
           <p style={{ color:C.gold, fontFamily:"'Montserrat',sans-serif", fontSize:"0.75rem", letterSpacing:"0.2em", textTransform:"uppercase", fontWeight:700, marginBottom:12 }}>
-            {lang==="es" ? "Encuéntrenos" : "Find Us"}
+            {lang==="he" ? "מצאו אותנו" : lang==="es" ? "Encuéntrenos" : "Find Us"}
           </p>
           <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(1.7rem,3vw,2.4rem)", color:C.navy, fontWeight:700 }}>
-            {lang==="es" ? "Nuestras Ubicaciones" : "Our Locations"}
+            {lang==="he" ? "המשרדים שלנו" : lang==="es" ? "Nuestras Ubicaciones" : "Our Locations"}
           </h2>
         </div>
 
@@ -2330,6 +2732,12 @@ export default function App() {
   const [lang, setLang] = useState("es");
   const [section, setSection] = useState("home");
   const [articleId, setArticleId] = useState(null);
+
+  /* RTL support for Hebrew */
+  useEffect(() => {
+    document.documentElement.dir = lang === "he" ? "rtl" : "ltr";
+    document.documentElement.lang = lang;
+  }, [lang]);
 
   const renderSection = () => {
     if (section === "blog" && articleId) {
