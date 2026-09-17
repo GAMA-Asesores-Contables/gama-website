@@ -2388,6 +2388,14 @@ const STATIC_TESTIMONIALS = [
     text:"Llevaba años declarando de forma incorrecta sin saberlo. Gracias a GAMA Asesores regularicé mi situación tributaria y ahora tengo la tranquilidad de cumplir correctamente. El costo de la asesoría se recuperó en el primer año." },
   { id:"s4en", name:"Lilliana García Barrantes", company:"Abogada LG Privacy Legal", stars:5, lang:"en",
     text:"For years I had been filing incorrectly without knowing it. Thanks to GAMA Advisors I regularized my tax situation. The advisory cost was recovered in the first year." },
+  { id:"s1he", name:"Michael Bienz", company:"Shaka Surf Camp S.A.", stars:5, lang:"he",
+    text:"GAMA Asesores שינתה לחלוטין את הניהול הפיננסי שלנו. עברנו מרישומים מבולגנים לדוחות כספיים לפי IFRS שהבנק שלנו מקבל ללא בעיות לבקשות אשראי." },
+  { id:"s2he", name:"Ezio Cabalceta Chaves", company:"Soltara Healing Center S.R.L.", stars:5, lang:"he",
+    text:"כחברה בינלאומית היינו זקוקים לרואה חשבון שמבין הן את התקנות הקוסטה-ריקאיות והן את הדרישות של השותפים הזרים שלנו. גוסטבו וצוותו עונים על שני התנאים בצורה מצוינת." },
+  { id:"s3he", name:"Naftali Dani Assado", company:"Grupo Empresarial Assado y Bernstein", stars:5, lang:"he",
+    text:"השירות האישי והזמינות של גוסטבו יוצאי דופן. הוא תמיד עונה מהר ובצורה ברורה. למצוא CPA ברמה כזו היה הקלה עצומה עבור החברה שלנו." },
+  { id:"s4he", name:"Lilliana García Barrantes", company:"Abogada LG Privacy Legal", stars:5, lang:"he",
+    text:"שנים הגשתי דוחות שגויים מבלי שידעתי. הודות ל-GAMA Asesores הסדרתי את מצבי המיסויי ועכשיו יש לי שקט נפשי שאני עומדת בדרישות כראוי. עלות הייעוץ הוחזרה כבר בשנה הראשונה." },
 ];
 
 function TestimonialsSection({ lang }) {
@@ -2411,7 +2419,7 @@ function TestimonialsSection({ lang }) {
 
   /* Mezclar: primero los dinámicos del idioma activo, luego los estáticos del idioma activo */
   const dynFiltered = dynItems.filter(t => (t.lang ?? "es") === lang);
-  const staticFiltered = STATIC_TESTIMONIALS.filter(t => t.lang === (lang === "he" ? "es" : lang));
+  const staticFiltered = STATIC_TESTIMONIALS.filter(t => t.lang === lang);
   const allItems = [...dynFiltered, ...staticFiltered];
 
   const stars = (n) => "★".repeat(n) + "☆".repeat(5 - n);
