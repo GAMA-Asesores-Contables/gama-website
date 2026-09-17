@@ -109,28 +109,11 @@ const DATA = {
       cta: "Presupuesto",
     },
     hero: {
-badge1: "CPAs Autorizados · Colegio de Contadores Públicos de Costa Rica",
-badge2: "Firma de CPIs Incorporados · Colegio de Contadores Privados de Costa Rica",
-headline1: "Su empresa merece",
-headline2: "asesoría contable",
-headline3: "que transforma números en decisiones.",
-subheadline: "Contabilidad, cumplimiento tributario y consultoría financiera para empresas en Costa Rica. Aplicamos NIIF Completas, NIIF para PYMES y NICSP con precisión, ética y acompañamiento estratégico.",
-cta: "Consultar por WhatsApp",
-ctaSub: "Respuesta en menos de 24 horas",
-stats: [
-  { value: "25+",  label: "Años de experiencia" },
-  { value: "NIIF", label: "Completas · PYMES · NICSP" },
-  { value: "2",    label: "Oficinas en Puntarenas" },
-],
-services: [
-  "Declaraciones tributarias",
-  "Estados financieros NIIF",
-  "Auditoría y aseguramiento",
-  "Planillas CCSS e INS",
-  "Certificaciones CPA",
-  "Consultoría financiera",
-],
-langToggle: "English",
+      badge: "Firma especializada · Costa Rica",
+      title: "Asesoría Contable,\nTributaria y Financiera",
+      subtitle: "Soluciones integrales para empresas que buscan crecer con seguridad financiera y cumplimiento normativo.",
+      cta: "Solicitar Presupuesto",
+      ctaSecondary: "Ver Servicios",
     },
     services: {
       label: "Servicios Profesionales",
@@ -603,6 +586,121 @@ Si sus ingresos anuales están dentro del límite establecido, el régimen simpl
 
 En GAMA Asesores atendemos a decenas de profesionales independientes, ayudándoles a cumplir correctamente y optimizar su carga tributaria de forma legal.`,
         },
+        {
+          id:11, category:"Administración Tributaria", date:"17 de septiembre, 2026",
+          title:"Hacienda reestructura sus 18 áreas legales: qué significa para los contribuyentes",
+          summary:"El Ministerio de Hacienda prepara la consolidación de sus más de 200 abogados dispersos en 18 unidades administrativas, buscando unificar criterios jurídicos y fortalecer el cobro de impuestos adeudados. Le explicamos qué implica esta reorganización para su empresa.",
+          content:`El Ministerio de Hacienda anunció el 17 de setiembre de 2026 que someterá a consulta interna una propuesta para reestructurar sus 18 áreas legales. Aunque puede sonar como un asunto interno de la institución, tiene implicaciones directas para toda empresa que tenga o pueda tener procesos pendientes ante el fisco costarricense.
+
+## El problema actual: dispersión jurídica
+
+Actualmente Hacienda cuenta con más de 200 abogados distribuidos en 18 unidades administrativas de distintas dependencias del Ministerio. Según el propio viceministro de Ingresos, Víctor Carvajal Porras, este modelo genera:
+
+- Criterios jurídicos contradictorios entre unidades que tratan situaciones similares
+- Duplicidad de trámites que frena la gestión institucional
+- Fragmentación en los procesos de cobro, especialmente en la fase judicial
+- Dificultades para recuperar la deuda tributaria adeudada al Fisco
+
+Esta dispersión no solo afecta la eficiencia interna de Hacienda: también genera inseguridad jurídica para los contribuyentes, ya que un mismo tipo de situación puede resolverse de forma diferente dependiendo de cuál unidad legal la tramite.
+
+## ¿Qué busca la reestructuración?
+
+La propuesta, alineada con recomendaciones del Ministerio de Planificación Nacional y Política Económica (MIDEPLAN) y de la Organización para la Cooperación y el Desarrollo Económicos (OCDE), busca:
+
+1. Concentrar las funciones jurídicas en una Dirección Jurídica fortalecida con criterios unificados
+2. Eliminar la duplicidad de competencias entre áreas con funciones similares
+3. Redistribuir el recurso humano para fortalecer las áreas de cobro judicial
+4. Establecer criterios jurídicos únicos que garanticen predictibilidad para los contribuyentes
+
+En palabras del viceministro Carvajal: "El Ministerio debe hablar con una sola voz legal".
+
+## ¿Qué implica para los contribuyentes?
+
+Cobro coactivo más efectivo: una estructura jurídica centralizada significa que Hacienda será más eficiente al iniciar y dar seguimiento a procesos de cobro judicial. Las empresas con deudas tributarias —incluyendo declaraciones tardías, omisiones o diferencias detectadas en auditoría— enfrentarán una gestión de cobro más ágil y sistemática.
+
+Mayor coherencia en criterios: con criterios unificados, será más predecible qué interpretación adoptará Hacienda ante situaciones tributarias complejas. Esto reduce la posibilidad de resoluciones contradictorias, algo que históricamente ha perjudicado tanto a la institución como a los contribuyentes.
+
+Proceso en curso: es importante aclarar que la propuesta está en fase de consulta interna. Hacienda no ha especificado cuáles de las 18 áreas serán modificadas, fusionadas o eliminadas, ni en qué plazo remitirá la propuesta a MIDEPLAN. Los cambios no son inmediatos.
+
+## Lo que su empresa debe hacer ahora
+
+Independientemente del resultado de esta reestructuración, la señal es clara: Hacienda está invirtiendo en fortalecer su capacidad de cobro y gestión jurídica. Esto hace más importante que nunca:
+
+- Mantener todas las declaraciones al día: IVA mensual, renta anual, planilla D-150
+- Tener respaldos documentales de todas las transacciones relevantes
+- Atender oportunamente cualquier notificación de la DGT o de TRIBU-CR
+- Regularizar situaciones pendientes antes de que pasen a la fase de cobro judicial, donde los costos procesales se incrementan significativamente
+
+En GAMA Asesores acompañamos a nuestros clientes no solo en el cumplimiento mensual, sino también en la atención de requerimientos de Hacienda, gestión de recursos y regularización de situaciones tributarias. Si tiene dudas sobre la situación fiscal de su empresa, contáctenos antes de que el problema llegue a la fase judicial.
+
+Fuente: Delfino.cr, 17 de setiembre de 2026. Declaraciones del Viceministro de Ingresos Víctor Carvajal Porras.`,
+        },
+        {
+          id:12, category:"Registro Nacional", date:"15 de septiembre, 2026",
+          title:"Correo electrónico obligatorio para su sociedad: el Registro Nacional abre sistema gratuito el 20 de setiembre de 2026",
+          summary:"A partir del 20 de setiembre de 2026, el Registro Nacional habilita el Sistema ACE para inscribir gratis el correo electrónico de su sociedad. El plazo límite es el 3 de diciembre de 2027; después de esa fecha, su sociedad no podrá inscribir ningún documento si no tiene correo registrado.",
+          content:`El Registro Nacional anunció que a partir del 20 de setiembre de 2026 habilitará el Sistema de Autogestión de Correos Electrónicos (ACE), mediante el cual los representantes legales podrán registrar directamente y de forma gratuita el correo electrónico de sus sociedades mercantiles. Este trámite, antes complejo y con costos notariales y arancelarios, pasa a ser un proceso en línea, gratuito y sin necesidad de publicar en La Gaceta.
+
+## ¿Por qué es obligatorio registrar un correo?
+
+La obligación nace de dos leyes:
+
+Ley 10.597: estableció el correo electrónico como medio oficial de notificación para todas las sociedades mercantiles ante Hacienda, el Poder Judicial y otras instituciones públicas.
+
+Ley 10.962: creó un mecanismo gratuito y expedito para registrar esa dirección, eliminando las barreras anteriores de costo y complejidad.
+
+Sin correo registrado, su sociedad podría no recibir notificaciones judiciales o administrativas que la ley considerará válidamente entregadas aunque usted no las haya visto.
+
+## ¿A qué sociedades aplica?
+
+La obligación aplica a:
+- Sociedad Anónima (S.A.)
+- Sociedad de Responsabilidad Limitada (S.R.L.)
+- Sociedad en Nombre Colectivo
+- Sociedad en Comandita Simple
+- Asociaciones extranjeras y sucursales de sociedades extranjeras cuyos apoderados no tengan domicilio en Costa Rica
+
+No aplica para: sociedades civiles, empresas individuales de responsabilidad limitada (EIRL), asociaciones bajo la Ley 218 ni fundaciones reguladas por la Ley 5338.
+
+## ¿Cómo funciona el trámite con el sistema ACE?
+
+El Sistema ACE estará disponible en el portal de servicios en línea del Registro Nacional a partir del 20 de setiembre. El proceso es el siguiente:
+
+1. Ingrese con su firma digital certificada
+2. El sistema muestra automáticamente las sociedades en las que usted figura como representante legal vigente
+3. Seleccione la sociedad para la cual desea inscribir el correo
+4. Ingrese y confirme la dirección de correo electrónico
+5. El sistema genera una declaración jurada electrónica que debe firmar digitalmente
+6. Descargue el comprobante de la gestión realizada
+
+No se requiere publicación en La Gaceta cuando se usa el sistema ACE.
+
+## El plazo límite y las consecuencias de no cumplir
+
+El plazo para inscribir el correo es el 3 de diciembre de 2027.
+
+A partir del 4 de diciembre de 2027, el Registro de Personas Jurídicas no tramitará ningún documento relacionado con sociedades que no tengan correo electrónico inscrito y consignará el defecto correspondiente, bloqueando certificaciones, cambios de representación, traspasos y cualquier otro movimiento registral.
+
+Después de esa fecha, el trámite tendrá costo: ₡2.000 de arancel del Registro Nacional, ₡275 timbre del Colegio de Abogados, ₡20 timbre del Archivo Nacional y ₡5.000 timbre de Educación y Cultura, para un total de ₡7.295 (más costo notarial si se hace por escritura).
+
+## ¿Qué pasa con el plazo del 31 de diciembre de 2026?
+
+El transitorio I de la Ley 10.597 establecía originalmente un plazo al 31 de diciembre de 2026. Sin embargo, la Ley 10.962, de fecha posterior, amplió ese plazo al 3 de diciembre de 2027. La Directriz DPJ-002-2026 del Registro de Personas Jurídicas confirma que el plazo vigente es el de 2027.
+
+## Condiciones que su sociedad debe cumplir para el trámite
+
+La Directriz DPJ-002-2026 establece que las sociedades deben mantenerse al día con el impuesto a las personas jurídicas (Ley 9024), el Registro de Transparencia y Beneficiarios Finales (RTBF), y si aplica, con la Caja Costarricense de Seguro Social (CCSS) y el Fondo de Desarrollo Social y Asignaciones Familiares (FODESAF).
+
+## Nuestra recomendación
+
+No espere hasta diciembre de 2027. El sistema estará habilitado desde el 20 de setiembre de 2026 y el trámite es gratuito, rápido y no requiere visitar el Registro. Aproveche ahora que no hay costo, no hay congestión en el sistema y no necesita abogado ni notario si tiene firma digital activa.
+
+Si su sociedad tiene alguna condición pendiente —impuesto de personas jurídicas atrasado, RTBF sin actualizar, o el representante legal no tiene firma digital vigente— este es el momento de regularizarlo antes de que el plazo se acerque.
+
+En GAMA Asesores le asistimos en verificar el estado registral de sus sociedades, mantener al día el impuesto de personas jurídicas y coordinar el trámite del correo electrónico ante el Registro Nacional.
+
+Fuente: Delfino.cr, 15 de setiembre de 2026. Basado en la Circular DGL-003-2026 del Registro Nacional y la Directriz DPJ-002-2026.`,
+        },
       ],
     },
     contact: {
@@ -647,28 +745,11 @@ En GAMA Asesores atendemos a decenas de profesionales independientes, ayudándol
   en: {
     nav: { links: ["Home","Services","About","Blog","Contact"], cta: "Get Quote" },
     hero: {
-badge1: "Authorized CPAs · Costa Rica Public Accountants Association",
-badge2: "CPI Firm · Costa Rica Private Accountants Association",
-headline1: "Your business deserves",
-headline2: "accounting advisory",
-headline3: "that turns numbers into decisions.",
-subheadline: "Accounting, tax compliance and financial consulting for companies in Costa Rica. We apply Full IFRS, IFRS for SMEs and IPSAS with precision, ethics and strategic partnership.",
-cta: "Contact via WhatsApp",
-ctaSub: "Response within 24 hours",
-stats: [
-  { value: "25+",  label: "Years of experience" },
-  { value: "IFRS", label: "Full · SMEs · IPSAS" },
-  { value: "2",    label: "Offices in Puntarenas" },
-],
-services: [
-  "Tax declarations",
-  "IFRS financial statements",
-  "Audit & assurance",
-  "CCSS & INS payroll",
-  "CPA certifications",
-  "Financial consulting",
-],
-langToggle: "Español",
+      badge: "Specialized firm · Costa Rica",
+      title: "Accounting, Tax\n& Financial Advisory",
+      subtitle: "Complete solutions for companies seeking growth with financial confidence and regulatory compliance.",
+      cta: "Request a Quote",
+      ctaSecondary: "View Services",
     },
     services: {
       label: "Professional Services",
@@ -1099,6 +1180,116 @@ All expenses must be supported by an electronic invoice in the professional's or
 
 At GAMA Advisors we serve dozens of independent professionals, helping them comply correctly and optimize their tax burden legally.`,
         },
+        {
+          id:11, category:"Tax Administration", date:"September 17, 2026",
+          title:"Costa Rica's Tax Ministry restructures its 18 legal units: What it means for taxpayers",
+          summary:"Costa Rica's Ministry of Finance (Hacienda) announced plans to consolidate its 200+ lawyers spread across 18 administrative units. The goal: unify legal criteria and strengthen tax debt collection. Here is what this reorganization means for your business.",
+          content:`On September 17, 2026, the Costa Rican Ministry of Finance announced it will put forward an internal consultation to restructure its 18 legal areas. While this may sound like a purely institutional matter, it has direct implications for any business that has — or could have — pending matters with the tax authority.
+
+## The current problem: legal dispersion
+
+Currently, Hacienda has more than 200 lawyers distributed across 18 administrative units within different departments. According to Vice Minister of Revenue Víctor Carvajal Porras, this model creates:
+
+- Contradictory legal criteria between units handling similar situations
+- Duplicate procedures that slow down institutional management
+- Fragmented collection processes, especially in the judicial phase
+- Difficulties recovering tax debt owed to the State
+
+This dispersion does not only affect Hacienda's internal efficiency: it also creates legal uncertainty for taxpayers, since the same type of situation may be resolved differently depending on which legal unit handles it.
+
+## What the restructuring seeks
+
+The proposal — aligned with recommendations from the Ministry of National Planning (MIDEPLAN) and the Organisation for Economic Co-operation and Development (OECD) — aims to:
+
+1. Concentrate legal functions in a strengthened Legal Directorate with unified criteria
+2. Eliminate duplication of competencies between units with similar functions
+3. Redistribute human resources to strengthen judicial tax collection
+4. Establish unified legal criteria to ensure predictability for taxpayers
+
+In the Vice Minister's words: "The Ministry must speak with one legal voice."
+
+## What this means for taxpayers
+
+More effective enforcement: a centralized legal structure means Hacienda will be more efficient at initiating and following through on judicial collection processes. Companies with tax debts — including late filings, omissions, or differences detected in audits — will face faster, more systematic collection management.
+
+Greater coherence in criteria: with unified criteria, it will be more predictable what interpretation Hacienda will take on complex tax situations. This reduces the possibility of contradictory resolutions — a historical issue that has harmed both the institution and taxpayers.
+
+Still in progress: the proposal is currently in internal consultation phase. Hacienda has not specified which of the 18 areas will be modified, merged, or eliminated, nor when it will be submitted to MIDEPLAN. Changes are not immediate.
+
+## What your company should do now
+
+Regardless of the outcome of this restructuring, the signal is clear: Hacienda is strengthening its legal and collection management capacity. This makes it more important than ever to:
+
+- Keep all filings current: monthly VAT, annual income tax, payroll D-150
+- Maintain complete documentation of all relevant transactions
+- Promptly respond to any notification from the DGT or TRIBU-CR
+- Regularize pending situations before they advance to the judicial collection phase, where procedural costs increase significantly
+
+At GAMA Advisors we support our clients not only with monthly compliance, but also with handling Hacienda inquiries, filing appeals, and regularizing tax situations. Contact us before the problem reaches the judicial stage.
+
+Source: Delfino.cr, September 17, 2026. Statements from Vice Minister of Revenue Víctor Carvajal Porras.`,
+        },
+        {
+          id:12, category:"Corporate Compliance", date:"September 15, 2026",
+          title:"Mandatory email registration for Costa Rican companies: Free system opens September 20, 2026",
+          summary:"Starting September 20, 2026, Costa Rica's National Registry will launch the ACE System for companies to register their official email address for free. The deadline is December 3, 2027 — after which companies without a registered email will be blocked from any registry transaction.",
+          content:`Costa Rica's National Registry announced that starting September 20, 2026, it will launch the Email Self-Management System (ACE — Sistema de Autogestión de Correos Electrónicos), allowing legal representatives to register their companies' official email addresses directly and for free. What was previously a complex and costly process is now an online procedure — free of charge and without requiring publication in the Official Gazette.
+
+## Why is registering an email mandatory?
+
+The obligation stems from two laws:
+
+Law 10.597: established email as the official notification channel for all commercial companies with government entities, including the Tax Authority and the Judicial Branch.
+
+Law 10.962: created a free, expedited mechanism to register that email address, removing previous cost and complexity barriers.
+
+Without a registered email, your company could miss judicial or administrative notifications that will be legally considered as validly delivered — even if you never received them.
+
+## Which companies are required to comply?
+
+The obligation applies to: Sociedad Anónima (S.A. / Corporation), Sociedad de Responsabilidad Limitada (S.R.L. / LLC), Sociedad en Nombre Colectivo (General Partnership), Sociedad en Comandita Simple, and foreign companies or branches whose legal representatives do not have domicile in Costa Rica.
+
+It does not apply to: civil partnerships (Sociedad Civil), Individual Limited Liability Companies (EIRL), associations under Law 218, or foundations under Law 5338.
+
+## How does the ACE system work?
+
+The ACE System will be available on the National Registry's online services portal starting September 20, 2026. The process:
+
+1. Log in with a valid digital signature certificate
+2. The system automatically displays all companies where you appear as an active legal representative
+3. Select the company for which you want to register the email
+4. Enter and confirm the email address that will receive official notifications
+5. The system generates an electronic sworn statement to be signed digitally
+6. Download your receipt as proof of the completed transaction
+
+No publication in the Official Gazette (La Gaceta) is required when using the ACE system.
+
+## The deadline and consequences of non-compliance
+
+The deadline to register the email is December 3, 2027.
+
+Starting December 4, 2027, the Registry of Legal Entities will not process any document for companies without a registered email. The defect will be recorded, blocking certifications, management changes, share transfers, and all other registry transactions.
+
+After that date, the procedure will carry fees: ₡2,000 National Registry fee, ₡275 Bar Association stamp, ₡20 National Archives stamp, and ₡5,000 Education and Culture stamp, for a total of ₡7,295 (plus notarial fees if done through a notarized deed).
+
+## What about the December 31, 2026 deadline?
+
+The original transitional provision in Law 10.597 set a deadline of December 31, 2026. However, the subsequently enacted Law 10.962 extended this to December 3, 2027. National Registry Directive DPJ-002-2026 confirms the 2027 deadline is the one currently in effect.
+
+## Conditions your company must meet
+
+Directive DPJ-002-2026 establishes that companies must be current with: the Corporate Income Tax (Impuesto a las Personas Jurídicas, Law 9024), the Beneficial Owners Registry (RTBF), and if applicable, the Social Security system (CCSS) and FODESAF.
+
+## Our practical recommendation
+
+Do not wait until December 2027. The system opens September 20, 2026, and the procedure is free, fast, and does not require visiting the Registry. Take advantage of the fact that right now there is no cost, no system congestion, and no need for a lawyer or notary if the legal representative has an active digital signature.
+
+If your company has any pending condition — outstanding corporate tax, outdated beneficial owners filing, or the legal representative lacks an active digital signature — now is the time to regularize before the deadline approaches.
+
+At GAMA Advisors we help verify your companies' registry status, keep corporate taxes current, and coordinate the email registration with the National Registry.
+
+Source: Delfino.cr, September 15, 2026. Based on National Registry Circular DGL-003-2026 and Directive DPJ-002-2026.`,
+        },
       ],
     },
     contact: {
@@ -1139,184 +1330,6 @@ At GAMA Advisors we serve dozens of independent professionals, helping them comp
     },
   },
 };
-
-/* ─────────────────────────────────────────────────────────────
-   PrivacyPolicy.jsx — GAMA Asesores Contables
-   Política de Privacidad bilingüe (ES/EN)
-   Cumple: Ley 8968 CR · GDPR básico · Formspree · Google Analytics
-   ───────────────────────────────────────────────────────────── */
-
-const PRIVACY_CONTENT = {
-  es: {
-    title: "Política de Privacidad",
-    updated: "Última actualización: Mayo 2026",
-    intro: "GAMA CPA y Asesoría Contable S.R.L. (en adelante \"GAMA Asesores\"), con domicilio en Barranca, Puntarenas, Costa Rica, es responsable del tratamiento de sus datos personales conforme a la Ley N.° 8968 (Ley de Protección de la Persona frente al Tratamiento de sus Datos Personales) y sus reglamentos.",
-    sections: [
-      {
-        title: "1. Datos que recopilamos",
-        body: "Recopilamos únicamente los datos que usted nos proporciona voluntariamente a través del formulario de contacto de este sitio: nombre completo, correo electrónico, número de teléfono (opcional), nombre de empresa y mensaje. Adicionalmente, Google Analytics recopila datos de navegación anónimos (páginas visitadas, tiempo de sesión, país de origen) para análisis estadístico."
-      },
-      {
-        title: "2. Finalidad del tratamiento",
-        body: "Sus datos personales son utilizados exclusivamente para: (a) responder a su consulta o solicitud de presupuesto, (b) contactarle en relación con los servicios de asesoría contable y financiera de GAMA Asesores, y (c) mejorar la experiencia del sitio web mediante análisis estadístico anónimo. No utilizamos sus datos para marketing masivo ni los compartimos con terceros con fines comerciales."
-      },
-      {
-        title: "3. Base legal del tratamiento",
-        body: "El tratamiento de sus datos se fundamenta en el consentimiento que usted otorga libremente al completar y enviar el formulario de contacto, conforme al artículo 5 de la Ley N.° 8968."
-      },
-      {
-        title: "4. Terceros que reciben sus datos",
-        body: "Sus datos de contacto son procesados por Formspree Inc. (Estados Unidos), servicio de gestión de formularios web, bajo sus propias políticas de privacidad y medidas de seguridad. Google LLC procesa datos de navegación anónimos mediante Google Analytics. Ninguno de estos proveedores tiene autorización para usar sus datos con fines propios."
-      },
-      {
-        title: "5. Conservación de datos",
-        body: "Sus datos se conservan durante el tiempo necesario para atender su consulta y, en caso de convertirse en cliente, durante la vigencia de la relación contractual más el plazo legal de prescripción aplicable (5 años según la legislación costarricense). Los datos de navegación de Google Analytics se conservan por 26 meses."
-      },
-      {
-        title: "6. Sus derechos",
-        body: "Conforme a la Ley N.° 8968, usted tiene derecho a: acceder a sus datos personales, rectificarlos si son inexactos, suprimirlos cuando ya no sean necesarios, oponerse a su tratamiento y solicitar su portabilidad. Para ejercer cualquiera de estos derechos, escríbanos a gmongea@gamacpa-asesores.com indicando su nombre completo y el derecho que desea ejercer. Atenderemos su solicitud en un plazo máximo de 5 días hábiles."
-      },
-      {
-        title: "7. Seguridad",
-        body: "GAMA Asesores implementa medidas técnicas y organizativas razonables para proteger sus datos personales contra acceso no autorizado, pérdida o destrucción. La transmisión de datos a través del formulario de contacto se realiza mediante protocolo HTTPS cifrado."
-      },
-      {
-        title: "8. Cookies y tecnologías de seguimiento",
-        body: "Este sitio utiliza Google Analytics, que emplea cookies para recopilar información de navegación de forma anónima. Puede desactivar estas cookies mediante la configuración de su navegador o instalando el complemento de inhabilitación de Google Analytics. No utilizamos cookies de publicidad ni de redes sociales."
-      },
-      {
-        title: "9. Cambios a esta política",
-        body: "Nos reservamos el derecho de actualizar esta Política de Privacidad cuando sea necesario. La fecha de última actualización siempre estará indicada al inicio del documento. Le recomendamos revisarla periódicamente."
-      },
-      {
-        title: "10. Contacto",
-        body: "Para consultas sobre esta política o el tratamiento de sus datos personales, contáctenos: CPA Gustavo Monge A. · gmongea@gamacpa-asesores.com · +506 8896-9883 · Barranca, Puntarenas, Costa Rica."
-      },
-    ]
-  },
-  en: {
-    title: "Privacy Policy",
-    updated: "Last updated: May 2026",
-    intro: "GAMA CPA y Asesoría Contable S.R.L. (hereinafter \"GAMA Advisors\"), with registered address in Barranca, Puntarenas, Costa Rica, is responsible for the processing of your personal data in accordance with Law No. 8968 (Law on Protection of Individuals Regarding the Processing of Personal Data) and its regulations.",
-    sections: [
-      {
-        title: "1. Data we collect",
-        body: "We collect only the data you voluntarily provide through this website's contact form: full name, email address, phone number (optional), company name, and message. Additionally, Google Analytics collects anonymous browsing data (pages visited, session time, country of origin) for statistical analysis."
-      },
-      {
-        title: "2. Purpose of processing",
-        body: "Your personal data is used exclusively to: (a) respond to your inquiry or quote request, (b) contact you regarding GAMA Advisors' accounting and financial advisory services, and (c) improve the website experience through anonymous statistical analysis. We do not use your data for mass marketing nor share it with third parties for commercial purposes."
-      },
-      {
-        title: "3. Legal basis for processing",
-        body: "The processing of your data is based on the consent you freely give by completing and submitting the contact form, in accordance with Article 5 of Law No. 8968."
-      },
-      {
-        title: "4. Third parties receiving your data",
-        body: "Your contact data is processed by Formspree Inc. (United States), a web form management service, under their own privacy policies and security measures. Google LLC processes anonymous browsing data through Google Analytics. Neither provider is authorized to use your data for their own purposes."
-      },
-      {
-        title: "5. Data retention",
-        body: "Your data is retained for as long as necessary to address your inquiry and, if you become a client, for the duration of the contractual relationship plus the applicable legal statute of limitations (5 years under Costa Rican law). Google Analytics browsing data is retained for 26 months."
-      },
-      {
-        title: "6. Your rights",
-        body: "Under Law No. 8968, you have the right to: access your personal data, rectify it if inaccurate, delete it when no longer necessary, object to its processing, and request its portability. To exercise any of these rights, write to us at gmongea@gamacpa-asesores.com indicating your full name and the right you wish to exercise. We will respond within 5 business days."
-      },
-      {
-        title: "7. Security",
-        body: "GAMA Advisors implements reasonable technical and organizational measures to protect your personal data against unauthorized access, loss, or destruction. Data transmission through the contact form is carried out via encrypted HTTPS protocol."
-      },
-      {
-        title: "8. Cookies and tracking technologies",
-        body: "This site uses Google Analytics, which employs cookies to collect browsing information anonymously. You can disable these cookies through your browser settings or by installing the Google Analytics opt-out add-on. We do not use advertising or social media cookies."
-      },
-      {
-        title: "9. Changes to this policy",
-        body: "We reserve the right to update this Privacy Policy when necessary. The last update date will always be indicated at the beginning of the document. We recommend reviewing it periodically."
-      },
-      {
-        title: "10. Contact",
-        body: "For questions about this policy or the processing of your personal data, contact us: CPA Gustavo Monge A. · gmongea@gamacpa-asesores.com · +506 8896-9883 · Barranca, Puntarenas, Costa Rica."
-      },
-    ]
-  }
-};
-
-function PrivacyPolicy({ lang = "es", onBack }) {
-  const t = PRIVACY_CONTENT[lang] || PRIVACY_CONTENT.es;
-
-  return (
-    <section style={{ padding:"100px 5% 80px", background:"#f8f7f4", minHeight:"100vh" }}>
-      <div style={{ maxWidth:820, margin:"0 auto" }}>
-
-        {/* Botón volver */}
-        {onBack && (
-          <button onClick={onBack}
-            style={{ background:"transparent", border:"1.5px solid #051e57", color:"#051e57",
-              fontFamily:"'Montserrat',sans-serif", fontSize:"0.78rem", fontWeight:700,
-              letterSpacing:"0.08em", textTransform:"uppercase", padding:"10px 24px",
-              cursor:"pointer", marginBottom:48, borderRadius:2 }}
-            onMouseEnter={e=>{ e.target.style.background="#051e57"; e.target.style.color="#fff"; }}
-            onMouseLeave={e=>{ e.target.style.background="transparent"; e.target.style.color="#051e57"; }}
-          >
-            {lang === "es" ? "← Volver" : "← Back"}
-          </button>
-        )}
-
-        {/* Header */}
-        <div style={{ borderLeft:"3px solid #b38d47", paddingLeft:"1.5rem", marginBottom:48 }}>
-          <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.72rem", fontWeight:700,
-            letterSpacing:"0.2em", textTransform:"uppercase", color:"#b38d47", marginBottom:10 }}>
-            GAMA Asesores Contables
-          </p>
-          <h1 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(1.8rem,3vw,2.6rem)",
-            fontWeight:700, color:"#051e57", marginBottom:12 }}>
-            {t.title}
-          </h1>
-          <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.82rem", color:"#9a9280" }}>
-            {t.updated}
-          </p>
-        </div>
-
-        {/* Intro */}
-        <div style={{ background:"#fff", borderLeft:"3px solid #b38d47", padding:"20px 24px",
-          marginBottom:40, boxShadow:"0 2px 12px rgba(5,30,87,0.06)" }}>
-          <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.92rem", color:"#3d3830",
-            lineHeight:1.85, margin:0 }}>
-            {t.intro}
-          </p>
-        </div>
-
-        {/* Secciones */}
-        {t.sections.map((s, i) => (
-          <div key={i} style={{ marginBottom:36, background:"#fff", padding:"28px 32px",
-            boxShadow:"0 2px 12px rgba(5,30,87,0.05)", borderRadius:2 }}>
-            <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.1rem", fontWeight:700,
-              color:"#051e57", marginBottom:12 }}>
-              {s.title}
-            </h2>
-            <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.88rem", color:"#4a4540",
-              lineHeight:1.85, margin:0 }}>
-              {s.body}
-            </p>
-          </div>
-        ))}
-
-        {/* Footer legal */}
-        <div style={{ marginTop:48, paddingTop:32, borderTop:"1px solid rgba(5,30,87,0.1)",
-          textAlign:"center" }}>
-          <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.76rem", color:"#9a9280", lineHeight:1.7 }}>
-            {lang === "es"
-              ? "GAMA CPA y Asesoría Contable S.R.L. · Cédula Jurídica 3-102-913105 · Barranca, Puntarenas, Costa Rica"
-              : "GAMA CPA y Asesoría Contable S.R.L. · Legal ID 3-102-913105 · Barranca, Puntarenas, Costa Rica"}
-          </p>
-        </div>
-
-      </div>
-    </section>
-  );
-}
 
 /* ─────────────── COMPONENTS ─────────────── */
 
@@ -1433,244 +1446,78 @@ function Navbar({ lang, setLang, section, setSection }) {
 }
 
 /* ── HERO ── */
-function HeroSection({ lang, setLang, setSection }) {
-  const [visible, setVisible] = useState(false);
+function HeroSection({ lang, setSection }) {
   const t = DATA[lang].hero;
-
-  useEffect(() => {
-    const timer = setTimeout(() => setVisible(true), 100);
-    return () => clearTimeout(timer);
-  }, []);
-
-  const handleWhatsApp = () => {
-    const msg = lang === "es"
-      ? "Hola, me gustaría consultar sobre los servicios de GAMA Asesores Contables."
-      : "Hello, I would like to inquire about GAMA Asesores Contables services.";
-    window.open(`https://wa.me/50688969883?text=${encodeURIComponent(msg)}`, "_blank");
-  };
-
   return (
-    <>
-      <style>{`
-        .hero-root {
-          font-family: 'Montserrat', sans-serif;
-          min-height: 100vh;
-          background: #030f2e;
-          position: relative;
-          overflow: hidden;
-          display: flex;
-          flex-direction: column;
-        }
-        .hero-root::before {
-          content: '';
-          position: absolute; inset: 0;
-          background:
-            linear-gradient(135deg, rgba(179,141,71,0.06) 25%, transparent 25%) -20px 0,
-            linear-gradient(225deg, rgba(179,141,71,0.06) 25%, transparent 25%) -20px 0,
-            linear-gradient(315deg, rgba(179,141,71,0.06) 25%, transparent 25%),
-            linear-gradient(45deg,  rgba(179,141,71,0.06) 25%, transparent 25%);
-          background-size: 40px 40px;
-          background-color: #030f2e;
-          pointer-events: none;
-        }
-        .hero-root::after {
-          content: '';
-          position: absolute; top: -120px; right: -120px;
-          width: 500px; height: 500px;
-          background: radial-gradient(circle, rgba(179,141,71,0.18) 0%, transparent 70%);
-          pointer-events: none;
-        }
-        .hero-main {
-          position: relative; z-index: 5; flex: 1;
-          display: flex; align-items: center;
-          padding: 2.5rem 2.5rem 2rem;
-          max-width: 1200px; margin: 0 auto; width: 100%; gap: 4rem;
-        }
-        .hero-copy {
-          flex: 1.2;
-          opacity: 0; transform: translateY(24px);
-          transition: opacity 0.7s ease, transform 0.7s ease;
-        }
-        .hero-copy.visible { opacity: 1; transform: translateY(0); }
-        .hero-badges { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1.75rem; }
-        .hero-badge {
-          display: inline-flex; align-items: center; gap: 0.5rem;
-          background: rgba(179,141,71,0.12);
-          border: 1px solid rgba(179,141,71,0.35);
-          color: #b38d47;
-          font-size: 0.68rem; font-weight: 700;
-          letter-spacing: 0.1em; text-transform: uppercase;
-          padding: 0.3rem 0.9rem; width: fit-content;
-        }
-        .badge-dot {
-          width: 6px; height: 6px; flex-shrink: 0;
-          background: #b38d47; border-radius: 50%;
-          animation: heroPulse 2s ease-in-out infinite;
-        }
-        .hero-badge:nth-child(2) .badge-dot { animation-delay: 1s; }
-        @keyframes heroPulse {
-          0%, 100% { opacity: 1; transform: scale(1); }
-          50%       { opacity: 0.45; transform: scale(0.75); }
-        }
-        .hero-headline {
-          font-family: 'Playfair Display', serif;
-          font-size: clamp(2.2rem, 4vw, 3.6rem);
-          font-weight: 700; line-height: 1.12;
-          color: #ffffff; margin-bottom: 1.4rem;
-        }
-        .hero-headline .gold-line { color: #b38d47; display: block; }
-        .hero-headline .accent-line {
-          color: #f2e485; display: block; font-style: italic;
-          font-size: clamp(1.5rem, 2.8vw, 2.4rem);
-        }
-        .hero-sub {
-          font-size: 0.97rem; font-weight: 300;
-          color: rgba(255,255,255,0.72); line-height: 1.78;
-          max-width: 520px; margin-bottom: 2rem;
-          border-left: 2px solid #b38d47; padding-left: 1rem;
-        }
-        .hero-service-tags {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 0.45rem;
-          margin-bottom: 2.25rem;
-          max-width: 520px;
-        }
-        .hero-service-tag {
-          font-size: 0.67rem; font-weight: 700;
-          letter-spacing: 0.07em; text-transform: uppercase;
-          color: rgba(255,255,255,0.58);
-          background: rgba(255,255,255,0.05);
-          border: 1px solid rgba(255,255,255,0.12);
-          padding: 0.3rem 0.5rem; text-align: center;
-        }
-        .hero-cta-btn {
-          display: inline-flex; align-items: center; gap: 0.75rem;
-          background: linear-gradient(135deg, #b38d47 0%, #d4aa5a 50%, #b38d47 100%);
-          background-size: 200% 200%;
-          color: #030f2e;
-          font-family: 'Montserrat', sans-serif;
-          font-size: 0.9rem; font-weight: 700;
-          letter-spacing: 0.08em; text-transform: uppercase;
-          padding: 1rem 2rem; border: none; cursor: pointer;
-          transition: background-position 0.4s ease, transform 0.2s ease, box-shadow 0.2s ease;
-          box-shadow: 0 4px 24px rgba(179,141,71,0.35);
-          border-radius: 2px;
-        }
-        .hero-cta-btn:hover {
-          background-position: right center;
-          transform: translateY(-2px);
-          box-shadow: 0 8px 32px rgba(179,141,71,0.5);
-        }
-        .hero-cta-sub { font-size: 0.7rem; color: rgba(255,255,255,0.38); letter-spacing: 0.06em; padding-left: 0.25rem; }
-        .hero-stats-col {
-          flex: 0.78;
-          display: flex; flex-direction: column; gap: 1.4rem;
-          opacity: 0; transform: translateX(24px);
-          transition: opacity 0.7s ease 0.25s, transform 0.7s ease 0.25s;
-        }
-        .hero-stats-col.visible { opacity: 1; transform: translateX(0); }
-        .hero-stat-card {
-          background: rgba(5,30,87,0.6);
-          border: 1px solid rgba(179,141,71,0.25);
-          border-left: 3px solid #b38d47;
-          padding: 1.2rem 1.4rem;
-          backdrop-filter: blur(8px);
-        }
-        .hero-stat-value {
-          font-family: 'Playfair Display', serif;
-          font-size: 2.3rem; font-weight: 700;
-          color: #f2e485; line-height: 1; margin-bottom: 0.3rem;
-        }
-        .hero-stat-label {
-          font-size: 0.7rem; font-weight: 700;
-          letter-spacing: 0.1em; text-transform: uppercase;
-          color: rgba(255,255,255,0.48);
-        }
-        .hero-stat-div { height: 1px; background: linear-gradient(to right, rgba(179,141,71,0.35), transparent); }
-        .hero-footer-strip {
-          position: relative; z-index: 5;
-          display: flex; align-items: center; justify-content: center;
-          gap: 2.5rem; padding: 0.9rem 2.5rem;
-          border-top: 1px solid rgba(179,141,71,0.15);
-          background: rgba(3,15,46,0.5); flex-wrap: wrap;
-        }
-        .hero-footer-item {
-          display: flex; align-items: center; gap: 0.45rem;
-          font-size: 0.7rem; color: rgba(255,255,255,0.38); letter-spacing: 0.05em;
-        }
-        .hero-footer-dot { width: 4px; height: 4px; background: #b38d47; border-radius: 50%; opacity: 0.55; }
-        @media (max-width: 900px) {
-          .hero-main { flex-direction: column; gap: 2rem; padding: 2rem 1.5rem 1.5rem; }
-          .hero-stats-col { flex-direction: row; flex-wrap: wrap; }
-          .hero-stat-card { flex: 1; min-width: 140px; }
-          .hero-service-tags { max-width: 100%; }
-          .hero-footer-strip { gap: 1rem; padding: 0.75rem 1.5rem; }
-        }
-        @media (max-width: 480px) {
-          .hero-headline { font-size: 1.9rem; }
-          .hero-stats-col { flex-direction: column; }
-          .hero-badge { font-size: 0.6rem; }
-          .hero-service-tags { grid-template-columns: repeat(2, 1fr); }
-        }
-      `}</style>
+    <section style={{ minHeight:"100vh", background:C.white, display:"flex", alignItems:"center", position:"relative", overflow:"hidden", borderBottom:`3px solid rgba(179,141,71,0.15)` }}>
 
-      <section className="hero-root">
-        <div className="hero-main">
+      {/* Motivo decorativo dorado — fondo claro */}
+      <div style={{ position:"absolute", right:0, top:0, bottom:0, width:"42%", background:"#f4f1eb", clipPath:"polygon(12% 0, 100% 0, 100% 100%, 0% 100%)" }} />
+      <div style={{ position:"absolute", right:"5%", top:"50%", transform:"translateY(-50%)", opacity:0.12 }}>
+        <svg viewBox="0 0 300 400" style={{ width:320, height:420 }}>
+          <rect x="0" y="200" width="55" height="200" fill={C.gold}/>
+          <rect x="75" y="120" width="55" height="280" fill={C.gold}/>
+          <rect x="150" y="50" width="55" height="350" fill={C.gold}/>
+          <polygon points="205,50 265,0 265,50" fill={C.gold}/>
+        </svg>
+      </div>
+      {/* Línea dorada inferior */}
+      <div style={{ position:"absolute", left:0, bottom:0, width:"100%", height:3, background:`linear-gradient(90deg, ${C.gold}, ${C.yellow}, transparent)`, opacity:0.5 }} />
 
-          <div className={`hero-copy ${visible ? "visible" : ""}`}>
-            <div className="hero-badges">
-              <div className="hero-badge"><span className="badge-dot" />{t.badge1}</div>
-              <div className="hero-badge"><span className="badge-dot" />{t.badge2}</div>
-            </div>
+      <div style={{ maxWidth:1200, margin:"0 auto", padding:"120px 5% 80px", width:"100%", position:"relative" }}>
+        <div style={{ maxWidth:620 }}>
 
-            <h1 className="hero-headline">
-              {t.headline1}
-              <span className="gold-line">{t.headline2}</span>
-              <span className="accent-line">{t.headline3}</span>
-            </h1>
-
-            <p className="hero-sub">{t.subheadline}</p>
-
-            <div className="hero-service-tags">
-              {t.services.map((s) => (
-                <span key={s} className="hero-service-tag">{s}</span>
-              ))}
-            </div>
-
-            <div style={{ display:"flex", flexDirection:"column", alignItems:"flex-start", gap:"0.55rem" }}>
-              <button className="hero-cta-btn" onClick={handleWhatsApp}>
-                <svg style={{width:"20px",height:"20px",fill:"#030f2e"}} viewBox="0 0 24 24">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                </svg>
-                {t.cta}
-              </button>
-              <span className="hero-cta-sub">· {t.ctaSub} ·</span>
-            </div>
+          {/* Badge */}
+          <div style={{ display:"inline-flex", alignItems:"center", gap:8, border:`1px solid rgba(179,141,71,0.45)`, background:"rgba(179,141,71,0.06)", padding:"6px 16px", borderRadius:2, marginBottom:32 }}>
+            <div style={{ width:6, height:6, borderRadius:"50%", background:C.gold }} />
+            <span style={{ color:C.gold, fontFamily:"'Montserrat',sans-serif", fontSize:"0.72rem", letterSpacing:"0.18em", textTransform:"uppercase", fontWeight:700 }}>{t.badge}</span>
           </div>
 
-          <div className={`hero-stats-col ${visible ? "visible" : ""}`}>
-            {t.stats.map((s, i) => (
-              <div key={i}>
-                <div className="hero-stat-card">
-                  <div className="hero-stat-value">{s.value}</div>
-                  <div className="hero-stat-label">{s.label}</div>
-                </div>
-                {i < t.stats.length - 1 && <div className="hero-stat-div" />}
+          {/* Título */}
+          <h1 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(2.4rem,5vw,4rem)", fontWeight:700, color:C.navy, lineHeight:1.1, marginBottom:28, maxWidth:640 }}>
+            {t.title.split("\n")[0]}<br/>
+            <span style={{ color:C.gold }}>
+              {t.title.split("\n").slice(1).join("\n")}
+            </span>
+          </h1>
+
+          {/* Subtítulo */}
+          <p style={{ color:"#4a4540", fontFamily:"'Montserrat',sans-serif", fontSize:"1.05rem", lineHeight:1.8, maxWidth:520, marginBottom:48, fontWeight:300 }}>
+            {t.subtitle}
+          </p>
+
+          {/* CTAs */}
+          <div style={{ display:"flex", gap:16, flexWrap:"wrap" }}>
+            <button onClick={() => setSection("contact")}
+              style={btn.primary}
+              onMouseEnter={e => e.target.style.opacity=0.88}
+              onMouseLeave={e => e.target.style.opacity=1}
+            >{t.cta}</button>
+            <button onClick={() => setSection("services")}
+              style={{ ...btn.outline, color:C.navy, borderColor:C.navy }}
+              onMouseEnter={e => { e.target.style.background=C.navy; e.target.style.color=C.white; }}
+              onMouseLeave={e => { e.target.style.background="transparent"; e.target.style.color=C.navy; e.target.style.borderColor=C.navy; }}
+            >{t.ctaSecondary}</button>
+          </div>
+
+          {/* Stats bar */}
+          <div style={{ marginTop:72, paddingTop:40, borderTop:`1px solid rgba(5,30,87,0.1)`, display:"flex", gap:48, flexWrap:"wrap" }}>
+            {[["10+", lang==="es"?"Años de experiencia":"Years of experience"],
+              ["100+", lang==="es"?"Clientes satisfechos":"Satisfied clients"],
+              ["6", lang==="es"?"Servicios especializados":"Specialized services"],
+              ["2", lang==="es"?"Oficinas en Costa Rica":"Offices in Costa Rica"]
+            ].map(([n,l]) => (
+              <div key={n}>
+                <div style={{ fontFamily:"'Playfair Display',serif", fontSize:"2.2rem", fontWeight:700, color:C.navy }}>{n}</div>
+                <div style={{ width:24, height:2, background:C.gold, margin:"6px 0 8px" }} />
+                <div style={{ color:"#6b6560", fontFamily:"'Montserrat',sans-serif", fontSize:"0.75rem", letterSpacing:"0.06em" }}>{l}</div>
               </div>
             ))}
           </div>
 
         </div>
-
-        <div className="hero-footer-strip">
-          <span className="hero-footer-item"><span className="hero-footer-dot" />Barranca, Puntarenas</span>
-          <span className="hero-footer-item"><span className="hero-footer-dot" />Santa Teresa, Cóbano</span>
-          <span className="hero-footer-item"><span className="hero-footer-dot" />gamacpa-asesores.com</span>
-          <span className="hero-footer-item"><span className="hero-footer-dot" />+506 8896-9883</span>
-        </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }
 
@@ -1794,8 +1641,9 @@ function AboutSection({ lang }) {
               <div style={{ background:C.navy, padding:"40px 36px", borderRadius:2, position:"relative", overflow:"hidden" }}>
                 <div style={{ position:"absolute", top:-20, right:-20, width:120, height:120, borderRadius:"50%", background:"rgba(179,141,71,0.08)" }} />
                 <div style={{ position:"absolute", bottom:0, left:0, height:3, width:"100%", background:`linear-gradient(90deg, ${C.gold}, transparent)` }} />
-                <img src="/gustavo_monge_cpa.jpg" alt="CPA Gustavo Monge A."
-                  style={{ width:80, height:80, borderRadius:"50%", objectFit:"cover", objectPosition:"center top", marginBottom:24, border:`3px solid rgba(179,141,71,0.4)`, display:"block" }} />
+                <div style={{ width:80, height:80, borderRadius:"50%", background:`linear-gradient(135deg, ${C.gold}, ${C.navyLt})`, display:"flex", alignItems:"center", justifyContent:"center", marginBottom:24, border:`3px solid rgba(179,141,71,0.4)` }}>
+                  <span style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.8rem", fontWeight:700, color:C.white }}>G</span>
+                </div>
                 <div style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.3rem", fontWeight:700, color:C.white, marginBottom:4 }}>{t.cpa.name}</div>
                 <div style={{ color:C.gold, fontFamily:"'Montserrat',sans-serif", fontSize:"0.76rem", letterSpacing:"0.1em", textTransform:"uppercase", marginBottom:24, fontWeight:600 }}>{t.cpa.role}</div>
                 {t.cpa.bio.split("\n\n").map((p,i) => (
@@ -1826,8 +1674,9 @@ function AboutSection({ lang }) {
           <div style={{ display:"flex", justifyContent:"center", marginBottom:28 }}>
             <div style={{ background:C.navy, borderRadius:2, overflow:"hidden", boxShadow:"0 6px 28px rgba(5,30,87,0.18)", width:"100%", maxWidth:380, borderTop:`3px solid ${C.gold}` }}>
               <div style={{ height:220, background:`linear-gradient(135deg, ${C.navyDk}, ${C.navyLt})`, display:"flex", alignItems:"center", justifyContent:"center", position:"relative" }}>
-                <img src="/gustavo_monge_cpa.jpg" alt="CPA Gustavo Monge A."
-                 style={{ width:100, height:100, borderRadius:"50%", objectFit:"cover", objectPosition:"center top", border:`3px solid rgba(255,255,255,0.25)`, display:"block" }} />
+                <div style={{ width:100, height:100, borderRadius:"50%", background:`linear-gradient(135deg, ${C.gold}, ${C.goldLt})`, display:"flex", alignItems:"center", justifyContent:"center", border:`3px solid rgba(255,255,255,0.25)` }}>
+                  <span style={{ fontFamily:"'Playfair Display',serif", fontSize:"2.4rem", fontWeight:700, color:C.white }}>G</span>
+                </div>
                 <div style={{ position:"absolute", bottom:0, left:0, right:0, height:2, background:`linear-gradient(90deg, transparent, ${C.gold}, transparent)` }} />
               </div>
               <div style={{ padding:"28px 28px 24px" }}>
@@ -2409,7 +2258,7 @@ function MapSection({ lang }) {
   );
 }
 
-function Footer({ lang, setSection, setShowPrivacy }) {
+function Footer({ lang, setSection }) {
   const t = DATA[lang].footer;
   const navSections = ["home","services","about","blog","contact"];
   return (
@@ -2449,18 +2298,7 @@ function Footer({ lang, setSection, setShowPrivacy }) {
         </div>
 
         <div style={{ borderTop:`1px solid rgba(255,255,255,0.08)`, paddingTop:24, display:"flex", justifyContent:"space-between", alignItems:"center", flexWrap:"wrap", gap:12 }}>
-        <div style={{ display:"flex", flexDirection:"column", gap:6 }}>
           <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.76rem", color:"rgba(255,255,255,0.3)" }}>{t.rights}</p>
-          <button onClick={() => { setShowPrivacy(true); window.scrollTo({top:0}); }}
-           style={{ background:"none", border:"none", cursor:"pointer", textAlign:"left", padding:0,
-             fontFamily:"'Montserrat',sans-serif", fontSize:"0.72rem",
-             color:"rgba(179,141,71,0.55)", letterSpacing:"0.04em" }}
-           onMouseEnter={e=>e.target.style.color="rgba(179,141,71,0.9)"}
-           onMouseLeave={e=>e.target.style.color="rgba(179,141,71,0.55)"}
-          >
-            {lang==="es" ? "Política de Privacidad" : "Privacy Policy"}
-          </button>
-        </div>
           <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.72rem", color:"rgba(255,255,255,0.22)" }}>
             <a href="https://gamacpa-asesores.com" style={{ color:"rgba(179,141,71,0.4)", textDecoration:"none" }}>gamacpa-asesores.com</a>
           </p>
@@ -2488,55 +2326,22 @@ function WhatsAppBtn() {
 }
 
 /* ─────────────── APP ─────────────── */
-const getBrowserLang = () => {
-  const lang = navigator.language || navigator.userLanguage || "es";
-  return lang.toLowerCase().startsWith("en") ? "en" : "es";
-};
-
 export default function App() {
-const [lang, setLang] = useState(getBrowserLang);
+  const [lang, setLang] = useState("es");
   const [section, setSection] = useState("home");
   const [article, setArticle] = useState(null);
-  const [showPrivacy, setShowPrivacy] = useState(false);
 
-  useEffect(() => {
-  const titles = {
-    es: {
-      home:     "GAMA Asesores Contables · Contabilidad y Finanzas | Costa Rica",
-      services: "Servicios Contables y Financieros · GAMA Asesores | Costa Rica",
-      about:    "Nosotros · CPA Gustavo Monge A. · GAMA Asesores Contables",
-      blog:     "Blog Tributario · Normativa Fiscal Costa Rica · GAMA Asesores",
-      contact:  "Contacto · Solicitar Presupuesto · GAMA Asesores Contables",
-      privacy:  "Política de Privacidad · GAMA Asesores Contables",
-    },
-    en: {
-      home:     "GAMA Advisors · Accounting & Financial Services | Costa Rica",
-      services: "Accounting & Financial Services · GAMA Advisors | Costa Rica",
-      about:    "About Us · CPA Gustavo Monge A. · GAMA Advisors",
-      blog:     "Tax Blog · Costa Rica Tax Regulations · GAMA Advisors",
-      contact:  "Contact · Request a Quote · GAMA Advisors",
-      privacy:  "Privacy Policy · GAMA Advisors",
+  const renderSection = () => {
+    if (section === "blog" && article) return <ArticleView article={article} lang={lang} onBack={() => setArticle(null)} />;
+    switch(section) {
+      case "home":     return <><HeroSection lang={lang} setSection={setSection}/><WhySection lang={lang}/><TestimonialsSection lang={lang}/></>;
+      case "services": return <ServicesSection lang={lang}/>;
+      case "about":    return <AboutSection lang={lang}/>;
+      case "blog":     return <BlogList lang={lang} onRead={(a)=>{ setArticle(a); window.scrollTo({top:0,behavior:"smooth"}); }}/>;
+      case "contact":  return <><ContactSection lang={lang}/><MapSection lang={lang}/></>;
+      default:         return <HeroSection lang={lang} setSection={setSection}/>;
     }
   };
-  document.title = titles[lang]?.[section] || titles[lang].home;
-}, [section, lang]);
-  
-  const renderSection = () => {
-  if (showPrivacy) return (
-    <PrivacyPolicy lang={lang} onBack={() => setShowPrivacy(false)} />
-  );
-  if (section === "blog" && article) return (
-    <ArticleView article={article} lang={lang} onBack={() => setArticle(null)} />
-  );
-  switch(section) {
-    case "home":     return <><HeroSection lang={lang} setLang={setLang} setSection={setSection}/><WhySection lang={lang}/><TestimonialsSection lang={lang}/></>;
-    case "services": return <ServicesSection lang={lang}/>;
-    case "about":    return <AboutSection lang={lang}/>;
-    case "blog":     return <BlogList lang={lang} onRead={(a)=>{ setArticle(a); window.scrollTo({top:0,behavior:"smooth"}); }}/>;
-    case "contact":  return <><ContactSection lang={lang}/><MapSection lang={lang}/></>;
-    default:         return <HeroSection lang={lang} setLang={setLang} setSection={setSection}/>;
-  }
-};
 
   return (
     <>
@@ -2570,10 +2375,7 @@ const [lang, setLang] = useState(getBrowserLang);
         {renderSection()}
       </main>
 
-      <Footer lang={lang}
-        setSection={(s)=>{ setSection(s); setArticle(null); setShowPrivacy(false); window.scrollTo({top:0}); }}
-        setShowPrivacy={setShowPrivacy}
-      />
+      <Footer lang={lang} setSection={(s)=>{ setSection(s); setArticle(null); window.scrollTo({top:0}); }}/>
       <WhatsAppBtn/>
     </>
   );
