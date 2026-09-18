@@ -703,6 +703,85 @@ Fuente: Delfino.cr, 15 de setiembre de 2026. Basado en la Circular DGL-003-2026 
         },
       ],
     },
+    faq: {
+      label: "Preguntas Frecuentes",
+      title: "¿Tiene Dudas? Tenemos Respuestas",
+      subtitle: "Las consultas más frecuentes de nuestros clientes.",
+      items: [
+        { q: "¿Cuánto cuesta el servicio de contabilidad?", a: "Los honorarios dependen del volumen de transacciones y servicios requeridos. Ofrecemos planes desde ₡80,000 mensuales para profesionales independientes hasta paquetes corporativos personalizados. Contáctenos para una cotización sin costo." },
+        { q: "¿Cuándo vence el IVA cada mes?", a: "El IVA (D-104) se declara y paga el día 15 de cada mes por el período anterior. Si el 15 cae en fin de semana o feriado, se traslada al siguiente día hábil." },
+        { q: "¿Necesito contador si soy profesional independiente?", a: "Sí. Todo profesional que emite facturas tiene obligaciones de IVA mensual (13%), retención en la fuente (12%) y declaración anual de renta. Sin asesoría adecuada es fácil pagar de más o incurrir en multas." },
+        { q: "¿Qué es TRIBU-CR?", a: "TRIBU-CR es la plataforma digital del Ministerio de Hacienda que reemplazó al ATV. Allí se gestionan todas las declaraciones, pagos y comunicaciones con Tributación. Toda empresa debe estar registrada." },
+        { q: "¿Cuánto tarda implementar NIIF para PYMES?", a: "Para una empresa mediana con registros ordenados, entre 4 y 6 semanas. Con documentación desordenada puede tomar de 10 a 12 semanas. Incluye diagnóstico, políticas contables, estados comparativos y capacitación." },
+        { q: "¿Pueden atenderme si estoy fuera de Costa Rica?", a: "Absolutamente. Atendemos clientes internacionales con operaciones en Costa Rica de forma 100% remota, en español e inglés. Ideal para inversionistas extranjeros y propietarios no residentes." },
+        { q: "¿Qué pasa si no presento una declaración a tiempo?", a: "La multa por omisión es del 2% mensual hasta el 20% del impuesto adeudado. Se cobran además intereses. En casos graves, Hacienda puede iniciar cobro judicial. Regularizar pronto siempre es más económico." },
+        { q: "¿Qué documentos necesito para empezar?", a: "Cédula jurídica o física, acceso a TRIBU-CR, estados de cuenta bancarios, facturas electrónicas del período y declaraciones anteriores si las hay. Le guiamos paso a paso en el proceso de incorporación." },
+      ],
+    },
+    cost: {
+      label: "El costo de no cumplir",
+      title: "Hacer Mal las Cosas Sale Muy Caro",
+      subtitle: "El incumplimiento tributario tiene consecuencias reales. Estos son los riesgos que evitamos para nuestros clientes.",
+      items: [
+        { icon: "⚖️", title: "Multas y Sanciones", text: "La multa por declaración tardía es del 2% mensual hasta el 20% del impuesto. Las omisiones pueden representar hasta el 50% del impuesto omitido más intereses moratorios." },
+        { icon: "🏛️", title: "Cobro Judicial", text: "Las deudas con Hacienda pasan a cobro judicial con honorarios adicionales, posible embargo de cuentas bancarias y bienes de la empresa." },
+        { icon: "🚫", title: "Bloqueo Registral", text: "Sin cumplimiento tributario, el Registro Nacional no inscribirá documentos: no traspasos, no cambios de representación, no certificaciones de ningún tipo." },
+        { icon: "📉", title: "Acceso al Crédito", text: "Los bancos exigen estar al día con Hacienda y CCSS para aprobar financiamiento. El incumplimiento cierra las puertas al crédito empresarial cuando más lo necesita." },
+      ],
+    },
+    tools: {
+      label: "Herramientas",
+      title: "Herramientas Fiscales Gratuitas",
+      subtitle: "Calculadoras y calendario de obligaciones para su gestión tributaria.",
+      calcTitle: "Calculadora de IVA",
+      calcSub: "Calcule el IVA al 13% de forma instantánea",
+      mode1: "Calcular IVA sobre precio neto",
+      mode2: "Extraer IVA de precio total",
+      base: "Precio base",
+      iva: "IVA (13%)",
+      total: "Total",
+      placeholder: "Ingrese el monto",
+      calTitle: "Calendario Tributario 2026",
+      calSub: "Fechas clave del año fiscal costarricense",
+      calNote: "* Cuando el vencimiento cae en fin de semana o feriado, se traslada al siguiente día hábil. Consulte a su asesor para fechas específicas del D-101.",
+      filterAll: "Todos",
+    },
+    privacy: {
+      label: "Política de Privacidad",
+      title: "Política de Privacidad",
+      subtitle: "Conforme a la Ley N.° 8968, Ley de Protección de la Persona frente al Tratamiento de sus Datos Personales",
+      content: `Última actualización: enero de 2026
+
+GAMA CPA y Asesoría Contable, S.R.L. (cédula jurídica 3-102-913105), en adelante GAMA Asesores, con domicilio en Residencial Bulevar del Sol, Etapa IV, Casa E-14, Barranca, Puntarenas, Costa Rica, es la responsable del tratamiento de los datos personales recopilados a través del sitio web gamacpa-asesores.com.
+
+## ¿Qué datos recopilamos?
+
+A través del formulario de contacto recopilamos: nombre completo, dirección de correo electrónico, número de teléfono (opcional), nombre de la empresa o negocio (opcional) y el mensaje que nos envía. Adicionalmente, mediante Google Analytics recopilamos datos de navegación de forma anónima y agregada (páginas visitadas, tiempo en el sitio, ubicación aproximada).
+
+## ¿Para qué usamos sus datos?
+
+Sus datos se utilizan exclusivamente para: responder sus consultas y solicitudes de cotización, contactarle con información sobre nuestros servicios, y mejorar la experiencia del sitio web mediante el análisis de tráfico anónimo.
+
+## Base legal del tratamiento
+
+El tratamiento de sus datos personales se basa en su consentimiento expreso al enviar el formulario de contacto, conforme al Artículo 5 de la Ley N.° 8968.
+
+## ¿Por cuánto tiempo conservamos sus datos?
+
+Los datos del formulario de contacto se conservan por el tiempo necesario para atender su consulta y, en caso de convertirse en cliente, durante toda la relación comercial más el período exigido por la legislación tributaria costarricense vigente.
+
+## Sus derechos
+
+Conforme a la Ley N.° 8968 y sus reglamentos, usted tiene derecho a: acceder a sus datos personales, rectificar datos incorrectos, solicitar su eliminación, oponerse al tratamiento, y revocar su consentimiento en cualquier momento. Para ejercer estos derechos, contáctenos en: gmongea@gamacpa-asesores.com
+
+## Cookies y análisis web
+
+Este sitio utiliza Google Analytics para analizar el uso del sitio de forma anónima. Puede desactivar esta funcionalidad a través de la configuración de su navegador o mediante el complemento de inhabilitación de Google Analytics.
+
+## Contacto
+
+Para consultas sobre esta política o para ejercer sus derechos: GAMA CPA y Asesoría Contable, S.R.L. · gmongea@gamacpa-asesores.com · +506 8896-9883`,
+    },
     contact: {
       label: "Contacto",
       title: "¿Listo para Impulsar su Empresa?",
@@ -1292,6 +1371,85 @@ Source: Delfino.cr, September 15, 2026. Based on National Registry Circular DGL-
         },
       ],
     },
+    faq: {
+      label: "FAQ",
+      title: "Have Questions? We Have Answers",
+      subtitle: "The most common questions from our clients and prospects.",
+      items: [
+        { q: "How much does accounting service cost?", a: "Fees depend on transaction volume and services required. We offer plans starting at ₡80,000 per month for independent professionals up to customized corporate packages. Contact us for a free quote." },
+        { q: "When is the monthly VAT return due?", a: "VAT (D-104) is declared and paid on the 15th of each month for the prior period. If the 15th falls on a weekend or holiday, it moves to the next business day." },
+        { q: "Do I need an accountant as an independent professional?", a: "Yes. Every professional who issues invoices has obligations: 13% VAT monthly, 12% withholding at source, and annual income tax declaration. Without proper advice it's easy to overpay or incur penalties." },
+        { q: "What is TRIBU-CR?", a: "TRIBU-CR is the Ministry of Finance's digital platform that replaced the old ATV system. All declarations, payments and communications with the Tax Authority are managed there. Every company must be registered." },
+        { q: "How long does IFRS for SMEs implementation take?", a: "For a mid-sized company with organized records: 4 to 6 weeks. With disorganized documentation it may take 10 to 12 weeks. Includes gap analysis, accounting policies, comparative statements and team training." },
+        { q: "Can you serve me if I'm outside Costa Rica?", a: "Absolutely. We serve international clients with operations in Costa Rica 100% remotely, in Spanish and English. Ideal for foreign investors and non-resident property owners." },
+        { q: "What happens if I miss a tax filing?", a: "The penalty is 2% per month up to 20% of the tax owed, plus interest. In serious cases, Hacienda can initiate judicial collection. Regularizing quickly is always cheaper." },
+        { q: "What documents do I need to start?", a: "Legal ID or business registration number, TRIBU-CR access, bank statements, electronic invoices for the period, and prior declarations if available. We guide you step by step." },
+      ],
+    },
+    cost: {
+      label: "The cost of non-compliance",
+      title: "Doing Things Wrong Is Very Expensive",
+      subtitle: "Tax non-compliance has real consequences. These are the risks we prevent for our clients.",
+      items: [
+        { icon: "⚖️", title: "Fines & Penalties", text: "Late filing penalty is 2% per month up to 20% of the tax owed. Omissions can represent up to 50% of the omitted tax plus interest charges." },
+        { icon: "🏛️", title: "Judicial Collection", text: "Tax debts move to judicial collection with additional legal fees, possible bank account garnishments and business asset seizures." },
+        { icon: "🚫", title: "Registry Blocks", text: "Without tax compliance, the National Registry won't process any documents for your company: no transfers, no management changes, no certifications." },
+        { icon: "📉", title: "Credit Access", text: "Banks require being current with Hacienda and CCSS to approve financing. Non-compliance closes doors to business credit when you need it most." },
+      ],
+    },
+    tools: {
+      label: "Tools",
+      title: "Free Tax Tools",
+      subtitle: "Calculators and obligation calendar for your tax management.",
+      calcTitle: "VAT Calculator",
+      calcSub: "Calculate 13% VAT instantly",
+      mode1: "Calculate VAT on net price",
+      mode2: "Extract VAT from total price",
+      base: "Base price",
+      iva: "VAT (13%)",
+      total: "Total",
+      placeholder: "Enter amount",
+      calTitle: "2026 Tax Calendar",
+      calSub: "Key dates of the Costa Rican fiscal year",
+      calNote: "* When a due date falls on a weekend or holiday, it moves to the next business day. Consult your advisor for specific D-101 dates.",
+      filterAll: "All",
+    },
+    privacy: {
+      label: "Privacy Policy",
+      title: "Privacy Policy",
+      subtitle: "In compliance with Law No. 8968, Personal Data Protection Law of Costa Rica",
+      content: `Last updated: January 2026
+
+GAMA CPA y Asesoría Contable, S.R.L. (corporate ID 3-102-913105), hereafter GAMA Advisors, located at Residencial Bulevar del Sol, Etapa IV, Casa E-14, Barranca, Puntarenas, Costa Rica, is the data controller for personal data collected through gamacpa-asesores.com.
+
+## What data do we collect?
+
+Through the contact form we collect: full name, email address, phone number (optional), company name (optional) and your message. Additionally, through Google Analytics we collect anonymous, aggregated browsing data (pages visited, time on site, approximate location).
+
+## How do we use your data?
+
+Your data is used exclusively to: respond to your inquiries and quote requests, contact you with information about our services, and improve the website experience through anonymous traffic analysis.
+
+## Legal basis
+
+Data processing is based on your express consent when submitting the contact form, pursuant to Article 5 of Law No. 8968.
+
+## How long do we retain your data?
+
+Contact form data is retained for as long as necessary to address your inquiry and, if you become a client, throughout the business relationship plus the period required by Costa Rican tax legislation.
+
+## Your rights
+
+Under Law No. 8968, you have the right to: access your personal data, correct inaccurate data, request deletion, object to processing, and revoke consent at any time. To exercise these rights contact us at: gmongea@gamacpa-asesores.com
+
+## Cookies and web analytics
+
+This site uses Google Analytics to analyze site usage anonymously. You can disable this through your browser settings or via the Google Analytics opt-out add-on.
+
+## Contact
+
+For questions about this policy or to exercise your rights: GAMA CPA y Asesoría Contable, S.R.L. · gmongea@gamacpa-asesores.com · +506 8896-9883`,
+    },
     contact: {
       label: "Contact",
       title: "Ready to Grow Your Business?",
@@ -1694,6 +1852,73 @@ Registro de Beneficiarios Finales: רישום הבעלים האמיתיים תו
         },
       ],
     },
+    faq: {
+      label: "שאלות נפוצות",
+      title: "יש שאלות? יש לנו תשובות",
+      subtitle: "השאלות הנפוצות ביותר מהלקוחות שלנו.",
+      items: [
+        { q: "כמה עולה שירות חשבונאות?", a: "העמלות תלויות בנפח העסקאות ובשירותים הנדרשים. אנו מציעים תוכניות החל מ-₡80,000 לחודש לעצמאים ועד חבילות ארגוניות מותאמות. צרו איתנו קשר לקבלת הצעת מחיר ללא עלות." },
+        { q: "מתי מוגש דוח מע"מ חודשי?", a: "מע"מ (D-104) מוגש ומשולם עד ה-15 לכל חודש עבור התקופה הקודמת. אם ה-15 חל בסוף שבוע או חג, הוא נדחה ליום העסקים הבא." },
+        { q: "האם אני זקוק לרואה חשבון כעצמאי?", a: "כן. כל איש מקצוע שמנפיק חשבוניות חייב ב-13% מע"מ חודשי, 12% ניכוי במקור ודוח שנתי. ללא ייעוץ מתאים קל לשלם יותר מדי או לקבל קנסות." },
+        { q: "מה זה TRIBU-CR?", a: "TRIBU-CR היא הפלטפורמה הדיגיטלית של משרד האוצר. כל הגשת דוחות, תשלומים ותקשורת עם רשות המסים מנוהלים שם. כל חברה חייבת להיות רשומה." },
+        { q: "כמה זמן לוקחת הטמעת IFRS?", a: "לחברה בינונית עם רישומים מסודרים: 4 עד 6 שבועות. עם תיעוד לא מסודר עשוי לקחת 10 עד 12 שבועות. כולל אבחון, מדיניות חשבונאית, דוחות השוואתיים והכשרת צוות." },
+        { q: "האם אפשר לקבל שירות מחוץ לקוסטה ריקה?", a: "בהחלט. אנו משרתים לקוחות בינלאומיים עם פעילות בקוסטה ריקה 100% מרחוק, בספרדית ובאנגלית. אידיאלי למשקיעים זרים ובעלי נכסים שאינם תושבים." },
+        { q: "מה קורה אם אני לא מגיש הצהרה בזמן?", a: "הקנס הוא 2% לחודש עד 20% מהמס שלא שולם, בתוספת ריבית. במקרים חמורים, Hacienda יכולה לפתוח בהליכי גבייה שיפוטית. הסדרה מוקדמת תמיד זולה יותר." },
+        { q: "אילו מסמכים צריך כדי להתחיל?", a: "מספר חברה או ת.ז, גישה ל-TRIBU-CR, דפי חשבון בנק, חשבוניות אלקטרוניות לתקופה ודוחות קודמים אם קיימים. אנו מנחים אתכם בכל שלב." },
+      ],
+    },
+    cost: {
+      label: "עלות אי-ציות",
+      title: "לעשות דברים בצורה שגויה יוצא ביוקר",
+      subtitle: "לאי-ציות מיסויי יש השלכות אמיתיות. אלה הסיכונים שאנו מונעים ללקוחותינו.",
+      items: [
+        { icon: "⚖️", title: "קנסות וסנקציות", text: "הקנס על הגשה מאוחרת הוא 2% לחודש עד 20% מהמס. השמטות עלולות להגיע ל-50% מהמס שהושמט בתוספת ריבית." },
+        { icon: "🏛️", title: "גבייה שיפוטית", text: "חובות מס עוברים לגבייה שיפוטית עם שכ"ט נוסף, עיקול אפשרי של חשבונות בנק ונכסי החברה." },
+        { icon: "🚫", title: "חסימת מרשם", text: "ללא ציות מיסויי, מרשם החברות לא יעבד שום מסמך: לא העברות, לא שינויי ייצוג, לא אישורים." },
+        { icon: "📉", title: "גישה לאשראי", text: "הבנקים דורשים להיות עדכניים עם Hacienda ו-CCSS לאישור מימון. אי-ציות סוגר את דלתות האשראי העסקי." },
+      ],
+    },
+    tools: {
+      label: "כלים",
+      title: "כלים מיסויים חינמיים",
+      subtitle: "מחשבונים ולוח שנה לניהול המס שלכם.",
+      calcTitle: "מחשבון מע"מ",
+      calcSub: "חשבו 13% מע"מ באופן מיידי",
+      mode1: "חשב מע"מ על מחיר נטו",
+      mode2: "הוצא מע"מ ממחיר כולל",
+      base: "מחיר בסיס",
+      iva: "מע"מ (13%)",
+      total: "סה"כ",
+      placeholder: "הזינו סכום",
+      calTitle: "לוח שנה מיסויי 2026",
+      calSub: "תאריכים מרכזיים בשנת המס הקוסטה-ריקאית",
+      calNote: "* כאשר מועד ביצוע חל בסוף שבוע או חג, הוא נדחה ליום העסקים הבא. התייעצו עם היועץ שלכם לגבי תאריכי D-101.",
+      filterAll: "הכל",
+    },
+    privacy: {
+      label: "מדיניות פרטיות",
+      title: "מדיניות פרטיות",
+      subtitle: "בהתאם לחוק N.° 8968, חוק הגנת המידע האישי של קוסטה ריקה",
+      content: `עדכון אחרון: ינואר 2026
+
+GAMA CPA y Asesoría Contable, S.R.L. (מספר עוסק 3-102-913105), להלן GAMA Asesores, הממוקמת ב-Residencial Bulevar del Sol, Etapa IV, Casa E-14, Barranca, Puntarenas, קוסטה ריקה, היא האחראית לטיפול בנתונים האישיים הנאספים דרך gamacpa-asesores.com.
+
+## אילו נתונים אנו אוספים?
+
+דרך טופס יצירת הקשר אנו אוספים: שם מלא, כתובת דוא"ל, מספר טלפון (אופציונלי), שם החברה (אופציונלי) וההודעה שלכם. בנוסף, דרך Google Analytics אנו אוספים נתוני גלישה אנונימיים ומצטברים.
+
+## כיצד אנו משתמשים בנתונים?
+
+הנתונים שלכם משמשים אך ורק: להגיב לפניות ובקשות הצעת מחיר, ליצור איתכם קשר בנוגע לשירותינו, ולשפר את חוויית האתר.
+
+## הבסיס החוקי
+
+עיבוד הנתונים האישיים שלכם מבוסס על הסכמתכם המפורשת בעת שליחת הטופס, בהתאם לסעיף 5 של חוק N.° 8968.
+
+## פרטי יצירת קשר
+
+לשאלות או לממש זכויותיכם: gmongea@gamacpa-asesores.com · +506 8896-9883`,
+    },
     contact: {
       label: "צור קשר",
       title: "מוכנים לשדרג את הניהול הפיננסי שלכם?",
@@ -1747,7 +1972,7 @@ function Navbar({ lang, setLang, section, setSection }) {
   }, []);
 
   const navStyle = {
-    position: "fixed", top: 0, left: 0, right: 0, zIndex: 100,
+    position: "fixed", top: 36, left: 0, right: 0, zIndex: 100,
     background: scrolled ? `rgba(3,18,46,0.98)` : `rgba(5,30,87,0.92)`,
     backdropFilter: "blur(10px)",
     borderBottom: `1px solid rgba(179,141,71,${scrolled ? "0.25" : "0.15"})`,
@@ -1755,7 +1980,7 @@ function Navbar({ lang, setLang, section, setSection }) {
     padding: "0 5%",
   };
 
-  const navSections = ["home","services","about","blog","contact"];
+  const navSections = ["home","services","about","blog","tools","contact"];
 
   const go = (s) => {
     setSection(s);
@@ -1806,6 +2031,11 @@ function Navbar({ lang, setLang, section, setSection }) {
             ))}
           </div>
 
+          <a href="https://calendly.com/YOUR_CALENDLY_LINK" target="_blank" rel="noopener noreferrer"
+            style={{ ...btn.outline, padding:"9px 18px", fontSize:"0.75rem", textDecoration:"none", color:C.gold, borderColor:C.gold }}
+            onMouseEnter={e=>{e.currentTarget.style.background=C.gold;e.currentTarget.style.color=C.navy;}}
+            onMouseLeave={e=>{e.currentTarget.style.background="transparent";e.currentTarget.style.color=C.gold;}}
+          >{lang==="he"?"📅 קביעת פגישה":lang==="es"?"📅 Agendar Cita":"📅 Book Appointment"}</a>
           <button onClick={() => go("contact")} style={{ ...btn.primary, padding:"10px 22px", fontSize:"0.75rem" }}>
             {t.cta}
           </button>
@@ -1904,10 +2134,10 @@ function HeroSection({ lang, setSection }) {
 
           {/* Stats bar */}
           <div style={{ marginTop:72, paddingTop:40, borderTop:`1px solid rgba(5,30,87,0.1)`, display:"flex", gap:48, flexWrap:"wrap" }}>
-            {[["10+", lang==="es"?"Años de experiencia":"Years of experience"],
-              ["100+", lang==="es"?"Clientes satisfechos":"Satisfied clients"],
-              ["6", lang==="es"?"Servicios especializados":"Specialized services"],
-              ["2", lang==="es"?"Oficinas en Costa Rica":"Offices in Costa Rica"]
+            {[["10+", lang==="he"?"שנות ניסיון":lang==="es"?"Años de experiencia":"Years of experience"],
+              ["100+", lang==="he"?"לקוחות מרוצים":lang==="es"?"Clientes satisfechos":"Satisfied clients"],
+              ["6", lang==="he"?"שירותים מקצועיים":lang==="es"?"Servicios especializados":"Specialized services"],
+              ["2", lang==="he"?"משרדים בקוסטה ריקה":lang==="es"?"Oficinas en Costa Rica":"Offices in Costa Rica"]
             ].map(([n,l]) => (
               <div key={n}>
                 <div style={{ fontFamily:"'Playfair Display',serif", fontSize:"2.2rem", fontWeight:700, color:C.navy }}>{n}</div>
@@ -2015,6 +2245,54 @@ function AboutSection({ lang }) {
 
   return (
     <>
+      {/* ── HISTORIA DE LA FIRMA ── */}
+      <section style={{ padding:"80px 5% 60px", background:"#f4f1eb" }}>
+        <div style={{ maxWidth:1100, margin:"0 auto" }}>
+          <p style={{ color:C.gold, fontFamily:"'Montserrat',sans-serif", fontSize:"0.75rem", letterSpacing:"0.2em", textTransform:"uppercase", fontWeight:700, marginBottom:12 }}>
+            {lang==="he"?"ההיסטוריה שלנו":lang==="es"?"Nuestra Historia":"Our Story"}
+          </p>
+          <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(1.6rem,2.8vw,2.2rem)", color:C.navy, fontWeight:700, marginBottom:32 }}>
+            {lang==="he"?"ממשרד מקומי לפירמה בינלאומית":lang==="es"?"De Práctica Local a Firma Internacional":"From Local Practice to International Firm"}
+          </h2>
+          <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:40, alignItems:"start" }} className="about-grid">
+            <div>
+              <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.91rem", color:"#4a4540", lineHeight:1.9, marginBottom:18 }}>
+                {lang==="he"
+                  ? "GAMA Asesores החלה פעילות תחת השם GAMA Servicios de Auditoría y Contabilidad, עם ייסוד רשמי בשנת 2017. הפירמה נוסדה על ידי CPA גוסטבו מונחה אלמן, שעבד כעצמאי מאז שנת 2000, מתוך אמונה שעסקים קטנים ובינוניים בקוסטה ריקה זכאים לייעוץ חשבונאי ברמה בינלאומית."
+                  : lang==="es"
+                  ? "GAMA Asesores inició operaciones bajo el nombre GAMA Servicios de Auditoría y Contabilidad, con fundación formal en 2017. La firma nació de la convicción del CPA Gustavo Monge Alemán — quien ejercía de forma independiente desde el año 2000 — de que las PYMES costarricenses merecen acceso a asesoría contable de alto nivel técnico, no solo servicios de registro básico."
+                  : "GAMA Asesores began operations as GAMA Servicios de Auditoría y Contabilidad, formally founded in 2017. The firm was built on CPA Gustavo Monge Alemán's conviction — having worked independently since 2000 — that Costa Rican SMEs deserve high-level technical accounting advisory, not just basic bookkeeping."}
+              </p>
+              <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.91rem", color:"#4a4540", lineHeight:1.9 }}>
+                {lang==="he"
+                  ? "עם השנים, הפירמה התפתחה מהתמקדות בלקוחות מקומיים בפונטרנס לכיסוי ארצי ובינלאומי. ב-2025 בוצע שינוי חברתי ל-GAMA CPA y Asesoría Contable, S.R.L., תוך שמירה על שמות המסחר המוכרים. כיום הפירמה פועלת משני משרדים פיזיים עם יכולת שירות מרחוק לכל קוסטה ריקה."
+                  : lang==="es"
+                  ? "Con el tiempo, la firma amplió su cobertura de clientes locales de la región de Puntarenas hacia atención nacional e internacional, adoptando el bilingüismo español/inglés como estándar. En 2025 se realizó el cambio societario a GAMA CPA y Asesoría Contable, S.R.L., manteniendo sus nombres comerciales. Hoy opera con dos oficinas físicas y cobertura remota para todo el país."
+                  : "Over time, the firm expanded from local Puntarenas clients to national and international coverage, adopting Spanish/English bilingualism as a service standard. In 2025, the structure was updated to GAMA CPA y Asesoría Contable, S.R.L. Today it operates two physical offices with remote service capacity across Costa Rica."}
+              </p>
+            </div>
+            <div style={{ borderLeft:`3px solid ${C.gold}`, paddingLeft:28 }}>
+              <div style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.72rem", color:C.gold, fontWeight:700, letterSpacing:"0.15em", textTransform:"uppercase", marginBottom:20 }}>
+                {lang==="he"?"ציר הזמן":lang==="es"?"Línea de Tiempo":"Timeline"}
+              </div>
+              {[
+                ["2000", lang==="he"?"תחילת עיסוק עצמאי":lang==="es"?"Inicio práctica profesional independiente":"Independent practice begins"],
+                ["2017", lang==="he"?"ייסוד רשמי של GAMA Asesores":lang==="es"?"Fundación formal de GAMA Asesores":"GAMA Asesores formally founded"],
+                ["2020", lang==="he"?"הרחבה לאזור חצי האי (Cóbano)":lang==="es"?"Expansión a zona peninsular (Cóbano)":"Expansion to Peninsula office (Cóbano)"],
+                ["2023", lang==="he"?"שירות בינלאומי, לקוחות דוברי אנגלית":lang==="es"?"Expansión a clientes internacionales bilingüe":"International clients & bilingual service"],
+                ["2025", lang==="he"?"שינוי חברתי ותמורה דיגיטלית":lang==="es"?"Cambio societario y transformación digital":"Corporate restructuring & digital transformation"],
+                ["2026", lang==="he"?"ספר מותג ושלושה שפות":lang==="es"?"Manual de Marca y servicio trilingüe":"Brand Manual & trilingual service launch"],
+              ].map(([yr, ev]) => (
+                <div key={yr} style={{ marginBottom:14, display:"flex", gap:12 }}>
+                  <span style={{ fontFamily:"'Playfair Display',serif", fontSize:"0.9rem", fontWeight:700, color:C.gold, flexShrink:0, minWidth:40 }}>{yr}</span>
+                  <span style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.84rem", color:"#4a4540", lineHeight:1.6 }}>{ev}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── SOBRE NOSOTROS ── */}
       <section id="about-section" style={{ padding:"100px 5%", background:C.white }}>
         <div style={{ maxWidth:1200, margin:"0 auto" }}>
@@ -2065,10 +2343,10 @@ function AboutSection({ lang }) {
         <div style={{ maxWidth:1200, margin:"0 auto" }}>
           <div style={{ textAlign:"center", marginBottom:56 }}>
             <p style={{ color:C.gold, fontFamily:"'Montserrat',sans-serif", fontSize:"0.75rem", letterSpacing:"0.2em", textTransform:"uppercase", fontWeight:700, marginBottom:12 }}>
-              {lang==="es" ? "Nuestro Equipo" : "Our Team"}
+              {lang==="he" ? "הצוות שלנו" : lang==="es" ? "Nuestro Equipo" : "Our Team"}
             </p>
             <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(1.7rem,3vw,2.4rem)", color:C.navy, fontWeight:700 }}>
-              {lang==="es" ? "Los Profesionales Detrás de GAMA" : "The Professionals Behind GAMA"}
+              {lang==="he" ? "המקצוענים מאחורי GAMA" : lang==="es" ? "Los Profesionales Detrás de GAMA" : "The Professionals Behind GAMA"}
             </h2>
           </div>
 
@@ -2129,10 +2407,16 @@ function AboutSection({ lang }) {
 /* ── BLOG LIST ── */
 function BlogList({ lang, onRead }) {
   const t = DATA[lang].blog;
-  const arts = [...t.articles].sort((a, b) => b.id - a.id);
+  const allArts = [...t.articles].sort((a, b) => b.id - a.id);
+  const [catFilter, setCatFilter] = useState("all");
+  const categories = ["all", ...new Set(allArts.map(a => a.category))];
+  const arts = catFilter === "all" ? allArts : allArts.filter(a => a.category === catFilter);
 
   return (
     <section id="blog-section" style={{ padding:"100px 5%", background:"#f4f1eb" }}>
+      <div style={{ maxWidth:1200, margin:"0 auto 0", display:"flex", flexWrap:"wrap", gap:8, marginBottom:0 }}>
+        {/* category filter rendered inside the section below */}
+      </div>
       <div style={{ maxWidth:1200, margin:"0 auto" }}>
         <div style={{ marginBottom:64, textAlign:"center" }}>
           <p style={{ color:C.gold, fontFamily:"'Montserrat',sans-serif", fontSize:"0.75rem", letterSpacing:"0.2em", textTransform:"uppercase", fontWeight:700, marginBottom:12 }}>{t.label}</p>
@@ -2661,11 +2945,13 @@ function MapSection({ lang }) {
       name: lang==="he" ? "משרד פונטרנס" : lang==="es" ? "Oficina Puntarenas" : "Puntarenas Office",
       addr: lang==="he" ? "Residencial Bulevar del Sol, Etapa IV, Barranca, Puntarenas" : lang==="es" ? "Residencial Bulevar del Sol, Etapa IV, Barranca, Puntarenas" : "Residencial Bulevar del Sol, Stage IV, Barranca, Puntarenas",
       mapSrc: "https://maps.google.com/maps?q=9.97055,-84.72782&z=17&output=embed",
+      waze: "https://waze.com/ul?ll=9.97055,-84.72782&navigate=yes",
     },
     {
       name: lang==="he" ? "משרד חצי האי" : lang==="es" ? "Oficina Peninsular" : "Peninsula Office",
       addr: lang==="he" ? "מול מגרש הכדורגל, קומה 2, Súper El Mango, Santa Teresa, Cóbano" : lang==="es" ? "Frente a la Plaza de Fútbol, 2° piso Súper El Mango, Santa Teresa, Cóbano" : "Across from the Soccer Field, 2nd floor Súper El Mango, Santa Teresa, Cóbano",
       mapSrc: "https://maps.google.com/maps?q=9.63883,-85.16311&z=17&output=embed",
+      waze: "https://waze.com/ul?ll=9.63883,-85.16311&navigate=yes",
     },
   ];
 
@@ -2694,9 +2980,16 @@ function MapSection({ lang }) {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               />
-              <div style={{ padding:"20px 24px" }}>
-                <div style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.72rem", fontWeight:700, color:C.navy, letterSpacing:"0.1em", textTransform:"uppercase", marginBottom:6 }}>{o.name}</div>
-                <div style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.86rem", color:"#4a4540", lineHeight:1.6 }}>{o.addr}</div>
+              <div style={{ padding:"20px 24px", display:"flex", justifyContent:"space-between", alignItems:"flex-end", gap:12, flexWrap:"wrap" }}>
+                <div>
+                  <div style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.72rem", fontWeight:700, color:C.navy, letterSpacing:"0.1em", textTransform:"uppercase", marginBottom:6 }}>{o.name}</div>
+                  <div style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.86rem", color:"#4a4540", lineHeight:1.6 }}>{o.addr}</div>
+                </div>
+                <a href={o.waze} target="_blank" rel="noopener noreferrer"
+                  style={{ display:"flex", alignItems:"center", gap:6, background:"#00BFFF", color:C.white, padding:"8px 14px", borderRadius:4, fontFamily:"'Montserrat',sans-serif", fontSize:"0.75rem", fontWeight:700, textDecoration:"none", flexShrink:0 }}
+                  onMouseEnter={e=>e.currentTarget.style.opacity="0.85"}
+                  onMouseLeave={e=>e.currentTarget.style.opacity="1"}
+                >🗺 Waze</a>
               </div>
             </div>
           ))}
@@ -2708,7 +3001,7 @@ function MapSection({ lang }) {
 
 function Footer({ lang, setSection }) {
   const t = DATA[lang].footer;
-  const navSections = ["home","services","about","blog","contact"];
+  const navSections = ["home","services","about","blog","tools","contact"];
   return (
     <footer style={{ background:C.navyDk, padding:"60px 5% 32px", borderTop:`3px solid rgba(179,141,71,0.25)` }}>
       <div style={{ maxWidth:1200, margin:"0 auto" }}>
@@ -2746,10 +3039,22 @@ function Footer({ lang, setSection }) {
         </div>
 
         <div style={{ borderTop:`1px solid rgba(255,255,255,0.08)`, paddingTop:24, display:"flex", justifyContent:"space-between", alignItems:"center", flexWrap:"wrap", gap:12 }}>
-          <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.76rem", color:"rgba(255,255,255,0.3)" }}>{t.rights}</p>
-          <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.72rem", color:"rgba(255,255,255,0.22)" }}>
-            <a href="https://gamacpa-asesores.com" style={{ color:"rgba(179,141,71,0.4)", textDecoration:"none" }}>gamacpa-asesores.com</a>
-          </p>
+          <div style={{ display:"flex", gap:16, flexWrap:"wrap", alignItems:"center" }}>
+            <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.76rem", color:"rgba(255,255,255,0.3)", margin:0 }}>{t.rights}</p>
+            <button onClick={() => setSection("privacy")}
+              style={{ background:"none", border:"none", cursor:"pointer", fontFamily:"'Montserrat',sans-serif", fontSize:"0.74rem", color:"rgba(255,255,255,0.3)", padding:0, textDecoration:"underline" }}
+              onMouseEnter={e=>e.target.style.color=C.gold}
+              onMouseLeave={e=>e.target.style.color="rgba(255,255,255,0.3)"}
+            >{lang==="he"?"מדיניות פרטיות":lang==="es"?"Política de Privacidad":"Privacy Policy"}</button>
+          </div>
+          <div style={{ display:"flex", gap:12, alignItems:"center" }}>
+            {[["📘","https://www.facebook.com/GAMAAsesoresContables"],["📸","https://www.instagram.com/gamaasesorescontables"],["💼","https://www.linkedin.com/company/gama-asesores-contables"],["🎵","https://www.tiktok.com/@gamaasesores"]].map(([icon,href])=>(
+              <a key={href} href={href} target="_blank" rel="noopener noreferrer" style={{ color:"rgba(255,255,255,0.35)", fontSize:"1rem", textDecoration:"none", transition:"color .2s" }}
+                onMouseEnter={e=>e.target.style.color=C.gold}
+                onMouseLeave={e=>e.target.style.color="rgba(255,255,255,0.35)"}
+              >{icon}</a>
+            ))}
+          </div>
         </div>
       </div>
     </footer>
@@ -2773,6 +3078,231 @@ function WhatsAppBtn() {
   );
 }
 
+
+/* ── TOP BAR ── */
+function TopBar({ lang }) {
+  const SOCIAL = [
+    { icon: "📘", label:"Facebook",  href:"https://www.facebook.com/GAMAAsesoresContables" },
+    { icon: "📸", label:"Instagram", href:"https://www.instagram.com/gamaasesorescontables" },
+    { icon: "💼", label:"LinkedIn",  href:"https://www.linkedin.com/company/gama-asesores-contables" },
+    { icon: "🎵", label:"TikTok",    href:"https://www.tiktok.com/@gamaasesores" },
+  ];
+  return (
+    <div style={{ background:C.navyDk, borderBottom:`1px solid rgba(179,141,71,0.2)`, padding:"6px 5%", position:"fixed", top:0, left:0, right:0, zIndex:101 }}>
+      <div style={{ maxWidth:1200, margin:"0 auto", display:"flex", justifyContent:"space-between", alignItems:"center", flexWrap:"wrap", gap:8 }}>
+        <div style={{ display:"flex", gap:20, alignItems:"center" }}>
+          <a href="tel:+50688969883" style={{ color:"rgba(255,255,255,0.65)", fontFamily:"'Montserrat',sans-serif", fontSize:"0.72rem", textDecoration:"none", letterSpacing:"0.04em" }}>
+            📞 +506 8896-9883
+          </a>
+          <a href="mailto:gmongea@gamacpa-asesores.com" style={{ color:"rgba(255,255,255,0.65)", fontFamily:"'Montserrat',sans-serif", fontSize:"0.72rem", textDecoration:"none", letterSpacing:"0.04em" }}>
+            ✉ gmongea@gamacpa-asesores.com
+          </a>
+        </div>
+        <div style={{ display:"flex", gap:12, alignItems:"center" }}>
+          {SOCIAL.map(s => (
+            <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
+              title={s.label}
+              style={{ color:"rgba(255,255,255,0.5)", fontSize:"0.85rem", textDecoration:"none", transition:"color .2s" }}
+              onMouseEnter={e=>e.target.style.color=C.gold}
+              onMouseLeave={e=>e.target.style.color="rgba(255,255,255,0.5)"}
+            >{s.icon}</a>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ── COST SECTION ── */
+function CostSection({ lang }) {
+  const t = DATA[lang].cost;
+  return (
+    <section style={{ padding:"80px 5%", background:C.navy }}>
+      <div style={{ maxWidth:1200, margin:"0 auto" }}>
+        <div style={{ textAlign:"center", marginBottom:52 }}>
+          <p style={{ color:C.gold, fontFamily:"'Montserrat',sans-serif", fontSize:"0.75rem", letterSpacing:"0.2em", textTransform:"uppercase", fontWeight:700, marginBottom:12 }}>{t.label}</p>
+          <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(1.7rem,3vw,2.4rem)", color:C.white, fontWeight:700, marginBottom:14 }}>{t.title}</h2>
+          <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.9rem", color:"rgba(255,255,255,0.55)", maxWidth:600, margin:"0 auto" }}>{t.subtitle}</p>
+        </div>
+        <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(240px,1fr))", gap:24 }}>
+          {t.items.map((item, i) => (
+            <div key={i} style={{ background:"rgba(255,255,255,0.04)", border:`1px solid rgba(179,141,71,0.2)`, borderTop:`3px solid ${C.gold}`, padding:"32px 24px", borderRadius:2 }}>
+              <div style={{ fontSize:"2rem", marginBottom:16 }}>{item.icon}</div>
+              <h3 style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.1rem", fontWeight:700, color:C.white, marginBottom:12 }}>{item.title}</h3>
+              <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.84rem", color:"rgba(255,255,255,0.6)", lineHeight:1.75 }}>{item.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ── FAQ SECTION ── */
+function FAQSection({ lang }) {
+  const t = DATA[lang].faq;
+  const [open, setOpen] = useState(null);
+  return (
+    <section style={{ padding:"100px 5%", background:"#f4f1eb" }}>
+      <div style={{ maxWidth:860, margin:"0 auto" }}>
+        <div style={{ textAlign:"center", marginBottom:56 }}>
+          <p style={{ color:C.gold, fontFamily:"'Montserrat',sans-serif", fontSize:"0.75rem", letterSpacing:"0.2em", textTransform:"uppercase", fontWeight:700, marginBottom:12 }}>{t.label}</p>
+          <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(1.7rem,3vw,2.4rem)", color:C.navy, fontWeight:700, marginBottom:14 }}>{t.title}</h2>
+          <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.9rem", color:"#6b6560" }}>{t.subtitle}</p>
+        </div>
+        <div style={{ display:"flex", flexDirection:"column", gap:8 }}>
+          {t.items.map((item, i) => (
+            <div key={i} style={{ background:C.white, borderRadius:2, border:`1px solid rgba(5,30,87,0.08)`, overflow:"hidden", borderLeft:`3px solid ${open===i?C.gold:"transparent"}`, transition:"border-color .2s" }}>
+              <button onClick={() => setOpen(open===i?null:i)}
+                style={{ width:"100%", background:"none", border:"none", cursor:"pointer", padding:"20px 24px", display:"flex", justifyContent:"space-between", alignItems:"center", textAlign:"start", gap:16 }}>
+                <span style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.92rem", fontWeight:600, color:C.navy, lineHeight:1.4 }}>{item.q}</span>
+                <span style={{ color:C.gold, fontSize:"1.2rem", fontWeight:700, flexShrink:0, transition:"transform .2s", transform: open===i?"rotate(45deg)":"rotate(0deg)" }}>+</span>
+              </button>
+              {open===i && (
+                <div style={{ padding:"0 24px 20px" }}>
+                  <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.88rem", color:"#4a4540", lineHeight:1.8, borderTop:`1px solid rgba(5,30,87,0.06)`, paddingTop:16 }}>{item.a}</p>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ── TOOLS SECTION (Calculadora + Calendario) ── */
+const CAL_DATA = [
+  { date:"Ene 15",  duty:"D-104 IVA (diciembre)",         type:"IVA",      en:"Jan 15 — D-104 VAT (December)",      he:"15 ינואר — מע"מ D-104 (דצמבר)" },
+  { date:"Ene 31",  duty:"Impuesto Personas Jurídicas",    type:"Registro", en:"Jan 31 — Corporate Tax",             he:"31 ינואר — מס חברות" },
+  { date:"Feb 15",  duty:"D-104 IVA (enero)",              type:"IVA",      en:"Feb 15 — D-104 VAT (January)",      he:"15 פברואר — מע"מ D-104 (ינואר)" },
+  { date:"Mar 15",  duty:"D-104 IVA (febrero)",            type:"IVA",      en:"Mar 15 — D-104 VAT (February)",     he:"15 מרץ — מע"מ D-104 (פברואר)" },
+  { date:"Abr 15",  duty:"D-104 IVA (marzo)",              type:"IVA",      en:"Apr 15 — D-104 VAT (March)",        he:"15 אפריל — מע"מ D-104 (מרץ)" },
+  { date:"Abr 30",  duty:"RTBF — Actualización anual",    type:"Registro", en:"Apr 30 — Beneficial Owners update", he:"30 אפריל — עדכון שנתי RTBF" },
+  { date:"May 15",  duty:"D-104 IVA (abril)",              type:"IVA",      en:"May 15 — D-104 VAT (April)",        he:"15 מאי — מע"מ D-104 (אפריל)" },
+  { date:"Jun 15",  duty:"D-104 IVA (mayo)",               type:"IVA",      en:"Jun 15 — D-104 VAT (May)",          he:"15 יוני — מע"מ D-104 (מאי)" },
+  { date:"Jul 15",  duty:"D-104 IVA (junio)",              type:"IVA",      en:"Jul 15 — D-104 VAT (June)",         he:"15 יולי — מע"מ D-104 (יוני)" },
+  { date:"Ago 15",  duty:"D-104 IVA (julio)",              type:"IVA",      en:"Aug 15 — D-104 VAT (July)",         he:"15 אוגוסט — מע"מ D-104 (יולי)" },
+  { date:"Set 15",  duty:"D-104 IVA (agosto)",             type:"IVA",      en:"Sep 15 — D-104 VAT (August)",       he:"15 ספטמבר — מע"מ D-104 (אוגוסט)" },
+  { date:"Oct 15",  duty:"D-104 IVA (setiembre)",          type:"IVA",      en:"Oct 15 — D-104 VAT (September)",    he:"15 אוקטובר — מע"מ D-104 (ספטמבר)" },
+  { date:"Nov 15",  duty:"D-104 IVA (octubre)",            type:"IVA",      en:"Nov 15 — D-104 VAT (October)",      he:"15 נובמבר — מע"מ D-104 (אוקטובר)" },
+  { date:"Dic 15",  duty:"D-104 IVA (noviembre)",          type:"IVA",      en:"Dec 15 — D-104 VAT (November)",     he:"15 דצמבר — מע"מ D-104 (נובמבר)" },
+  { date:"Dic 15",  duty:"D-101 Renta anual (año fiscal)",type:"Renta",    en:"Dec 15 — D-101 Annual Income Tax",  he:"15 דצמבר — D-101 מס הכנסה שנתי" },
+  { date:"Dic 20",  duty:"Aguinaldo — pago máximo",       type:"Aguinaldo",en:"Dec 20 — Christmas Bonus deadline", he:"20 דצמבר — תשלום אגרת חופשה שנתית" },
+];
+const TYPE_COLORS = { IVA:"#0a2d7a", Renta:"#b38d47", Registro:"#2d6a4f", Aguinaldo:"#8b0000", Planilla:"#4a235a" };
+
+function ToolsSection({ lang }) {
+  const t = DATA[lang].tools;
+  const [mode, setMode] = useState("net");
+  const [amount, setAmount] = useState("");
+  const [filter, setFilter] = useState("all");
+
+  const val = parseFloat(amount.replace(/,/g,"")) || 0;
+  const base  = mode==="net"  ? val       : val / 1.13;
+  const iva   = mode==="net"  ? val*0.13  : val - val/1.13;
+  const total = mode==="net"  ? val*1.13  : val;
+  const fmt = (n) => n.toLocaleString("es-CR", { minimumFractionDigits:2, maximumFractionDigits:2 });
+
+  const types = ["all","IVA","Renta","Registro","Aguinaldo"];
+  const filtered = filter==="all" ? CAL_DATA : CAL_DATA.filter(r=>r.type===filter);
+  const getLabel = (r) => lang==="en" ? r.en : lang==="he" ? r.he : `${r.date} — ${r.duty}`;
+
+  return (
+    <section style={{ padding:"100px 5%", background:C.white }}>
+      <div style={{ maxWidth:1200, margin:"0 auto" }}>
+        <div style={{ textAlign:"center", marginBottom:64 }}>
+          <p style={{ color:C.gold, fontFamily:"'Montserrat',sans-serif", fontSize:"0.75rem", letterSpacing:"0.2em", textTransform:"uppercase", fontWeight:700, marginBottom:12 }}>{t.label}</p>
+          <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(1.7rem,3vw,2.4rem)", color:C.navy, fontWeight:700, marginBottom:14 }}>{t.title}</h2>
+          <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.9rem", color:"#6b6560" }}>{t.subtitle}</p>
+        </div>
+
+        <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:40 }} className="map-grid">
+          {/* IVA Calculator */}
+          <div style={{ background:"#f4f1eb", padding:"40px 36px", borderRadius:2, borderTop:`3px solid ${C.gold}` }}>
+            <h3 style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.35rem", color:C.navy, fontWeight:700, marginBottom:8 }}>{t.calcTitle}</h3>
+            <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.83rem", color:"#6b6560", marginBottom:28 }}>{t.calcSub}</p>
+
+            <div style={{ display:"flex", gap:8, marginBottom:24 }}>
+              {["net","gross"].map(m => (
+                <button key={m} onClick={() => setMode(m)}
+                  style={{ flex:1, padding:"10px 8px", border:`1.5px solid ${mode===m?C.navy:"rgba(5,30,87,0.2)"}`, background:mode===m?C.navy:"transparent", color:mode===m?C.white:C.navy, fontFamily:"'Montserrat',sans-serif", fontSize:"0.75rem", fontWeight:600, cursor:"pointer", borderRadius:2, transition:"all .2s" }}>
+                  {m==="net" ? t.mode1 : t.mode2}
+                </button>
+              ))}
+            </div>
+
+            <input type="number" value={amount} onChange={e=>setAmount(e.target.value)} placeholder={t.placeholder}
+              style={{ width:"100%", padding:"14px 16px", border:`1.5px solid rgba(5,30,87,0.2)`, borderRadius:2, fontFamily:"'Montserrat',sans-serif", fontSize:"1rem", color:C.navy, background:C.white, outline:"none", boxSizing:"border-box", marginBottom:24 }}
+              onFocus={e=>e.target.style.borderColor=C.gold}
+              onBlur={e=>e.target.style.borderColor="rgba(5,30,87,0.2)"} />
+
+            {val > 0 && (
+              <div style={{ background:C.white, padding:"20px", borderRadius:2, border:`1px solid rgba(5,30,87,0.1)` }}>
+                {[[ t.base, fmt(base) ],[ t.iva, fmt(iva) ],[ t.total, fmt(total) ]].map(([label,value], i) => (
+                  <div key={i} style={{ display:"flex", justifyContent:"space-between", padding:"10px 0", borderBottom: i<2 ? `1px solid rgba(5,30,87,0.06)` : "none" }}>
+                    <span style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.85rem", color:"#6b6560" }}>{label}</span>
+                    <span style={{ fontFamily:"'Montserrat',sans-serif", fontSize:i===2?"1.1rem":"0.88rem", fontWeight:i===2?700:500, color:i===2?C.gold:C.navy }}>₡{value}</span>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Calendario */}
+          <div style={{ background:"#f4f1eb", padding:"40px 36px", borderRadius:2, borderTop:`3px solid ${C.gold}` }}>
+            <h3 style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.35rem", color:C.navy, fontWeight:700, marginBottom:8 }}>{t.calTitle}</h3>
+            <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.83rem", color:"#6b6560", marginBottom:20 }}>{t.calSub}</p>
+
+            <div style={{ display:"flex", gap:6, flexWrap:"wrap", marginBottom:20 }}>
+              {types.map(tp => (
+                <button key={tp} onClick={() => setFilter(tp)}
+                  style={{ padding:"5px 12px", border:`1.5px solid ${filter===tp?C.navy:"rgba(5,30,87,0.2)"}`, background:filter===tp?C.navy:"transparent", color:filter===tp?C.white:C.navy, fontFamily:"'Montserrat',sans-serif", fontSize:"0.72rem", fontWeight:600, cursor:"pointer", borderRadius:20, transition:"all .2s" }}>
+                  {tp==="all" ? t.filterAll : tp}
+                </button>
+              ))}
+            </div>
+
+            <div style={{ maxHeight:340, overflowY:"auto", display:"flex", flexDirection:"column", gap:6 }}>
+              {filtered.map((r, i) => (
+                <div key={i} style={{ display:"flex", alignItems:"center", gap:12, background:C.white, padding:"10px 14px", borderRadius:2, borderLeft:`3px solid ${TYPE_COLORS[r.type]||C.navy}` }}>
+                  <span style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.82rem", color:C.navy, flex:1 }}>{getLabel(r)}</span>
+                  <span style={{ background:TYPE_COLORS[r.type]||C.navy, color:C.white, fontFamily:"'Montserrat',sans-serif", fontSize:"0.66rem", fontWeight:700, letterSpacing:"0.06em", padding:"2px 8px", borderRadius:10, flexShrink:0 }}>{r.type}</span>
+                </div>
+              ))}
+            </div>
+            <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.72rem", color:"#9a9280", marginTop:14, lineHeight:1.6 }}>{t.calNote}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ── PRIVACY SECTION ── */
+function PrivacySection({ lang, setSection }) {
+  const t = DATA[lang].privacy;
+  const renderContent = (text) => text.split("\n\n").map((para, i) => {
+    if (para.startsWith("## ")) return <h2 key={i} style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.2rem", color:C.navy, fontWeight:700, marginTop:32, marginBottom:12 }}>{para.slice(3)}</h2>;
+    return <p key={i} style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.9rem", color:"#4a4540", lineHeight:1.85, marginBottom:14 }}>{para}</p>;
+  });
+  return (
+    <section style={{ padding:"100px 5% 80px", background:C.white }}>
+      <div style={{ maxWidth:780, margin:"0 auto" }}>
+        <button onClick={() => setSection("home")}
+          style={{ ...btn.outline, marginBottom:40, fontSize:"0.78rem", padding:"10px 24px", color:C.navy, borderColor:C.navy }}
+          onMouseEnter={e=>{e.target.style.background=C.navy;e.target.style.color=C.white;}}
+          onMouseLeave={e=>{e.target.style.background="transparent";e.target.style.color=C.navy;}}
+        >{lang==="he"?"← חזרה":lang==="es"?"← Volver":"← Back"}</button>
+        <p style={{ color:C.gold, fontFamily:"'Montserrat',sans-serif", fontSize:"0.75rem", letterSpacing:"0.2em", textTransform:"uppercase", fontWeight:700, marginBottom:12 }}>{t.label}</p>
+        <h1 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(1.8rem,3vw,2.4rem)", fontWeight:700, color:C.navy, marginBottom:10 }}>{t.title}</h1>
+        <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.85rem", color:"#9a9280", marginBottom:40, fontStyle:"italic" }}>{t.subtitle}</p>
+        <div>{renderContent(t.content)}</div>
+      </div>
+    </section>
+  );
+}
+
 /* ─────────────── APP ─────────────── */
 export default function App() {
   const [lang, setLang] = useState("es");
@@ -2785,17 +3315,67 @@ export default function App() {
     document.documentElement.lang = lang;
   }, [lang]);
 
+  /* SEO meta tags — update on language change */
+  useEffect(() => {
+    const META = {
+      es: { title:"GAMA Asesores Contables | Contabilidad y Finanzas en Costa Rica", desc:"Firma especializada en contabilidad, NIIF para PYMES, declaraciones fiscales, auditoría y asesoría financiera en Costa Rica. Servicio bilingüe ES/EN.", kw:"contabilidad costa rica, contador puntarenas, NIIF pymes, IVA costa rica, declaraciones tributarias" },
+      en: { title:"GAMA Advisors | Accounting & Finance in Costa Rica", desc:"Specialized firm in accounting, IFRS for SMEs, tax declarations, audit and financial advisory in Costa Rica. Bilingual ES/EN service.", kw:"accountant costa rica, CPA puntarenas, IFRS SMEs, VAT costa rica, tax filing" },
+      he: { title:"GAMA Asesores | חשבונאות ופיננסים בקוסטה ריקה", desc:"משרד המתמחה בחשבונאות, IFRS לעסקים קטנים, הגשת דוחות מס, ביקורת וייעוץ פיננסי בקוסטה ריקה.", kw:"רואה חשבון קוסטה ריקה, CPA, IFRS, מע"מ" },
+    };
+    const m = META[lang];
+    document.title = m.title;
+    const setMeta = (sel, content, attr="name") => {
+      let el = document.querySelector(`meta[${attr}="${sel}"]`);
+      if (!el) { el = document.createElement("meta"); el.setAttribute(attr, sel); document.head.appendChild(el); }
+      el.setAttribute("content", content);
+    };
+    setMeta("description", m.desc);
+    setMeta("keywords", m.kw);
+    setMeta("og:title", m.title, "property");
+    setMeta("og:description", m.desc, "property");
+    setMeta("og:url", "https://gamacpa-asesores.com", "property");
+    setMeta("og:type", "website", "property");
+    setMeta("og:image", "https://gamacpa-asesores.com/logo_gama_asesores_modificado_web.jpg", "property");
+    setMeta("twitter:card", "summary_large_image");
+    setMeta("twitter:title", m.title);
+    setMeta("twitter:description", m.desc);
+  }, [lang]);
+
+  /* Schema.org LocalBusiness */
+  useEffect(() => {
+    const id = "schema-local-business";
+    let el = document.getElementById(id);
+    if (!el) { el = document.createElement("script"); el.id = id; el.type = "application/ld+json"; document.head.appendChild(el); }
+    el.textContent = JSON.stringify({ "@context":"https://schema.org", "@type":"AccountingService", name:"GAMA Asesores Contables", url:"https://gamacpa-asesores.com", logo:"https://gamacpa-asesores.com/logo_gama_asesores_modificado_web.jpg", telephone:"+50688969883", email:"gmongea@gamacpa-asesores.com", address:[{ "@type":"PostalAddress", streetAddress:"Residencial Bulevar del Sol, Etapa IV, Casa E-14", addressLocality:"Barranca", addressRegion:"Puntarenas", addressCountry:"CR" },{ "@type":"PostalAddress", streetAddress:"2° piso Súper El Mango, frente Plaza de Fútbol Santa Teresa", addressLocality:"Cóbano", addressRegion:"Puntarenas", addressCountry:"CR" }], areaServed:"CR", availableLanguage:["Spanish","English","Hebrew"], description:"Firma especializada en contabilidad, NIIF para PYMES, declaraciones fiscales, auditoría y asesoría financiera en Costa Rica." });
+  }, []);
+
+  /* Google Analytics — reemplaza G-XXXXXXXXXX con tu Measurement ID real */
+  useEffect(() => {
+    const GA_ID = "G-NK13QV0MEQ";
+    // Google Analytics 4 — gamacpa-asesores.com
+    const s = document.createElement("script");
+    s.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+    s.async = true;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ window.dataLayer.push(arguments); };
+    window.gtag("js", new Date());
+    window.gtag("config", GA_ID);
+  }, []);
+
   const renderSection = () => {
     if (section === "blog" && articleId) {
       const article = DATA[lang].blog.articles.find(a => a.id === articleId);
       return <ArticleView article={article} lang={lang} onBack={() => setArticleId(null)} />;
     }
     switch(section) {
-      case "home":     return <><HeroSection lang={lang} setSection={setSection}/><WhySection lang={lang}/><TestimonialsSection lang={lang}/></>;
+      case "home":     return <><HeroSection lang={lang} setSection={setSection}/><CostSection lang={lang}/><WhySection lang={lang}/><FAQSection lang={lang}/><TestimonialsSection lang={lang}/></>;
       case "services": return <ServicesSection lang={lang}/>;
       case "about":    return <AboutSection lang={lang}/>;
       case "blog":     return <BlogList lang={lang} onRead={(a)=>{ setArticleId(a.id); window.scrollTo({top:0,behavior:"smooth"}); }}/>;
+      case "tools":    return <ToolsSection lang={lang}/>;
       case "contact":  return <><ContactSection lang={lang}/><MapSection lang={lang}/></>;
+      case "privacy":  return <PrivacySection lang={lang} setSection={setSection}/>;
       default:         return <HeroSection lang={lang} setSection={setSection}/>;
     }
   };
@@ -2826,9 +3406,10 @@ export default function App() {
         a:focus{outline:none;}
       `}</style>
 
+      <TopBar lang={lang}/>
       <Navbar lang={lang} setLang={setLang} section={section} setSection={setSection}/>
 
-      <main style={{ paddingTop: section === "home" ? 0 : 72 }}>
+      <main style={{ paddingTop: section === "home" ? 36 : 108 }}>
         {renderSection()}
       </main>
 
