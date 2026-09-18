@@ -3051,7 +3051,7 @@ function Footer({ lang, setSection }) {
             >{lang==="he"?"מדיניות פרטיות":lang==="es"?"Política de Privacidad":"Privacy Policy"}</button>
           </div>
           <div style={{ display:"flex", gap:12, alignItems:"center" }}>
-            {[["📘","https://www.facebook.com/GAMAAsesoresContables"],["📸","https://www.instagram.com/gamaasesorescontables"],["💼","https://www.linkedin.com/company/gama-asesores-contables"],["🎵","https://www.tiktok.com/@gamaasesores"]].map(([icon,href])=>(
+            {[["📘","https://www.facebook.com/GAMA.Asesores.CPA"],["📸","https://www.instagram.com/gmongea/"],["💼","https://www.linkedin.com/in/gustavomongecpa/"],["🎵","https://www.tiktok.com/@gmongea"]].map(([icon,href])=>(
               <a key={href} href={href} target="_blank" rel="noopener noreferrer" style={{ color:"rgba(255,255,255,0.35)", fontSize:"1rem", textDecoration:"none", transition:"color .2s" }}
                 onMouseEnter={e=>e.target.style.color=C.gold}
                 onMouseLeave={e=>e.target.style.color="rgba(255,255,255,0.35)"}
@@ -3085,10 +3085,10 @@ function WhatsAppBtn() {
 /* ── TOP BAR ── */
 function TopBar({ lang }) {
   const SOCIAL = [
-    { icon: "📘", label:"Facebook",  href:"https://www.facebook.com/GAMAAsesoresContables" },
-    { icon: "📸", label:"Instagram", href:"https://www.instagram.com/gamaasesorescontables" },
-    { icon: "💼", label:"LinkedIn",  href:"https://www.linkedin.com/company/gama-asesores-contables" },
-    { icon: "🎵", label:"TikTok",    href:"https://www.tiktok.com/@gamaasesores" },
+    { icon: "📘", label:"Facebook",  href:"https://www.facebook.com/GAMA.Asesores.CPA" },
+    { icon: "📸", label:"Instagram", href:"https://www.instagram.com/gmongea/" },
+    { icon: "💼", label:"LinkedIn",  href:"https://www.linkedin.com/in/gustavomongecpa/" },
+    { icon: "🎵", label:"TikTok",    href:"https://www.tiktok.com/@gmongea" },
   ];
   return (
     <div style={{ background:C.navyDk, borderBottom:`1px solid rgba(179,141,71,0.2)`, padding:"6px 5%", position:"fixed", top:0, left:0, right:0, zIndex:101 }}>
