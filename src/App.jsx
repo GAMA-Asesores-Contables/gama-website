@@ -2031,7 +2031,7 @@ function Navbar({ lang, setLang, section, setSection }) {
             ))}
           </div>
 
-          <a href="https://calendly.com/YOUR_CALENDLY_LINK" target="_blank" rel="noopener noreferrer"
+          <a href="https://calendly.com/gamacpa-asesores/30min" target="_blank" rel="noopener noreferrer"
             style={{ ...btn.outline, padding:"9px 18px", fontSize:"0.75rem", textDecoration:"none", color:C.gold, borderColor:C.gold }}
             onMouseEnter={e=>{e.currentTarget.style.background=C.gold;e.currentTarget.style.color=C.navy;}}
             onMouseLeave={e=>{e.currentTarget.style.background="transparent";e.currentTarget.style.color=C.gold;}}
