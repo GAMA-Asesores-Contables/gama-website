@@ -105,7 +105,7 @@ const icons = {
 const DATA = {
   es: {
     nav: {
-      links: ["Inicio","Servicios","Nosotros","Blog","Contacto"],
+      links: ["Inicio","Servicios","Nosotros","Blog","Herramientas","Contacto"],
       cta: "Presupuesto",
     },
     hero: {
@@ -816,13 +816,13 @@ Para consultas sobre esta política o para ejercer sus derechos: GAMA CPA y Ases
     footer: {
       tagline: "Contabilidad · Finanzas · Consultoría Empresarial",
       rights: "© 2026 GAMA Asesores Contables. Todos los derechos reservados.",
-      links: ["Inicio","Servicios","Nosotros","Blog","Contacto"],
+      links: ["Inicio","Servicios","Nosotros","Blog","Herramientas","Contacto"],
     },
   },
 
   /* ── ENGLISH ── */
   en: {
-    nav: { links: ["Home","Services","About","Blog","Contact"], cta: "Get Quote" },
+    nav: { links: ["Home","Services","About","Blog","Tools","Contact"], cta: "Get Quote" },
     hero: {
       badge: "Specialized firm · Costa Rica",
       title: "Accounting, Tax\n& Financial Advisory",
@@ -1484,13 +1484,13 @@ For questions about this policy or to exercise your rights: GAMA CPA y Asesoría
     footer: {
       tagline: "Accounting · Finance · Business Consulting",
       rights: "© 2026 GAMA Asesores Contables. All rights reserved.",
-      links: ["Home","Services","About","Blog","Contact"],
+      links: ["Home","Services","About","Blog","Tools","Contact"],
     },
   },
 
   /* ── HEBREW ── */
   he: {
-    nav: { links: ["ראשי","שירותים","אודות","בלוג","צור קשר"], cta: "בקש הצעת מחיר" },
+    nav: { links: ["ראשי","שירותים","אודות","בלוג","כלים","צור קשר"], cta: "בקש הצעת מחיר" },
     hero: {
       badge: "משרד מקצועי · קוסטה ריקה",
       title: "ייעוץ חשבונאי,\nמיסויי ופיננסי",
@@ -1953,7 +1953,7 @@ GAMA CPA y Asesoría Contable, S.R.L. (מספר עוסק 3-102-913105), להלן
     footer: {
       tagline: "חשבונאות · פיננסים · ייעוץ עסקי",
       rights: "© 2026 GAMA Asesores Contables. כל הזכויות שמורות.",
-      links: ["ראשי","שירותים","אודות","בלוג","צור קשר"],
+      links: ["ראשי","שירותים","אודות","בלוג","כלים","צור קשר"],
     },
   },
 };
@@ -1999,7 +1999,7 @@ function Navbar({ lang, setLang, section, setSection }) {
         </div>
 
         {/* Desktop links */}
-        <div style={{ display:"flex", alignItems:"center", gap:32 }} className="nav-desktop">
+        <div style={{ display:"flex", alignItems:"center", gap:20 }} className="nav-desktop">
           {t.links.map((link, i) => (
             <button key={i}
               onClick={() => go(navSections[i])}
@@ -2032,7 +2032,7 @@ function Navbar({ lang, setLang, section, setSection }) {
           </div>
 
           <a href="https://calendly.com/gamacpa-asesores/30min" target="_blank" rel="noopener noreferrer"
-            style={{ ...btn.outline, padding:"9px 18px", fontSize:"0.75rem", textDecoration:"none", color:C.gold, borderColor:C.gold }}
+            style={{ ...btn.outline, padding:"7px 14px", fontSize:"0.72rem", textDecoration:"none", color:C.gold, borderColor:C.gold }}
             onMouseEnter={e=>{e.currentTarget.style.background=C.gold;e.currentTarget.style.color=C.navy;}}
             onMouseLeave={e=>{e.currentTarget.style.background="transparent";e.currentTarget.style.color=C.gold;}}
           >{lang==="he"?"📅 קביעת פגישה":lang==="es"?"📅 Agendar Cita":"📅 Book Appointment"}</a>
@@ -2060,7 +2060,10 @@ function Navbar({ lang, setLang, section, setSection }) {
               }}
             >{link}</button>
           ))}
-          <div style={{ display:"flex", gap:8, marginTop:16 }}>
+          <a href="https://calendly.com/gamacpa-asesores/30min" target="_blank" rel="noopener noreferrer"
+            style={{ display:"block", width:"100%", background:C.gold, color:C.navy, fontFamily:"'Montserrat',sans-serif", fontSize:"0.85rem", fontWeight:700, textAlign:"center", padding:"14px 0", textDecoration:"none", letterSpacing:"0.08em", marginTop:16, marginBottom:8 }}
+          >📅 {lang==="he"?"קביעת פגישה":lang==="es"?"Agendar Cita":"Book Appointment"}</a>
+          <div style={{ display:"flex", gap:8, marginTop:8 }}>
             {["es","en","he"].map(l => (
               <button key={l} onClick={() => setLang(l)}
                 style={{ padding:"8px 20px", border:`1px solid ${C.gold}`, cursor:"pointer",
