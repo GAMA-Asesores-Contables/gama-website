@@ -3112,10 +3112,10 @@ const SocialIcons = {
 };
 
 const SOCIAL_LINKS = [
-  { label:"Facebook",  href:"https://www.facebook.com/GAMA.Asesores.CPA",       icon:SocialIcons.facebook  },
-  { label:"Instagram", href:"https://www.instagram.com/gmongea/",                icon:SocialIcons.instagram },
+  { label:"Facebook",  href:"https://www.facebook.com/GAMA.AsesoresContables.CPA/",       icon:SocialIcons.facebook  },
+  { label:"Instagram", href:"https://www.instagram.com/gama.asesorescontables/",                icon:SocialIcons.instagram },
   { label:"LinkedIn",  href:"https://www.linkedin.com/in/gustavomongecpa/",      icon:SocialIcons.linkedin  },
-  { label:"TikTok",    href:"https://www.tiktok.com/@gmongea",                   icon:SocialIcons.tiktok    },
+  { label:"TikTok",    href:"https://www.tiktok.com/@gama.asesorescontables",                   icon:SocialIcons.tiktok    },
 ];
 
 function TopBar({ lang }) {
