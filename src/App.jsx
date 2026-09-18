@@ -3051,11 +3051,12 @@ function Footer({ lang, setSection }) {
             >{lang==="he"?"מדיניות פרטיות":lang==="es"?"Política de Privacidad":"Privacy Policy"}</button>
           </div>
           <div style={{ display:"flex", gap:12, alignItems:"center" }}>
-            {[["📘","https://www.facebook.com/GAMA.Asesores.CPA"],["📸","https://www.instagram.com/gmongea/"],["💼","https://www.linkedin.com/in/gustavomongecpa/"],["🎵","https://www.tiktok.com/@gmongea"]].map(([icon,href])=>(
-              <a key={href} href={href} target="_blank" rel="noopener noreferrer" style={{ color:"rgba(255,255,255,0.35)", fontSize:"1rem", textDecoration:"none", transition:"color .2s" }}
-                onMouseEnter={e=>e.target.style.color=C.gold}
-                onMouseLeave={e=>e.target.style.color="rgba(255,255,255,0.35)"}
-              >{icon}</a>
+            {SOCIAL_LINKS.map(s=>(
+              <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" title={s.label}
+                style={{ color:"rgba(255,255,255,0.45)", display:"flex", alignItems:"center", textDecoration:"none", transition:"color .2s" }}
+                onMouseEnter={e=>e.currentTarget.style.color=C.gold}
+                onMouseLeave={e=>e.currentTarget.style.color="rgba(255,255,255,0.45)"}
+              >{s.icon}</a>
             ))}
           </div>
         </div>
@@ -3083,31 +3084,58 @@ function WhatsAppBtn() {
 
 
 /* ── TOP BAR ── */
+const SocialIcons = {
+  facebook: (
+    <svg viewBox="0 0 24 24" fill="currentColor" style={{width:20,height:20}}>
+      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+    </svg>
+  ),
+  instagram: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{width:20,height:20}}>
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+    </svg>
+  ),
+  linkedin: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{width:20,height:20}}>
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+      <rect x="2" y="9" width="4" height="12"/>
+      <circle cx="4" cy="4" r="2"/>
+    </svg>
+  ),
+  tiktok: (
+    <svg viewBox="0 0 24 24" fill="currentColor" style={{width:20,height:20}}>
+      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.54V6.79a4.85 4.85 0 0 1-1.01-.1z"/>
+    </svg>
+  ),
+};
+
+const SOCIAL_LINKS = [
+  { label:"Facebook",  href:"https://www.facebook.com/GAMA.Asesores.CPA",       icon:SocialIcons.facebook  },
+  { label:"Instagram", href:"https://www.instagram.com/gmongea/",                icon:SocialIcons.instagram },
+  { label:"LinkedIn",  href:"https://www.linkedin.com/in/gustavomongecpa/",      icon:SocialIcons.linkedin  },
+  { label:"TikTok",    href:"https://www.tiktok.com/@gmongea",                   icon:SocialIcons.tiktok    },
+];
+
 function TopBar({ lang }) {
-  const SOCIAL = [
-    { icon: "📘", label:"Facebook",  href:"https://www.facebook.com/GAMA.Asesores.CPA" },
-    { icon: "📸", label:"Instagram", href:"https://www.instagram.com/gmongea/" },
-    { icon: "💼", label:"LinkedIn",  href:"https://www.linkedin.com/in/gustavomongecpa/" },
-    { icon: "🎵", label:"TikTok",    href:"https://www.tiktok.com/@gmongea" },
-  ];
   return (
-    <div style={{ background:C.navyDk, borderBottom:`1px solid rgba(179,141,71,0.2)`, padding:"6px 5%", position:"fixed", top:0, left:0, right:0, zIndex:101 }}>
+    <div style={{ background:C.navyDk, borderBottom:`1px solid rgba(179,141,71,0.2)`, padding:"7px 5%", position:"fixed", top:0, left:0, right:0, zIndex:101 }}>
       <div style={{ maxWidth:1200, margin:"0 auto", display:"flex", justifyContent:"space-between", alignItems:"center", flexWrap:"wrap", gap:8 }}>
         <div style={{ display:"flex", gap:20, alignItems:"center" }}>
-          <a href="tel:+50688969883" style={{ color:"rgba(255,255,255,0.65)", fontFamily:"'Montserrat',sans-serif", fontSize:"0.72rem", textDecoration:"none", letterSpacing:"0.04em" }}>
+          <a href="tel:+50688969883" style={{ color:"rgba(255,255,255,0.7)", fontFamily:"'Montserrat',sans-serif", fontSize:"0.72rem", textDecoration:"none", letterSpacing:"0.04em" }}>
             📞 +506 8896-9883
           </a>
-          <a href="mailto:gmongea@gamacpa-asesores.com" style={{ color:"rgba(255,255,255,0.65)", fontFamily:"'Montserrat',sans-serif", fontSize:"0.72rem", textDecoration:"none", letterSpacing:"0.04em" }}>
+          <a href="mailto:gmongea@gamacpa-asesores.com" style={{ color:"rgba(255,255,255,0.7)", fontFamily:"'Montserrat',sans-serif", fontSize:"0.72rem", textDecoration:"none", letterSpacing:"0.04em" }}>
             ✉ gmongea@gamacpa-asesores.com
           </a>
         </div>
-        <div style={{ display:"flex", gap:12, alignItems:"center" }}>
-          {SOCIAL.map(s => (
-            <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
-              title={s.label}
-              style={{ color:"rgba(255,255,255,0.5)", fontSize:"0.85rem", textDecoration:"none", transition:"color .2s" }}
-              onMouseEnter={e=>e.target.style.color=C.gold}
-              onMouseLeave={e=>e.target.style.color="rgba(255,255,255,0.5)"}
+        <div style={{ display:"flex", gap:16, alignItems:"center" }}>
+          {SOCIAL_LINKS.map(s => (
+            <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" title={s.label}
+              style={{ color:"rgba(255,255,255,0.75)", display:"flex", alignItems:"center", textDecoration:"none", transition:"color .2s" }}
+              onMouseEnter={e=>e.currentTarget.style.color=C.gold}
+              onMouseLeave={e=>e.currentTarget.style.color="rgba(255,255,255,0.75)"}
             >{s.icon}</a>
           ))}
         </div>
