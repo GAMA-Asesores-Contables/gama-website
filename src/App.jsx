@@ -3778,7 +3778,19 @@ export default function App() {
     el.textContent = JSON.stringify({ "@context":"https://schema.org", "@type":"AccountingService", name:"GAMA Asesores Contables", url:"https://gamacpa-asesores.com", logo:"https://gamacpa-asesores.com/logo_gama_asesores_modificado_web.jpg", telephone:"+50688969883", email:"gmongea@gamacpa-asesores.com", address:[{ "@type":"PostalAddress", streetAddress:"Residencial Bulevar del Sol, Etapa IV, Casa E-14", addressLocality:"Barranca", addressRegion:"Puntarenas", addressCountry:"CR" },{ "@type":"PostalAddress", streetAddress:"2° piso Súper El Mango, frente Plaza de Fútbol Santa Teresa", addressLocality:"Cóbano", addressRegion:"Puntarenas", addressCountry:"CR" }], areaServed:"CR", availableLanguage:["Spanish","English","Hebrew"], description:"Firma especializada en contabilidad, NIIF para PYMES, declaraciones fiscales, auditoría y asesoría financiera en Costa Rica." });
   }, []);
 
-  /* Google Analytics: se carga una sola vez desde index.html (G-CB4GKL0NTB) */
+  /* Google Analytics — reemplaza G-XXXXXXXXXX con tu Measurement ID real */
+  useEffect(() => {
+    const GA_ID = "G-NK13QV0MEQ";
+    // Google Analytics 4 — gamacpa-asesores.com
+    const s = document.createElement("script");
+    s.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+    s.async = true;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ window.dataLayer.push(arguments); };
+    window.gtag("js", new Date());
+    window.gtag("config", GA_ID);
+  }, []);
 
   const renderSection = () => {
     if (section === "blog" && articleId) {
@@ -3825,7 +3837,7 @@ export default function App() {
       `}</style>
 
       <TopBar lang={lang}/>
-      <Navbar lang={lang} setLang={setLang} section={section} setSection={setSection}/>
+      <Navbar lang={lang} setLang={setLang} section={section} setSection={(s)=>{ setSection(s); setArticleId(null); }}/>
 
       <main style={{ paddingTop: section === "home" ? 36 : 108 }}>
         {renderSection()}
