@@ -2826,18 +2826,42 @@ function BlogList({ lang, onRead }) {
 function ArticleView({ article, lang, onBack }) {
   const t = DATA[lang].blog;
 
+  /* Tiempo de lectura (≈200 palabras por minuto) y barra de progreso de lectura */
+  const words = (article.content || "").split(/\s+/).filter(Boolean).length;
+  const readMin = Math.max(1, Math.round(words / 200));
+  const readLabel = lang === "he" ? `${readMin} דק׳ קריאה` : lang === "es" ? `${readMin} min de lectura` : `${readMin} min read`;
+  const bodyRef = useRef(null);
+  const [progress, setProgress] = useState(0);
+  useEffect(() => {
+    const onScroll = () => {
+      const el = bodyRef.current;
+      if (!el) return;
+      const r = el.getBoundingClientRect();
+      const total = r.height - window.innerHeight * 0.6;
+      const done = -r.top + window.innerHeight * 0.4;
+      setProgress(Math.max(0, Math.min(100, (done / Math.max(total, 1)) * 100)));
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive:true });
+    window.addEventListener("resize", onScroll);
+    return () => { window.removeEventListener("scroll", onScroll); window.removeEventListener("resize", onScroll); };
+  }, [article.id, lang]);
+
   const renderContent = (text) => {
     if (!text) return <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.95rem", color:"#3d3830", lineHeight:1.85 }}>Contenido en actualización.</p>;
     return text.split("\n").map((line, i) => {
-      if (line.startsWith("## ")) return <h2 key={i} style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.35rem", color:C.navy, fontWeight:700, marginTop:36, marginBottom:14 }}>{line.slice(3)}</h2>;
+      if (line.startsWith("## ")) return <div key={i} style={{ textAlign:"center", marginTop:44, marginBottom:18 }}><h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.35rem", color:C.navy, fontWeight:700, lineHeight:1.35, margin:0 }}>{line.slice(3)}</h2><div style={{ width:48, height:3, background:C.gold, margin:"12px auto 0" }}/></div>;
       if (line.startsWith("# ")) return <h1 key={i} style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.6rem", color:C.navy, fontWeight:700, marginBottom:16 }}>{line.slice(2)}</h1>;
       if (line.trim() === "") return <br key={i}/>;
-      return <p key={i} style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.93rem", color:"#3d3830", lineHeight:1.85, marginBottom:14 }}>{line}</p>;
+      return <p key={i} className="art-p" style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"1rem", color:"#3d3830", lineHeight:1.85, marginBottom:14 }}>{line}</p>;
     });
   };
 
   return (
     <section style={{ padding:"100px 5% 80px", background:C.white }}>
+      <div aria-hidden="true" style={{ position:"fixed", top:0, left:0, height:4, width:`${progress}%`, background:`linear-gradient(90deg, ${C.gold}, ${C.yellow})`, zIndex:9999, transition:"width .1s linear" }}/>
+      {/* Texto justificado en pantallas anchas, sin cortar palabras; alineado normal en celulares */}
+      <style>{`.art-p{hyphens:none;-webkit-hyphens:none;overflow-wrap:break-word}@media(min-width:768px){.art-p{text-align:justify}}`}</style>
       <div style={{ maxWidth:780, margin:"0 auto" }}>
         <button onClick={onBack}
           style={{ ...btn.outline, marginBottom:40, fontSize:"0.78rem", padding:"10px 24px", color:C.navy, borderColor:C.navy }}
@@ -2847,18 +2871,18 @@ function ArticleView({ article, lang, onBack }) {
 
         <img src={blogCover(article.id, lang)} alt={article.title} onError={e => { e.currentTarget.style.display="none"; }} style={{ width:"100%", aspectRatio:"1200 / 630", objectFit:"cover", display:"block", marginBottom:28, background:C.navy }}/>
 
-        <div style={{ display:"flex", gap:10, marginBottom:20 }}>
+        <div style={{ display:"flex", gap:10, marginBottom:20, justifyContent:"center", flexWrap:"wrap" }}>
           <span style={{ background:C.navy, color:C.yellow, fontFamily:"'Montserrat',sans-serif", fontSize:"0.72rem", fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase", padding:"4px 12px" }}>{article.category}</span>
-          <span style={{ color:"#9a9280", fontFamily:"'Montserrat',sans-serif", fontSize:"0.82rem", alignSelf:"center" }}>{article.date}</span>
+          <span style={{ color:"#9a9280", fontFamily:"'Montserrat',sans-serif", fontSize:"0.82rem", alignSelf:"center" }}>{article.date} · {readLabel}</span>
         </div>
 
-        <h1 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(1.8rem,3vw,2.4rem)", fontWeight:700, color:C.navy, lineHeight:1.28, marginBottom:32 }}>{article.title}</h1>
+        <h1 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(1.8rem,3vw,2.4rem)", fontWeight:700, color:C.navy, lineHeight:1.28, marginBottom:32, textAlign:"center" }}>{article.title}</h1>
 
         <div style={{ background:"#f4f1eb", padding:"20px 24px", borderLeft:`3px solid ${C.gold}`, marginBottom:40 }}>
           <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.93rem", color:"#3d3830", lineHeight:1.75, margin:0, fontStyle:"italic" }}>{article.summary}</p>
         </div>
 
-        <div>{renderContent(article.content)}</div>
+        <div lang={lang} ref={bodyRef}>{renderContent(article.content)}</div>
 
         <div style={{ marginTop:60, padding:"32px 28px", background:C.navy, textAlign:"center" }}>
           <p style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.1rem", color:C.white, marginBottom:20 }}>
