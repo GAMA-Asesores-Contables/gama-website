@@ -777,6 +777,52 @@ La descripción de los códigos 13 a 17 corresponde a la interpretación técnic
 
 Fuentes: Ministerio de Hacienda, Anexos y Estructuras v4.4 (bitácora de ajustes del 22 de abril de 2026) y comunicado de actualización; KPMG Costa Rica, 8 de mayo de 2026; PwC Tax & Legal.`,
         },
+        {
+          id: 14,
+                  category: "Administración Tributaria",
+          date: "20 de octubre, 2026",
+          title: "Registro obligatorio de números SINPE Móvil ante Hacienda: lo que debe saber y cómo prepararse",
+          summary: "El Decreto Ejecutivo N.º 45953-H obliga a los contribuyentes que cobran por SINPE Móvil en su actividad económica a registrar sus números en el RUT. Explicamos a quién aplica, los plazos, la sanción y qué hacer desde ya.",
+          content: `El 16 de octubre de 2026 se publicó en el Alcance N.º 139 a La Gaceta N.º 196 el Decreto Ejecutivo N.º 45953-H, que modifica el Reglamento del Procedimiento Tributario (Decreto N.º 38277-H) y establece una nueva obligación formal: registrar ante el Ministerio de Hacienda los números de teléfono SINPE Móvil que se utilicen para cobrar en una actividad económica. El decreto rige desde su publicación.
+
+## ¿Qué dispone el decreto?
+
+Se adiciona un inciso 3) al artículo 22 del Reglamento del Procedimiento Tributario. Los contribuyentes que utilicen SINPE Móvil como medio de pago en el ejercicio de su actividad económica deberán registrar en el Registro Único Tributario (RUT) el o los números de teléfono vinculados a una cuenta bancaria, tanto al inscribirse como cuando modifiquen sus datos, conforme a lo que disponga una resolución general de la Administración Tributaria.
+
+## ¿A quién le aplica?
+
+A toda persona física o jurídica que reciba cobros de su negocio, profesión o servicio por SINPE Móvil: comercios, profesionales independientes, emprendedores, prestadores de servicios, alquileres y ventas por redes sociales. Lo determinante no es el tamaño del negocio, sino que el número se use para cobrar dentro de la actividad económica. El mismo número usado únicamente para fines personales queda fuera del alcance.
+
+## ¿Por qué lo hace Hacienda?
+
+El propio decreto lo explica en sus considerandos: a mayo de 2026 existían 4.801.297 suscripciones activas de SINPE Móvil y en 2025 se transaron aproximadamente ₡12,5 billones por esta vía. Hacienda busca identificar y cruzar la información de los cobros electrónicos con lo declarado por cada contribuyente.
+
+## Plazos: qué rige hoy y qué viene
+
+El decreto ya está vigente, pero su aplicación práctica depende de una resolución general que aún no se ha emitido. El Transitorio I fija lo siguiente. Hacienda tiene un máximo de tres meses, contados desde la vigencia del decreto, para adaptar el RUT y emitir la resolución general, es decir, a más tardar en enero de 2027. Los contribuyentes que ya están inscritos tendrán doce meses, contados desde la vigencia de esa resolución, para actualizar su información. Quienes se inscriban después deberán incluir los números desde su inscripción.
+
+## Sanción por incumplimiento
+
+Vencidos los plazos, no registrar los números constituye una infracción sancionable conforme al artículo 83 del Código de Normas y Procedimientos Tributarios: una multa equivalente al 2% de los ingresos brutos del período del impuesto sobre la renta anterior a la infracción, con un mínimo de 3 y un máximo de 100 salarios base. Con el salario base de 2026 (₡462.200), esto equivale a un mínimo de ₡1.386.600 y un máximo de ₡46.220.000.
+
+## Qué hacer desde ya
+
+Aunque el plazo para actualizar el RUT todavía no corre, conviene adelantar el trabajo para evitar presiones de último momento. Le recomendamos lo siguiente. Primero, haga un inventario de todos los números SINPE Móvil que usa para cobrar en su negocio y de la cuenta bancaria a la que está vinculado cada uno. Segundo, separe los números personales de los comerciales, de modo que el uso del número sea coherente con la actividad que declara. Tercero, verifique que los ingresos recibidos por SINPE Móvil estén reflejados en su contabilidad y en sus declaraciones de IVA y renta, porque el cruce de información será más sencillo para la Administración. Cuarto, esté atento a la resolución general de Hacienda, que definirá el procedimiento exacto, el formulario y la fecha de inicio del plazo de doce meses.
+
+## Preguntas frecuentes
+
+¿Debo registrar mi número ya? Todavía no es posible, pues Hacienda debe adaptar el RUT y emitir la resolución general. Lo prudente es preparar la información desde ahora.
+
+¿Si cobro con SINPE Móvil desde mi número personal también debo registrarlo? Si ese número recibe cobros de su actividad económica, sí. Por eso recomendamos separar los números personales de los comerciales.
+
+¿Qué pasa si tengo varios números? Deberá registrar todos los que utilice como medio de pago en su actividad, cada uno vinculado a su cuenta bancaria.
+
+¿Esto significa un impuesto nuevo? No. Es una obligación formal de información; no crea un tributo. Sin embargo, mejora la capacidad de Hacienda para contrastar lo que usted cobra con lo que declara.
+
+Si desea que revisemos su caso, identifiquemos los números que debe registrar y ordenemos sus ingresos antes de que Hacienda emita la resolución, escríbanos y con gusto le atendemos.
+
+Fuente: Decreto Ejecutivo N.º 45953-H, Alcance N.º 139 a La Gaceta N.º 196 del 16 de octubre de 2026; artículo 83 del Código de Normas y Procedimientos Tributarios.`,
+        },
       ],
     },
     faq: {
@@ -1521,6 +1567,52 @@ The description of codes 13 to 17 reflects GAMA Asesores' technical interpretati
 
 Sources: Ministerio de Hacienda, Annexes and Structures v4.4 (adjustment log of April 22, 2026) and update notice; KPMG Costa Rica, May 8, 2026; PwC Tax & Legal.`,
         },
+        {
+          id: 14,
+                  category: "Tax Administration",
+          date: "October 20, 2026",
+          title: "Mandatory registration of SINPE Móvil numbers with the Tax Authority: what you need to know and how to prepare",
+          summary: "Executive Decree No. 45953-H requires taxpayers who collect payments through SINPE Móvil in their business to register their numbers in the RUT. We explain who is affected, the deadlines, the penalty and what to do now.",
+          content: `On October 16, 2026, Executive Decree No. 45953-H was published in Supplement No. 139 to La Gaceta No. 196. It amends the Tax Procedure Regulations (Decree No. 38277-H) and creates a new formal obligation: registering with the Ministry of Finance (Hacienda) the SINPE Móvil phone numbers used to collect payments in an economic activity. The decree is in force since its publication.
+
+## What does the decree provide?
+
+A new subsection 3) is added to Article 22 of the Tax Procedure Regulations. Taxpayers who use SINPE Móvil as a payment method in their economic activity must register in the Single Taxpayer Registry (RUT) the phone number or numbers linked to a bank account, both when they register and when they update their data, as established by a general resolution of the Tax Administration.
+
+## Who is affected?
+
+Any individual or legal entity that receives payments for its business, profession or service through SINPE Móvil: shops, independent professionals, entrepreneurs, service providers, rentals and sales through social media. What matters is not the size of the business but that the number is used to collect payments within the economic activity. A number used only for personal purposes is outside the scope.
+
+## Why is Hacienda doing this?
+
+The decree itself explains it: as of May 2026 there were 4,801,297 active SINPE Móvil subscriptions, and roughly ₡12.5 trillion was transacted through this channel in 2025. Hacienda aims to identify and cross-check electronic collections against what each taxpayer reports.
+
+## Deadlines: what applies today and what is coming
+
+The decree is already in force, but its practical application depends on a general resolution that has not yet been issued. Transitory Provision I sets the following. Hacienda has a maximum of three months from the decree's effective date to adapt the RUT and issue the general resolution, that is, by January 2027 at the latest. Taxpayers who are already registered will have twelve months from the effective date of that resolution to update their information. Those who register afterwards must include their numbers at registration.
+
+## Penalty for non-compliance
+
+Once the deadlines expire, failing to register the numbers is a sanctionable infringement under Article 83 of the Tax Rules and Procedures Code: a fine equal to 2% of the gross income of the income-tax period preceding the infringement, with a minimum of 3 and a maximum of 100 base salaries. With the 2026 base salary (₡462,200), this means a minimum of ₡1,386,600 and a maximum of ₡46,220,000.
+
+## What to do now
+
+Although the deadline to update the RUT is not yet running, it is wise to do the groundwork to avoid last-minute pressure. We recommend the following. First, take an inventory of every SINPE Móvil number you use to collect payments in your business and the bank account each one is linked to. Second, separate personal numbers from business numbers so that the use of each number is consistent with the activity you report. Third, confirm that income received through SINPE Móvil is reflected in your accounting and in your VAT and income tax returns, since the Administration's cross-checks will be simpler. Fourth, watch for Hacienda's general resolution, which will define the exact procedure, the form and the date on which the twelve-month period starts.
+
+## Frequently asked questions
+
+Do I need to register my number now? Not yet, because Hacienda must first adapt the RUT and issue the general resolution. The prudent course is to prepare the information now.
+
+If I collect through SINPE Móvil from my personal number, must I register it? If that number receives payments from your economic activity, yes. That is why we recommend separating personal and business numbers.
+
+What if I have several numbers? You must register every number you use as a payment method in your activity, each linked to its bank account.
+
+Is this a new tax? No. It is a formal reporting obligation and does not create a tax. It does, however, improve Hacienda's ability to compare what you collect with what you declare.
+
+If you would like us to review your case, identify the numbers you must register and organize your income before Hacienda issues the resolution, write to us and we will gladly assist you.
+
+Source: Executive Decree No. 45953-H, Supplement No. 139 to La Gaceta No. 196 of October 16, 2026; Article 83 of the Tax Rules and Procedures Code.`,
+        },
       ],
     },
     faq: {
@@ -2077,6 +2169,52 @@ Registro de Beneficiarios Finales: רישום הבעלים האמיתיים תו
 תיאור הקודים 13 עד 17 משקף את הפרשנות המקצועית של GAMA Asesores למבנה שפרסם Hacienda.
 
 מקורות: Ministerio de Hacienda, Anexos y Estructuras v4.4 (יומן התאמות מיום 22 באפריל 2026) והודעת העדכון; KPMG Costa Rica, 8 במאי 2026; PwC Tax & Legal.`,
+        },
+        {
+          id: 14,
+                  category: "מנהל המסים",
+          date: "20 באוקטובר, 2026",
+          title: "חובת רישום מספרי SINPE Móvil ברשות המסים של קוסטה ריקה: מה חשוב לדעת ואיך להתכונן",
+          summary: "צו מס' 45953-H מחייב נישומים הגובים תשלומים דרך SINPE Móvil בפעילותם העסקית לרשום את המספרים במרשם ה-RUT. הסברנו את מי זה מחייב, מהם המועדים, מהי הסנקציה ומה כדאי לעשות כבר עכשיו.",
+          content: `ב-16 באוקטובר 2026 פורסם בנספח מס' 139 לעיתון הרשמי La Gaceta מס' 196 הצו הממשלתי מס' 45953-H, המתקן את תקנות הליך המס (צו מס' 38277-H) וקובע חובה פורמלית חדשה: לרשום במשרד האוצר (Hacienda) את מספרי הטלפון של SINPE Móvil המשמשים לגביית תשלומים בפעילות עסקית. הצו בתוקף מיום פרסומו.
+
+## מה קובע הצו?
+
+מתווסף סעיף קטן 3) לסעיף 22 בתקנות הליך המס. נישומים המשתמשים ב-SINPE Móvil כאמצעי תשלום בפעילותם העסקית יהיו חייבים לרשום במרשם הנישומים (RUT) את מספר הטלפון או המספרים המקושרים לחשבון בנק, הן בעת ההרשמה והן בעת עדכון פרטים, בהתאם להחלטה כללית של רשות המסים.
+
+## על מי זה חל?
+
+על כל אדם או תאגיד הגובה תשלומים עבור עסק, מקצוע או שירות דרך SINPE Móvil: חנויות, בעלי מקצוע עצמאיים, יזמים, נותני שירותים, השכרות ומכירות ברשתות חברתיות. הקובע אינו גודל העסק אלא השימוש במספר לגביית תשלומים במסגרת הפעילות העסקית. מספר המשמש למטרות פרטיות בלבד אינו נכלל.
+
+## מדוע Hacienda עושה זאת?
+
+הצו עצמו מסביר: נכון למאי 2026 היו 4,801,297 מנויים פעילים ב-SINPE Móvil, ובשנת 2025 הועברו בערוץ זה כ-12.5 טריליון קולון. הרשות מבקשת לזהות ולהצליב את הגבייה האלקטרונית עם הדיווחים של כל נישום.
+
+## מועדים: מה חל היום ומה צפוי
+
+הצו כבר בתוקף, אך יישומו המעשי תלוי בהחלטה כללית שטרם פורסמה. הוראת המעבר הראשונה קובעת: ל-Hacienda עד שלושה חודשים ממועד תחילת הצו להתאים את ה-RUT ולפרסם את ההחלטה הכללית, כלומר לכל המאוחר בינואר 2027. נישומים הרשומים כבר יקבלו שנים-עשר חודשים ממועד תחילת ההחלטה לעדכון המידע. מי שיירשם לאחר מכן יצטרך לכלול את המספרים כבר בהרשמה.
+
+## סנקציה על אי-ציות
+
+לאחר חלוף המועדים, אי-רישום המספרים מהווה הפרה הניתנת לענישה לפי סעיף 83 לקוד הכללים וההליכים המסוימים: קנס בשיעור 2% מההכנסה ברוטו של תקופת מס ההכנסה שקדמה להפרה, בין 3 ל-100 משכורות בסיס. לפי משכורת הבסיס ל-2026 (462,200 קולון) מדובר בקנס מינימלי של 1,386,600 קולון ומקסימלי של 46,220,000 קולון.
+
+## מה כדאי לעשות כבר עכשיו
+
+אף שהמועד לעדכון ה-RUT טרם החל, כדאי להקדים את ההכנות. ראשית, ערכו רשימה של כל מספרי SINPE Móvil שבהם אתם גובים בעסק ושל חשבון הבנק המקושר לכל אחד. שנית, הפרידו בין מספרים פרטיים למספרים עסקיים. שלישית, ודאו שהכנסות שהתקבלו דרך SINPE Móvil משתקפות בהנהלת החשבונות ובדוחות המע״מ ומס ההכנסה. רביעית, עקבו אחר ההחלטה הכללית של Hacienda שתקבע את ההליך המדויק, הטופס ומועד תחילת תקופת שנים-עשר החודשים.
+
+## שאלות נפוצות
+
+האם עליי לרשום את המספר כבר עכשיו? עדיין לא, כי Hacienda צריכה קודם להתאים את ה-RUT ולפרסם את ההחלטה הכללית. מומלץ להכין את המידע כבר עכשיו.
+
+אם אני גובה מהמספר הפרטי שלי, האם עליי לרשום אותו? אם המספר מקבל תשלומים מהפעילות העסקית, כן. לכן מומלץ להפריד בין מספרים פרטיים לעסקיים.
+
+מה אם יש לי כמה מספרים? יש לרשום כל מספר המשמש כאמצעי תשלום בפעילות, כל אחד מקושר לחשבון הבנק שלו.
+
+האם זהו מס חדש? לא. זו חובת דיווח פורמלית ואינה יוצרת מס, אך היא משפרת את יכולת הרשות להשוות בין מה שנגבה למה שמדווח.
+
+אם תרצו שנבדוק את המקרה שלכם, נזהה את המספרים שיש לרשום ונסדר את ההכנסות לפני פרסום ההחלטה, פנו אלינו ונשמח לסייע.
+
+מקור: צו ממשלתי מס' 45953-H, נספח 139 ל-La Gaceta מס' 196 מיום 16 באוקטובר 2026; סעיף 83 לקוד הכללים וההליכים המסוימים.`,
         },
       ],
     },
@@ -3570,7 +3708,7 @@ function PrivacySection({ lang, setSection }) {
 
 /* ─────────────── APP ─────────────── */
 export default function App() {
-  const [lang, setLang] = useState("es");
+  const [lang, setLang] = useState(() => { try { const l = new URLSearchParams(window.location.search).get("lang"); return ["es","en","he"].includes(l) ? l : "es"; } catch (e) { return "es"; } });
   /* Enlaces directos: gamacpa-asesores.com/#blog/13 abre el artículo 13 */
   const parseHash = () => {
     const m = (window.location.hash || "").match(/^#blog(?:\/(\d+))?$/);
