@@ -2805,13 +2805,13 @@ function BlogList({ lang, onRead }) {
             >
               <img src={blogCover(a.id, lang)} alt={a.title} loading="lazy" onError={e => { e.currentTarget.style.display="none"; }} style={{ width:"100%", aspectRatio:"1200 / 630", objectFit:"cover", display:"block", background:C.navy }}/>
               <div style={{ padding:"28px 28px 24px" }}>
-                <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:16 }}>
+                <div style={{ display:"flex", alignItems:"center", justifyContent:"center", flexWrap:"wrap", gap:10, marginBottom:16 }}>
                   <span style={{ background:C.navy, color:C.yellow, fontFamily:"'Montserrat',sans-serif", fontSize:"0.68rem", fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase", padding:"3px 10px", borderRadius:2 }}>{a.category}</span>
                   <span style={{ color:"#9a9280", fontFamily:"'Montserrat',sans-serif", fontSize:"0.76rem" }}>{a.date}</span>
                 </div>
-                <h3 style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.12rem", fontWeight:700, color:C.navy, lineHeight:1.4, marginBottom:14 }}>{a.title}</h3>
-                <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.85rem", color:"#4a4540", lineHeight:1.75 }}>{a.summary}</p>
-                <div style={{ marginTop:20, color:C.gold, fontFamily:"'Montserrat',sans-serif", fontSize:"0.8rem", fontWeight:700, letterSpacing:"0.06em" }}>{t.readMore}</div>
+                <h3 style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.12rem", fontWeight:700, color:C.navy, lineHeight:1.4, marginBottom:14, textAlign:"center" }}>{a.title}</h3>
+                <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.85rem", color:"#4a4540", lineHeight:1.75, textAlign:"start" }}>{a.summary}</p>
+                <div style={{ marginTop:20, textAlign:"center", color:C.gold, fontFamily:"'Montserrat',sans-serif", fontSize:"0.8rem", fontWeight:700, letterSpacing:"0.06em" }}>{t.readMore}</div>
               </div>
             </article>
           ))}
