@@ -2774,6 +2774,9 @@ function AboutSection({ lang }) {
 }
 
 /* ── BLOG LIST ── */
+/* Portada de cada artículo: /public/blog/portadas/<id>.jpg (1200x630). Si no existe, se oculta sola. */
+const blogCover = (id) => `/blog/portadas/${id}.jpg`;
+
 function BlogList({ lang, onRead }) {
   const t = DATA[lang].blog;
   const allArts = [...t.articles].sort((a, b) => b.id - a.id);
@@ -2800,6 +2803,7 @@ function BlogList({ lang, onRead }) {
               onMouseLeave={e => { e.currentTarget.style.boxShadow="0 2px 16px rgba(5,30,87,0.08)"; e.currentTarget.style.transform="none"; }}
               onClick={() => onRead(a)}
             >
+              <img src={blogCover(a.id)} alt={a.title} loading="lazy" onError={e => { e.currentTarget.style.display="none"; }} style={{ width:"100%", aspectRatio:"1200 / 630", objectFit:"cover", display:"block", background:C.navy }}/>
               <div style={{ padding:"28px 28px 24px" }}>
                 <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:16 }}>
                   <span style={{ background:C.navy, color:C.yellow, fontFamily:"'Montserrat',sans-serif", fontSize:"0.68rem", fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase", padding:"3px 10px", borderRadius:2 }}>{a.category}</span>
@@ -2840,6 +2844,8 @@ function ArticleView({ article, lang, onBack }) {
           onMouseEnter={e => { e.target.style.background=C.navy; e.target.style.color=C.white; }}
           onMouseLeave={e => { e.target.style.background="transparent"; e.target.style.color=C.navy; }}
         >{t.back}</button>
+
+        <img src={blogCover(article.id)} alt={article.title} onError={e => { e.currentTarget.style.display="none"; }} style={{ width:"100%", aspectRatio:"1200 / 630", objectFit:"cover", display:"block", marginBottom:28, background:C.navy }}/>
 
         <div style={{ display:"flex", gap:10, marginBottom:20 }}>
           <span style={{ background:C.navy, color:C.yellow, fontFamily:"'Montserrat',sans-serif", fontSize:"0.72rem", fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase", padding:"4px 12px" }}>{article.category}</span>
