@@ -701,6 +701,82 @@ En GAMA Asesores le asistimos en verificar el estado registral de sus sociedades
 
 Fuente: Delfino.cr, 15 de setiembre de 2026. Basado en la Circular DGL-003-2026 del Registro Nacional y la Directriz DPJ-002-2026.`,
         },
+        {
+          id:13, category:"Facturación Electrónica", date:"21 de octubre, 2026",
+          title:"Factura electrónica 4.4: nuevos documentos y cambios de Hacienda obligatorios desde el 1 de noviembre de 2026",
+          summary:"Hacienda actualizó los Anexos y Estructuras de la versión 4.4: nuevos códigos en notas de crédito y débito que pueden trasladar el ajuste al período original, Factura de Exportación y Recibo de Pago como documentos de referencia, cédulas alfanuméricas e IVA devuelto en servicios de salud.",
+          content:`Hacienda modificó los Anexos y Estructuras de la versión 4.4 de los comprobantes electrónicos mediante la bitácora de ajustes del 22 de abril de 2026. Los cambios ya pueden aplicarse si su sistema de facturación está al día, y serán de acatamiento obligatorio desde el 1 de noviembre de 2026. La versión sigue llamándose 4.4, pero en los hechos es una segunda actualización que reúne cinco ajustes, y uno de ellos incide directamente en la contabilidad y en las declaraciones: el de las notas de crédito y débito.
+
+## Los cinco ajustes y la fecha clave
+
+Los ajustes son: nuevos códigos de referencia en las notas de crédito y débito (Nota 9), dos tipos adicionales de documento referenciado (Nota 10), identificaciones alfanuméricas para personas jurídicas, una excepción en el campo de teléfono para números como el 911 y una precisión sobre el campo IVA devuelto. Si su sistema no se actualiza, los comprobantes que no respeten la nueva estructura podrían ser rechazados desde el 1 de noviembre de 2026.
+
+## 1. Notas de crédito y débito: nuevos códigos de referencia
+
+Conviene separar dos campos que se parecen pero cumplen funciones distintas. En el campo de tipo de documento de referencia (Nota 10) se indica qué clase de comprobante se está tomando como base: factura, tiquete, nota, factura de exportación o recibo de pago. En el campo de código de referencia (Nota 9) se indica el motivo de la relación y el efecto que la nota tendrá sobre ese comprobante. Ambos se completan en la misma nota, por lo que no basta con mirar el número del código: hay que verificar en qué campo del XML fue consignado.
+
+La Nota 9 suma los códigos 13 a 17 y modifica el 12:
+
+Código 13: anula el comprobante referenciado por error material.
+
+Código 14: corrige un monto por error material.
+
+Código 15: sustituye un comprobante electrónico por error material.
+
+Código 16: sustituye un comprobante que Hacienda rechazó.
+
+Código 17: registra el pago de un comprobante emitido a crédito. Solo lo utiliza el Recibo Electrónico de Pago.
+
+Código 12: se redefine como nota de crédito financiera por una exoneración que se acredita después de facturar.
+
+## Un caso práctico: igual error, distinto período
+
+Imagine una factura de agosto emitida por ₡500.000 cuando lo correcto eran ₡50.000. Se corrige con una nota de crédito por ₡450.000, y el código escogido determina en qué mes se refleja el ajuste.
+
+Con el código 02 (corrección de monto), el ajuste se registra en el mes de emisión de la nota. Si la nota sale en septiembre, el efecto queda en septiembre.
+
+Con el código 14 (corrección de monto por error material), el efecto se traslada al mes del comprobante original, agosto. Si ya se presentó la declaración de agosto, deberá valorarse su rectificación; si aún no se presenta, el ajuste debe incluirse antes de hacerlo.
+
+## El alcance de "error material" en la estructura electrónica
+
+No debe confundirse con el concepto de materialidad de las normas contables. Los Anexos no establecen un monto ni un porcentaje a partir del cual un error se considere material. Lo que caracteriza a estos códigos es el período en que se imputa la corrección: el del comprobante original. La elección del código debe respaldarse en el análisis contable y tributario de cada caso.
+
+## Notas ordinarias y notas financieras
+
+Una nota ordinaria afecta una línea concreta de bien o servicio, así que debe conservar el código CABYS, la tarifa de IVA y el resto de los datos de esa línea. Los códigos 01 (anular), 02 (corregir monto) y 06 (devolución de mercancía) surten efecto en el mes en que se emite la nota. Si se anula con el 01 y después se emite un comprobante nuevo, este debe llevar el código 07 (sustituye comprobante electrónico).
+
+Las notas financieras (código 09 en crédito y 10 en débito) se emplean cuando el ajuste recae sobre el total del comprobante, como un descuento por pronto pago, y no requieren CABYS. Con el nuevo uso del código 12, si el cliente presenta su autorización de exoneración después de la compra, el proveedor puede emitir una nota de crédito financiera solo por el impuesto a devolver, sin anular la operación completa ni emitir otra factura. El efecto se registra en el período de la nota.
+
+## 2. Dos nuevos tipos de documento referenciado
+
+La Nota 10 incorpora el código 19 (Factura Electrónica de Exportación) y el código 20 (Recibo Electrónico de Pago). Su única función es identificar el tipo de comprobante al que se hace referencia, lo que facilita rastrear, por ejemplo, una nota ligada a una factura de exportación o un recibo de pago vinculado a otro comprobante.
+
+## 3. Cédulas jurídicas con letras y números
+
+La descripción de los campos de identificación ahora admite caracteres alfanuméricos en las personas jurídicas, en línea con los datos del Registro Nacional. Según KPMG, aplicará a las sociedades nuevas o a las que pidan el cambio a partir de la fecha que se defina. Es un ajuste principalmente técnico, pero conviene revisar que su sistema de facturación, los auxiliares de clientes y proveedores y el programa contable no limiten el campo a dígitos, pues esa restricción podría impedir emitir el comprobante.
+
+## 4. IVA devuelto en servicios de salud
+
+El campo IVA devuelto pasa a ser obligatorio cuando se facturan servicios de salud y el pago se hace con tarjeta. Si la factura contiene solo servicios de salud, el monto se obtiene dividiendo lo pagado con tarjeta entre la venta neta y multiplicando el resultado por el impuesto. Cuando el cliente combina medios de pago, solo se devuelve el IVA proporcional a la parte pagada con tarjeta. Si la factura mezcla servicios de salud con otros bienes o servicios, el impuesto que entra en la fórmula es únicamente el de las líneas de salud gravadas al 4 %.
+
+El sistema comprueba que el monto devuelto corresponda a líneas con CABYS de servicios de salud y que la tarjeta figure entre los medios de pago. Si no se cumple alguna de las dos condiciones, el comprobante se rechaza, y en ningún caso el IVA devuelto puede exceder el IVA calculado sobre esas líneas.
+
+## 5. Teléfonos especiales
+
+El campo de teléfono admite ahora excepciones para números especiales como el 911, que no llevan la extensión de los números nacionales o internacionales. Es un cambio de validación en el sistema de facturación.
+
+## Qué debe hacer su empresa
+
+Este cambio exige más coordinación entre quien emite los comprobantes y quien lleva la contabilidad. Registrar automáticamente cada nota en el mes en que llega ya no es suficiente: hay que revisar el motivo del ajuste, el código y el comprobante modificado. Una clasificación equivocada puede mover un ajuste a un período distinto del que corresponde, generar diferencias entre los comprobantes y la declaración, y obligar a revisarla.
+
+Le recomendamos confirmar con su proveedor de facturación que la actualización esté lista antes del 1 de noviembre de 2026, consultarnos el código a utilizar antes de emitir una nota de crédito o débito y avisarnos de cualquier ajuste a facturas de meses ya declarados, para analizar si procede rectificar.
+
+En GAMA Asesores revisamos con nuestros clientes la configuración de sus comprobantes electrónicos y el tratamiento contable y tributario de cada ajuste.
+
+La descripción de los códigos 13 a 17 corresponde a la interpretación técnica de GAMA Asesores a partir de la estructura publicada por Hacienda.
+
+Fuentes: Ministerio de Hacienda, Anexos y Estructuras v4.4 (bitácora de ajustes del 22 de abril de 2026) y comunicado de actualización; KPMG Costa Rica, 8 de mayo de 2026; PwC Tax & Legal.`,
+        },
       ],
     },
     faq: {
@@ -1369,6 +1445,82 @@ At GAMA Advisors we help verify your companies' registry status, keep corporate 
 
 Source: Delfino.cr, September 15, 2026. Based on National Registry Circular DGL-003-2026 and Directive DPJ-002-2026.`,
         },
+        {
+          id:13, category:"E-Invoicing", date:"October 21, 2026",
+          title:"Electronic Invoicing 4.4: new documents and Hacienda changes mandatory from November 1, 2026",
+          summary:"Hacienda updated the Annexes and Structures of version 4.4: new codes on credit and debit notes that can move the adjustment back to the original period, Export Invoice and Payment Receipt as reference documents, alphanumeric IDs and the VAT refund on health services.",
+          content:`Hacienda amended the Annexes and Structures of version 4.4 of the electronic receipts through its adjustment log of April 22, 2026. The changes can already be applied if your invoicing system is up to date, and they become mandatory on November 1, 2026. The version is still called 4.4, but in practice it is a second update bundling five adjustments, and one of them bears directly on bookkeeping and tax returns: the one on credit and debit notes.
+
+## The five adjustments and the key date
+
+The adjustments are: new reference codes on credit and debit notes (Note 9), two additional types of referenced document (Note 10), alphanumeric IDs for legal entities, an exception in the phone field for numbers such as 911, and a clarification of the VAT refund field. If your system is not updated, receipts that do not follow the new structure could be rejected from November 1, 2026.
+
+## 1. Credit and debit notes: new reference codes
+
+Two similar-looking fields serve different purposes. The reference document type field (Note 10) states what kind of receipt is being used as the basis: invoice, ticket, note, export invoice or payment receipt. The reference code field (Note 9) states the reason for the link and the effect the note will have on that receipt. Both are completed on the same note, so the code number alone is not enough: you must check which XML field it was entered in.
+
+Note 9 adds codes 13 to 17 and changes 12:
+
+Code 13: cancels the referenced receipt due to material error.
+
+Code 14: corrects an amount due to material error.
+
+Code 15: replaces an electronic receipt due to material error.
+
+Code 16: replaces a receipt that Hacienda rejected.
+
+Code 17: records payment of a receipt issued on credit. Used only by the Electronic Payment Receipt.
+
+Code 12: redefined as a financial credit note for an exemption credited after invoicing.
+
+## A practical case: same error, different period
+
+Picture an August invoice issued for ₡500,000 when the right amount was ₡50,000. It is corrected with a credit note for ₡450,000, and the code chosen determines which month reflects the adjustment.
+
+With code 02 (amount correction), the adjustment is recorded in the month the note is issued. If the note goes out in September, the effect lands in September.
+
+With code 14 (amount correction due to material error), the effect moves back to the month of the original receipt, August. If the August return was already filed, its amendment must be assessed; if it has not been filed yet, the adjustment must be included before filing.
+
+## What "material error" means in the electronic structure
+
+It should not be confused with materiality in accounting standards. The Annexes set no amount or percentage above which an error counts as material. What defines these codes is the period to which the correction is assigned: that of the original receipt. The choice of code must be backed by the accounting and tax analysis of each case.
+
+## Ordinary notes and financial notes
+
+An ordinary note affects a specific goods or service line, so it must keep the CABYS code, the VAT rate and the rest of that line's data. Codes 01 (cancel), 02 (correct amount) and 06 (return of goods) take effect in the month the note is issued. If you cancel with 01 and later issue a new receipt, the new one must carry code 07 (replaces electronic receipt).
+
+Financial notes (code 09 for credit and 10 for debit) are used when the adjustment falls on the total of the receipt, such as an early-payment discount, and do not require CABYS. With the new use of code 12, if the customer presents its exemption authorization after the purchase, the supplier can issue a financial credit note only for the tax to be refunded, without cancelling the whole transaction or issuing another invoice. The effect is recorded in the period of the note.
+
+## 2. Two new types of referenced document
+
+Note 10 adds code 19 (Electronic Export Invoice) and code 20 (Electronic Payment Receipt). Their only function is to identify the type of receipt being referenced, which makes it easier to trace, for example, a note tied to an export invoice or a payment receipt linked to another receipt.
+
+## 3. Legal entity IDs with letters and numbers
+
+The description of the identification fields now allows alphanumeric characters for legal entities, in line with National Registry data. According to KPMG, it will apply to new companies or those requesting the change from a date yet to be set. It is mainly a technical adjustment, but check that your invoicing system, customer and supplier ledgers and accounting software do not limit the field to digits, since that restriction could prevent the receipt from being issued.
+
+## 4. VAT refund on health services
+
+The VAT refund field becomes mandatory when health services are invoiced and payment is made by card. If the invoice contains only health services, the amount is obtained by dividing the card payment by net sales and multiplying the result by the tax. When the customer combines payment methods, only the VAT proportional to the card portion is refunded. If the invoice mixes health services with other goods or services, the tax used in the formula is only that of the health lines taxed at 4%.
+
+The system checks that the refunded amount corresponds to lines with health-service CABYS codes and that the card appears among the payment methods. If either condition fails, the receipt is rejected, and the VAT refund can never exceed the VAT calculated on those lines.
+
+## 5. Special phone numbers
+
+The phone field now allows exceptions for special numbers such as 911, which do not carry the extension of national or international numbers. It is a validation change in the invoicing system.
+
+## What your company should do
+
+This change calls for more coordination between whoever issues the receipts and whoever keeps the books. Automatically posting each note in the month it arrives is no longer enough: the reason for the adjustment, the code and the modified receipt must be reviewed. A wrong classification can move an adjustment to the wrong period, create differences between the receipts and the tax return, and force a review of the return.
+
+We recommend confirming with your invoicing provider that the update is ready before November 1, 2026, consulting us on the code to use before issuing a credit or debit note, and letting us know of any adjustment to invoices of months already filed, so we can analyze whether an amendment is due.
+
+At GAMA Asesores we review with our clients the setup of their electronic receipts and the accounting and tax treatment of each adjustment.
+
+The description of codes 13 to 17 reflects GAMA Asesores' technical interpretation of the structure published by Hacienda.
+
+Sources: Ministerio de Hacienda, Annexes and Structures v4.4 (adjustment log of April 22, 2026) and update notice; KPMG Costa Rica, May 8, 2026; PwC Tax & Legal.`,
+        },
       ],
     },
     faq: {
@@ -1849,6 +2001,82 @@ Registro de Beneficiarios Finales: רישום הבעלים האמיתיים תו
 ב-GAMA Asesores אנו מסייעים לבדוק את מצב החברות שלכם ולתאם את רישום הדוא״ל.
 
 מקור: Delfino.cr, 15 בספטמבר 2026. חוזר DGL-003-2026 והנחיית DPJ-002-2026.`,
+        },
+        {
+          id:13, category:"חשבונית אלקטרונית", date:"21 באוקטובר, 2026",
+          title:"חשבונית אלקטרונית 4.4: מסמכים חדשים ושינויים של Hacienda שהופכים לחובה מ-1 בנובמבר 2026",
+          summary:"Hacienda עדכן את הנספחים והמבנים של גרסה 4.4: קודים חדשים בהודעות זיכוי וחיוב שעשויים להחזיר את ההתאמה לתקופה המקורית, חשבונית יצוא וקבלת תשלום כמסמכי הפניה, מספרי זיהוי אלפאנומריים ומע״מ מוחזר בשירותי בריאות.",
+          content:`משרד האוצר של קוסטה ריקה (Hacienda) תיקן את הנספחים והמבנים של גרסה 4.4 של המסמכים האלקטרוניים באמצעות יומן ההתאמות מיום 22 באפריל 2026. אפשר ליישם את השינויים כבר עכשיו אם מערכת החשבוניות שלכם מעודכנת, והם יהפכו לחובה ב-1 בנובמבר 2026. הגרסה עדיין נקראת 4.4, אך בפועל זהו עדכון שני המאגד חמש התאמות, ואחת מהן משפיעה ישירות על הנהלת החשבונות ועל הדוחות: זו של הודעות הזיכוי והחיוב.
+
+## חמש ההתאמות והתאריך המכריע
+
+ההתאמות הן: קודי הפניה חדשים בהודעות זיכוי וחיוב (הערה 9), שני סוגי מסמך נוספים שאליהם ניתן להפנות (הערה 10), מספרי זיהוי אלפאנומריים לישויות משפטיות, חריג בשדה הטלפון למספרים כמו 911, והבהרה בשדה המע״מ המוחזר. אם המערכת שלכם לא תעודכן, מסמכים שאינם עומדים במבנה החדש עלולים להידחות החל מ-1 בנובמבר 2026.
+
+## 1. הודעות זיכוי וחיוב: קודי הפניה חדשים
+
+כדאי להפריד בין שני שדות הדומים זה לזה אך משרתים מטרות שונות. בשדה סוג מסמך ההפניה (הערה 10) מציינים איזה סוג מסמך משמש בסיס: חשבונית, כרטיס, הודעה, חשבונית יצוא או קבלת תשלום. בשדה קוד ההפניה (הערה 9) מציינים את הסיבה לקשר ואת ההשפעה שתהיה להודעה על אותו מסמך. שני השדות ממולאים באותה הודעה, ולכן לא מספיק להסתכל על מספר הקוד: יש לוודא באיזה שדה ב-XML הוא נרשם.
+
+הערה 9 מוסיפה את הקודים 13 עד 17 ומשנה את הקוד 12:
+
+קוד 13: מבטל את המסמך שאליו מפנים בשל טעות מהותית.
+
+קוד 14: מתקן סכום בשל טעות מהותית.
+
+קוד 15: מחליף מסמך אלקטרוני בשל טעות מהותית.
+
+קוד 16: מחליף מסמך ש-Hacienda דחה.
+
+קוד 17: רושם תשלום של מסמך שהונפק באשראי. משמש רק את קבלת התשלום האלקטרונית.
+
+קוד 12: מוגדר מחדש כהודעת זיכוי פיננסית בשל פטור שמוכר לאחר החיוב.
+
+## מקרה מעשי: אותה טעות, תקופה שונה
+
+דמיינו חשבונית מאוגוסט שהונפקה על ₡500,000 כשהסכום הנכון היה ₡50,000. התיקון נעשה בהודעת זיכוי על ₡450,000, והקוד שנבחר קובע באיזה חודש תשתקף ההתאמה.
+
+עם קוד 02 (תיקון סכום), ההתאמה נרשמת בחודש הנפקת ההודעה. אם ההודעה יוצאת בספטמבר, ההשפעה נופלת על ספטמבר.
+
+עם קוד 14 (תיקון סכום בשל טעות מהותית), ההשפעה חוזרת לחודש המסמך המקורי, אוגוסט. אם הדוח של אוגוסט כבר הוגש, יש לבחון תיקון שלו; אם טרם הוגש, יש לכלול את ההתאמה לפני ההגשה.
+
+## מה פירוש "טעות מהותית" במבנה האלקטרוני
+
+אין לבלבל זאת עם מהותיות בתקני החשבונאות. הנספחים אינם קובעים סכום או אחוז שמעליו טעות נחשבת מהותית. מה שמגדיר את הקודים הללו הוא התקופה שאליה מיוחס התיקון: תקופת המסמך המקורי. בחירת הקוד צריכה להיתמך בניתוח החשבונאי והמיסויי של כל מקרה.
+
+## הודעות רגילות והודעות פיננסיות
+
+הודעה רגילה משפיעה על שורה מסוימת של טובין או שירות, ולכן עליה לשמור את קוד CABYS, את שיעור המע״מ ואת שאר נתוני אותה שורה. הקודים 01 (ביטול), 02 (תיקון סכום) ו-06 (החזרת סחורה) נכנסים לתוקף בחודש הנפקת ההודעה. אם מבטלים עם 01 ולאחר מכן מנפיקים מסמך חדש, על המסמך החדש לשאת את קוד 07 (מחליף מסמך אלקטרוני).
+
+הודעות פיננסיות (קוד 09 בזיכוי ו-10 בחיוב) משמשות כשההתאמה חלה על סך המסמך, כמו הנחה על תשלום מוקדם, ואינן דורשות CABYS. עם השימוש החדש בקוד 12, אם הלקוח מציג אישור פטור לאחר הרכישה, הספק יכול להנפיק הודעת זיכוי פיננסית רק על המס להחזר, בלי לבטל את העסקה כולה ובלי להנפיק חשבונית נוספת. ההשפעה נרשמת בתקופת ההודעה.
+
+## 2. שני סוגי מסמך חדשים להפניה
+
+הערה 10 מוסיפה את קוד 19 (חשבונית יצוא אלקטרונית) ואת קוד 20 (קבלת תשלום אלקטרונית). תפקידם היחיד הוא לזהות את סוג המסמך שאליו מפנים, מה שמקל למשל על מעקב אחר הודעה הקשורה לחשבונית יצוא או קבלת תשלום המקושרת למסמך אחר.
+
+## 3. מספרי זיהוי של ישויות משפטיות עם אותיות וספרות
+
+תיאור שדות הזיהוי מתיר כעת תווים אלפאנומריים בישויות משפטיות, בהתאם לנתוני הרישום הלאומי. לפי KPMG, זה יחול על חברות חדשות או על כאלה שיבקשו את השינוי מתאריך שייקבע. זוהי התאמה טכנית בעיקרה, אך כדאי לבדוק שמערכת החשבוניות, כרטיסי הלקוחות והספקים ותוכנת הנהלת החשבונות אינן מגבילות את השדה לספרות, שכן הגבלה כזו עלולה למנוע הנפקת מסמך.
+
+## 4. מע״מ מוחזר בשירותי בריאות
+
+שדה המע״מ המוחזר הופך לחובה כשמחייבים שירותי בריאות והתשלום נעשה בכרטיס. אם בחשבונית יש רק שירותי בריאות, הסכום מתקבל מחלוקת התשלום בכרטיס במכירה נטו וכפל התוצאה במס. כשהלקוח משלב אמצעי תשלום, מוחזר רק המע״מ היחסי לחלק ששולם בכרטיס. אם החשבונית משלבת שירותי בריאות עם טובין או שירותים אחרים, המס שנכנס לנוסחה הוא רק זה של שורות הבריאות החייבות ב-4%.
+
+המערכת בודקת שהסכום המוחזר מתאים לשורות עם קודי CABYS של שירותי בריאות ושהכרטיס מופיע בין אמצעי התשלום. אם אחד התנאים אינו מתקיים, המסמך נדחה, ובשום מקרה המע״מ המוחזר אינו יכול לעלות על המע״מ שחושב על אותן שורות.
+
+## 5. מספרי טלפון מיוחדים
+
+שדה הטלפון מתיר כעת חריגים למספרים מיוחדים כמו 911, שאין להם שלוחה כמו למספרים לאומיים או בינלאומיים. זהו שינוי בבדיקות התקינות של מערכת החשבוניות.
+
+## מה על החברה שלכם לעשות
+
+שינוי זה מחייב יותר תיאום בין מי שמנפיק את המסמכים לבין מי שמנהל את הספרים. רישום אוטומטי של כל הודעה בחודש שבו היא מגיעה כבר אינו מספיק: יש לבדוק את סיבת ההתאמה, את הקוד ואת המסמך שתוקן. סיווג שגוי עלול להעביר התאמה לתקופה לא נכונה, ליצור פערים בין המסמכים לדוח, ולחייב בדיקה מחודשת שלו.
+
+אנו ממליצים לוודא מול ספק מערכת החשבוניות שהעדכון מוכן לפני 1 בנובמבר 2026, להתייעץ איתנו לגבי הקוד לפני הנפקת הודעת זיכוי או חיוב, ולעדכן אותנו על כל התאמה לחשבוניות של חודשים שכבר דווחו, כדי לבחון אם נדרש תיקון.
+
+ב-GAMA Asesores אנו בודקים עם לקוחותינו את הגדרת המסמכים האלקטרוניים ואת הטיפול החשבונאי והמיסויי בכל התאמה.
+
+תיאור הקודים 13 עד 17 משקף את הפרשנות המקצועית של GAMA Asesores למבנה שפרסם Hacienda.
+
+מקורות: Ministerio de Hacienda, Anexos y Estructuras v4.4 (יומן התאמות מיום 22 באפריל 2026) והודעת העדכון; KPMG Costa Rica, 8 במאי 2026; PwC Tax & Legal.`,
         },
       ],
     },
@@ -3343,8 +3571,34 @@ function PrivacySection({ lang, setSection }) {
 /* ─────────────── APP ─────────────── */
 export default function App() {
   const [lang, setLang] = useState("es");
-  const [section, setSection] = useState("home");
-  const [articleId, setArticleId] = useState(null);
+  /* Enlaces directos: gamacpa-asesores.com/#blog/13 abre el artículo 13 */
+  const parseHash = () => {
+    const m = (window.location.hash || "").match(/^#blog(?:\/(\d+))?$/);
+    if (!m) return { section: "home", articleId: null };
+    return { section: "blog", articleId: m[1] ? parseInt(m[1], 10) : null };
+  };
+  const [section, setSection] = useState(() => parseHash().section);
+  const [articleId, setArticleId] = useState(() => parseHash().articleId);
+
+  /* Mantener la URL sincronizada con el blog y responder al botón Atrás */
+  useEffect(() => {
+    const target = section === "blog" ? (articleId ? "#blog/" + articleId : "#blog") : "";
+    const current = window.location.hash;
+    if (section === "blog" || current.startsWith("#blog")) {
+      if (current !== target) {
+        window.history.replaceState(null, "", window.location.pathname + window.location.search + target);
+      }
+    }
+  }, [section, articleId]);
+
+  useEffect(() => {
+    const onHash = () => {
+      const h = parseHash();
+      if (window.location.hash.startsWith("#blog")) { setSection("blog"); setArticleId(h.articleId); }
+    };
+    window.addEventListener("hashchange", onHash);
+    return () => window.removeEventListener("hashchange", onHash);
+  }, []);
 
   /* RTL support for Hebrew */
   useEffect(() => {
@@ -3403,7 +3657,8 @@ export default function App() {
   const renderSection = () => {
     if (section === "blog" && articleId) {
       const article = DATA[lang].blog.articles.find(a => a.id === articleId);
-      return <ArticleView article={article} lang={lang} onBack={() => setArticleId(null)} />;
+      if (article) return <ArticleView article={article} lang={lang} onBack={() => setArticleId(null)} />;
+      /* si el artículo no existe en este idioma, se muestra la lista del blog */
     }
     switch(section) {
       case "home":     return <><HeroSection lang={lang} setSection={setSection}/><CostSection lang={lang}/><WhySection lang={lang}/><FAQSection lang={lang}/><TestimonialsSection lang={lang}/></>;
