@@ -823,6 +823,60 @@ Si desea que revisemos su caso, identifiquemos los números que debe registrar y
 
 Fuente: Decreto Ejecutivo N.º 45953-H, Alcance N.º 139 a La Gaceta N.º 196 del 16 de octubre de 2026; artículo 83 del Código de Normas y Procedimientos Tributarios.`,
         },
+        {
+          id: 15,
+          category: "Empresas Nuevas",
+          date: "11 de noviembre, 2026",
+          title: "Sociedades recién inscritas: RTBF en 20 días hábiles y actualización de datos en TRIBU-CR en 10",
+          summary: "Al inscribirse una sociedad en el Registro Nacional nacen dos obligaciones con plazos distintos: la declaración de Beneficiarios Finales (20 días hábiles, ante el Banco Central) y el registro y actualización de datos en el RUT por TRIBU-CR (10 días hábiles, ante Tributación). Explicamos plazos, base legal y sanciones.",
+          content: `Cuando una sociedad queda inscrita en el Registro Nacional y se le asigna su cédula jurídica, empiezan a correr dos plazos que con frecuencia se confunden porque se cumplen ante instituciones distintas: la declaración del Registro de Transparencia y Beneficiarios Finales (RTBF), que se presenta ante el Banco Central de Costa Rica, y el registro y actualización de datos en el Registro Único Tributario (RUT), que se hace ante la Dirección General de Tributación por medio de TRIBU-CR. Una no sustituye a la otra, y ambas aplican aunque la sociedad todavía no tenga actividad económica.
+
+## Resumen de plazos
+
+RTBF: 20 días hábiles desde la inscripción o la asignación de la cédula jurídica, y después cada año en abril. RUT en TRIBU-CR: 10 días hábiles desde la inscripción de la escritura constitutiva, luego un mes para comunicar cualquier cambio y una actualización anual. Es común escuchar que ambos plazos son de 20 días, y no es así: los 20 días hábiles corresponden al RTBF, mientras que ante Tributación el plazo es de 10.
+
+## 1. Registro de Transparencia y Beneficiarios Finales (RTBF)
+
+La base legal es la Ley N.º 9416 (Ley para Mejorar la Lucha contra el Fraude Fiscal), su reglamento y la Resolución Conjunta MH-DGT-RES-0020-2024 / DG-336-2024. La obligación alcanza a las sociedades mercantiles, los fideicomisos privados, los administradores de recursos de terceros y las organizaciones sin fines de lucro, incluidas las sociedades inactivas.
+
+La primera declaración debe presentarse dentro de los 20 días hábiles siguientes a la inscripción, a la asignación de la cédula jurídica o a la reinscripción (artículo 8, inciso b). Si el evento ocurre en abril, se aplica el plazo más favorable entre los 20 días hábiles y el mes de abril. Lo mismo rige para las transformaciones y fusiones que generan una nueva cédula jurídica.
+
+La declaración ordinaria posterior se presenta en el mes de abril de cada año (artículo 8, inciso a). Hacienda ha trasladado este plazo de forma excepcional en alguna ocasión, como ocurrió en 2024 cuando se movió a octubre, por lo que conviene confirmar la fecha cada año.
+
+Se presenta en la plataforma Central Directo del Banco Central (www.centraldirecto.fi.cr), por medio del representante legal o, cuando corresponda, de un apoderado especial. Se informa quiénes son los accionistas de la sociedad y sus beneficiarios finales.
+
+Si no se presenta, el artículo 84 bis del Código de Normas y Procedimientos Tributarios establece una multa del 2% de los ingresos brutos del período anterior a la infracción, con un mínimo de 3 y un máximo de 100 salarios base. Con el salario base de 2026 (₡462.200), esto equivale a entre ₡1.386.600 y ₡46.220.000.
+
+## 2. Registro y actualización de datos en el RUT por medio de TRIBU-CR
+
+Las personas jurídicas inscritas en el Registro Nacional quedan inscritas de oficio en el RUT, aunque no realicen una actividad lucrativa. Sin embargo, esa inscripción de oficio no está completa: la sociedad debe suministrar su domicilio fiscal, su correo electrónico y los demás datos requeridos dentro de los diez días hábiles siguientes a la inscripción de la escritura constitutiva. Así lo establecen el artículo 22 del Reglamento de Procedimiento Tributario (Decreto N.º 38277-H) y el artículo 4 de la Resolución MH-DGT-RES-0013-2025.
+
+Si la sociedad va a desarrollar una actividad económica, debe además registrarla ante Tributación. A falta de otro plazo, la inscripción se hace dentro de los diez días hábiles siguientes a la fecha en que se inician las actividades u operaciones (artículo 22 del Reglamento y artículo 3 de la Resolución MH-DGT-RES-0037-2025).
+
+En la práctica el trámite se hace en la Oficina Virtual (OVi) de TRIBU-CR. El representante legal crea su usuario, ingresa con la cédula jurídica y, en la opción Mis datos, presenta la declaración de inscripción o de modificación de datos. Allí se completan el domicilio fiscal, el correo electrónico (el sistema envía un código de verificación), las actividades económicas, el régimen tributario y el método de facturación. Al finalizar se descargan los comprobantes que genera el sistema, que conviene conservar.
+
+Una vez registrada, la sociedad debe mantener sus datos al día. Cualquier modificación se comunica dentro de un mes desde que ocurre (artículo 4 de la Resolución 0037) y, además, los datos se actualizan cada año, contado desde la última declaración del RUT presentada (artículo 5). Si no se actualiza en plazo, TRIBU-CR impide presentar cualquier gestión hasta que se cumpla. Cuando Hacienda emita la resolución general sobre SINPE Móvil, la actualización también incluirá los números que se usen para cobrar, como explicamos en nuestro artículo sobre el Decreto N.º 45953-H.
+
+La sanción por no inscribirse o no actualizar a tiempo está en el artículo 78 del Código de Normas y Procedimientos Tributarios: el 50% de un salario base por cada mes o fracción de mes de atraso, con un máximo de 3 salarios base. Con el salario base de 2026 son ₡231.100 por mes, con un tope de ₡1.386.600.
+
+## Errores frecuentes
+
+Primero, pensar que una sociedad inactiva no tiene obligaciones: el RTBF y la actualización del RUT aplican igual. Segundo, confundir los plazos y presentar solo uno de los dos trámites, porque cada uno se cumple ante una institución distinta. Tercero, no mantener actualizado el correo electrónico, que es el medio por el cual la Administración notifica. Cuarto, no guardar los comprobantes de presentación de cada trámite.
+
+## Preguntas frecuentes
+
+¿Mi sociedad no tiene actividad, debo hacer ambos trámites? Sí. El RTBF aplica a las sociedades activas e inactivas, y la sociedad está inscrita en el RUT aunque no tenga actividad económica, por lo que debe suministrar sus datos.
+
+¿Desde cuándo se cuentan los plazos? El del RTBF, desde la inscripción o la asignación de la cédula jurídica. El de Tributación, desde la inscripción de la escritura constitutiva.
+
+¿Y si mi sociedad se inscribió en abril? Para el RTBF se aplica el plazo más favorable entre los 20 días hábiles y el mes de abril. Para el RUT siguen corriendo los diez días hábiles.
+
+¿Pueden hacerlo por mí? Sí. En GAMA Asesores presentamos ambos trámites por usted, desde la declaración en Central Directo hasta el registro y la actualización de datos en TRIBU-CR.
+
+Si su sociedad se inscribió recientemente, o no está seguro de si sus datos están al día en el RTBF y en el RUT, escríbanos y revisamos su caso para evitar multas y bloqueos en TRIBU-CR.
+
+Fuentes: Ley N.º 9416; Resolución Conjunta MH-DGT-RES-0020-2024 / DG-336-2024, artículo 8; Código de Normas y Procedimientos Tributarios, artículos 78 y 84 bis; Reglamento de Procedimiento Tributario (Decreto N.º 38277-H), artículo 22; Resoluciones MH-DGT-RES-0037-2025 (artículos 3 a 5) y MH-DGT-RES-0013-2025 (artículo 4); salario base 2026 de ₡462.200 (Consejo Superior del Poder Judicial, sesión N.º 113-2025).`,
+        },
       ],
     },
     faq: {
@@ -1613,6 +1667,60 @@ If you would like us to review your case, identify the numbers you must register
 
 Source: Executive Decree No. 45953-H, Supplement No. 139 to La Gaceta No. 196 of October 16, 2026; Article 83 of the Tax Rules and Procedures Code.`,
         },
+        {
+          id: 15,
+          category: "New Companies",
+          date: "November 11, 2026",
+          title: "Newly registered companies: RTBF within 20 business days and data update in TRIBU-CR within 10",
+          summary: "When a company is registered with the National Registry, two obligations with different deadlines arise: the Final Beneficiaries declaration (20 business days, with the Central Bank) and the registration and update of data in the RUT through TRIBU-CR (10 business days, with the Tax Authority). We explain the deadlines, legal basis and penalties.",
+          content: `When a company is registered with the National Registry and receives its legal ID number (cédula jurídica), two deadlines start running that are often confused because they are met before different institutions: the Transparency and Final Beneficiaries Registry (RTBF) declaration, filed with the Central Bank of Costa Rica, and the registration and update of data in the Single Taxpayer Registry (RUT), done with the Tax Authority (Dirección General de Tributación) through TRIBU-CR. One does not replace the other, and both apply even if the company has no economic activity yet.
+
+## Summary of deadlines
+
+RTBF: 20 business days from registration or assignment of the legal ID number, and then every year in April. RUT in TRIBU-CR: 10 business days from registration of the incorporation deed, then one month to report any change and an annual update. It is common to hear that both deadlines are 20 days, which is not the case: the 20 business days apply to the RTBF, while before the Tax Authority the deadline is 10.
+
+## 1. Transparency and Final Beneficiaries Registry (RTBF)
+
+The legal basis is Law No. 9416 (Law to Improve the Fight Against Tax Fraud), its regulations and Joint Resolution MH-DGT-RES-0020-2024 / DG-336-2024. The obligation covers commercial companies, private trusts, managers of third-party funds and non-profit organizations, including inactive companies.
+
+The first declaration must be filed within 20 business days after registration, assignment of the legal ID number or re-registration (Article 8, paragraph b). If the event occurs in April, the more favorable period applies: 20 business days or the month of April. The same rule applies to transformations and mergers that generate a new legal ID number.
+
+The ordinary declaration that follows is filed in April of each year (Article 8, paragraph a). Hacienda has occasionally moved this deadline on an exceptional basis, as in 2024 when it was moved to October, so it is wise to confirm the date every year.
+
+It is filed on the Central Bank's Central Directo platform (www.centraldirecto.fi.cr), through the legal representative or, where applicable, a special attorney-in-fact. The filing reports the company's shareholders and its final beneficiaries.
+
+If it is not filed, Article 84 bis of the Tax Rules and Procedures Code provides a fine of 2% of the gross income of the period prior to the infringement, with a minimum of 3 and a maximum of 100 base salaries. With the 2026 base salary (₡462,200), this equals between ₡1,386,600 and ₡46,220,000.
+
+## 2. Registration and data update in the RUT through TRIBU-CR
+
+Legal entities registered with the National Registry are registered in the RUT automatically, even if they carry on no profit-making activity. That automatic registration is not complete, however: the company must provide its tax address, email and other required data within ten business days after the incorporation deed is registered. This is set by Article 22 of the Tax Procedure Regulations (Decree No. 38277-H) and Article 4 of Resolution MH-DGT-RES-0013-2025.
+
+If the company will carry on an economic activity, it must also register it with the Tax Authority. Absent another deadline, registration must be made within ten business days after the date the activities or operations begin (Article 22 of the Regulations and Article 3 of Resolution MH-DGT-RES-0037-2025).
+
+In practice the process is done in the TRIBU-CR Virtual Office (OVi). The legal representative creates a user, logs in with the company's legal ID number and, under the My Data option (Mis datos), files the registration or data modification declaration. There the tax address, email (the system sends a verification code), economic activities, tax regime and invoicing method are completed. At the end, the receipts generated by the system are downloaded and should be kept.
+
+Once registered, the company must keep its data up to date. Any change is reported within one month from when it occurs (Article 4 of Resolution 0037) and, in addition, the data is updated every year, counted from the last RUT declaration filed (Article 5). If it is not updated on time, TRIBU-CR blocks any filing until it is done. When Hacienda issues the general resolution on SINPE Móvil, the update will also include the numbers used to collect payments, as we explain in our article on Decree No. 45953-H.
+
+The penalty for failing to register or update on time is found in Article 78 of the Tax Rules and Procedures Code: 50% of a base salary for each month or fraction of a month of delay, up to a maximum of 3 base salaries. With the 2026 base salary that is ₡231,100 per month, capped at ₡1,386,600.
+
+## Common mistakes
+
+First, believing that an inactive company has no obligations: the RTBF and the RUT update apply just the same. Second, confusing the deadlines and filing only one of the two procedures, because each is done before a different institution. Third, not keeping the email address up to date, since it is the channel through which the Administration serves notices. Fourth, not keeping the filing receipts for each procedure.
+
+## Frequently asked questions
+
+My company has no activity; must I complete both procedures? Yes. The RTBF applies to active and inactive companies, and the company is registered in the RUT even without economic activity, so it must provide its data.
+
+From when are the deadlines counted? The RTBF deadline runs from registration or assignment of the legal ID number. The Tax Authority deadline runs from registration of the incorporation deed.
+
+What if my company was registered in April? For the RTBF the more favorable period applies: 20 business days or the month of April. For the RUT, the ten business days continue to run.
+
+Can you do it for me? Yes. At GAMA Asesores we handle both procedures for you, from the Central Directo declaration to the registration and update of data in TRIBU-CR.
+
+If your company was recently registered, or you are not sure whether your data is up to date in the RTBF and the RUT, write to us and we will review your case to avoid fines and blocked procedures in TRIBU-CR.
+
+Sources: Law No. 9416; Joint Resolution MH-DGT-RES-0020-2024 / DG-336-2024, Article 8; Tax Rules and Procedures Code, Articles 78 and 84 bis; Tax Procedure Regulations (Decree No. 38277-H), Article 22; Resolutions MH-DGT-RES-0037-2025 (Articles 3 to 5) and MH-DGT-RES-0013-2025 (Article 4); 2026 base salary of ₡462,200 (Judicial Branch Superior Council, session No. 113-2025).`,
+        },
       ],
     },
     faq: {
@@ -2215,6 +2323,60 @@ Registro de Beneficiarios Finales: רישום הבעלים האמיתיים תו
 אם תרצו שנבדוק את המקרה שלכם, נזהה את המספרים שיש לרשום ונסדר את ההכנסות לפני פרסום ההחלטה, פנו אלינו ונשמח לסייע.
 
 מקור: צו ממשלתי מס' 45953-H, נספח 139 ל-La Gaceta מס' 196 מיום 16 באוקטובר 2026; סעיף 83 לקוד הכללים וההליכים המסוימים.`,
+        },
+        {
+          id: 15,
+          category: "חברות חדשות",
+          date: "11 בנובמבר, 2026",
+          title: "חברות שנרשמו לאחרונה: RTBF בתוך 20 ימי עסקים ועדכון נתונים ב-TRIBU-CR בתוך 10",
+          summary: "עם רישום חברה במרשם הלאומי נוצרות שתי חובות עם מועדים שונים: הצהרת הנהנים הסופיים (20 ימי עסקים, מול הבנק המרכזי) ורישום ועדכון נתונים ב-RUT באמצעות TRIBU-CR (10 ימי עסקים, מול רשות המסים). אנו מסבירים את המועדים, הבסיס החוקי והסנקציות.",
+          content: `כאשר חברה נרשמת במרשם הלאומי (Registro Nacional) ומוקצה לה מספר תאגיד (cédula jurídica), מתחילים לרוץ שני מועדים שנוטים להתבלבל ביניהם, משום שהם מתבצעים מול גופים שונים: הצהרת מרשם השקיפות והנהנים הסופיים (RTBF), המוגשת לבנק המרכזי של קוסטה ריקה, ורישום ועדכון נתונים במרשם המסים האחיד (RUT), המתבצע מול רשות המסים (Dirección General de Tributación) באמצעות מערכת TRIBU-CR. אחת אינה מחליפה את האחרת, ושתיהן חלות גם אם לחברה עדיין אין פעילות כלכלית.
+
+## סיכום המועדים
+
+RTBF: 20 ימי עסקים מהרישום או מהקצאת מספר התאגיד, ולאחר מכן מדי שנה באפריל. RUT ב-TRIBU-CR: 10 ימי עסקים מרישום שטר ההתאגדות, לאחר מכן חודש אחד לדווח על כל שינוי, ועדכון שנתי. לעתים נטען ששני המועדים הם 20 יום, וזה אינו נכון: 20 ימי עסקים הוא המועד של ה-RTBF, ואילו מול רשות המסים המועד הוא 10 ימי עסקים.
+
+## 1. מרשם השקיפות והנהנים הסופיים (RTBF)
+
+הבסיס החוקי הוא חוק מס' 9416 (חוק לשיפור המאבק בהונאת מס), התקנות שלו וההחלטה המשותפת MH-DGT-RES-0020-2024 / DG-336-2024. החובה חלה על חברות מסחריות, נאמנויות פרטיות, מנהלי כספים של צדדים שלישיים וארגונים ללא מטרות רווח, כולל חברות לא פעילות.
+
+ההצהרה הראשונה מוגשת בתוך 20 ימי עסקים מהרישום, מהקצאת מספר התאגיד או מרישום מחדש (סעיף 8, סעיף קטן ב). אם האירוע חל באפריל, חל המועד הנוח יותר מבין 20 ימי עסקים לבין חודש אפריל. כך גם בהמרה או במיזוג שיוצרים מספר תאגיד חדש.
+
+ההצהרה הרגילה מוגשת בחודש אפריל בכל שנה (סעיף 8, סעיף קטן א). לעתים משרד האוצר מעביר את המועד באופן חריג, כפי שקרה ב-2024 כאשר הועבר לאוקטובר, ולכן כדאי לוודא את התאריך מדי שנה.
+
+ההגשה מתבצעת בפלטפורמת Central Directo של הבנק המרכזי (www.centraldirecto.fi.cr), על ידי נציג החברה החוקי או, כשנדרש, מיופה כוח מיוחד. בהצהרה מדווחים על בעלי המניות של החברה ועל הנהנים הסופיים שלה.
+
+אם ההצהרה לא מוגשת, סעיף 84 bis בקוד כללי ונהלי המס קובע קנס של 2% מההכנסה הברוטו של התקופה שקדמה להפרה, בין 3 ל-100 שכרי בסיס. לפי שכר הבסיס של 2026 (₡462,200) מדובר בין ₡1,386,600 ל-₡46,220,000.
+
+## 2. רישום ועדכון נתונים ב-RUT באמצעות TRIBU-CR
+
+חברות הרשומות במרשם הלאומי נרשמות אוטומטית ב-RUT, גם אם אינן עוסקות בפעילות למטרות רווח. עם זאת, הרישום האוטומטי אינו שלם: על החברה למסור את כתובתה לצורכי מס, כתובת דוא"ל ויתר הנתונים הנדרשים בתוך עשרה ימי עסקים מרישום שטר ההתאגדות. כך קובעים סעיף 22 לתקנות הליך המס (צו מס' 38277-H) וסעיף 4 להחלטה MH-DGT-RES-0013-2025.
+
+אם החברה עומדת לפעול בפעילות כלכלית, עליה לרשום אותה גם מול רשות המסים. בהיעדר מועד אחר, הרישום נעשה בתוך עשרה ימי עסקים מהמועד שבו מתחילה הפעילות (סעיף 22 לתקנות וסעיף 3 להחלטה MH-DGT-RES-0037-2025).
+
+בפועל ההליך מתבצע במשרד הווירטואלי (OVi) של TRIBU-CR. הנציג החוקי יוצר משתמש, נכנס עם מספר התאגיד ובאפשרות Mis datos מגיש הצהרת רישום או שינוי נתונים. שם משלימים את הכתובת לצורכי מס, הדוא"ל (המערכת שולחת קוד אימות), הפעילויות הכלכליות, משטר המס ושיטת החשבוניות. בסיום מורידים את האישורים שהמערכת מפיקה, ומומלץ לשמור אותם.
+
+לאחר הרישום, על החברה לשמור על עדכניות הנתונים. כל שינוי מדווח בתוך חודש מהמועד שבו התרחש (סעיף 4 להחלטה 0037), ובנוסף הנתונים מתעדכנים מדי שנה, מההצהרה האחרונה שהוגשה ב-RUT (סעיף 5). אם העדכון לא מבוצע בזמן, TRIBU-CR חוסמת הגשת כל הליך עד לעדכון. כאשר משרד האוצר יפרסם את ההחלטה הכללית בנושא SINPE Móvil, העדכון יכלול גם את המספרים המשמשים לגביית תשלומים, כפי שהסברנו במאמר שלנו על צו מס' 45953-H.
+
+הסנקציה על אי-רישום או אי-עדכון בזמן קבועה בסעיף 78 בקוד כללי ונהלי המס: 50% משכר בסיס לכל חודש או חלק ממנו של איחור, עד מקסימום של 3 שכרי בסיס. לפי שכר הבסיס של 2026 מדובר ב-₡231,100 לחודש, עם תקרה של ₡1,386,600.
+
+## טעויות נפוצות
+
+ראשית, להניח שלחברה לא פעילה אין חובות: ה-RTBF ועדכון ה-RUT חלים עליה באותה מידה. שנית, לבלבל בין המועדים ולהגיש רק אחד משני ההליכים, משום שכל אחד מתבצע מול גוף אחר. שלישית, לא לעדכן את כתובת הדוא"ל, שהיא הערוץ שדרכו הרשות שולחת הודעות. רביעית, לא לשמור את אישורי ההגשה של כל הליך.
+
+## שאלות נפוצות
+
+לחברה שלי אין פעילות, האם עליי להשלים את שני ההליכים? כן. ה-RTBF חל על חברות פעילות ולא פעילות, והחברה רשומה ב-RUT גם ללא פעילות כלכלית, ולכן עליה למסור את הנתונים.
+
+מתי מתחילים לספור את המועדים? המועד של ה-RTBF נספר מהרישום או מהקצאת מספר התאגיד. המועד מול רשות המסים נספר מרישום שטר ההתאגדות.
+
+ומה אם החברה נרשמה באפריל? ב-RTBF חל המועד הנוח יותר מבין 20 ימי עסקים לבין חודש אפריל. ב-RUT ממשיכים לרוץ עשרת ימי העסקים.
+
+האם אתם יכולים לעשות זאת עבורי? כן. ב-GAMA Asesores אנו מגישים את שני ההליכים עבורכם, מההצהרה ב-Central Directo ועד לרישום ולעדכון הנתונים ב-TRIBU-CR.
+
+אם החברה שלכם נרשמה לאחרונה, או שאינכם בטוחים שהנתונים ב-RTBF וב-RUT מעודכנים, כתבו לנו ונבדוק את המקרה כדי למנוע קנסות וחסימות ב-TRIBU-CR.
+
+מקורות: חוק מס' 9416; החלטה משותפת MH-DGT-RES-0020-2024 / DG-336-2024, סעיף 8; קוד כללי ונהלי המס, סעיפים 78 ו-84 bis; תקנות הליך המס (צו מס' 38277-H), סעיף 22; החלטות MH-DGT-RES-0037-2025 (סעיפים 3 עד 5) ו-MH-DGT-RES-0013-2025 (סעיף 4); שכר הבסיס לשנת 2026 בסך ₡462,200 (המועצה העליונה של הרשות השופטת, ישיבה מס' 113-2025).`,
         },
       ],
     },
