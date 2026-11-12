@@ -176,7 +176,7 @@ Incluye asesoría en la estructura societaria más conveniente, inscripción en 
         {
           num: "01",
           title: "Experiencia Técnica",
-          text: "Más de 10 años en el mercado costarricense con dominio profundo de NIIF para PYMES, tributación actualizada y regulaciones locales vigentes. Capacitación continua en cambios normativos.",
+          text: "Más de 20 años en el mercado costarricense con dominio profundo de NIIF para PYMES, tributación actualizada y regulaciones locales vigentes. Capacitación continua en cambios normativos.",
         },
         {
           num: "02",
@@ -1064,7 +1064,7 @@ Includes corporate structure advice, Public Registry registration, legal ID, DGT
       label: "Why Choose Us?",
       title: "Commitment to Excellence",
       items: [
-        { num: "01", title: "Technical Expertise", text: "Over 10 years in the Costa Rican market with deep knowledge of IFRS for SMEs, updated taxation and current local regulations. Continuous training in regulatory changes." },
+        { num: "01", title: "Technical Expertise", text: "Over 20 years in the Costa Rican market with deep knowledge of IFRS for SMEs, updated taxation and current local regulations. Continuous training in regulatory changes." },
         { num: "02", title: "Personalized Service", text: "We don't believe in one-size-fits-all. We take the time to understand your business, industry and financial goals, designing solutions tailored to your business reality." },
         { num: "03", title: "Bilingual · ES / EN", text: "Full professional service in Spanish and English. We facilitate direct communication with local and international clients and prepare documentation for both audiences." },
         { num: "04", title: "360° Availability", text: "Offices in Barranca and Santa Teresa with a virtual team for all of Costa Rica. Flexibility for in-person or remote work, always with the same quality of service." },
@@ -1908,7 +1908,7 @@ For questions about this policy or to exercise your rights: GAMA CPA y Asesoría
       label: "למה לבחור אותנו?",
       title: "מחויבות למצוינות",
       items: [
-        { num: "01", title: "מומחיות טכנית", text: "מעל 10 שנות ניסיון בשוק קוסטה ריקה עם ידע מעמיק ב-IFRS לעסקים קטנים, מיסוי עדכני ותקנות מקומיות. עדכון מתמיד בשינויי חקיקה." },
+        { num: "01", title: "מומחיות טכנית", text: "מעל 20 שנות ניסיון בשוק קוסטה ריקה עם ידע מעמיק ב-IFRS לעסקים קטנים, מיסוי עדכני ותקנות מקומיות. עדכון מתמיד בשינויי חקיקה." },
         { num: "02", title: "שירות אישי", text: "אנו מאמינים בשירות מותאם אישית. לוקחים את הזמן להבין את העסק, הענף והמטרות הפיננסיות שלכם ומעצבים פתרונות המותאמים למציאות העסקית שלכם." },
         { num: "03", title: "שלישי לשוני ES / EN / עב", text: "שירות מקצועי מלא בספרדית, אנגלית ועברית. אנו מאפשרים תקשורת ישירה עם לקוחות מקומיים ומשקיעים זרים ומכינים תיעוד לכל הקהלים." },
         { num: "04", title: "זמינות מלאה", text: "משרדים בברנקה ובסנטה טרזה, עם צוות וירטואלי לכל קוסטה ריקה. גמישות לעבודה פנים אל פנים או מרחוק, תמיד באותה איכות שירות." },
@@ -2665,7 +2665,7 @@ function HeroSection({ lang, setSection }) {
 
           {/* Stats bar */}
           <div style={{ marginTop:72, paddingTop:40, borderTop:`1px solid rgba(5,30,87,0.1)`, display:"flex", gap:48, flexWrap:"wrap" }}>
-            {[["10+", lang==="he"?"שנות ניסיון":lang==="es"?"Años de experiencia":"Years of experience"],
+            {[["20+", lang==="he"?"שנות ניסיון":lang==="es"?"Años de experiencia":"Years of experience"],
               ["100+", lang==="he"?"לקוחות מרוצים":lang==="es"?"Clientes satisfechos":"Satisfied clients"],
               ["6", lang==="he"?"שירותים מקצועיים":lang==="es"?"Servicios especializados":"Specialized services"],
               ["2", lang==="he"?"משרדים בקוסטה ריקה":lang==="es"?"Oficinas en Costa Rica":"Offices in Costa Rica"]
