@@ -369,7 +369,7 @@ Es normal que el patrimonio cambie al implementar NIIF. Ajustes en depreciación
           category: "Normativa",
           date: "28 de abril, 2026",
           title: "Reforma tributaria 2026: Cambios que impactan su negocio",
-          summary: "Los cambios normativos de 2026 en Costa Rica introducen nuevas obligaciones de facturación, modificaciones en tasas, y el nuevo reporte de beneficiarios finales (CIF-BB). Conozca qué debe hacer.",
+          summary: "Los cambios normativos de 2026 en Costa Rica introducen nuevas obligaciones de facturación, modificaciones en tasas, y la declaración de beneficiarios finales (RTBF). Conozca qué debe hacer.",
           content: `La reforma tributaria 2026 moderniza la administración tributaria costarricense y introduce obligaciones nuevas para todos los tamaños de empresa. Ignorarlas tiene costo directo en sanciones.
 
 ## Facturación electrónica 100% obligatoria
@@ -388,9 +388,9 @@ Evalúe si con sus ingresos actuales le conviene más el régimen simplificado q
 
 La tasa de renta capital aumenta de 15% a 18% para ventas de activos. Se mantiene el 15% para activos poseídos más de 10 años (beneficio por inversión a largo plazo). Si tiene ventas de activos planeadas, analice el timing con su asesor.
 
-## Nueva declaración de beneficiarios finales (CIF-BB)
+## Declaración de beneficiarios finales (RTBF)
 
-Todas las sociedades mercantiles deben presentar anualmente la Declaración de Información sobre Beneficiarios Finales, identificando quiénes son los propietarios reales de la empresa. El primer vencimiento fue el 31 de marzo de 2026. La multa por incumplimiento va de ₡500.000 a ₡2.000.000.
+Todas las sociedades mercantiles, incluidas las inactivas, deben presentar cada año en abril la declaración del Registro de Transparencia y Beneficiarios Finales ante el Banco Central, por medio de Central Directo, identificando quiénes son los propietarios reales de la empresa. Si no se presenta, el artículo 84 bis del Código de Normas y Procedimientos Tributarios establece una multa del 2% de los ingresos brutos del período anterior, con un mínimo de 3 y un máximo de 100 salarios base (entre ₡1.386.600 y ₡46.220.000 con el salario base de 2026).
 
 ## Aumento en retención de servicios
 
@@ -482,7 +482,7 @@ Inscríbase ante la DGT si aún no lo ha hecho. Emita factura electrónica por c
 
 Dentro del primer mes de inicio de operaciones debe completar: inscripción ante la Dirección General de Tributación (DGT) como contribuyente del IVA y del Impuesto sobre la Renta, inscripción ante la Caja Costarricense de Seguro Social (CCSS) como patrono (si tiene empleados), registro de la razón social ante la Municipalidad del cantón donde opera (patente municipal), y apertura de cuenta bancaria empresarial.
 
-La inscripción en la DGT se realiza en el portal ATV (Administración Tributaria Virtual) con la cédula jurídica de la sociedad.
+Las sociedades inscritas en el Registro Nacional quedan registradas de oficio en el Registro Único Tributario (RUT), pero deben completar sus datos (domicilio fiscal, correo electrónico y actividades económicas) en TRIBU-CR, con la cédula jurídica de la sociedad, dentro de los diez días hábiles siguientes a la inscripción de la escritura constitutiva. Si va a desarrollar una actividad económica, debe registrarla también en TRIBU-CR dentro de los diez días hábiles siguientes al inicio de operaciones.
 
 ## Obligaciones mensuales desde el primer mes
 
@@ -490,7 +490,7 @@ Desde el primer mes de operaciones debe declarar y pagar el IVA mensualmente (an
 
 ## Facturación electrónica: obligatoria desde el inicio
 
-No existe período de gracia para la facturación electrónica. Desde el primer día de operaciones debe emitir facturas electrónicas autorizadas por la DGT. Para ello necesita registrarse como emisor en el ATV, adquirir un certificado digital de la ACCV, y contar con software de facturación compatible o usar el sistema Comprobantes Electrónicos gratuito de la DGT.
+No existe período de gracia para la facturación electrónica. Desde el primer día de operaciones debe emitir facturas electrónicas autorizadas por la DGT. Para ello necesita registrarse como emisor en TRIBU-CR, adquirir un certificado digital de la ACCV, y contar con software de facturación compatible o usar el sistema Comprobantes Electrónicos gratuito de la DGT.
 
 ## Impuesto sobre la Renta: declaración anual
 
@@ -502,9 +502,9 @@ En el primer año, aunque tenga pérdidas (lo cual es común), debe presentar la
 
 Todas las sociedades mercantiles inscritas en Costa Rica, independientemente de si operan o no, deben pagar el impuesto a las personas jurídicas anualmente. Para el período 2026, el monto varía según la actividad y el tamaño de la empresa. Su no pago puede generar limitaciones en trámites registrales.
 
-## Declaración de beneficiarios finales (CIF-BB)
+## Declaración de beneficiarios finales (RTBF)
 
-Las nuevas sociedades deben presentar la declaración de información sobre beneficiarios finales dentro de los primeros 20 días hábiles después de su inscripción en el Registro Nacional. Esta declaración identifica a los propietarios reales de la empresa y debe actualizarse anualmente.
+Las nuevas sociedades deben presentar la declaración del Registro de Transparencia y Beneficiarios Finales ante el Banco Central, por medio de Central Directo, dentro de los primeros 20 días hábiles después de su inscripción en el Registro Nacional. Esta declaración identifica a los propietarios reales de la empresa y se presenta de nuevo cada año en abril.
 
 ## Errores del primer año más comunes
 
@@ -1234,7 +1234,7 @@ It is normal for equity to change when implementing IFRS. Adjustments in depreci
         {
           id:5, category:"Regulations", date:"April 28, 2026",
           title:"Tax reform 2026: Changes that impact your business",
-          summary:"The 2026 regulatory changes in Costa Rica introduce new invoicing obligations, rate modifications, and the new beneficial owners report (CIF-BB). Know what you must do.",
+          summary:"The 2026 regulatory changes in Costa Rica introduce new invoicing obligations, rate modifications, and the beneficial owners declaration (RTBF). Know what you must do.",
           content:`The 2026 tax reform modernizes Costa Rican tax administration and introduces new obligations for companies of all sizes. Ignoring them has a direct cost in penalties.
 
 ## Electronic invoicing 100% mandatory
@@ -1253,9 +1253,9 @@ Evaluate whether, with your current income, the simplified regime is more effici
 
 The capital income rate increases from 15% to 18% for asset sales. The 15% rate is maintained for assets held more than 10 years (long-term investment benefit). If you have planned asset sales, analyze the timing with your advisor.
 
-## New beneficial owners declaration (CIF-BB)
+## Beneficial owners declaration (RTBF)
 
-All business corporations must annually file the Declaration of Information on Final Beneficiaries, identifying who are the real owners of the company. The first deadline was March 31, 2026. The penalty for non-compliance ranges from ₡500,000 to ₡2,000,000.
+All business corporations, including inactive ones, must file the Transparency and Final Beneficiaries Registry declaration with the Central Bank every April through Central Directo, identifying who the real owners of the company are. If it is not filed, Article 84 bis of the Tax Rules and Procedures Code provides a fine of 2% of the gross income of the prior period, with a minimum of 3 and a maximum of 100 base salaries (between ₡1,386,600 and ₡46,220,000 with the 2026 base salary).
 
 ## Increase in service withholding
 
@@ -1345,7 +1345,7 @@ At GAMA Advisors we help platform hosts regularize and optimize their tax situat
 
 Within the first month of starting operations you must complete: registration with the General Tax Directorate (DGT) as a VAT and Income Tax contributor, registration with the Costa Rican Social Security Fund (CCSS) as an employer (if you have employees), registration of the business name with the Municipality of the canton where you operate, and opening a business bank account.
 
-DGT registration is done on the ATV (Virtual Tax Administration) portal with the company's legal ID.
+Companies registered with the National Registry are registered automatically in the Single Taxpayer Registry (RUT), but they must complete their data (tax address, email and economic activities) in TRIBU-CR, using the company's legal ID, within ten business days after the incorporation deed is registered. If the company will carry on an economic activity, it must also register it in TRIBU-CR within ten business days after operations begin.
 
 ## Monthly obligations from the first month
 
@@ -1353,7 +1353,7 @@ From the first month of operations you must declare and pay VAT monthly (before 
 
 ## Electronic invoicing: mandatory from day one
 
-There is no grace period for electronic invoicing. From the first day of operations you must issue DGT-authorized electronic invoices. For this you need to register as an issuer on the ATV, obtain a digital certificate from the ACCV, and have compatible invoicing software or use the DGT's free Electronic Receipts system.
+There is no grace period for electronic invoicing. From the first day of operations you must issue DGT-authorized electronic invoices. For this you need to register as an issuer in TRIBU-CR, obtain a digital certificate from the ACCV, and have compatible invoicing software or use the DGT's free Electronic Receipts system.
 
 ## Income Tax: annual declaration
 
@@ -1363,9 +1363,9 @@ The annual income tax declaration (Form D-101) is filed within two months and fi
 
 All business corporations registered in Costa Rica, regardless of whether they operate or not, must pay the annual legal entities tax. Non-payment can generate limitations in registry procedures.
 
-## Beneficial owners declaration (CIF-BB)
+## Beneficial owners declaration (RTBF)
 
-New corporations must file the beneficial owners information declaration within the first 20 business days after registration at the National Registry. This declaration identifies the real owners of the company and must be updated annually.
+New corporations must file the Transparency and Final Beneficiaries Registry declaration with the Central Bank, through Central Directo, within the first 20 business days after registration at the National Registry. This declaration identifies the real owners of the company and is filed again every April.
 
 At GAMA Advisors we accompany companies from their incorporation, ensuring they start correctly from day one.`,
         },
