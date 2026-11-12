@@ -827,7 +827,7 @@ Fuente: Decreto Ejecutivo N.º 45953-H, Alcance N.º 139 a La Gaceta N.º 196 de
           id: 15,
           category: "Empresas Nuevas",
           date: "11 de noviembre, 2026",
-          title: "Sociedades nuevas: RTBF en 20 días hábiles y TRIBU-CR en 10",
+          title: "Sociedades nuevas: declaración del RTBF en 20 días hábiles y TRIBU-CR en 10",
           summary: "Al inscribirse una sociedad en el Registro Nacional nacen dos obligaciones con plazos distintos: la declaración de Beneficiarios Finales (20 días hábiles, ante el Banco Central) y el registro y actualización de datos en el RUT por TRIBU-CR (10 días hábiles, ante Tributación). Explicamos plazos, base legal y sanciones.",
           content: `Cuando una sociedad queda inscrita en el Registro Nacional y se le asigna su cédula jurídica, empiezan a correr dos plazos que con frecuencia se confunden porque se cumplen ante instituciones distintas: la declaración del Registro de Transparencia y Beneficiarios Finales (RTBF), que se presenta ante el Banco Central de Costa Rica, y el registro y actualización de datos en el Registro Único Tributario (RUT), que se hace ante la Dirección General de Tributación por medio de TRIBU-CR. Una no sustituye a la otra, y ambas aplican aunque la sociedad todavía no tenga actividad económica.
 
@@ -1671,7 +1671,7 @@ Source: Executive Decree No. 45953-H, Supplement No. 139 to La Gaceta No. 196 of
           id: 15,
           category: "New Companies",
           date: "November 11, 2026",
-          title: "New companies: RTBF in 20 business days and TRIBU-CR in 10",
+          title: "New companies: RTBF declaration in 20 business days and TRIBU-CR in 10",
           summary: "When a company is registered with the National Registry, two obligations with different deadlines arise: the Final Beneficiaries declaration (20 business days, with the Central Bank) and the registration and update of data in the RUT through TRIBU-CR (10 business days, with the Tax Authority). We explain the deadlines, legal basis and penalties.",
           content: `When a company is registered with the National Registry and receives its legal ID number (cédula jurídica), two deadlines start running that are often confused because they are met before different institutions: the Transparency and Final Beneficiaries Registry (RTBF) declaration, filed with the Central Bank of Costa Rica, and the registration and update of data in the Single Taxpayer Registry (RUT), done with the Tax Authority (Dirección General de Tributación) through TRIBU-CR. One does not replace the other, and both apply even if the company has no economic activity yet.
 
@@ -2328,7 +2328,7 @@ Registro de Beneficiarios Finales: רישום הבעלים האמיתיים תו
           id: 15,
           category: "חברות חדשות",
           date: "11 בנובמבר, 2026",
-          title: "חברות חדשות: RTBF ב-20 ימי עסקים ו-TRIBU-CR ב-10",
+          title: "חברות חדשות: הצהרת RTBF ב-20 ימי עסקים ו-TRIBU-CR ב-10",
           summary: "עם רישום חברה במרשם הלאומי נוצרות שתי חובות עם מועדים שונים: הצהרת הנהנים הסופיים (20 ימי עסקים, מול הבנק המרכזי) ורישום ועדכון נתונים ב-RUT באמצעות TRIBU-CR (10 ימי עסקים, מול רשות המסים). אנו מסבירים את המועדים, הבסיס החוקי והסנקציות.",
           content: `כאשר חברה נרשמת במרשם הלאומי (Registro Nacional) ומוקצה לה מספר תאגיד (cédula jurídica), מתחילים לרוץ שני מועדים שנוטים להתבלבל ביניהם, משום שהם מתבצעים מול גופים שונים: הצהרת מרשם השקיפות והנהנים הסופיים (RTBF), המוגשת לבנק המרכזי של קוסטה ריקה, ורישום ועדכון נתונים במרשם המסים האחיד (RUT), המתבצע מול רשות המסים (Dirección General de Tributación) באמצעות מערכת TRIBU-CR. אחת אינה מחליפה את האחרת, ושתיהן חלות גם אם לחברה עדיין אין פעילות כלכלית.
 
