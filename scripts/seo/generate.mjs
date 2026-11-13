@@ -362,7 +362,7 @@ function patchIndex() {
       address: post(s), geo: { "@type": "GeoCoordinates", latitude: s.lat, longitude: s.lng },
     }],
     founder: { "@type": "Person", name: "Gustavo Monge Alemán", jobTitle: "Contador Público Autorizado", email: CONTACT.email },
-    areaServed: { "@type": "Country", name: "Costa Rica" }, knowsLanguage: ["es", "en"],
+    areaServed: { "@type": "Country", name: "Costa Rica" }, knowsLanguage: ["es", "en", "he"],
     sameAs: SOCIAL, priceRange: "$$", currenciesAccepted: "CRC, USD", paymentAccepted: "Transferencia bancaria, SINPE Móvil",
     hasOfferCatalog: {
       "@type": "OfferCatalog", name: "Servicios contables, tributarios y de auditoría",
