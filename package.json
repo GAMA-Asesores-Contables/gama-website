@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "seo": "node scripts/seo/generate.mjs",
+    "prebuild": "node scripts/seo/generate.mjs",
     "build": "vite build",
     "preview": "vite preview"
   },

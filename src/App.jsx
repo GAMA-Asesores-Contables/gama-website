@@ -3939,8 +3939,8 @@ export default function App() {
   /* SEO meta tags — update on language change */
   useEffect(() => {
     const META = {
-      es: { title:"GAMA Asesores Contables | Contabilidad y Finanzas en Costa Rica", desc:"Firma especializada en contabilidad, NIIF para PYMES, declaraciones fiscales, auditoría y asesoría financiera en Costa Rica. Servicio bilingüe ES/EN.", kw:"contabilidad costa rica, contador puntarenas, NIIF pymes, IVA costa rica, declaraciones tributarias" },
-      en: { title:"GAMA Advisors | Accounting & Finance in Costa Rica", desc:"Specialized firm in accounting, IFRS for SMEs, tax declarations, audit and financial advisory in Costa Rica. Bilingual ES/EN service.", kw:"accountant costa rica, CPA puntarenas, IFRS SMEs, VAT costa rica, tax filing" },
+      es: { title:"Contadores CPA en Puntarenas y Santa Teresa | GAMA Asesores", desc:"Contabilidad, NIIF para PYMES, impuestos, auditoría y certificaciones CPA en Costa Rica. Oficinas en Barranca y Santa Teresa. Atención en español e inglés.", kw:"contabilidad costa rica, contador puntarenas, NIIF pymes, IVA costa rica, declaraciones tributarias" },
+      en: { title:"CPA Accountants in Puntarenas & Santa Teresa, Costa Rica | GAMA", desc:"Accounting, IFRS for SMEs, tax returns, audit and CPA certifications in Costa Rica. Offices in Barranca and Santa Teresa. Service in English and Spanish.", kw:"accountant costa rica, CPA puntarenas, IFRS SMEs, VAT costa rica, tax filing" },
       he: { title:"GAMA Asesores | חשבונאות ופיננסים בקוסטה ריקה", desc:"משרד המתמחה בחשבונאות, IFRS לעסקים קטנים, הגשת דוחות מס, ביקורת וייעוץ פיננסי בקוסטה ריקה.", kw:"רואה חשבון קוסטה ריקה, CPA, IFRS, מע״מ" },
     };
     const m = META[lang];
@@ -3954,21 +3954,13 @@ export default function App() {
     setMeta("keywords", m.kw);
     setMeta("og:title", m.title, "property");
     setMeta("og:description", m.desc, "property");
-    setMeta("og:url", "https://gamacpa-asesores.com", "property");
+    setMeta("og:url", "https://gamacpa-asesores.com/", "property");
     setMeta("og:type", "website", "property");
-    setMeta("og:image", "https://gamacpa-asesores.com/logo_gama_asesores_modificado_web.jpg", "property");
+    setMeta("og:image", "https://gamacpa-asesores.com/og-gama.jpg", "property");
     setMeta("twitter:card", "summary_large_image");
     setMeta("twitter:title", m.title);
     setMeta("twitter:description", m.desc);
   }, [lang]);
-
-  /* Schema.org LocalBusiness */
-  useEffect(() => {
-    const id = "schema-local-business";
-    let el = document.getElementById(id);
-    if (!el) { el = document.createElement("script"); el.id = id; el.type = "application/ld+json"; document.head.appendChild(el); }
-    el.textContent = JSON.stringify({ "@context":"https://schema.org", "@type":"AccountingService", name:"GAMA Asesores Contables", url:"https://gamacpa-asesores.com", logo:"https://gamacpa-asesores.com/logo_gama_asesores_modificado_web.jpg", telephone:"+50688969883", email:"gmongea@gamacpa-asesores.com", address:[{ "@type":"PostalAddress", streetAddress:"Residencial Bulevar del Sol, Etapa IV, Casa E-14", addressLocality:"Barranca", addressRegion:"Puntarenas", addressCountry:"CR" },{ "@type":"PostalAddress", streetAddress:"2° piso Súper El Mango, frente Plaza de Fútbol Santa Teresa", addressLocality:"Cóbano", addressRegion:"Puntarenas", addressCountry:"CR" }], areaServed:"CR", availableLanguage:["Spanish","English","Hebrew"], description:"Firma especializada en contabilidad, NIIF para PYMES, declaraciones fiscales, auditoría y asesoría financiera en Costa Rica." });
-  }, []);
 
   /* Google Analytics: se carga una sola vez desde index.html (G-CB4GKL0NTB) */
 
