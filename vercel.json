@@ -3,13 +3,34 @@
   "redirects": [
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "proyecto-fz6yq.vercel.app" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "project-fz6yq.vercel.app"
+        }
+      ],
       "destination": "https://gamacpa-asesores.com/:path*",
       "permanent": true
     },
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "www.gamacpa-asesores.com" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "proyecto-fz6yq.vercel.app"
+        }
+      ],
+      "destination": "https://gamacpa-asesores.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.gamacpa-asesores.com"
+        }
+      ],
       "destination": "https://gamacpa-asesores.com/:path*",
       "permanent": true
     }
@@ -18,8 +39,14 @@
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
       ]
     }
   ]
