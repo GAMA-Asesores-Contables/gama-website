@@ -1,92 +1,279 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://gamacpa-asesores.com/</loc>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://gamacpa-asesores.com/#services</loc>
+    <loc>https://gamacpa-asesores.com/servicios/</loc>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es-CR" href="https://gamacpa-asesores.com/servicios/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gamacpa-asesores.com/en/services/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gamacpa-asesores.com/servicios/"/>
   </url>
   <url>
-    <loc>https://gamacpa-asesores.com/#about</loc>
-    <changefreq>yearly</changefreq>
+    <loc>https://gamacpa-asesores.com/en/services/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es-CR" href="https://gamacpa-asesores.com/servicios/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gamacpa-asesores.com/en/services/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gamacpa-asesores.com/servicios/"/>
+  </url>
+  <url>
+    <loc>https://gamacpa-asesores.com/servicios/certificaciones-cpa/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es-CR" href="https://gamacpa-asesores.com/servicios/certificaciones-cpa/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gamacpa-asesores.com/en/services/cpa-certifications/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gamacpa-asesores.com/servicios/certificaciones-cpa/"/>
+  </url>
+  <url>
+    <loc>https://gamacpa-asesores.com/en/services/cpa-certifications/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es-CR" href="https://gamacpa-asesores.com/servicios/certificaciones-cpa/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gamacpa-asesores.com/en/services/cpa-certifications/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gamacpa-asesores.com/servicios/certificaciones-cpa/"/>
+  </url>
+  <url>
+    <loc>https://gamacpa-asesores.com/servicios/auditoria-aseguramiento/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es-CR" href="https://gamacpa-asesores.com/servicios/auditoria-aseguramiento/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gamacpa-asesores.com/en/services/audit-assurance/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gamacpa-asesores.com/servicios/auditoria-aseguramiento/"/>
+  </url>
+  <url>
+    <loc>https://gamacpa-asesores.com/en/services/audit-assurance/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es-CR" href="https://gamacpa-asesores.com/servicios/auditoria-aseguramiento/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gamacpa-asesores.com/en/services/audit-assurance/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gamacpa-asesores.com/servicios/auditoria-aseguramiento/"/>
+  </url>
+  <url>
+    <loc>https://gamacpa-asesores.com/servicios/niif-para-pymes/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es-CR" href="https://gamacpa-asesores.com/servicios/niif-para-pymes/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gamacpa-asesores.com/en/services/ifrs-for-smes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gamacpa-asesores.com/servicios/niif-para-pymes/"/>
+  </url>
+  <url>
+    <loc>https://gamacpa-asesores.com/en/services/ifrs-for-smes/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es-CR" href="https://gamacpa-asesores.com/servicios/niif-para-pymes/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gamacpa-asesores.com/en/services/ifrs-for-smes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gamacpa-asesores.com/servicios/niif-para-pymes/"/>
+  </url>
+  <url>
+    <loc>https://gamacpa-asesores.com/servicios/declaraciones-fiscales/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es-CR" href="https://gamacpa-asesores.com/servicios/declaraciones-fiscales/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gamacpa-asesores.com/en/services/tax-compliance/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gamacpa-asesores.com/servicios/declaraciones-fiscales/"/>
+  </url>
+  <url>
+    <loc>https://gamacpa-asesores.com/en/services/tax-compliance/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es-CR" href="https://gamacpa-asesores.com/servicios/declaraciones-fiscales/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gamacpa-asesores.com/en/services/tax-compliance/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gamacpa-asesores.com/servicios/declaraciones-fiscales/"/>
+  </url>
+  <url>
+    <loc>https://gamacpa-asesores.com/servicios/outsourcing-contable/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es-CR" href="https://gamacpa-asesores.com/servicios/outsourcing-contable/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gamacpa-asesores.com/en/services/accounting-outsourcing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gamacpa-asesores.com/servicios/outsourcing-contable/"/>
+  </url>
+  <url>
+    <loc>https://gamacpa-asesores.com/en/services/accounting-outsourcing/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es-CR" href="https://gamacpa-asesores.com/servicios/outsourcing-contable/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gamacpa-asesores.com/en/services/accounting-outsourcing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gamacpa-asesores.com/servicios/outsourcing-contable/"/>
+  </url>
+  <url>
+    <loc>https://gamacpa-asesores.com/servicios/proyecciones-financieras/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es-CR" href="https://gamacpa-asesores.com/servicios/proyecciones-financieras/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gamacpa-asesores.com/en/services/financial-projections/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gamacpa-asesores.com/servicios/proyecciones-financieras/"/>
+  </url>
+  <url>
+    <loc>https://gamacpa-asesores.com/en/services/financial-projections/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es-CR" href="https://gamacpa-asesores.com/servicios/proyecciones-financieras/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gamacpa-asesores.com/en/services/financial-projections/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gamacpa-asesores.com/servicios/proyecciones-financieras/"/>
+  </url>
+  <url>
+    <loc>https://gamacpa-asesores.com/servicios/constitucion-societaria/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es-CR" href="https://gamacpa-asesores.com/servicios/constitucion-societaria/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gamacpa-asesores.com/en/services/company-formation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gamacpa-asesores.com/servicios/constitucion-societaria/"/>
+  </url>
+  <url>
+    <loc>https://gamacpa-asesores.com/en/services/company-formation/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es-CR" href="https://gamacpa-asesores.com/servicios/constitucion-societaria/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gamacpa-asesores.com/en/services/company-formation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gamacpa-asesores.com/servicios/constitucion-societaria/"/>
+  </url>
+  <url>
+    <loc>https://gamacpa-asesores.com/contador-puntarenas-barranca/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es-CR" href="https://gamacpa-asesores.com/contador-puntarenas-barranca/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gamacpa-asesores.com/en/accountant-barranca-puntarenas/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gamacpa-asesores.com/contador-puntarenas-barranca/"/>
+  </url>
+  <url>
+    <loc>https://gamacpa-asesores.com/en/accountant-barranca-puntarenas/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es-CR" href="https://gamacpa-asesores.com/contador-puntarenas-barranca/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gamacpa-asesores.com/en/accountant-barranca-puntarenas/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gamacpa-asesores.com/contador-puntarenas-barranca/"/>
+  </url>
+  <url>
+    <loc>https://gamacpa-asesores.com/contador-santa-teresa-cobano/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es-CR" href="https://gamacpa-asesores.com/contador-santa-teresa-cobano/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gamacpa-asesores.com/en/accountant-santa-teresa-costa-rica/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gamacpa-asesores.com/contador-santa-teresa-cobano/"/>
+  </url>
+  <url>
+    <loc>https://gamacpa-asesores.com/en/accountant-santa-teresa-costa-rica/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es-CR" href="https://gamacpa-asesores.com/contador-santa-teresa-cobano/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gamacpa-asesores.com/en/accountant-santa-teresa-costa-rica/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gamacpa-asesores.com/contador-santa-teresa-cobano/"/>
+  </url>
+  <url>
+    <loc>https://gamacpa-asesores.com/blog/airbnb-booking-homeaway-costa-rica-impuestos-obligaciones.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://gamacpa-asesores.com/#blog</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://gamacpa-asesores.com/blog/correo-electronico-obligatorio-sociedad-registro-nacional-abre.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://gamacpa-asesores.com/#contact</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://gamacpa-asesores.com/blog/factura-electronica-4-4-nuevos-documentos-cambios.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gamacpa-asesores.com/blog/ganancias-capital-costa-rica-aplicacion-pago-beneficios.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gamacpa-asesores.com/blog/hacienda-reestructura-18-areas-legales-significa-contribuyentes.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gamacpa-asesores.com/blog/iva-costa-rica-declaracion-calculo-obligaciones-actualizadas.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gamacpa-asesores.com/blog/niif-pymes-implementacion-paso-paso-empresa.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gamacpa-asesores.com/blog/obligaciones-tributarias-empresas-nuevas-costa-rica-guia.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gamacpa-asesores.com/blog/planilla-ccss-costa-rica-obligaciones-empleador-calculo.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gamacpa-asesores.com/blog/reforma-tributaria-2026-cambios-impactan-negocio.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://gamacpa-asesores.com/blog/registro-sinpe-movil-hacienda.html</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gamacpa-asesores.com/blog/tribu-cr-guia-completa-tributacion-electronica-2026.html</loc>
-    <lastmod>2026-10-21</lastmod>
-  </url>
-  <url>
-    <loc>https://gamacpa-asesores.com/blog/iva-costa-rica-declaracion-calculo-obligaciones-actualizadas.html</loc>
-    <lastmod>2026-10-21</lastmod>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://gamacpa-asesores.com/blog/renta-capital-vs-renta-utilidades-diferencias-estrategias.html</loc>
     <lastmod>2026-10-21</lastmod>
-  </url>
-  <url>
-    <loc>https://gamacpa-asesores.com/blog/niif-pymes-implementacion-paso-paso-empresa.html</loc>
-    <lastmod>2026-10-21</lastmod>
-  </url>
-  <url>
-    <loc>https://gamacpa-asesores.com/blog/reforma-tributaria-2026-cambios-impactan-negocio.html</loc>
-    <lastmod>2026-10-21</lastmod>
-  </url>
-  <url>
-    <loc>https://gamacpa-asesores.com/blog/ganancias-capital-costa-rica-aplicacion-pago-beneficios.html</loc>
-    <lastmod>2026-10-21</lastmod>
-  </url>
-  <url>
-    <loc>https://gamacpa-asesores.com/blog/airbnb-booking-homeaway-costa-rica-impuestos-obligaciones.html</loc>
-    <lastmod>2026-10-21</lastmod>
-  </url>
-  <url>
-    <loc>https://gamacpa-asesores.com/blog/obligaciones-tributarias-empresas-nuevas-costa-rica-guia.html</loc>
-    <lastmod>2026-10-21</lastmod>
-  </url>
-  <url>
-    <loc>https://gamacpa-asesores.com/blog/planilla-ccss-costa-rica-obligaciones-empleador-calculo.html</loc>
-    <lastmod>2026-10-21</lastmod>
-  </url>
-  <url>
-    <loc>https://gamacpa-asesores.com/blog/tributacion-profesionales-independientes-costa-rica-debe-saber.html</loc>
-    <lastmod>2026-10-21</lastmod>
-  </url>
-  <url>
-    <loc>https://gamacpa-asesores.com/blog/hacienda-reestructura-18-areas-legales-significa-contribuyentes.html</loc>
-    <lastmod>2026-10-21</lastmod>
-  </url>
-  <url>
-    <loc>https://gamacpa-asesores.com/blog/correo-electronico-obligatorio-sociedad-registro-nacional-abre.html</loc>
-    <lastmod>2026-10-21</lastmod>
-  </url>
-  <url>
-    <loc>https://gamacpa-asesores.com/blog/factura-electronica-4-4-nuevos-documentos-cambios.html</loc>
-    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://gamacpa-asesores.com/blog/sociedades-nuevas-rtbf-tribu-cr-plazos.html</loc>
     <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gamacpa-asesores.com/blog/tribu-cr-guia-completa-tributacion-electronica-2026.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gamacpa-asesores.com/blog/tributacion-profesionales-independientes-costa-rica-debe-saber.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
