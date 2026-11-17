@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { NEWS, NEWS_LABELS, fmtNewsDate, newsActive } from "./noticias.js";
 
 /* ─────────────── BRAND TOKENS ─────────────── */
 const C = {
@@ -105,7 +106,7 @@ const icons = {
 const DATA = {
   es: {
     nav: {
-      links: ["Inicio","Servicios","Nosotros","Blog","Herramientas","Contacto"],
+      links: ["Inicio","Servicios","Nosotros","Blog","Noticias","Herramientas","Contacto"],
       cta: "Presupuesto",
     },
     hero: {
@@ -992,13 +993,13 @@ Para consultas sobre esta política o para ejercer sus derechos: GAMA CPA y Ases
     footer: {
       tagline: "Contabilidad · Finanzas · Consultoría Empresarial",
       rights: "© 2026 GAMA Asesores Contables. Todos los derechos reservados.",
-      links: ["Inicio","Servicios","Nosotros","Blog","Herramientas","Contacto"],
+      links: ["Inicio","Servicios","Nosotros","Blog","Noticias","Herramientas","Contacto"],
     },
   },
 
   /* ── ENGLISH ── */
   en: {
-    nav: { links: ["Home","Services","About","Blog","Tools","Contact"], cta: "Get Quote" },
+    nav: { links: ["Home","Services","About","Blog","News","Tools","Contact"], cta: "Get Quote" },
     hero: {
       badge: "Specialized firm · Costa Rica",
       title: "Accounting, Tax\n& Financial Advisory",
@@ -1836,13 +1837,13 @@ For questions about this policy or to exercise your rights: GAMA CPA y Asesoría
     footer: {
       tagline: "Accounting · Finance · Business Consulting",
       rights: "© 2026 GAMA Asesores Contables. All rights reserved.",
-      links: ["Home","Services","About","Blog","Tools","Contact"],
+      links: ["Home","Services","About","Blog","News","Tools","Contact"],
     },
   },
 
   /* ── HEBREW ── */
   he: {
-    nav: { links: ["ראשי","שירותים","אודות","בלוג","כלים","צור קשר"], cta: "בקש הצעת מחיר" },
+    nav: { links: ["ראשי","שירותים","אודות","בלוג","חדשות","כלים","צור קשר"], cta: "בקש הצעת מחיר" },
     hero: {
       badge: "משרד מקצועי · קוסטה ריקה",
       title: "ייעוץ חשבונאי,\nמיסויי ופיננסי",
@@ -2481,7 +2482,7 @@ GAMA CPA y Asesoría Contable, S.R.L. (מספר עוסק 3-102-913105), להלן
     footer: {
       tagline: "חשבונאות · פיננסים · ייעוץ עסקי",
       rights: "© 2026 GAMA Asesores Contables. כל הזכויות שמורות.",
-      links: ["ראשי","שירותים","אודות","בלוג","כלים","צור קשר"],
+      links: ["ראשי","שירותים","אודות","בלוג","חדשות","כלים","צור קשר"],
     },
   },
 };
@@ -2508,7 +2509,7 @@ function Navbar({ lang, setLang, section, setSection }) {
     padding: "0 5%",
   };
 
-  const navSections = ["home","services","about","blog","tools","contact"];
+  const navSections = ["home","services","about","blog","news","tools","contact"];
 
   const go = (s) => {
     setSection(s);
@@ -2527,7 +2528,7 @@ function Navbar({ lang, setLang, section, setSection }) {
         </div>
 
         {/* Desktop links */}
-        <div style={{ display:"flex", alignItems:"center", gap:20 }} className="nav-desktop">
+        <div style={{ display:"flex", alignItems:"center", gap:16 }} className="nav-desktop">
           {t.links.map((link, i) => (
             <button key={i}
               onClick={() => go(navSections[i])}
@@ -2559,7 +2560,7 @@ function Navbar({ lang, setLang, section, setSection }) {
             ))}
           </div>
 
-          <a href="https://calendly.com/gamacpa-asesores/30min" target="_blank" rel="noopener noreferrer"
+          <a href="https://calendly.com/gamacpa-asesores/30min" target="_blank" rel="noopener noreferrer" className="nav-cal"
             style={{ ...btn.outline, padding:"7px 14px", fontSize:"0.72rem", textDecoration:"none", color:C.gold, borderColor:C.gold }}
             onMouseEnter={e=>{e.currentTarget.style.background=C.gold;e.currentTarget.style.color=C.navy;}}
             onMouseLeave={e=>{e.currentTarget.style.background="transparent";e.currentTarget.style.color=C.gold;}}
@@ -3054,6 +3055,115 @@ function ArticleView({ article, lang, onBack }) {
             target="_blank" rel="noopener noreferrer"
             style={{ ...btn.primary, display:"inline-block", textDecoration:"none" }}
           >{lang==="he" ? "שלחו הודעה ב-WhatsApp" : lang==="es" ? "Consultar por WhatsApp" : "Ask via WhatsApp"}</a>
+        </div>
+      </div>
+      <WhatsAppBtn />
+    </section>
+  );
+}
+
+/* ── NEWS (noticias / avisos de último momento) ── */
+/* Contenido en español e inglés; en hebreo se muestra la versión en inglés. */
+const newsLang = (lang) => (lang === "es" ? "es" : "en");
+
+function NewsBody({ blocks }) {
+  return blocks.map((b, i) => {
+    if (Array.isArray(b)) return <ul key={i} style={{ margin:"0 0 18px 22px", fontFamily:"'Montserrat',sans-serif", fontSize:"1rem", color:"#3d3830", lineHeight:1.85 }}>{b.map((li, j) => <li key={j} style={{ marginBottom:6 }}>{li}</li>)}</ul>;
+    if (b.startsWith("## ")) return <div key={i} style={{ textAlign:"center", marginTop:36, marginBottom:16 }}><h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.3rem", color:C.navy, fontWeight:700, lineHeight:1.35, margin:0 }}>{b.slice(3)}</h2><div style={{ width:48, height:3, background:C.gold, margin:"12px auto 0" }}/></div>;
+    return <p key={i} style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"1rem", color:"#3d3830", lineHeight:1.85, marginBottom:14 }}>{b}</p>;
+  });
+}
+
+function NewsBadge({ item, n }) {
+  const on = newsActive(item);
+  return <span style={{ background: on ? "#1f7a4d" : "#8a8573", color:C.white, fontFamily:"'Montserrat',sans-serif", fontSize:"0.68rem", fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase", padding:"3px 10px", borderRadius:2 }}>{on ? n.active : n.expired}</span>;
+}
+
+function NewsList({ lang, onRead }) {
+  const lk = newsLang(lang);
+  const n = NEWS_LABELS[lk];
+  const items = [...NEWS].sort((a, b) => (a.date < b.date ? 1 : -1));
+  return (
+    <section style={{ padding:"100px 5%", background:"#f4f1eb" }}>
+      <div style={{ maxWidth:1200, margin:"0 auto" }}>
+        <div style={{ marginBottom:64, textAlign:"center" }}>
+          <p style={{ color:C.gold, fontFamily:"'Montserrat',sans-serif", fontSize:"0.75rem", letterSpacing:"0.2em", textTransform:"uppercase", fontWeight:700, marginBottom:12 }}>{n.label}</p>
+          <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(1.9rem,3.5vw,2.8rem)", color:C.navy, fontWeight:700, marginBottom:12 }}>{n.title}</h2>
+          <p style={{ fontFamily:"'Montserrat',sans-serif", color:"#6b6560", maxWidth:560, margin:"0 auto", lineHeight:1.7, fontSize:"0.92rem" }}>{n.subtitle}</p>
+        </div>
+        {items.length === 0 && <p style={{ textAlign:"center", fontFamily:"'Montserrat',sans-serif", color:"#6b6560" }}>{n.empty}</p>}
+        <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(340px,1fr))", gap:28 }}>
+          {items.map(it => {
+            const d = it[lk];
+            return (
+              <article key={it.slug} style={{ background:C.white, borderRadius:2, overflow:"hidden", boxShadow:"0 2px 16px rgba(5,30,87,0.08)", transition:"box-shadow .25s, transform .25s", cursor:"pointer", borderTop:`3px solid ${C.gold}` }}
+                onMouseEnter={e => { e.currentTarget.style.boxShadow="0 8px 32px rgba(5,30,87,0.14)"; e.currentTarget.style.transform="translateY(-4px)"; }}
+                onMouseLeave={e => { e.currentTarget.style.boxShadow="0 2px 16px rgba(5,30,87,0.08)"; e.currentTarget.style.transform="none"; }}
+                onClick={() => onRead(it)}
+              >
+                <img src={it.og} alt={d.imageAlt} loading="lazy" onError={e => { e.currentTarget.style.display="none"; }} style={{ width:"100%", aspectRatio:"1200 / 630", objectFit:"cover", display:"block", background:C.navy }}/>
+                <div style={{ padding:"28px 28px 24px" }}>
+                  <div style={{ display:"flex", alignItems:"center", justifyContent:"center", flexWrap:"wrap", gap:10, marginBottom:16 }}>
+                    <span style={{ background:C.navy, color:C.yellow, fontFamily:"'Montserrat',sans-serif", fontSize:"0.68rem", fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase", padding:"3px 10px", borderRadius:2 }}>{d.category}</span>
+                    <NewsBadge item={it} n={n}/>
+                    <span style={{ color:"#9a9280", fontFamily:"'Montserrat',sans-serif", fontSize:"0.76rem" }}>{fmtNewsDate(it.date, lk)}</span>
+                  </div>
+                  <h3 style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.12rem", fontWeight:700, color:C.navy, lineHeight:1.4, marginBottom:14, textAlign:"center" }}>{d.title}</h3>
+                  <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.85rem", color:"#4a4540", lineHeight:1.75 }}>{d.summary}</p>
+                  <div style={{ marginTop:20, textAlign:"center", color:C.gold, fontFamily:"'Montserrat',sans-serif", fontSize:"0.8rem", fontWeight:700, letterSpacing:"0.06em" }}>{n.readMore}</div>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+      </div>
+      <WhatsAppBtn />
+    </section>
+  );
+}
+
+function NewsView({ item, lang, onBack }) {
+  const lk = newsLang(lang);
+  const n = NEWS_LABELS[lk];
+  const d = item[lk];
+  const on = newsActive(item);
+  return (
+    <section style={{ padding:"100px 5% 80px", background:C.white }}>
+      <div style={{ maxWidth:780, margin:"0 auto" }}>
+        <button onClick={onBack}
+          style={{ ...btn.outline, marginBottom:40, fontSize:"0.78rem", padding:"10px 24px", color:C.navy, borderColor:C.navy }}
+          onMouseEnter={e => { e.target.style.background=C.navy; e.target.style.color=C.white; }}
+          onMouseLeave={e => { e.target.style.background="transparent"; e.target.style.color=C.navy; }}
+        >{n.back}</button>
+
+        <div style={{ display:"flex", gap:10, marginBottom:20, justifyContent:"center", flexWrap:"wrap", alignItems:"center" }}>
+          <span style={{ background:C.navy, color:C.yellow, fontFamily:"'Montserrat',sans-serif", fontSize:"0.72rem", fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase", padding:"4px 12px" }}>{d.category}</span>
+          <NewsBadge item={item} n={n}/>
+          <span style={{ color:"#9a9280", fontFamily:"'Montserrat',sans-serif", fontSize:"0.82rem" }}>{fmtNewsDate(item.date, lk)} · {on ? n.validUntil : n.expiredOn} {fmtNewsDate(item.validUntil, lk)}</span>
+        </div>
+
+        <h1 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(1.7rem,3vw,2.3rem)", fontWeight:700, color:C.navy, lineHeight:1.28, marginBottom:28, textAlign:"center" }}>{d.title}</h1>
+
+        <div style={{ background:"#f4f1eb", padding:"20px 24px", borderLeft:`3px solid ${C.gold}`, marginBottom:32 }}>
+          <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.93rem", color:"#3d3830", lineHeight:1.75, margin:0, fontStyle:"italic" }}>{d.summary}</p>
+        </div>
+
+        <div style={{ textAlign:"center", marginBottom:32 }}>
+          <img src={item.image} alt={d.imageAlt} onError={e => { e.currentTarget.style.display="none"; }} style={{ maxWidth:"100%", width:420, height:"auto", border:"1px solid rgba(5,30,87,0.15)", boxShadow:"0 4px 20px rgba(5,30,87,0.12)" }}/>
+        </div>
+
+        <div lang={lk}><NewsBody blocks={d.body}/></div>
+
+        <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.88rem", color:"#3d3830", lineHeight:1.7, marginTop:28 }}>
+          <strong>{n.source}:</strong> <a href={d.source.url} target="_blank" rel="noopener noreferrer" style={{ color:C.navy }}>{d.source.label}</a>
+        </p>
+        <p style={{ fontFamily:"'Montserrat',sans-serif", fontSize:"0.8rem", color:"#7a7568", lineHeight:1.7, marginTop:8, fontStyle:"italic" }}>{n.disclaimer}</p>
+
+        <div style={{ marginTop:48, padding:"32px 28px", background:C.navy, textAlign:"center" }}>
+          <p style={{ fontFamily:"'Playfair Display',serif", fontSize:"1.1rem", color:C.white, marginBottom:20 }}>{n.ctaTitle}</p>
+          <a href={`https://wa.me/50688969883?text=${encodeURIComponent(n.ctaMsg)}`} target="_blank" rel="noopener noreferrer"
+            style={{ ...btn.primary, display:"inline-block", textDecoration:"none" }}
+          >{n.ctaBtn}</a>
         </div>
       </div>
       <WhatsAppBtn />
@@ -3562,7 +3672,7 @@ function MapSection({ lang }) {
 
 function Footer({ lang, setSection }) {
   const t = DATA[lang].footer;
-  const navSections = ["home","services","about","blog","tools","contact"];
+  const navSections = ["home","services","about","blog","news","tools","contact"];
   return (
     <footer style={{ background:C.navyDk, padding:"60px 5% 32px", borderTop:`3px solid rgba(179,141,71,0.25)` }}>
       <div style={{ maxWidth:1200, margin:"0 auto" }}>
@@ -3903,28 +4013,35 @@ export default function App() {
   const [lang, setLang] = useState(() => { try { const l = new URLSearchParams(window.location.search).get("lang"); return ["es","en","he"].includes(l) ? l : "es"; } catch (e) { return "es"; } });
   /* Enlaces directos: gamacpa-asesores.com/#blog/13 abre el artículo 13 */
   const parseHash = () => {
-    const m = (window.location.hash || "").match(/^#blog(?:\/(\d+))?$/);
-    if (!m) return { section: "home", articleId: null };
-    return { section: "blog", articleId: m[1] ? parseInt(m[1], 10) : null };
+    const hash = window.location.hash || "";
+    const m = hash.match(/^#blog(?:\/(\d+))?$/);
+    if (m) return { section: "blog", articleId: m[1] ? parseInt(m[1], 10) : null, newsSlug: null };
+    /* Enlaces directos: gamacpa-asesores.com/#noticias/<slug> abre esa noticia */
+    const n = hash.match(/^#noticias(?:\/([a-z0-9-]+))?$/);
+    if (n) return { section: "news", articleId: null, newsSlug: n[1] || null };
+    return { section: "home", articleId: null, newsSlug: null };
   };
   const [section, setSection] = useState(() => parseHash().section);
   const [articleId, setArticleId] = useState(() => parseHash().articleId);
+  const [newsSlug, setNewsSlug] = useState(() => parseHash().newsSlug);
 
   /* Mantener la URL sincronizada con el blog y responder al botón Atrás */
   useEffect(() => {
-    const target = section === "blog" ? (articleId ? "#blog/" + articleId : "#blog") : "";
+    const target = section === "blog" ? (articleId ? "#blog/" + articleId : "#blog")
+      : section === "news" ? (newsSlug ? "#noticias/" + newsSlug : "#noticias") : "";
     const current = window.location.hash;
-    if (section === "blog" || current.startsWith("#blog")) {
+    if (section === "blog" || section === "news" || current.startsWith("#blog") || current.startsWith("#noticias")) {
       if (current !== target) {
         window.history.replaceState(null, "", window.location.pathname + window.location.search + target);
       }
     }
-  }, [section, articleId]);
+  }, [section, articleId, newsSlug]);
 
   useEffect(() => {
     const onHash = () => {
       const h = parseHash();
       if (window.location.hash.startsWith("#blog")) { setSection("blog"); setArticleId(h.articleId); }
+      else if (window.location.hash.startsWith("#noticias")) { setSection("news"); setNewsSlug(h.newsSlug); }
     };
     window.addEventListener("hashchange", onHash);
     return () => window.removeEventListener("hashchange", onHash);
@@ -3970,11 +4087,17 @@ export default function App() {
       if (article) return <ArticleView article={article} lang={lang} onBack={() => setArticleId(null)} />;
       /* si el artículo no existe en este idioma, se muestra la lista del blog */
     }
+    if (section === "news" && newsSlug) {
+      const item = NEWS.find(x => x.slug === newsSlug);
+      if (item) return <NewsView item={item} lang={lang} onBack={() => setNewsSlug(null)} />;
+      /* si la noticia no existe, se muestra la lista de noticias */
+    }
     switch(section) {
       case "home":     return <><HeroSection lang={lang} setSection={setSection}/><CostSection lang={lang}/><WhySection lang={lang}/><FAQSection lang={lang}/><TestimonialsSection lang={lang}/></>;
       case "services": return <ServicesSection lang={lang}/>;
       case "about":    return <AboutSection lang={lang}/>;
       case "blog":     return <BlogList lang={lang} onRead={(a)=>{ setArticleId(a.id); window.scrollTo({top:0,behavior:"smooth"}); }}/>;
+      case "news":     return <NewsList lang={lang} onRead={(it)=>{ setNewsSlug(it.slug); window.scrollTo({top:0,behavior:"smooth"}); }}/>;
       case "tools":    return <ToolsSection lang={lang}/>;
       case "contact":  return <><ContactSection lang={lang}/><MapSection lang={lang}/></>;
       case "privacy":  return <PrivacySection lang={lang} setSection={setSection}/>;
@@ -3993,6 +4116,12 @@ export default function App() {
         * { margin:0; padding:0; box-sizing:border-box; }
         html { scroll-behavior:smooth; }
         body { background:#f8f7f4; }
+        @media(max-width:1240px){
+          .nav-desktop{gap:11px!important;}
+          .nav-desktop > button{font-size:0.72rem!important;letter-spacing:0.06em!important;}
+        }
+        @media(max-width:1120px){ .nav-cal{display:none!important;} }
+        @media(max-width:980px){ .nav-desktop{display:none!important;} .nav-mobile-btn{display:flex!important;} }
         @media(max-width:900px){
           .nav-desktop{display:none!important;}
           .nav-mobile-btn{display:flex!important;}
@@ -4009,13 +4138,13 @@ export default function App() {
       `}</style>
 
       <TopBar lang={lang}/>
-      <Navbar lang={lang} setLang={setLang} section={section} setSection={(s)=>{ setSection(s); setArticleId(null); }}/>
+      <Navbar lang={lang} setLang={setLang} section={section} setSection={(s)=>{ setSection(s); setArticleId(null); setNewsSlug(null); }}/>
 
       <main style={{ paddingTop: section === "home" ? 36 : 108 }}>
         {renderSection()}
       </main>
 
-      <Footer lang={lang} setSection={(s)=>{ setSection(s); setArticleId(null); window.scrollTo({top:0}); }}/>
+      <Footer lang={lang} setSection={(s)=>{ setSection(s); setArticleId(null); setNewsSlug(null); window.scrollTo({top:0}); }}/>
       <WhatsAppBtn/>
     </>
   );

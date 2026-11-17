@@ -8,6 +8,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { DOMAIN, ORG_ID, GA_ID, LASTMOD, CONTACT, OFFICES, SOCIAL } from "./site.mjs";
 import { PAGES, HUB } from "./pages.mjs";
+import { NEWS, NEWS_PATHS, NEWS_LABELS, fmtNewsDate } from "../../src/noticias.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const PUB = path.join(ROOT, "public");
@@ -40,7 +41,7 @@ try {
 
 const L = {
   es: {
-    lang: "es", locale: "es_CR", home: "Inicio", services: "Servicios", blog: "Blog",
+    lang: "es", locale: "es_CR", home: "Inicio", services: "Servicios", blog: "Blog", news: "Noticias", newsHome: "/noticias/",
     altNav: "English", faq: "Preguntas frecuentes", related: "Artículos relacionados",
     other: "Otros servicios", locations: "Dónde atendemos", ctaH: "¿Hablamos de su caso?",
     ctaP: "Escriba al CPA Gustavo Monge A. y reciba orientación sobre su situación. Atendemos en español e inglés.",
@@ -51,7 +52,7 @@ const L = {
     rights: "Todos los derechos reservados.", blogHome: "/#blog", home_href: "/", seeMore: "Ver todos los artículos",
   },
   en: {
-    lang: "en", locale: "en_US", home: "Home", services: "Services", blog: "Blog",
+    lang: "en", locale: "en_US", home: "Home", services: "Services", blog: "Blog", news: "News", newsHome: "/en/news/",
     altNav: "Español", faq: "Frequently asked questions", related: "Related articles (Spanish)",
     other: "Other services", locations: "Where we work", ctaH: "Shall we talk about your case?",
     ctaP: "Message CPA Gustavo Monge A. and get guidance on your situation. We work in English and Spanish.",
@@ -99,7 +100,7 @@ const header = (lang, altHref) => {
   const sv = lang === "es" ? HUB.es.path : HUB.en.path;
   const st = pageOf("santateresa", lang).path;
   const br = pageOf("barranca", lang).path;
-  return `<header class="gm-h"><a class="gm-b" href="${t.home_href}">GAMA <span>Asesores Contables</span></a><nav aria-label="Principal"><a href="${sv}">${t.services}</a><a href="${st}">Santa Teresa</a><a href="${br}">Barranca</a><a href="${t.blogHome}">${t.blog}</a><a href="${altHref}" hreflang="${lang === "es" ? "en" : "es"}">${t.altNav}</a></nav></header>`;
+  return `<header class="gm-h"><a class="gm-b" href="${t.home_href}">GAMA <span>Asesores Contables</span></a><nav aria-label="Principal"><a href="${sv}">${t.services}</a><a href="${st}">Santa Teresa</a><a href="${br}">Barranca</a><a href="${t.blogHome}">${t.blog}</a><a href="${t.newsHome}">${t.news}</a><a href="${altHref}" hreflang="${lang === "es" ? "en" : "es"}">${t.altNav}</a></nav></header>`;
 };
 
 const cta = (lang, topic) => {
@@ -115,7 +116,7 @@ const footer = (lang) => {
   return `<footer class="gm-f"><div class="gm-fg"><div><strong>GAMA Asesores Contables</strong><p>${t.slogan}</p><p>CPA Gustavo Monge A.</p><p>${CONTACT.phoneIntl}<br>${CONTACT.email}</p></div><div><strong>${t.offices}</strong><p>${t.barranca}<br>${esc(b.street)}</p><p>${t.santaTeresa}<br>${esc(s.street)}</p><p>${t.hours}</p></div><div><strong>${t.services}</strong><ul>${links}<li><a href="${pageOf("santateresa", lang).path}">Santa Teresa</a></li><li><a href="${pageOf("barranca", lang).path}">Barranca</a></li></ul></div></div><p class="gm-copy">© ${LASTMOD.slice(0, 4)} GAMA Asesores Contables. ${t.rights}</p></footer>`;
 };
 
-const head = ({ lang, title, desc, url, alts, ogType = "website", ld }) => {
+const head = ({ lang, title, desc, url, alts, ogType = "website", ld, image = OG_IMAGE }) => {
   const t = L[lang];
   const alt = alts ? alts.map(([hl, href]) => `<link rel="alternate" hreflang="${hl}" href="${DOMAIN}${href}">`).join("") : "";
   return `<!doctype html>
@@ -136,11 +137,11 @@ ${alt}
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:url" content="${DOMAIN}${url}">
 <meta property="og:locale" content="${t.locale}">
-<meta property="og:image" content="${OG_IMAGE}">
+<meta property="og:image" content="${image}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="${OG_IMAGE}">
+<meta name="twitter:image" content="${image}">
 ${ld.map(jsonLd).join("\n")}
 <style>${CSS}</style>
 ${GA}
@@ -272,6 +273,89 @@ ${footer(lang)}
   );
 }
 
+
+/* ───────────── Noticias (avisos de último momento) ───────────── */
+const newsAlts = (item) => [["es-CR", NEWS_PATHS.es.item(item.slug)], ["en", NEWS_PATHS.en.item(item.slug)], ["x-default", NEWS_PATHS.es.item(item.slug)]];
+const newsHubAlts = [["es-CR", NEWS_PATHS.es.hub], ["en", NEWS_PATHS.en.hub], ["x-default", NEWS_PATHS.es.hub]];
+const NEWS_CSS = "background:#051e57;color:#f2e485;font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:3px 10px;display:inline-block";
+
+function renderNewsBody(blocks) {
+  return blocks.map((b) => {
+    if (Array.isArray(b)) return `<ul>${b.map((i) => `<li>${esc(i)}</li>`).join("")}</ul>`;
+    if (b.startsWith("## ")) return `<h2>${esc(b.slice(3))}</h2>`;
+    return `<p>${esc(b)}</p>`;
+  }).join("\n");
+}
+
+function renderNewsItem(item, lang) {
+  const t = L[lang], n = NEWS_LABELS[lang], d = item[lang];
+  const altLang = lang === "es" ? "en" : "es";
+  const url = NEWS_PATHS[lang].item(item.slug);
+  const hub = NEWS_PATHS[lang].hub;
+  const crumbs = [[t.home, t.home_href], [n.nav, hub], [d.title, url]];
+  const ld = {
+    "@context": "https://schema.org", "@type": "NewsArticle", headline: d.title, description: d.summary,
+    inLanguage: lang === "es" ? "es-CR" : "en", datePublished: item.date, dateModified: item.date,
+    image: [`${DOMAIN}${item.og}`, `${DOMAIN}${item.image}`], mainEntityOfPage: `${DOMAIN}${url}`,
+    author: { "@type": "Person", name: "Gustavo Monge Alemán", jobTitle: "Contador Público Autorizado", url: `${DOMAIN}/` },
+    publisher: { "@type": "Organization", "@id": ORG_ID, name: "GAMA Asesores Contables", logo: { "@type": "ImageObject", url: `${DOMAIN}/favicon-192x192.png` } },
+  };
+  return (
+    head({ lang, title: `${d.title} | GAMA Asesores Contables`, desc: d.summary, url, alts: newsAlts(item), ogType: "article", image: `${DOMAIN}${item.og}`, ld: [crumbLd(crumbs), ld] }) +
+    `<body class="gm-page">
+${header(lang, NEWS_PATHS[altLang].item(item.slug))}
+<main class="gm-main">
+<nav class="gm-crumbs" aria-label="breadcrumb"><a href="${t.home_href}">${t.home}</a> › <a href="${hub}">${esc(n.nav)}</a> › ${esc(d.category)}</nav>
+<article>
+<p><span style="${NEWS_CSS}">${esc(d.category)}</span> &nbsp;<time datetime="${item.date}">${fmtNewsDate(item.date, lang)}</time> · <strong>${n.validUntil} ${fmtNewsDate(item.validUntil, lang)}</strong></p>
+<h1>${esc(d.title)}</h1>
+<p class="gm-lead">${esc(d.summary)}</p>
+<p style="text-align:center"><img src="${item.image}" alt="${esc(d.imageAlt)}" width="512" height="640" style="max-width:100%;height:auto;border:1px solid rgba(5,30,87,.15)"></p>
+${renderNewsBody(d.body)}
+<p><strong>${n.source}:</strong> <a href="${d.source.url}" rel="noopener">${esc(d.source.label)}</a></p>
+<p style="font-size:.85rem;color:#7a7568"><em>${esc(n.disclaimer)}</em></p>
+</article>
+<p><a href="${hub}">${n.allNews}</a></p>
+</main>
+<section class="gm-cta"><h2>${esc(n.ctaTitle)}</h2><p>${t.ctaP}</p><a class="gm-btn" href="https://wa.me/${CONTACT.wa}?text=${encodeURIComponent(n.ctaMsg)}" rel="noopener">${n.ctaBtn}</a><a class="gm-btn2" href="mailto:${CONTACT.email}">${t.mail}</a><p style="margin-top:14px;font-size:.85rem">${CONTACT.phoneIntl} · ${CONTACT.email}</p></section>
+${footer(lang)}
+</body>
+</html>
+`
+  );
+}
+
+function renderNewsHub(lang) {
+  const t = L[lang], n = NEWS_LABELS[lang];
+  const altLang = lang === "es" ? "en" : "es";
+  const hub = NEWS_PATHS[lang].hub;
+  const crumbs = [[t.home, t.home_href], [n.nav, hub]];
+  const cards = NEWS.map((it) => {
+    const d = it[lang];
+    return `<div class="gm-card"><p><span style="${NEWS_CSS}">${esc(d.category)}</span> &nbsp;${fmtNewsDate(it.date, lang)}</p><h2><a href="${NEWS_PATHS[lang].item(it.slug)}">${esc(d.title)}</a></h2><p>${esc(d.summary)}</p></div>`;
+  }).join("");
+  const list = {
+    "@context": "https://schema.org", "@type": "ItemList",
+    itemListElement: NEWS.map((it, i) => ({ "@type": "ListItem", position: i + 1, name: it[lang].title, url: `${DOMAIN}${NEWS_PATHS[lang].item(it.slug)}` })),
+  };
+  return (
+    head({ lang, title: `${n.title} | GAMA Asesores Contables`, desc: n.subtitle, url: hub, alts: newsHubAlts, ld: [crumbLd(crumbs), list] }) +
+    `<body class="gm-page">
+${header(lang, NEWS_PATHS[altLang].hub)}
+<main class="gm-main">
+<nav class="gm-crumbs" aria-label="breadcrumb"><a href="${t.home_href}">${t.home}</a> › ${esc(n.nav)}</nav>
+<h1>${esc(n.title)}</h1>
+<p class="gm-lead">${esc(n.subtitle)}</p>
+<div class="gm-grid" style="grid-template-columns:1fr">${cards || `<p>${esc(n.empty)}</p>`}</div>
+</main>
+${cta(lang, n.nav)}
+${footer(lang)}
+</body>
+</html>
+`
+  );
+}
+
 /* ───────────── Artículos del blog (HTML estático existente) ───────────── */
 const MONTHS = { enero: 1, febrero: 2, marzo: 3, abril: 4, mayo: 5, junio: 6, julio: 7, agosto: 8, septiembre: 9, setiembre: 9, octubre: 10, noviembre: 11, diciembre: 12 };
 
@@ -335,6 +419,8 @@ function buildSitemap() {
       add(p[lang].path, { lastmod: LASTMOD, changefreq: "monthly", priority: p.type === "location" ? "0.9" : "0.8", alts: hreflangs(p.key) });
     }
   }
+  for (const lang of ["es", "en"]) add(NEWS_PATHS[lang].hub, { lastmod: NEWS[0] ? NEWS[0].date : LASTMOD, changefreq: "weekly", priority: "0.7", alts: newsHubAlts });
+  for (const it of NEWS) for (const lang of ["es", "en"]) add(NEWS_PATHS[lang].item(it.slug), { lastmod: it.date, changefreq: "monthly", priority: "0.6", alts: newsAlts(it) });
   for (const f of blogFiles) {
     const loc = `/blog/${f}`;
     add(loc, { lastmod: prevLastmod[`${DOMAIN}${loc}`] || LASTMOD, changefreq: "monthly", priority: "0.7" });
@@ -373,7 +459,7 @@ function patchIndex() {
   const ld = `<!--seo-ld-->${jsonLd(org)}\n  ${jsonLd(site)}<!--/seo-ld-->`;
 
   const links = services.map((p) => `<li><a href="${p.es.path}">${esc(p.es.crumb)}</a> — ${esc(p.es.desc)}</li>`).join("");
-  const pre = `<!--seo-prerender--><main style="font-family:Georgia,serif;max-width:900px;margin:0 auto;padding:48px 5%;color:#051e57;line-height:1.7"><h1>GAMA Asesores Contables: contabilidad, impuestos y auditoría en Costa Rica</h1><p style="font-family:Arial,sans-serif;color:#3d3830">Firma contable dirigida por el CPA Gustavo Monge A., con oficinas en Barranca de Puntarenas y en Santa Teresa de Cóbano. Atención en español e inglés.</p><h2>Servicios</h2><ul style="font-family:Arial,sans-serif;color:#3d3830">${links}</ul><h2>Oficinas</h2><ul style="font-family:Arial,sans-serif;color:#3d3830"><li><a href="${pageOf("barranca", "es").path}">Barranca, Puntarenas</a>: ${esc(b.street)}</li><li><a href="${pageOf("santateresa", "es").path}">Santa Teresa, Cóbano</a>: ${esc(s.street)}</li></ul><p style="font-family:Arial,sans-serif"><a href="https://wa.me/${CONTACT.wa}">WhatsApp ${CONTACT.phoneIntl}</a> · <a href="mailto:${CONTACT.email}">${CONTACT.email}</a> · <a href="${HUB.en.path}">English</a></p></main><!--/seo-prerender-->`;
+  const pre = `<!--seo-prerender--><main style="font-family:Georgia,serif;max-width:900px;margin:0 auto;padding:48px 5%;color:#051e57;line-height:1.7"><h1>GAMA Asesores Contables: contabilidad, impuestos y auditoría en Costa Rica</h1><p style="font-family:Arial,sans-serif;color:#3d3830">Firma contable dirigida por el CPA Gustavo Monge A., con oficinas en Barranca de Puntarenas y en Santa Teresa de Cóbano. Atención en español e inglés.</p><h2>Servicios</h2><ul style="font-family:Arial,sans-serif;color:#3d3830">${links}</ul><h2>Oficinas</h2><ul style="font-family:Arial,sans-serif;color:#3d3830"><li><a href="${pageOf("barranca", "es").path}">Barranca, Puntarenas</a>: ${esc(b.street)}</li><li><a href="${pageOf("santateresa", "es").path}">Santa Teresa, Cóbano</a>: ${esc(s.street)}</li></ul><p style="font-family:Arial,sans-serif"><a href="https://wa.me/${CONTACT.wa}">WhatsApp ${CONTACT.phoneIntl}</a> · <a href="mailto:${CONTACT.email}">${CONTACT.email}</a> · <a href="${NEWS_PATHS.es.hub}">Noticias</a> · <a href="${HUB.en.path}">English</a></p></main><!--/seo-prerender-->`;
 
   html = html.replace(/<!--seo-ld-->[\s\S]*?<!--\/seo-ld-->/, () => ld);
   html = html.replace(/<!--seo-prerender-->[\s\S]*?<!--\/seo-prerender-->/, () => pre);
@@ -383,7 +469,11 @@ function patchIndex() {
 /* ───────────── Ejecución ───────────── */
 for (const lang of ["es", "en"]) write(`${HUB[lang].path.replace(/^\//, "")}index.html`, renderHub(lang));
 for (const p of PAGES) for (const lang of ["es", "en"]) write(`${p[lang].path.replace(/^\//, "")}index.html`, renderPage(p, lang));
+for (const lang of ["es", "en"]) {
+  write(`${NEWS_PATHS[lang].hub.replace(/^\//, "")}index.html`, renderNewsHub(lang));
+  for (const it of NEWS) write(`${NEWS_PATHS[lang].item(it.slug).replace(/^\//, "")}index.html`, renderNewsItem(it, lang));
+}
 for (const f of blogFiles) processBlog(f);
 buildSitemap();
 patchIndex();
-console.log(`SEO: ${PAGES.length * 2 + 2} páginas generadas, ${blogFiles.length} artículos procesados, sitemap actualizado.`);
+console.log(`SEO: ${PAGES.length * 2 + 2 + 2 + NEWS.length * 2} páginas generadas, ${blogFiles.length} artículos procesados, sitemap actualizado.`);

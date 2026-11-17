@@ -2,7 +2,7 @@
 export const DOMAIN = "https://gamacpa-asesores.com";
 export const ORG_ID = `${DOMAIN}/#organization`;
 export const GA_ID = "G-CB4GKL0NTB";
-export const LASTMOD = "2026-11-12"; // actualizar cuando cambie el contenido de las páginas
+export const LASTMOD = "2026-11-16"; // actualizar cuando cambie el contenido de las páginas
 
 export const CONTACT = {
   phoneDisplay: "8896-9883",
